@@ -1,0 +1,155 @@
+{
+  "slug": "tandoori-chicken",
+  "title": "Tandoori Chicken",
+  "tagline": "Dhaba-style charred drumsticks with a two-stage marinade, roasted in the OTG.",
+  "image": "image.webp",
+  "emoji": "🍗",
+  "chef": "Raja",
+  "cuisine": "Indian",
+  "course": "Main",
+  "tags": [
+    "high-protein",
+    "gym-meal",
+    "otg",
+    "chicken",
+    "marinade",
+    "grilled",
+    "indian"
+  ],
+  "flavor": [
+    "spicy",
+    "smoky",
+    "tangy",
+    "savory"
+  ],
+  "ratings": {
+    "overall": 5,
+    "difficulty": 3,
+    "availability": 4
+  },
+  "servings": 2,
+  "servingsNote": "About 500 g drumsticks (5-6 pieces).",
+  "time": {
+    "prep": 20,
+    "cook": 40,
+    "total": 60
+  },
+  "macros": {
+    "perServing": {
+      "calories": 470,
+      "protein": 47,
+      "carbs": 6,
+      "fat": 27,
+      "fibre": 1
+    },
+    "whole": {
+      "calories": 940,
+      "protein": 94,
+      "carbs": 12,
+      "fat": 54,
+      "fibre": 2
+    }
+  },
+  "macroNotes": [
+    "Estimated from ingredients using skin-on drumsticks.",
+    "Most of the fat is in the skin. Remove the skin before marinating to cut ~120 kcal and ~13 g fat per serving — the deep gashes still let the marinade in.",
+    "Already lean, high-protein and low-carb. Soya doesn't belong here; if you want more protein per plate, add an extra drumstick or serve with a side of hung-curd raita.",
+    "The marinade time (2+ hours) is inactive — total time reflects a short 1 hr + 1-2 hr two-stage marinade."
+  ],
+  "ingredients": [
+    {
+      "group": "Chicken",
+      "items": [
+        "500 g chicken drumsticks (5-6 pieces), skin on or off",
+        "Deep gashes cut to the bone, 2-3 slits per piece",
+        "One tendon snipped at the base of each drumstick"
+      ]
+    },
+    {
+      "group": "First marinade (tenderise)",
+      "items": [
+        "2 tsp Kashmiri red chilli powder (for colour)",
+        "1 tsp salt",
+        "1 tbsp lemon juice or white vinegar",
+        "1 tbsp ginger-garlic paste",
+        "1/2 tbsp mustard oil"
+      ]
+    },
+    {
+      "group": "Second marinade (the real one)",
+      "items": [
+        "120 g thick curd",
+        "1 tsp besan (gram flour), if curd is thin",
+        "1.5 tsp Kashmiri red chilli powder",
+        "1/2 tsp degi mirch (optional)",
+        "1 tsp coriander powder",
+        "1/2 tsp cumin powder",
+        "1/2 tsp garam masala",
+        "1/4 tsp black pepper",
+        "1.5 tsp kasuri methi, crushed",
+        "1/2 tbsp ginger-garlic paste",
+        "1 tbsp mustard oil",
+        "Salt, only a little (already salted in stage 1)"
+      ]
+    },
+    {
+      "group": "To finish",
+      "items": [
+        "1 tbsp butter or ghee",
+        "Pinch of chaat masala",
+        "Lemon wedges, to serve on the side"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Prep the drumsticks",
+      "body": "Pat 500 g drumsticks completely dry. Cut 2-3 deep gashes to the bone on each (non-negotiable for flavour penetration) and snip the one white tendon at the base of each — it stops the meat pulling up and splitting during the cook."
+    },
+    {
+      "title": "First marinade",
+      "body": "Rub in 2 tsp Kashmiri chilli powder + 1 tsp salt + 1 tbsp lemon juice + 1 tbsp ginger-garlic paste + 1/2 tbsp mustard oil, working it aggressively into the cuts. Rest 45-60 minutes."
+    },
+    {
+      "title": "Mix the second marinade",
+      "body": "If you have no hung curd, drain 120 g regular curd in a sieve/cloth for 10-15 minutes, OR stir in 1 tsp roasted besan to soak up moisture. Combine it with 1.5 tsp Kashmiri chilli + 1/2 tsp degi mirch + 1 tsp coriander powder + 1/2 tsp cumin powder + 1/2 tsp garam masala + 1/4 tsp black pepper + 1.5 tsp crushed kasuri methi + 1/2 tbsp ginger-garlic paste + 1 tbsp mustard oil + a little salt. It should be a thick paste, not runny."
+    },
+    {
+      "title": "Second marinade",
+      "body": "Wipe excess liquid off the chicken (don't wash). Coat with the second marinade, massaging into every cut for 2-3 minutes. Rest at room temperature 1-2 hours (or 4-6 hours refrigerated for deeper flavour). Keep it coated, not dripping — excess marinade insulates and burns."
+    },
+    {
+      "title": "Preheat the OTG",
+      "body": "Preheat the OTG fully to 200°C for 15 minutes (or 240-250°C if your OTG goes higher — then reduce cook time). Set the rack in the middle with a tray below to catch drips. Fan on if available."
+    },
+    {
+      "title": "Main cook",
+      "body": "Roast at 200°C for 30 minutes total, flipping once at 15 minutes. After the flip, brush lightly with butter or oil (not more marinade). This gets the meat cooked to the bone."
+    },
+    {
+      "title": "Char phase",
+      "body": "Switch to grill / top heat and cook 8-10 minutes for the tandoor-style char. IMPORTANT: rotate and flip every 3-4 minutes even if the top looks done — OTGs char strongly from the top only, and skipping this leaves one side pale and feeling raw. Look for localised black spots, not uniform browning."
+    },
+    {
+      "title": "Check doneness",
+      "body": "At the deepest cut near the bone the juices should run clear and the meat should pull back from the bone, no translucent flesh. If unsure, give it +5 minutes at 200°C before serving."
+    },
+    {
+      "title": "Restaurant finish",
+      "body": "Straight out of the oven, brush with 1 tbsp butter or ghee and sprinkle a tiny pinch of chaat masala. Rest 5 minutes before eating."
+    },
+    {
+      "title": "Serve",
+      "body": "Serve with lemon wedges on the SIDE — squeeze just before each bite. Don't squeeze lemon over the hot chicken; the acid tightens the meat and softens the crust 5-10 minutes later."
+    }
+  ],
+  "notes": [
+    "Pan-sear fallback (no OTG): sear the drumsticks in a hot pan to build char, then lower heat, add a splash of water, cover and cook through — but the OTG roast is the authentic method and worth it.",
+    "Air-fryer alternative: 200°C, similar timing, flipping partway.",
+    "Use less marinade than feels right — if it drips when you lift a piece, it's too much, and it'll steam instead of char.",
+    "Lemon lovers: make a lemon-butter glaze (1 tbsp melted butter + 1/2 tsp lemon juice) brushed on AFTER resting — the fat buffers the acid so it doesn't toughen the meat.",
+    "Leftover marinade keeps for a quick chicken breast the next day — thin it with 2-3 tbsp curd or 1 tbsp oil first, coat lightly, and roast a whole breast only 16-18 min at 200°C (breast dries out much faster than drumsticks)."
+  ],
+  "source": "Adapted from my own cooking notes.",
+  "diet": "non-veg"
+}

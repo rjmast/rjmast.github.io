@@ -1,0 +1,94 @@
+{
+  "slug": "protein-mocha",
+  "title": "Protein Mocha",
+  "tagline": "Post-workout chocolate mocha — chocolate protein powder blended into coffee and warm milk without clumping.",
+  "image": "image.webp",
+  "emoji": "☕",
+  "chef": "Raja",
+  "cuisine": "Continental",
+  "course": "Drink",
+  "tags": [
+    "drink",
+    "high-protein",
+    "gym-meal",
+    "no-cook",
+    "quick"
+  ],
+  "flavor": [
+    "sweet",
+    "rich"
+  ],
+  "ratings": {
+    "overall": 4,
+    "difficulty": 1,
+    "availability": 4
+  },
+  "servings": 1,
+  "servingsNote": "One post-workout mug",
+  "time": {
+    "prep": 5,
+    "cook": 0,
+    "total": 5
+  },
+  "macros": {
+    "perServing": {
+      "calories": 250,
+      "protein": 32,
+      "carbs": 18,
+      "fat": 6,
+      "fibre": 1
+    },
+    "whole": {
+      "calories": 250,
+      "protein": 32,
+      "carbs": 18,
+      "fat": 6,
+      "fibre": 1
+    }
+  },
+  "macroNotes": [
+    "Estimated from ingredients (1 scoop whey + 1 cup milk + coffee).",
+    "Already a high-protein drink (~32 g) for ~250 kcal — a clean post-workout refuel with a caffeine hit for recovery.",
+    "To cut calories, use toned/skim milk or a milk alternative; to push protein higher, use 1.5 scoops and a splash more liquid.",
+    "No soya boost needed — the whey is the protein here."
+  ],
+  "ingredients": [
+    {
+      "group": "Mocha",
+      "items": [
+        "1 scoop chocolate protein powder",
+        "1 cup milk (or milk alternative)",
+        "1 cup brewed coffee",
+        "Optional: honey, maple syrup or a pinch of cinnamon"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Brew the coffee",
+      "body": "Prepare 1 cup of coffee however you like it."
+    },
+    {
+      "title": "Warm the milk",
+      "body": "Heat 1 cup milk until warm but not boiling. Keep it below ~55–65°C — if the liquid is too hot the protein powder clumps and can denature into an unpleasant texture."
+    },
+    {
+      "title": "Make a smooth paste",
+      "body": "In a shaker or cup, mix 1 scoop chocolate protein powder with a small amount of the warm milk (or a splash of room-temperature liquid) first, stirring into a smooth paste. This is the trick that prevents clumps."
+    },
+    {
+      "title": "Combine",
+      "body": "Stir or blend the protein paste into the coffee and the remaining warm milk until fully smooth."
+    },
+    {
+      "title": "Sweeten & serve",
+      "body": "Taste and, if you like, add a little honey, maple syrup or a pinch of cinnamon. Drink post-workout while warm."
+    }
+  ],
+  "notes": [
+    "The whole game here is temperature and mixing order: paste first with cooler liquid, then add the warm coffee/milk — that's what keeps it silky instead of grainy.",
+    "Works as a warm post-workout drink; pour over ice for an iced version."
+  ],
+  "source": "Adapted from my own cooking notes.",
+  "diet": "veg"
+}

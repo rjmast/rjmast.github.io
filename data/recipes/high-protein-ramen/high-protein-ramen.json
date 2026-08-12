@@ -1,0 +1,105 @@
+{
+  "slug": "high-protein-ramen",
+  "title": "High-Protein Chicken Ramen",
+  "tagline": "Instant ramen turned into a proper gym meal with a seared chicken breast and mushrooms.",
+  "image": "image.webp",
+  "emoji": "🍜",
+  "chef": "Raja",
+  "cuisine": "Japanese",
+  "course": "Main",
+  "tags": [
+    "high-protein",
+    "gym-meal",
+    "quick",
+    "noodles",
+    "chicken",
+    "one-pot"
+  ],
+  "flavor": [
+    "savory",
+    "umami",
+    "spicy"
+  ],
+  "ratings": {
+    "overall": 4,
+    "difficulty": 1,
+    "availability": 4
+  },
+  "servings": 2,
+  "servingsNote": "500 g chicken split across two bowls.",
+  "time": {
+    "prep": 10,
+    "cook": 15,
+    "total": 25
+  },
+  "macros": {
+    "perServing": {
+      "calories": 780,
+      "protein": 69,
+      "carbs": 72,
+      "fat": 18,
+      "fibre": 4
+    },
+    "whole": {
+      "calories": 1560,
+      "protein": 138,
+      "carbs": 144,
+      "fat": 36,
+      "fibre": 8
+    }
+  },
+  "macroNotes": [
+    "Estimated using ~480 kcal instant ramen packets — check your packet, brands vary a lot.",
+    "~69 g protein per bowl is excellent for a cut. Most calories are from the fried instant noodles, not the chicken.",
+    "To cut ~150-200 kcal: use a baked/air-dried ramen cake instead of fried, skip the oil (use a non-stick pan), and pile in 150-200 g shredded cabbage for volume.",
+    "Want more protein? Crack 2 eggs into the simmering broth (egg-drop style) for +12 g — just nudges you slightly over 800 kcal."
+  ],
+  "ingredients": [
+    {
+      "group": "Per bowl (x2 for both servings)",
+      "items": [
+        "250 g raw chicken breast, sliced into thin strips",
+        "1 packet instant ramen (~480 kcal) + its seasoning packet",
+        "100 g mushrooms, sliced",
+        "10 g green onions (spring onions), sliced",
+        "1/2 tsp oil (optional — or use a non-stick pan)",
+        "Black pepper",
+        "Pinch chilli flakes, optional",
+        "~400-450 ml water for the noodles"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Season the chicken",
+      "body": "Slice 250 g chicken breast into thin strips (thin strips season and cook better than a whole breast). Toss with 1/2 of the ramen seasoning packet, black pepper and a pinch of chilli flakes. Let it sit while you prep everything else."
+    },
+    {
+      "title": "Sear the chicken",
+      "body": "Get a pan quite hot, add 1/2 tsp oil (or use non-stick dry). Lay the chicken in a single layer and cook 3 minutes on the first side without moving it, then 2-3 minutes on the second side. Let it brown — that's where the flavour is. Remove and set aside."
+    },
+    {
+      "title": "Brown the mushrooms",
+      "body": "In the same pan, add 100 g sliced mushrooms and cook 3-4 minutes until they release their water and start to brown."
+    },
+    {
+      "title": "Cook the noodles",
+      "body": "Bring about 400-450 ml water to a boil. Add the noodle cake and cook per packet (usually 3 minutes), then stir in the remaining 1/2 seasoning packet."
+    },
+    {
+      "title": "Bring it together",
+      "body": "Add the mushrooms and seared chicken back into the pot. Simmer 30-60 seconds, then turn off the heat."
+    },
+    {
+      "title": "Finish",
+      "body": "Top with 10 g sliced green onions and extra chilli flakes if you like heat. Serve immediately."
+    }
+  ],
+  "notes": [
+    "Best-texture trick: use 50-100 ml LESS water than the packet recommends. The broth becomes richer and coats the noodles like a saucy stir-fry instead of a thin, diluted soup.",
+    "Cabbage, spinach, ginger, a splash of soy sauce or chilli oil all fit here — cabbage especially adds huge volume for almost no calories.",
+    "Cook both bowls at the same time or save half the raw seasoned chicken for the second serving."
+  ],
+  "source": "Adapted from my own cooking notes.",
+  "diet": "non-veg"
+}

@@ -1,0 +1,123 @@
+{
+  "slug": "cabbage-kimchi",
+  "title": "Cabbage Kimchi",
+  "tagline": "A vegan Indian-kitchen kimchi — fermented, not pickled, no vinegar in sight.",
+  "image": "image.webp",
+  "emoji": "🥬",
+  "chef": "Raja",
+  "cuisine": "Korean",
+  "course": "Side",
+  "tags": [
+    "fermented",
+    "korean",
+    "vegetarian",
+    "no-cook",
+    "meal-prep"
+  ],
+  "flavor": [
+    "spicy",
+    "tangy",
+    "umami",
+    "fresh"
+  ],
+  "ratings": {
+    "overall": 4,
+    "difficulty": 2,
+    "availability": 3
+  },
+  "servings": 16,
+  "servingsNote": "Makes a large jar — roughly 16 side-dish servings.",
+  "time": {
+    "prep": 40,
+    "cook": 0,
+    "total": 40
+  },
+  "macros": {
+    "perServing": {
+      "calories": 30,
+      "protein": 1,
+      "carbs": 6,
+      "fat": 0,
+      "fibre": 2
+    },
+    "whole": {
+      "calories": 480,
+      "protein": 16,
+      "carbs": 96,
+      "fat": 5,
+      "fibre": 32
+    }
+  },
+  "macroNotes": [
+    "Estimated for the whole batch. This is a condiment — per serving it's negligible calories and near-zero protein, but great fibre and gut-friendly probiotics.",
+    "It's not a protein source, so pair it with something that is: it's excellent alongside grilled chicken, eggs, or stirred into fried rice with soya/paneer.",
+    "No fat, no oil — genuinely a free-hit flavour bomb for a cut."
+  ],
+  "ingredients": [
+    {
+      "group": "Vegetables + brine",
+      "items": [
+        "2 medium cabbages, cut into bite-sized pieces",
+        "1 medium carrot, thinly sliced",
+        "10 spring onions, chopped",
+        "5 tbsp sea salt, for brining (aim for ~2–2.5% salt by veg weight)"
+      ]
+    },
+    {
+      "group": "Kimchi paste",
+      "items": [
+        "3 tbsp cooked rice (or 1/2 tsp sugar/jaggery as a substitute)",
+        "3 tbsp Kashmiri lal mirch + 1 tbsp kuti mirch (coarse red chilli)",
+        "10 garlic cloves",
+        "1-inch piece ginger",
+        "1 pear",
+        "1 medium onion",
+        "3 dried red chillies",
+        "1/2 red paprika (bell pepper)",
+        "50 ml water"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Wash and brine",
+      "body": "Cut 2 cabbages into bite-sized pieces and thinly slice 1 carrot; wash both twice. In a large bowl, toss them with 5 tbsp sea salt and enough water to coat, and leave 1 hour. This softens the veg and pulls out excess water. After the hour, rinse once."
+    },
+    {
+      "title": "Make the paste",
+      "body": "Blend 10 garlic cloves, 1-inch ginger, 1 pear, 1 medium onion, 3 dried chillies, 1/2 red paprika, 3 tbsp cooked rice and 50 ml water into a paste. Stir in 3 tbsp Kashmiri lal mirch and 1 tbsp kuti mirch. (No cooked rice? Use 1/2 tsp sugar or grated jaggery — the bacteria feed on the sugars either way.)"
+    },
+    {
+      "title": "Drain and mix",
+      "body": "Squeeze the water out of the cabbage and carrot with your hands. Add the chopped spring onions and the kimchi paste, and mix thoroughly so every piece is coated."
+    },
+    {
+      "title": "Taste the salt",
+      "body": "Eat a small piece — it should be clearly salty but edible. If it's bland, add a little salt now; correct salt is what makes the whole ferment succeed and keeps spoilage bacteria out."
+    },
+    {
+      "title": "Pack it",
+      "body": "Press the mix firmly into a clean glass or food-grade plastic container (an IKEA plastic tub is perfect). DON'T use an aluminium pressure cooker — the acid reacts with it, giving a metallic taste and grey discolouration. Press down to remove air pockets and leave 1–2 inches of headspace."
+    },
+    {
+      "title": "Ferment — lid loose, NOT airtight",
+      "body": "Close the lid normally but do not seal it airtight, and never lock a pressure cooker — fermentation makes CO2 that must escape. Leave at room temp (out of direct sun, away from the stove) for 1–2 days. It's normal for almost nothing to happen for the first 24–36 hours."
+    },
+    {
+      "title": "Check daily",
+      "body": "Press it down once a day. You're waiting for tiny bubbles/a faint fizz, a fresh tangy curd-or-lemon smell, and a mild sourness at the edges. Good = clean sour smell; bad = rotten/eggy smell or fuzzy mould (very unlikely if salted right)."
+    },
+    {
+      "title": "Refrigerate",
+      "body": "Once it tastes pleasantly sour, move it to the fridge — cold nearly stops the fermentation. It tastes best after a few more days and keeps for weeks."
+    }
+  ],
+  "notes": [
+    "Why no vinegar: achaar adds acid upfront to preserve; kimchi makes its own lactic acid by fermentation. Add vinegar and you suppress the good bacteria and get a flat, sharp achaar instead of real kimchi.",
+    "Where the bacteria come from: they're already on the raw cabbage. Salt + low oxygen + the veg's own sugars simply let the good lactic-acid bacteria win instead of the spoilage ones. That's why you don't sterilise the cabbage.",
+    "Kashmiri + kuti mirch stand in for Korean gochugaru — colour and heat are covered, the result is an Indian-kimchi fusion rather than strictly traditional.",
+    "Travel-safe once it has fermented: 8–10 hours out of the fridge just makes it slightly more sour. Leave headspace and bag it — cabin pressure + gas can make the container swell."
+  ],
+  "source": "Adapted from my own cooking notes.",
+  "diet": "veg"
+}

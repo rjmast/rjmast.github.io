@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Rajapandiyan Arivazhagan — RajaOS</title>
+  <meta name="description" content="Rajapandiyan Arivazhagan, AI/LLM Engineer. A portfolio built as a desktop operating system.">
+  <meta name="theme-color" content="#08306b">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="shared/tokens.css">
+  <link rel="stylesheet" href="os/os.css">
+  <link rel="stylesheet" href="os/virus.css">
+</head>
+<body class="booting">
+
+  <!-- Desktop + wallpaper -->
+  <main id="desktop">
+    <!-- Wallpaper: the low-poly portrait (in CSS) with the name flanking it — YOUR · [face] · NAME.
+         Replace the letters below with your own first + last name (keep the --d delays evenly staggered).
+         Each letter rides a gentle, always-visible wave (staggered left→right); the word breathes a glow. -->
+    <div id="wall" aria-hidden="true">
+      <div class="wall-name">
+        <span class="wm wm-l"><span class="l" style="--d:0s">R</span><span class="l" style="--d:.08s">A</span><span class="l" style="--d:.16s">J</span><span class="l" style="--d:.24s">A</span></span>
+      </div>
+    </div>
+    <div id="desk-icons"></div>
+    <div id="windows"></div>
+  </main>
+
+  <!-- Menu bar (top) -->
+  <div id="menubar"></div>
+
+  <!-- Dock (bottom) -->
+  <div id="dock"></div>
+
+  <!-- Boot screen -->
+  <div id="boot" aria-hidden="true"></div>
+
+  <!-- Small-screen splash: brief note, then hands off to the mobile OS -->
+  <div id="screen-notice" aria-hidden="true">
+    <div class="sn-mark">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="8" stroke="#fff" stroke-width="1.7"/>
+        <path d="M12 4.5v15M4.5 12h15" stroke="#fff" stroke-width="1.1" opacity=".55"/>
+        <circle cx="12" cy="12" r="2.3" fill="#f6923c"/>
+      </svg>
+    </div>
+    <h2>Best viewed on desktop</h2>
+    <p>RajaOS is a windowed desktop. Opening the tailored mobile view&hellip;</p>
+    <div class="sn-spin" aria-hidden="true"></div>
+    <a class="sn-desktop" href="#" id="sn-desktop">Continue to the desktop version&nbsp;&rarr;</a>
+  </div>
+
+  <script src="os/virus.js"></script>
+  <script src="os/os.js"></script>
+</body>
+</html>

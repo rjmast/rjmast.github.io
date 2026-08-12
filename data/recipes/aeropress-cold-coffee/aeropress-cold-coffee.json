@@ -1,0 +1,107 @@
+{
+  "slug": "aeropress-cold-coffee",
+  "title": "AeroPress Cold Coffee",
+  "tagline": "Fast iced coffee from an AeroPress — black over ice or a café-style milk version.",
+  "image": "image.webp",
+  "emoji": "🧊",
+  "chef": "Raja",
+  "cuisine": "Continental",
+  "course": "Drink",
+  "tags": [
+    "drink",
+    "no-cook",
+    "quick"
+  ],
+  "flavor": [
+    "rich",
+    "creamy",
+    "smoky"
+  ],
+  "ratings": {
+    "overall": 4.5,
+    "difficulty": 1,
+    "availability": 4
+  },
+  "servings": 1,
+  "servingsNote": "One glass; scale the concentrate for more.",
+  "time": {
+    "prep": 5,
+    "cook": 0,
+    "total": 5
+  },
+  "macros": {
+    "perServing": {
+      "calories": 130,
+      "protein": 6,
+      "carbs": 14,
+      "fat": 5,
+      "fibre": 0
+    },
+    "whole": {
+      "calories": 130,
+      "protein": 6,
+      "carbs": 14,
+      "fat": 5,
+      "fibre": 0
+    }
+  },
+  "macroNotes": [
+    "Estimated for the milk version with 180 ml toned milk and 1 tsp sugar; the black-over-ice version is essentially 0 kcal.",
+    "Protein comes from the milk (~6 g). For a high-protein cold coffee, blend in a scoop of whey (chocolate or coffee flavour) or use high-protein milk — turns it into a ~25 g protein iced drink.",
+    "To cut calories/sugar: skip the sugar (dissolve none), use toned or skim milk, and don't add ice cream."
+  ],
+  "ingredients": [
+    {
+      "group": "Coffee concentrate (AeroPress)",
+      "items": [
+        "15–18 g coffee (fine-medium grind)",
+        "80–120 ml hot water"
+      ]
+    },
+    {
+      "group": "Black-over-ice version",
+      "items": [
+        "A glass full of ice",
+        "Optional: a splash of water to taste"
+      ]
+    },
+    {
+      "group": "Milk version",
+      "items": [
+        "Ice",
+        "150–200 ml cold milk",
+        "1 tsp sugar (optional; dissolve in the hot shot)",
+        "Optional: a scoop of ice cream for a thick, blended version"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Brew a strong shot",
+      "body": "In the AeroPress, brew a concentrated shot: 15–18 g coffee (fine-medium grind) with only 80–120 ml hot water, steep about 1–1.5 minutes, then press. Brew it STRONGER than a normal cup — this is the key so it doesn't taste watery once the ice and milk dilute it."
+    },
+    {
+      "title": "Sweeten now if using",
+      "body": "If you want it sweet, stir 1 tsp sugar into the hot shot straight after pressing — sugar dissolves far better in hot coffee than in the cold glass later."
+    },
+    {
+      "title": "Black over ice (fast + clean)",
+      "body": "Fill a glass with ice first, then press or pour the hot concentrate directly over the ice. The ice instantly chills it and locks in the aromas, and the strong brew makes up for the dilution. This is the correct instant iced-coffee hack — much better than brewing normal coffee and fridging it, which turns thin and a bit stale."
+    },
+    {
+      "title": "Milk version (café style)",
+      "body": "In a glass, add ice and 150–200 ml cold milk, then pour the strong coffee shot over the top. This gives a pseudo-espresso iced latte — the milk smooths the acidity and adds body. A go-to ratio: 17 g coffee, ~90 ml water, then ice + 180 ml milk."
+    },
+    {
+      "title": "Optional: shake or blend",
+      "body": "For a frothier drink, add the concentrate, milk, ice and optional sugar to a jar and shake hard 20–30 seconds — light foam, well chilled. For a thick, indulgent 'Indian café' cold coffee, blend the shot with ice, milk and a scoop of ice cream until frothy."
+    }
+  ],
+  "notes": [
+    "Cooling hot coffee in the fridge is the lazy fallback — it works but tastes more acidic/bitter and thinner than brewing strong over ice, because hot extraction pulls more acids.",
+    "With milk especially, always brew stronger than usual — milk lowers the perceived intensity, so normal-strength coffee tastes flat and watery.",
+    "For true smooth, low-acid cold brew, steep coarse grounds in cold water 8–16 hours instead — best flavour, but no good if you want it right now."
+  ],
+  "source": "Adapted from my own cooking notes.",
+  "diet": "veg"
+}

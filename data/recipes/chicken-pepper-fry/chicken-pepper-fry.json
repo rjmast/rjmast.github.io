@@ -1,0 +1,150 @@
+{
+  "slug": "chicken-pepper-fry",
+  "title": "Chicken Pepper Fry",
+  "tagline": "South Indian semi-gravy chicken, pepper-forward with fresh-ground masala.",
+  "image": "image.webp",
+  "emoji": "🍗",
+  "chef": "Raja",
+  "cuisine": "Indian",
+  "course": "Main",
+  "tags": [
+    "chicken",
+    "high-protein",
+    "curry",
+    "marinade",
+    "comfort-food",
+    "indian",
+    "restaurant-style"
+  ],
+  "flavor": [
+    "spicy",
+    "savory",
+    "smoky"
+  ],
+  "ratings": {
+    "overall": 5,
+    "difficulty": 3,
+    "availability": 4
+  },
+  "servings": 4,
+  "servingsNote": "Uses 1 kg bone-in chicken; scale halves cleanly for 500 g.",
+  "time": {
+    "prep": 25,
+    "cook": 30,
+    "total": 55
+  },
+  "macros": {
+    "perServing": {
+      "calories": 430,
+      "protein": 48,
+      "carbs": 10,
+      "fat": 22,
+      "fibre": 2
+    },
+    "whole": {
+      "calories": 1720,
+      "protein": 192,
+      "carbs": 40,
+      "fat": 88,
+      "fibre": 8
+    }
+  },
+  "macroNotes": [
+    "Estimated for 1 kg bone-in chicken across 4 servings, not counting rice/parotta.",
+    "Genuinely great macros — high protein, low carb, most of the fat comes from the 3–4 tbsp oil. Cut the oil to 2 tbsp to save ~30 kcal per serving; the dish still works.",
+    "Already very high protein, so no soya needed. Pair with a small portion of ghee rice or one parotta rather than a big carb load if you're tracking."
+  ],
+  "ingredients": [
+    {
+      "group": "Light marinade",
+      "items": [
+        "1 kg chicken, curry cut, bone-in (leg/thigh/drumstick preferred)",
+        "1 tsp crushed black peppercorns",
+        "1/2 tsp salt",
+        "1 tbsp ginger-garlic paste",
+        "8–10 curry leaves, crushed",
+        "1 tsp oil"
+      ]
+    },
+    {
+      "group": "Pepper fry masala (fresh ground)",
+      "items": [
+        "2 tbsp black peppercorns",
+        "1 tbsp cumin seeds (jeera)",
+        "1 tbsp fennel seeds (saunf)"
+      ]
+    },
+    {
+      "group": "Cooking",
+      "items": [
+        "3–4 tbsp oil",
+        "1/4 tsp cumin seeds",
+        "1/4 tsp fennel seeds",
+        "15–20 garlic cloves, lightly crushed",
+        "1 handful curry leaves (plus a small handful to finish)",
+        "3 medium onions, thinly sliced",
+        "1/2 tsp salt (plus more to taste)",
+        "1.5 tbsp ginger-garlic paste (reduced, since chicken is marinated)",
+        "2–3 green chillies, slit (half at onion stage, half at finish)",
+        "1/4 tsp turmeric powder",
+        "1/4 tsp garam masala",
+        "1/4 to 1/3 cup hot water",
+        "2–4 tbsp thick curd, well beaten"
+      ]
+    },
+    {
+      "group": "Finish",
+      "items": [
+        "Juice of 1/2 lemon",
+        "1 handful fresh coriander, chopped (optional)"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Light marinade",
+      "body": "Mix 1 kg curry-cut chicken with 1 tsp crushed black pepper, 1/2 tsp salt, 1 tbsp ginger-garlic paste, 8–10 crushed curry leaves and 1 tsp oil. Rest 15–30 minutes. Keep it light — NO curd, turmeric or garam masala in the marinade, or it stops being a pepper fry and turns into a pre-spiced curry."
+    },
+    {
+      "title": "Roast the pepper masala",
+      "body": "On low heat, dry roast 2 tbsp black peppercorns, 1 tbsp cumin and 1 tbsp fennel until aromatic and the cumin turns light brown. Cool completely, then grind to a fine powder. This fresh-ground masala is the whole point of the dish — don't substitute pre-ground pepper for all of it."
+    },
+    {
+      "title": "Start the base",
+      "body": "Heat a kadhai on high with 3–4 tbsp oil. When hot, add 1/4 tsp cumin and 1/4 tsp fennel; let them crackle. Add 15–20 lightly crushed garlic cloves and 1 handful curry leaves and sauté till fragrant — don't brown the garlic."
+    },
+    {
+      "title": "Onions",
+      "body": "Add 3 thinly sliced onions and 1/2 tsp salt. Cook on high, stirring every 20–30 seconds, until light golden (translucent is not enough — you want light golden strands with oil separating at the edges, about 5–8 min). Add 1.5 tbsp ginger-garlic paste and half the slit green chillies; cook 1–2 minutes until the raw smell goes."
+    },
+    {
+      "title": "Spice and chicken",
+      "body": "Lower the flame and add 1/4 tsp turmeric and 1/4 tsp garam masala. Immediately add the marinated chicken. Raise the heat and cook 4–5 minutes, stirring, until the chicken releases its moisture."
+    },
+    {
+      "title": "Cook through",
+      "body": "Add 1/4 to 1/3 cup hot water, cover, and cook on low 10–12 minutes until the chicken is fully cooked and tender and the oil starts to separate."
+    },
+    {
+      "title": "Add curd (critical)",
+      "body": "Lower the flame completely, then add 2–4 tbsp beaten thick curd. Stir continuously for 1–2 minutes until no white streaks remain and the gravy looks glossy. Adding curd on high heat makes it split; adding it raw at the very end makes it sour — low heat and constant stirring is the trick."
+    },
+    {
+      "title": "Pepper fry finish",
+      "body": "Raise the heat to high. Add ALL the pepper fry masala, the remaining slit green chillies and a small handful of fresh curry leaves. Toss continuously until the moisture reduces and the gravy turns thick and clingy, coating the chicken."
+    },
+    {
+      "title": "Finish and rest",
+      "body": "Switch off the heat. Add the juice of 1/2 lemon and a handful of chopped coriander (optional). Mix once and rest 2 minutes. Serve hot with Malabar parotta, roti or ghee rice."
+    }
+  ],
+  "notes": [
+    "This is the semi-gravy version — pepper-forward with just enough curd for body, not a runny curry and not bone-dry. For a fully traditional dry fry, skip the curd and toss longer at the end.",
+    "The light marinade beats no marinade: salt and pepper get time to penetrate so the chicken is juicier and more evenly seasoned. Avoid the heavy curd-and-masala marinade — early crushed pepper turns bitter and curd twice makes it flat and sour.",
+    "No fresh coriander? Skip it entirely — many authentic versions use none. Do NOT substitute coriander powder; it adds sweetness and a generic curry taste that dulls the pepper. A little extra lemon or fried curry leaves is a better finish.",
+    "Bone-in pieces may have dark marrow near the bone even after washing — that's harmless, it just darkens on cooking. Cook until the meat is white to the bone and juices run clear.",
+    "For separate ginger-garlic and green chilli: use ~1.5 tbsp ginger-garlic paste (roughly 1 tbsp ginger + 1/2 tbsp garlic) and 2–3 chillies (2 = mild, 3 = medium)."
+  ],
+  "source": "Adapted from my own cooking notes.",
+  "diet": "non-veg"
+}

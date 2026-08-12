@@ -1,0 +1,122 @@
+{
+  "slug": "banana-protein-muffins",
+  "title": "Banana Protein Muffins",
+  "tagline": "Banana-chocolate protein muffins baked in cupcake moulds in the OTG.",
+  "image": "image.webp",
+  "emoji": "🧁",
+  "chef": "Raja",
+  "cuisine": "Continental",
+  "course": "Dessert",
+  "tags": [
+    "high-protein",
+    "gym-meal",
+    "dessert",
+    "otg",
+    "oven-baked",
+    "breakfast",
+    "meal-prep"
+  ],
+  "flavor": [
+    "sweet",
+    "nutty"
+  ],
+  "ratings": {
+    "overall": 3.5,
+    "difficulty": 2,
+    "availability": 4
+  },
+  "servings": 6,
+  "servingsNote": "Makes 6 cupcake-mould muffins; 1 muffin = 1 serving.",
+  "time": {
+    "prep": 15,
+    "cook": 18,
+    "total": 33
+  },
+  "macros": {
+    "perServing": {
+      "calories": 110,
+      "protein": 7,
+      "carbs": 15,
+      "fat": 2,
+      "fibre": 2
+    },
+    "whole": {
+      "calories": 660,
+      "protein": 42,
+      "carbs": 90,
+      "fat": 12,
+      "fibre": 12
+    }
+  },
+  "macroNotes": [
+    "Estimated per muffin (6 muffins from the full batter).",
+    "Genuinely gym-friendly — about 7 g protein for ~110 kcal per muffin, low fat. Two muffins make a solid ~14 g protein snack.",
+    "Protein boost is already built in via the scoop of whey; for more, use a heaped scoop or add 1 tbsp of a second protein source — but don't overdo protein powder or the muffins turn rubbery.",
+    "Add 1 tsp oil or peanut butter to the batter for much better texture; it adds only a few kcal per muffin and stops the protein powder drying them out."
+  ],
+  "ingredients": [
+    {
+      "group": "Wet",
+      "items": [
+        "2 medium bananas (ripe is best; soften firm/unripe ones first)",
+        "1 egg (strongly recommended for structure)",
+        "3 tbsp milk (keep extra for adjusting)",
+        "1 tsp honey, sugar or jaggery (helps if bananas aren't very ripe)",
+        "1 tsp oil OR peanut butter (optional but improves texture)"
+      ]
+    },
+    {
+      "group": "Dry",
+      "items": [
+        "3 tbsp flour (atta or maida) — use 3 tbsp max, not 4, so they don't dry out",
+        "1 scoop protein powder (whey or plant)",
+        "1–2 tbsp cocoa powder",
+        "1/2 tsp baking powder",
+        "1 pinch salt"
+      ]
+    },
+    {
+      "group": "Optional",
+      "items": [
+        "A few chocolate chips or chopped nuts, to sprinkle"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Fix firm bananas",
+      "body": "If your bananas are yellow-but-firm rather than very soft, peel and slice them, microwave 60–90 seconds, then mash — this softens and sweetens them so the muffins don't come out dry. Mash to a smooth, lump-free paste like baby food; visible banana chunks cause wet pockets and gummy muffins."
+    },
+    {
+      "title": "Whisk the wet",
+      "body": "In a bowl, whisk the mashed banana with 1 egg until smooth. Mix in 3 tbsp milk, 1 tsp honey/sugar/jaggery and 1 tsp oil or peanut butter."
+    },
+    {
+      "title": "Add the dry",
+      "body": "Add 3 tbsp flour, 1 scoop protein powder, 1–2 tbsp cocoa powder, 1/2 tsp baking powder and a pinch of salt. Mix to a thick pancake-batter consistency — protein powder soaks up a lot of liquid, so if it's too thick add 1 tbsp milk; too runny, add 1 tbsp flour. Don't overmix."
+    },
+    {
+      "title": "Preheat the OTG",
+      "body": "Preheat the OTG to 180°C for 10 minutes on bake mode (top + bottom rods on)."
+    },
+    {
+      "title": "Fill the moulds",
+      "body": "Lightly grease 6 cupcake moulds and fill each only 70–75% full (about 3–4 tbsp batter each) — protein batter still expands, and overfilling causes overflow. Sprinkle a few chocolate chips or nuts on top if using. Any leftover batter can go into a half-filled microwave-safe mug."
+    },
+    {
+      "title": "Bake",
+      "body": "Bake on the middle rack at 180°C for 15–18 minutes. Start checking at 15 min: they're done when the tops look matte (not shiny), the edges pull slightly from the mould, and a toothpick comes out with moist crumbs (not wet batter)."
+    },
+    {
+      "title": "Cool before removing",
+      "body": "Let them cool in the moulds 10 minutes before removing — hot protein muffins break easily and firm up as they cool. Expect a soft, slightly dense, brownie-muffin texture, not fluffy bakery cupcakes — that's normal with protein powder."
+    }
+  ],
+  "notes": [
+    "Air-fryer version: 160°C for ~12–15 min. Microwave version (6 small): fill 60–70%, cook on HIGH starting at 2 min, then 30-sec bursts to 2.5–3.5 min — texture is spongier/steamed and less browned; rest 5–10 min after.",
+    "Leftover-batter mug: fill a ceramic mug half full, stir once to redistribute moisture, microwave on HIGH ~1.5 min then 20–30 sec bursts (2–2.5 min total). It comes out like a fudgy banana protein brownie.",
+    "Biggest mistakes: too much protein powder (rubbery), not enough banana (dry), overfilling (overflow), overbaking (dry). A smooth banana mash and a moist-crumb toothpick test are the two things that matter most."
+  ],
+  "source": "Adapted from my own cooking notes.",
+  "diet": "non-veg"
+}

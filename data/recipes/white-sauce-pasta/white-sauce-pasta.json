@@ -1,0 +1,136 @@
+{
+  "slug": "white-sauce-pasta",
+  "title": "Creamy White Sauce Pasta",
+  "tagline": "One creamy white-sauce base, two ways — classic cream-and-alfredo veg, or a high-protein blended-paneer sauce with seared chicken.",
+  "image": "image.webp",
+  "emoji": "🍝",
+  "chef": "Raja",
+  "cuisine": "Italian",
+  "course": "Main",
+  "tags": [
+    "pasta",
+    "italian",
+    "vegetarian",
+    "comfort-food",
+    "high-protein",
+    "restaurant-style"
+  ],
+  "flavor": [
+    "creamy",
+    "cheesy",
+    "garlicky",
+    "savory"
+  ],
+  "ratings": {
+    "overall": 4,
+    "difficulty": 3,
+    "availability": 4
+  },
+  "servings": 2,
+  "servingsNote": "Sauce comfortably coats ~200-220 g dry pasta — don't overload it with more pasta.",
+  "time": {
+    "prep": 15,
+    "cook": 25,
+    "total": 40
+  },
+  "macros": {
+    "perServing": {
+      "calories": 720,
+      "protein": 24,
+      "carbs": 78,
+      "fat": 34,
+      "fibre": 5
+    },
+    "whole": {
+      "calories": 1440,
+      "protein": 48,
+      "carbs": 156,
+      "fat": 68,
+      "fibre": 10
+    }
+  },
+  "macroNotes": [
+    "Estimated from ingredients — this is for the classic cream + jarred-alfredo version.",
+    "The classic version is rich (~720 kcal/serving). To lighten: use the blended-paneer sauce instead of cream + jar (drops fat by ~15 g and adds ~10 g protein per serving), or cook 180 g pasta instead of 220 g.",
+    "Protein boost: the paneer sauce is the built-in high-protein route (150 g paneer). Add a seared chicken breast per serving for another ~45 g protein, or finish with extra grated parmesan.",
+    "Golden rule: more pasta does NOT mean more sauce. Pasta water fixes texture, parmesan fixes body, milk only adds volume — reach for them in that order."
+  ],
+  "ingredients": [
+    {
+      "group": "Pasta and veg (both versions)",
+      "items": [
+        "200-220 g spaghetti or fettuccine (dry)",
+        "Salt for the pasta water (season it like the sea)",
+        "150 g mushrooms, sliced",
+        "1/2 green bell pepper, sliced",
+        "60 g baby corn, sliced",
+        "4-5 cloves garlic, finely chopped",
+        "1 tbsp butter (or oil)",
+        "Black pepper, generous",
+        "Chilli flakes, optional",
+        "1-1.5 cups reserved pasta water"
+      ]
+    },
+    {
+      "group": "Option A — Classic cream sauce",
+      "items": [
+        "150 ml heavy cream",
+        "150 g jarred Veeba (or any) alfredo sauce",
+        "20-30 g parmesan, finely grated",
+        "Squeeze of lemon, optional"
+      ]
+    },
+    {
+      "group": "Option B — High-protein paneer sauce",
+      "items": [
+        "150 g soft fresh paneer",
+        "120-150 ml full-fat milk",
+        "1 tbsp butter + 1 tsp olive oil",
+        "20-25 g parmesan, finely grated (recommended for umami)",
+        "1 large chicken breast, butterflied (optional, per serving)"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Boil the pasta",
+      "body": "Bring a big pot of well-salted water to a boil. Add 200-220 g pasta and cook 1 minute LESS than the packet says. Before draining, scoop out 1-1.5 cups of pasta water and keep it hot. Drain but do NOT rinse; let it steam off 20-30 seconds."
+    },
+    {
+      "title": "Brown the mushrooms",
+      "body": "Heat 1 tbsp butter in a wide pan on medium-high. Add 150 g mushrooms alone first and let them sit so they release water and brown — don't stir constantly. If they aren't browning, your heat is too low."
+    },
+    {
+      "title": "Add the rest of the veg",
+      "body": "Add 60 g baby corn and 1/2 sliced bell pepper, season lightly with salt. Add 4-5 cloves chopped garlic and cook 30 seconds only. Lower the heat to medium-low."
+    },
+    {
+      "title": "Build the sauce — Option A (classic)",
+      "body": "Add 150 ml cream and 150 g jarred alfredo. Stir gently, add plenty of black pepper and a pinch of chilli flakes. Simmer 2-3 minutes only on low — do NOT boil hard or the cream splits."
+    },
+    {
+      "title": "OR build the sauce — Option B (paneer)",
+      "body": "First blend 150 g paneer with 120-150 ml milk until completely smooth — light-cream consistency, no grains (if grainy, blend more). In the pan, gently cook 1 tbsp butter + 1 tsp olive oil with the garlic (no browning), then pour in the blended paneer and stir constantly on LOW heat. You're stabilising a protein emulsion, not boiling it."
+    },
+    {
+      "title": "Emulsify",
+      "body": "Add the drained pasta plus 1/2 cup hot pasta water. Toss continuously for 1-2 minutes. If thick, add more pasta water a splash at a time; if thin, keep tossing on low for 30 seconds. It should cling to the strands, not pool."
+    },
+    {
+      "title": "Finish with parmesan",
+      "body": "Turn the heat OFF. Add 20-30 g grated parmesan and toss fast so it melts smoothly. Taste and adjust salt and black pepper. A tiny squeeze of lemon cuts the richness beautifully."
+    },
+    {
+      "title": "Optional — sear the chicken",
+      "body": "For the chicken version, pat 1 butterflied breast very dry, season with salt and pepper, and sear in 1 tbsp oil on medium-high for 4-5 minutes without touching. Flip, add 1 tbsp butter + a crushed garlic clove, baste 1-2 minutes, then rest 5 minutes before slicing. Fan the slices over the pasta."
+    }
+  ],
+  "notes": [
+    "Use less pasta than you think — 150 ml cream + jar + a small parmesan cube tops out at coating ~400-450 g dry pasta, so 200-220 g gives a proper creamy coat for two.",
+    "If the sauce looks slightly loose in the pan, that's perfect — it tightens on the plate in 60 seconds. Don't chase thickness.",
+    "Malai can replace cream but use less (roughly 120-150 g malai per 250 ml cream), whisk it smooth with 2-3 tbsp warm milk first, and never let it boil hard or it turns grainy.",
+    "For freshness, cook the chicken fresh per serving rather than reheating — reheated breast loses 10-15% moisture."
+  ],
+  "source": "Adapted from my own cooking notes.",
+  "diet": "veg"
+}

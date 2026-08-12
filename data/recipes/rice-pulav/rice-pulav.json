@@ -1,0 +1,150 @@
+{
+  "slug": "rice-pulav",
+  "title": "Rice Pulav",
+  "tagline": "One-pot pulav with a fresh-ground coconut-garlic-chilli masala, bulked with soya so it actually hits protein.",
+  "image": "image.webp",
+  "emoji": "🍚",
+  "chef": "Raja",
+  "cuisine": "Indian",
+  "course": "Main",
+  "tags": [
+    "high-protein",
+    "one-pot",
+    "vegetarian",
+    "rice",
+    "soya"
+  ],
+  "flavor": [
+    "savory",
+    "aromatic",
+    "mild-spicy"
+  ],
+  "ratings": {
+    "overall": 4,
+    "difficulty": 2,
+    "availability": 4
+  },
+  "servings": 2,
+  "servingsNote": "",
+  "time": {
+    "prep": 15,
+    "cook": 25,
+    "total": 40
+  },
+  "macros": {
+    "perServing": {
+      "calories": 735,
+      "protein": 36,
+      "carbs": 98,
+      "fat": 20,
+      "fibre": 9
+    },
+    "whole": {
+      "calories": 1470,
+      "protein": 72,
+      "carbs": 196,
+      "fat": 40,
+      "fibre": 18
+    }
+  },
+  "macroNotes": [
+    "Estimated from ingredients. To cut it toward ~600 kcal/serving, drop the oil to 1 tbsp and the rice to 3/4 cup."
+  ],
+  "ingredients": [
+    {
+      "group": "The protein",
+      "items": [
+        "100 g dry soya chunks (50 g per serving)",
+        "Boiling water, to soak"
+      ]
+    },
+    {
+      "group": "The grind (masala paste)",
+      "items": [
+        "3 tbsp dry coconut (desiccated/kopra), ~20 g",
+        "1 inch ginger (adrak)",
+        "6 cloves garlic (lasun)",
+        "2 green chillies",
+        "1 inch cinnamon stick (dalchini)",
+        "Splash of water to help it blend"
+      ]
+    },
+    {
+      "group": "The base",
+      "items": [
+        "1 cup basmati rice (~185 g dry), rinsed until the water runs clear",
+        "2 tbsp oil",
+        "2 cups mixed vegetables (~250 g) — potato, cauliflower, green beans, peas, whatever you like",
+        "2 cups hot water (2:1 water to rice)"
+      ]
+    },
+    {
+      "group": "Ground spices",
+      "items": [
+        "1/2 tsp turmeric (haldi)",
+        "1 tsp red chilli powder",
+        "1 tsp coriander powder (dhaniya powder)",
+        "1/2 tsp garam masala",
+        "1 tsp salt, to taste"
+      ]
+    },
+    {
+      "group": "To finish",
+      "items": [
+        "3 tbsp fresh coriander (hara dhaniya), chopped"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Prep the soya chunks",
+      "body": "Soak 100 g dry soya chunks in boiling water for 10 minutes until soft. Drain, then squeeze them dry hard — get all the water out or they'll taste bland and turn the pulav watery. Squeeze, refill with fresh water, squeeze again. Set aside."
+    },
+    {
+      "title": "Rinse the rice",
+      "body": "Rinse 1 cup basmati (~185 g) until the water runs clear. Soak for 15 minutes, then drain. (Soaking is optional but gives longer, fluffier grains.)"
+    },
+    {
+      "title": "Chop the veg",
+      "body": "Cut 2 cups (~250 g) mixed vegetables — potato, cauliflower, beans, peas — into bite-sized pieces."
+    },
+    {
+      "title": "Grind the masala",
+      "body": "Blend 3 tbsp dry coconut + 1 inch ginger + 6 cloves garlic + 2 green chillies + 1 inch cinnamon with a splash of water into a coarse paste."
+    },
+    {
+      "title": "Bhuno the masala",
+      "body": "Heat 2 tbsp oil in a heavy pot over medium heat. Add the ground paste and fry 3–4 minutes, stirring, until the raw smell is gone and the oil starts to separate at the edges."
+    },
+    {
+      "title": "Toast the soya",
+      "body": "Add the squeezed-dry soya chunks and fry 3–4 minutes until they pick up colour and start catching on the pot. This step is what makes them taste good instead of spongy — don't skip it."
+    },
+    {
+      "title": "Toast the rice",
+      "body": "Add the drained rice and fry gently 2 minutes, stirring, until each grain is coated in oil and slightly translucent. Be gentle — you don't want broken grains."
+    },
+    {
+      "title": "Add the ground spices",
+      "body": "Add 1/2 tsp turmeric, 1 tsp red chilli powder, 1 tsp coriander powder, 1/2 tsp garam masala, 1 tsp salt. Stir for 1 minute to bloom the spices."
+    },
+    {
+      "title": "Add the vegetables",
+      "body": "Tip in the 2 cups chopped vegetables and stir for 2 minutes to coat."
+    },
+    {
+      "title": "Add hot water and cook",
+      "body": "Pour in 2 cups hot water (hot, not cold — cold water shocks the rice and makes it cook unevenly). Stir once, bring to a boil, then cover and drop to the lowest heat. Cook 12–15 minutes until the water is absorbed and the rice is tender."
+    },
+    {
+      "title": "Rest",
+      "body": "Turn off the heat and leave it covered for 5 minutes. Don't lift the lid. Then fluff with a fork."
+    },
+    {
+      "title": "Finish",
+      "body": "Scatter 3 tbsp chopped fresh coriander over the top."
+    }
+  ],
+  "notes": [],
+  "diet": "veg"
+}

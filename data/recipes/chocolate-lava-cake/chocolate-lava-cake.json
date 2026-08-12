@@ -1,0 +1,132 @@
+{
+  "slug": "chocolate-lava-cake",
+  "title": "Chocolate Lava Cake",
+  "tagline": "Classic molten lava cakes baked in a muffin mould with khaand and Amul butter — plus a quick protein mug-cake variation.",
+  "image": "image.webp",
+  "emoji": "🍫",
+  "chef": "Raja",
+  "cuisine": "Continental",
+  "course": "Dessert",
+  "tags": [
+    "dessert",
+    "cheat-day",
+    "oven-baked",
+    "comfort-food",
+    "egg",
+    "quick"
+  ],
+  "flavor": [
+    "sweet",
+    "rich"
+  ],
+  "ratings": {
+    "overall": 4.5,
+    "difficulty": 3,
+    "availability": 4
+  },
+  "servings": 6,
+  "servingsNote": "Makes 6 muffin-mould lava cakes",
+  "time": {
+    "prep": 15,
+    "cook": 9,
+    "total": 24
+  },
+  "macros": {
+    "perServing": {
+      "calories": 315,
+      "protein": 4,
+      "carbs": 25,
+      "fat": 20,
+      "fibre": 2
+    },
+    "whole": {
+      "calories": 1890,
+      "protein": 24,
+      "carbs": 150,
+      "fat": 120,
+      "fibre": 12
+    }
+  },
+  "macroNotes": [
+    "Estimated per cake (batch of 6).",
+    "This is a treat-day dessert — mostly butter, chocolate and sugar, and protein-poor (~4 g/cake). Enjoy it as one, don't try to health-ify the classic version.",
+    "If you want the dessert to actually count as protein, make the protein mug-cake variation below (~25 g protein from a scoop of whey) instead of the classic.",
+    "Portion control is the real lever: one cake is ~315 kcal; two starts eating a big chunk of a 1600–1800 kcal day."
+  ],
+  "ingredients": [
+    {
+      "group": "Classic lava cakes (6 muffin cups)",
+      "items": [
+        "1/2 cup (120 g) dark chocolate (55–70%), chopped",
+        "6 tbsp (90 g) Amul butter (salted — so skip added salt)",
+        "1/2 cup khaand (raw sugar), semi-powdered",
+        "2 eggs",
+        "1/4 cup (30 g) maida (all-purpose flour)",
+        "1 tbsp cocoa powder, for dusting the moulds",
+        "Extra butter, for greasing",
+        "(Skip vanilla — lava cake doesn't need it)"
+      ]
+    },
+    {
+      "group": "Protein mug-cake variation (1 mug)",
+      "items": [
+        "1 scoop chocolate whey protein",
+        "1 tbsp cocoa powder",
+        "1.5 tbsp maida",
+        "2 tsp sugar (important — protein + cocoa kill sweetness)",
+        "1/4 tsp baking powder",
+        "Pinch salt",
+        "1 egg",
+        "2 tbsp milk",
+        "1 tsp melted butter or peanut butter",
+        "2 squares dark chocolate, for the centre"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Prep the moulds",
+      "body": "Grease 6 muffin cups with butter, dust with 1 tbsp cocoa powder and tap out the excess. Chill the tray in the fridge while you make the batter — a cold mould helps the lava centre."
+    },
+    {
+      "title": "Melt chocolate + butter",
+      "body": "In a microwave-safe bowl, melt 1/2 cup chopped dark chocolate with 6 tbsp Amul butter in bursts: 30 sec → stir, 20 sec → stir, 20 sec → stir, 10–15 sec if needed. Stop as soon as it's smooth. Cool 2–3 minutes (warm, not hot). Do NOT melt the khaand in with it — raw sugar won't dissolve in fat and stays grainy."
+    },
+    {
+      "title": "Powder the khaand",
+      "body": "If the khaand crystals are large, pulse 1/2 cup in a mixer for 10–15 seconds to semi-powdered (not full icing sugar) so the cake isn't gritty."
+    },
+    {
+      "title": "Whisk eggs + khaand",
+      "body": "Whisk 2 eggs with the 1/2 cup powdered khaand for 30–45 seconds by hand — just until uniform, slightly thickened and foamy on top with no visible sugar grains. Don't whip in lots of air or you'll get a cakey texture instead of a molten centre. Since the butter is salted, add no extra salt."
+    },
+    {
+      "title": "Combine & fold in flour",
+      "body": "Pour the warm (not hot) chocolate-butter into the egg mix and whisk gently 10–15 seconds. Add 1/4 cup maida and fold with a spatula, stopping the moment the dry flour disappears. The batter should be thick but pourable — like melted chocolate sauce, not pancake-thin or brownie-thick. No baking powder or baking soda for the classic version."
+    },
+    {
+      "title": "Rest & fill",
+      "body": "Rest the batter 3–5 minutes (helps the khaand dissolve further). Take the mould from the fridge and fill each cup ~3/4 full. A chocolate square pushed into each centre is optional — with rich batter filled to ~3/4 you don't need it."
+    },
+    {
+      "title": "Bake",
+      "body": "Bake in a preheated oven at 200°C (390°F), middle rack, for 9 minutes (8 min = very runny, 10 min = fudgy). Edges should look set and slightly pulled from the sides; centres soft and slightly shiny with a gentle jiggle. Don't go past 10 minutes on the first batch."
+    },
+    {
+      "title": "Unmould",
+      "body": "Rest 1 minute, run a knife around the edges, and invert confidently onto a plate. Serve with vanilla ice cream or a dusting of sugar."
+    },
+    {
+      "title": "Variation — protein mug cake",
+      "body": "For a high-protein single serving in a WIDE 300–350 ml microwave-safe mug: mix the dry ingredients (1 scoop chocolate whey, 1 tbsp cocoa, 1.5 tbsp maida, 2 tsp sugar, 1/4 tsp baking powder, pinch salt) thoroughly, then whisk in 1 egg, 2 tbsp milk and 1 tsp melted butter/PB until smooth. Pour half the batter in, add 2 chocolate squares, top with the rest (traps the molten centre). Microwave 30–40 seconds on HIGH — protein goes molten → overcooked in ~5 seconds, so err short. Stir the batter bottom-to-top before cooking so the base isn't undercooked, and don't skimp on the 2 tsp sugar or it tastes flat. Rest 10 seconds."
+    }
+  ],
+  "notes": [
+    "Amul butter is salted — the slight sweet-salt contrast is actually nice in lava cake, so leave out any added salt.",
+    "Khaand makes the classic cake slightly more fudgy and less glossy than white sugar — that's normal; resting the batter and baking 9 (not 8) minutes helps the raw sugar cook through.",
+    "Leftover classic batter that won't fit an oven-safe dish: microwave it in a greased mug filled only halfway, in bursts (20 + 10 + 5–8 sec), never more than 45 seconds total, no lid.",
+    "For the protein mug cake, a wider mug beats a tall narrow one — it cooks more evenly and keeps the centre molten."
+  ],
+  "source": "Adapted from my own cooking notes.",
+  "diet": "non-veg"
+}

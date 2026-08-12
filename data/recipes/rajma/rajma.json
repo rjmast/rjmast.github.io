@@ -1,0 +1,135 @@
+{
+  "slug": "rajma",
+  "title": "Rajma",
+  "tagline": "Slow-simmered kidney beans in a smooth onion-tomato masala.",
+  "image": "image.webp",
+  "emoji": "🫘",
+  "chef": "Raja",
+  "cuisine": "Indian",
+  "course": "Main",
+  "tags": [
+    "vegetarian",
+    "curry",
+    "comfort-food",
+    "high-protein",
+    "pressure-cooker",
+    "meal-prep",
+    "indian"
+  ],
+  "flavor": [
+    "savory",
+    "spicy",
+    "rich"
+  ],
+  "ratings": {
+    "overall": 4.5,
+    "difficulty": 2,
+    "availability": 5
+  },
+  "servings": 2,
+  "servingsNote": "Scales up easily — double everything for 4.",
+  "time": {
+    "prep": 15,
+    "cook": 45,
+    "total": 60
+  },
+  "macros": {
+    "perServing": {
+      "calories": 380,
+      "protein": 18,
+      "carbs": 55,
+      "fat": 9,
+      "fibre": 15
+    },
+    "whole": {
+      "calories": 760,
+      "protein": 36,
+      "carbs": 110,
+      "fat": 18,
+      "fibre": 30
+    }
+  },
+  "macroNotes": [
+    "Estimated from ingredients (dry rajma weight, before rice).",
+    "Solid macros on its own — high fibre and decent plant protein. Served with 1 cup cooked rice, add ~200 kcal and ~4 g protein per serving.",
+    "Protein boost: stir in 100 g soaked, squeezed, roughly chopped soya chunks (50 g per serving) with the beans at step 6. Adds ~13 g protein per serving and soaks up the gravy nicely.",
+    "For extra protein without changing the dish, finish with a spoon of thick curd per bowl or serve alongside a boiled egg."
+  ],
+  "ingredients": [
+    {
+      "group": "Beans",
+      "items": [
+        "1 cup (180 g) dry rajma (red kidney beans), soaked 8 hours or overnight",
+        "100 g dry soya chunks (optional, for protein)",
+        "3 cups (720 ml) water for pressure cooking",
+        "1 tsp salt (for cooking the beans)"
+      ]
+    },
+    {
+      "group": "Masala base",
+      "items": [
+        "2 tbsp oil or ghee",
+        "1 tsp cumin seeds (jeera)",
+        "1 bay leaf (tej patta)",
+        "2 medium onions (~200 g), finely chopped",
+        "1 tbsp ginger-garlic paste",
+        "3 medium tomatoes (~250 g), pureed",
+        "1/2 tsp turmeric (haldi)",
+        "1 tsp red chilli powder",
+        "1.5 tsp coriander powder (dhaniya)",
+        "1/2 tsp garam masala",
+        "3/4 tsp salt, to taste",
+        "1 raw potato, peeled and halved (only if you oversalt)"
+      ]
+    },
+    {
+      "group": "Finish",
+      "items": [
+        "1/2 tsp garam masala",
+        "2 tbsp fresh coriander (hara dhaniya), chopped",
+        "1 tsp kasuri methi (dried fenugreek), crushed (optional)"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Soak the beans",
+      "body": "Soak 1 cup (180 g) dry rajma in plenty of water for 8 hours or overnight. This matters — under-soaked rajma stays hard in the middle no matter how long you cook it. Drain and rinse before cooking."
+    },
+    {
+      "title": "Pressure cook",
+      "body": "Add the soaked rajma to a pressure cooker with 3 cups (720 ml) water and 1 tsp salt. Cook on high until the first whistle, then lower the heat and cook 15–18 minutes (about 5–6 whistles). The beans should mash easily when pressed between two fingers — that softness is what makes the gravy creamy later."
+    },
+    {
+      "title": "Soak the soya (optional)",
+      "body": "If using, soak 100 g dry soya chunks in hot (not cold) water for 10 minutes, then squeeze each one dry hard — squeezing out the water is what stops them tasting spongy. Roughly chop and set aside."
+    },
+    {
+      "title": "Temper",
+      "body": "Heat 2 tbsp oil or ghee in a pan. Add 1 tsp cumin seeds and 1 bay leaf; let the cumin sizzle for 20 seconds."
+    },
+    {
+      "title": "Fry the onions",
+      "body": "Add 2 finely chopped onions and fry on medium heat until deep golden, 8–10 minutes. Don't rush this — pale onions make a flat rajma. Add 1 tbsp ginger-garlic paste and cook 1 minute until the raw smell goes."
+    },
+    {
+      "title": "Cook the masala",
+      "body": "Add the puree of 3 tomatoes, 1/2 tsp turmeric, 1 tsp red chilli powder, 1.5 tsp coriander powder, 1/2 tsp garam masala and 3/4 tsp salt. Cook on medium 8–10 minutes until the oil separates at the edges and the masala looks glossy, not raw."
+    },
+    {
+      "title": "Combine",
+      "body": "Tip in the cooked rajma with its cooking liquid (and the squeezed soya chunks if using). Stir, then mash a few beans against the side of the pan to thicken the gravy naturally. Simmer 12–15 minutes so the beans drink up the masala."
+    },
+    {
+      "title": "Finish",
+      "body": "Stir in 1/2 tsp garam masala, 1 tsp crushed kasuri methi and 2 tbsp chopped coriander. Simmer 2 more minutes. Serve hot with rice (rajma-chawal) or roti."
+    }
+  ],
+  "notes": [
+    "SALT RESCUE: if the rajma comes out too salty, drop in 1–2 pieces of peeled raw potato and simmer 10–15 minutes, then remove them — the potato pulls out a good amount of the excess salt. You can also stretch it with more water, extra tomato puree or a few more cooked beans, or mellow it with a spoon of cream or curd. A pinch of sugar or a squeeze of lemon also masks over-salting.",
+    "Always soak the rajma properly — it's the single biggest factor in whether the beans turn creamy.",
+    "Mashing a few beans instead of adding cornflour keeps the gravy thick and authentic."
+  ],
+  "source": "Adapted from my own cooking notes.",
+  "diet": "veg"
+}

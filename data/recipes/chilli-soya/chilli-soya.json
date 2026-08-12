@@ -1,0 +1,137 @@
+{
+  "slug": "chilli-soya",
+  "title": "Chilli Soya",
+  "tagline": "Restaurant-style Indo-Chinese chilli with air-fried (not deep-fried) soya chunks in a glossy soy-MSG sauce.",
+  "image": "image.webp",
+  "emoji": "🌶️",
+  "chef": "Raja",
+  "cuisine": "Indo-Chinese",
+  "course": "Main",
+  "tags": [
+    "soya",
+    "high-protein",
+    "gym-meal",
+    "indo-chinese",
+    "air-fryer",
+    "vegetarian",
+    "stir-fry",
+    "restaurant-style",
+    "meal-prep"
+  ],
+  "flavor": [
+    "umami",
+    "spicy",
+    "savory",
+    "tangy"
+  ],
+  "ratings": {
+    "overall": 4,
+    "difficulty": 3,
+    "availability": 3
+  },
+  "servings": 2,
+  "servingsNote": "Soya IS the protein base here — no extra needed",
+  "time": {
+    "prep": 15,
+    "cook": 20,
+    "total": 35
+  },
+  "macros": {
+    "perServing": {
+      "calories": 400,
+      "protein": 40,
+      "carbs": 30,
+      "fat": 9,
+      "fibre": 8
+    },
+    "whole": {
+      "calories": 800,
+      "protein": 80,
+      "carbs": 60,
+      "fat": 18,
+      "fibre": 16
+    }
+  },
+  "macroNotes": [
+    "Estimated from ingredients (150 g dry soya chunks base).",
+    "Genuinely one of the best protein-to-calorie ratios you can cook — ~40 g protein for ~400 kcal a serving, because soya chunks are the base (no need to add more protein).",
+    "Air-frying instead of the classic cornstarch deep-fry keeps it lean; if you skip the cornstarch coating entirely and just spice-rub + spray oil, you save another ~100 kcal across the batch but lose some crispness.",
+    "MSG is doing real work here for the restaurant umami — ~1/4 tsp (≈1–1.25 g) for this batch is plenty and well within normal cooking limits; don't overdo it or it turns sharp."
+  ],
+  "ingredients": [
+    {
+      "group": "Soya chunks",
+      "items": [
+        "150 g dry soya chunks (~2 cups)",
+        "2 tbsp cornstarch/cornflour",
+        "1 tbsp all-purpose flour (maida)",
+        "1/2 tsp salt",
+        "1/2 tsp black pepper",
+        "1 tbsp oil (helps them crisp in the air fryer)"
+      ]
+    },
+    {
+      "group": "Sauce & stir-fry",
+      "items": [
+        "1 tbsp oil",
+        "1 tbsp ginger, finely chopped",
+        "1 tbsp garlic, finely chopped",
+        "1–2 green chillies, chopped",
+        "2 tbsp coriander stems, chopped",
+        "2 spring onion bulbs (whites), chopped",
+        "1 onion, cut into squares",
+        "1 capsicum, cut into squares",
+        "2–2.5 tbsp dark soy sauce (no light soy)",
+        "1/4 tsp salt (to make up for skipping light soy)",
+        "1.5–2 tbsp vinegar",
+        "1–1.5 tsp sugar",
+        "1/2 tsp white pepper",
+        "1/4 tsp MSG (ajinomoto)",
+        "1/3 cup hot water",
+        "Cornflour slurry: 2 tsp cornflour + 3–4 tbsp water",
+        "Spring onion greens, to garnish"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Boil & squeeze",
+      "body": "Boil 150 g dry soya chunks until soft, then squeeze out ALL the excess water — this is the key step; skip it and they turn soggy and won't crisp."
+    },
+    {
+      "title": "Coat",
+      "body": "Toss the squeezed chunks with 2 tbsp cornstarch, 1 tbsp maida, 1/2 tsp salt, 1/2 tsp black pepper and 1 tbsp oil. The oil is what lets them crisp in the air fryer without frying."
+    },
+    {
+      "title": "Air-fry",
+      "body": "Preheat the air fryer to 180°C for 3–4 minutes. Spread the coated chunks in a single layer (don't overcrowd) and air-fry at 180°C for 10–15 minutes, shaking the basket halfway. For extra crisp, bump to 200°C for the last 2–3 minutes. Without the coating they'd just dry out and go chewy."
+    },
+    {
+      "title": "Start the sauce base",
+      "body": "Heat a wok on high, add 1 tbsp oil, and when hot add 1 tbsp ginger, 1 tbsp garlic, 1–2 green chillies, 2 tbsp coriander stems and the spring onion bulbs. Stir a few seconds."
+    },
+    {
+      "title": "Add the veg",
+      "body": "Add the onion and capsicum squares and stir-fry on high for a minute — keep them crunchy, not soft."
+    },
+    {
+      "title": "Build & season the sauce",
+      "body": "Add 2–2.5 tbsp dark soy sauce plus 1/4 tsp salt (standing in for light soy), 1/3 cup hot water, 1.5–2 tbsp vinegar, 1–1.5 tsp sugar, 1/2 tsp white pepper and 1/4 tsp MSG. Bring to a boil. Add the MSG here with the other sauces so it dissolves evenly."
+    },
+    {
+      "title": "Thicken",
+      "body": "Stir the cornflour slurry (2 tsp cornflour + 3–4 tbsp water) and add it gradually, stirring, until the sauce turns glossy and coats a spoon."
+    },
+    {
+      "title": "Toss & serve",
+      "body": "Add the air-fried soya chunks and toss quickly to coat — do this fast so they keep their crunch. Taste and adjust with a splash more soy + a pinch of salt if it needs depth (not more MSG). Garnish with spring onion greens and serve hot."
+    }
+  ],
+  "notes": [
+    "No light soy sauce? Dark soy alone gives colour and a touch of sweetness but is less salty — use it plus a pinch of extra salt.",
+    "Don't double the sauces linearly if you scale the soya up — increase by ~30–40% and taste-adjust at the end, or it gets too salty.",
+    "Toss the crisped soya into the sauce at the very last moment; sitting in the sauce softens the coating."
+  ],
+  "source": "Adapted from my own cooking notes.",
+  "diet": "veg"
+}

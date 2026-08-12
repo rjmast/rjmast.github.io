@@ -1,0 +1,115 @@
+{
+  "slug": "chicken-salami-ham-roll",
+  "title": "Chicken Salami & Ham Roll",
+  "tagline": "Pan-crisped chicken salami and ham rolled up with melty cheese and sauce.",
+  "image": "image.webp",
+  "emoji": "🌯",
+  "chef": "Raja",
+  "cuisine": "Fusion",
+  "course": "Snack",
+  "tags": [
+    "high-protein",
+    "chicken",
+    "wrap",
+    "quick",
+    "pan-fried",
+    "snack"
+  ],
+  "flavor": [
+    "savory",
+    "cheesy",
+    "smoky"
+  ],
+  "ratings": {
+    "overall": 4,
+    "difficulty": 1,
+    "availability": 3
+  },
+  "servings": 2,
+  "servingsNote": "2 rolls.",
+  "time": {
+    "prep": 10,
+    "cook": 10,
+    "total": 20
+  },
+  "macros": {
+    "perServing": {
+      "calories": 420,
+      "protein": 28,
+      "carbs": 34,
+      "fat": 19,
+      "fibre": 3
+    },
+    "whole": {
+      "calories": 840,
+      "protein": 56,
+      "carbs": 68,
+      "fat": 38,
+      "fibre": 6
+    }
+  },
+  "macroNotes": [
+    "Estimated per roll: chicken salami + chicken ham + 1 slice cheese + 1 paratha/tortilla + sauce and veg.",
+    "Salami and ham are processed and fairly salty/fatty — good protein but watch the sodium. Going easy on the cheese and sauce keeps it in check.",
+    "Protein boost: add a fried or scrambled egg inside each roll for ~6 g more protein, or use a high-protein wrap. Soya doesn't fit this dish."
+  ],
+  "ingredients": [
+    {
+      "group": "Filling (2 rolls)",
+      "items": [
+        "6 slices chicken salami",
+        "4 slices chicken ham",
+        "2 slices cheese (cheddar or processed)",
+        "1 tsp oil, for cooking the meats",
+        "2 eggs (optional, for a protein kick)"
+      ]
+    },
+    {
+      "group": "Wrap & veg",
+      "items": [
+        "2 parathas, rotis or large tortillas",
+        "Thinly sliced onion",
+        "Sliced tomato",
+        "Lettuce or shredded cabbage",
+        "Sauce of choice: mayo, mint mayo, peri-peri or ketchup + mustard"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Cook the meats first",
+      "body": "Even though the salami and ham are pre-cooked, cook them for flavour and safety — the ham packet says 2 minutes. Drizzle 1 tsp oil in a non-stick pan on medium, add the 6 salami and 4 ham slices and cook about 1 minute per side until slightly golden and sizzling. This crisps the edges and makes them taste much better than cold from the pack."
+    },
+    {
+      "title": "If frozen",
+      "body": "If the salami is straight from the freezer, thaw it first: lay slices on a plate, cover with a damp paper towel and microwave in 30-second bursts at medium power, flipping once (1–2 minutes total), until hot through with no cold center. Then still pan-crisp it for texture."
+    },
+    {
+      "title": "Add egg (optional)",
+      "body": "For extra protein, push the meat aside and scramble or fry 2 eggs in the same pan, or make a thin omelette to layer into the rolls."
+    },
+    {
+      "title": "Melt the cheese",
+      "body": "Lay 2 slices of cheese over the hot meats in the pan for the last 30 seconds so they start to melt and bind everything."
+    },
+    {
+      "title": "Warm the wrap",
+      "body": "Warm 2 parathas/rotis/tortillas in a dry pan for 20–30 seconds a side so they're pliable and don't crack when rolled."
+    },
+    {
+      "title": "Build and roll",
+      "body": "Down the middle of each wrap layer the crisped salami, ham, melty cheese, a little sliced onion, tomato and lettuce/cabbage, and a line of your sauce (mayo, mint mayo or peri-peri). Roll it up tight."
+    },
+    {
+      "title": "Toast the roll",
+      "body": "Set the rolls seam-side down in the pan and lightly toast on medium until golden and crisp on the outside and the cheese is fully melted inside. Slice in half and eat hot."
+    }
+  ],
+  "notes": [
+    "Works just as well as a sandwich if you have bread — the golden crisp outside with melted cheese and sauce balances the salty meat well.",
+    "Level it up with sautéed onions or bell peppers inside, or swap in a mint-mayo or peri-peri sauce.",
+    "Cooking the salami and ham before rolling is the key step — don't skip it, cold-from-pack is much blander."
+  ],
+  "source": "Adapted from my own cooking notes.",
+  "diet": "non-veg"
+}

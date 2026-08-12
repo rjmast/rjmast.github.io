@@ -1,0 +1,120 @@
+{
+  "slug": "buffalo-ranch-paneer-pita",
+  "title": "Buffalo Ranch Paneer Pita",
+  "tagline": "Crispy buffalo-coated paneer stuffed into warm pita with fresh vegetables and creamy ranch.",
+  "image": "image.webp",
+  "emoji": "🌯",
+  "chef": "Raja",
+  "cuisine": "American Fusion",
+  "course": "Main",
+  "tags": [
+    "high-protein",
+    "paneer",
+    "pita",
+    "quick",
+    "buffalo",
+    "ranch",
+    "vegetarian"
+  ],
+  "flavor": [
+    "spicy",
+    "tangy",
+    "creamy",
+    "savory"
+  ],
+  "ratings": {
+    "overall": 4,
+    "difficulty": 1,
+    "availability": 3
+  },
+  "servings": 2,
+  "servingsNote": "Makes 2 stuffed pitas.",
+  "time": {
+    "prep": 10,
+    "cook": 10,
+    "total": 20
+  },
+  "macros": {
+    "perServing": {
+      "calories": 380,
+      "protein": 29,
+      "carbs": 18,
+      "fat": 20,
+      "fibre": 2
+    },
+    "whole": {
+      "calories": 760,
+      "protein": 58,
+      "carbs": 36,
+      "fat": 40,
+      "fibre": 4
+    }
+  },
+  "macroNotes": [
+    "Macros assume 200 g low-fat paneer, 2 pita breads (~200 kcal total), 1 tsp oil, 2 tbsp lite ranch and vegetables.",
+    "Actual calories will vary depending on the paneer and pita used.",
+    "Using regular full-fat paneer increases the calories by roughly 180–220 kcal for the whole recipe."
+  ],
+  "ingredients": [
+    {
+      "group": "Paneer",
+      "items": [
+        "200 g low-fat paneer, cubed",
+        "1 tsp oil",
+        "1 tbsp cornflour (optional, for extra crispiness)",
+        "1/2 tsp garlic powder",
+        "1/2 tsp black pepper",
+        "1/2 tsp paprika or Kashmiri chilli powder",
+        "Salt to taste"
+      ]
+    },
+    {
+      "group": "Buffalo Sauce",
+      "items": [
+        "2 tbsp Frank's RedHot",
+        "1 tsp butter (optional)"
+      ]
+    },
+    {
+      "group": "Assembly",
+      "items": [
+        "2 pita breads",
+        "2 tbsp lite ranch dressing",
+        "1 cup shredded lettuce",
+        "1 small tomato, sliced",
+        "1/2 onion, thinly sliced",
+        "Extra Frank's RedHot for serving (optional)"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Season the paneer",
+      "body": "Mix the paneer with garlic powder, black pepper, paprika, salt and the optional cornflour until evenly coated."
+    },
+    {
+      "title": "Cook until crispy",
+      "body": "Heat 1 tsp oil in a pan over medium-high heat. Cook the paneer for 5–6 minutes, turning occasionally, until golden and crisp on multiple sides."
+    },
+    {
+      "title": "Coat with buffalo sauce",
+      "body": "Mix Frank's RedHot with the optional butter. Toss the hot paneer in the sauce until evenly coated, then return it to the pan for 20–30 seconds so the sauce adheres without softening the crust."
+    },
+    {
+      "title": "Toast the pitas",
+      "body": "Toast each pita in the same pan for about 1 minute per side until warm and lightly crisp."
+    },
+    {
+      "title": "Assemble",
+      "body": "Spread about 1 tbsp lite ranch inside each pita. Layer in the lettuce, onion and tomato, then add the buffalo paneer. Finish with another drizzle of ranch and a few extra drops of Frank's if you like more heat."
+    }
+  ],
+  "notes": [
+    "Cornflour is optional but gives the paneer a crispier exterior.",
+    "Avoid simmering the paneer in the buffalo sauce or it will lose its crispiness.",
+    "Quick-pickled onions (onion, lemon juice or vinegar, salt and a pinch of sugar) pair exceptionally well with this recipe.",
+    "Replace part of the ranch with Greek yogurt for extra protein while keeping the same creamy texture."
+  ],
+  "source": "Adapted from my own cooking notes.",
+  "diet": "veg"
+}

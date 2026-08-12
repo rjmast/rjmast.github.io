@@ -1,0 +1,123 @@
+{
+  "slug": "chicken-chaukoni",
+  "title": "Chicken Chaukoni (Nepali)",
+  "tagline": "A quick onion-forward Nepali semi-dry chicken sabzi that goes perfectly with roti.",
+  "image": "image.webp",
+  "emoji": "🍛",
+  "chef": "Raja",
+  "cuisine": "Nepali",
+  "course": "Main",
+  "tags": [
+    "chicken",
+    "nepali",
+    "curry",
+    "high-protein",
+    "quick",
+    "soya",
+    "gym-meal"
+  ],
+  "flavor": [
+    "savory",
+    "spicy",
+    "herby"
+  ],
+  "ratings": {
+    "overall": 3,
+    "difficulty": 2,
+    "availability": 5
+  },
+  "servings": 2,
+  "servingsNote": "",
+  "time": {
+    "prep": 15,
+    "cook": 20,
+    "total": 35
+  },
+  "macros": {
+    "perServing": {
+      "calories": 500,
+      "protein": 57,
+      "carbs": 22,
+      "fat": 18,
+      "fibre": 6
+    },
+    "whole": {
+      "calories": 1000,
+      "protein": 114,
+      "carbs": 44,
+      "fat": 36,
+      "fibre": 12
+    }
+  },
+  "macroNotes": [
+    "Estimated from ingredients. Light, semi-dry and genuinely high protein — a great sick-day or everyday meal that still tastes proper.",
+    "The 100 g dry soya chunks add roughly 25 g protein per serving on top of the chicken for very few calories, and they soak up the masala beautifully in a semi-dry sabzi like this.",
+    "Cut the oil from 2 tbsp to 1 tbsp to save ~120 kcal across the pot without hurting the dish.",
+    "Skip the soya if you'd rather keep it purely traditional — chicken alone still lands around 30 g protein per serving."
+  ],
+  "ingredients": [
+    {
+      "group": "Main",
+      "items": [
+        "300 g chicken breast (or thigh), cut into medium pieces and marinated",
+        "100 g dry soya chunks (50 g per serving)",
+        "2 medium onions, sliced",
+        "1 small tomato (or skip and use 3–4 tbsp water)",
+        "2 tbsp oil"
+      ]
+    },
+    {
+      "group": "Tempering + spices",
+      "items": [
+        "1/2 tsp cumin seeds (jeera)",
+        "1/2 tsp fenugreek seeds (methi dana)",
+        "1/2 tsp turmeric (haldi)",
+        "1 tsp coriander powder (dhaniya)",
+        "Red chilli powder, to taste",
+        "Salt, to taste",
+        "Optional: garlic, ginger, green chilli, fresh coriander leaves"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Prep the soya",
+      "body": "Boil 100 g soya chunks in salted water for 5 min, drain, and squeeze each one dry with your hands — this squeeze matters, or they stay watery and won't take on the masala. Halve any large chunks."
+    },
+    {
+      "title": "Temper",
+      "body": "Heat 2 tbsp oil in a pan. Add 1/2 tsp fenugreek seeds and let them turn slightly dark (this is the signature chaukoni flavour — don't let them burn black). Add 1/2 tsp cumin seeds."
+    },
+    {
+      "title": "Soften the onions",
+      "body": "Add 2 sliced onions and sauté just until soft — no need to brown them fully. Add garlic/ginger/green chilli here if using."
+    },
+    {
+      "title": "Sear the chicken",
+      "body": "Add the 300 g marinated chicken along with salt, 1/2 tsp turmeric, 1 tsp coriander powder and chilli powder. Spread it out and sear on high for about 2 min until the outside turns white — don't stir too much."
+    },
+    {
+      "title": "Add the soya",
+      "body": "Stir in the squeezed soya chunks so they start picking up the masala."
+    },
+    {
+      "title": "Cover and cook",
+      "body": "Add the chopped tomato (or 3–4 tbsp water), stir, cover, and cook on medium 6–10 min until the chicken is cooked through. Breast pieces are usually 90–100% done by the 6-minute mark."
+    },
+    {
+      "title": "Dry it off",
+      "body": "Open the lid and cook uncovered on medium-high 1–2 min to dry it to a semi-gravy consistency."
+    },
+    {
+      "title": "Finish",
+      "body": "Taste for salt. Finish with a pinch of crushed methi seeds or fresh coriander. Serve with roti, paratha or rice."
+    }
+  ],
+  "notes": [
+    "Doneness check for the chicken: pieces should be opaque all the way through (not glassy), juices clear not pink, texture firm but not chalky.",
+    "For juicy breast, don't overcook — sear 2 min, cover 6 min, dry 1–2 min is about 9–10 min total after the chicken hits the pan.",
+    "Skipping the tomato makes it even simpler and more onion-forward — just use a few tbsp water to help it cook."
+  ],
+  "source": "Adapted from my own cooking notes.",
+  "diet": "non-veg"
+}

@@ -1,0 +1,136 @@
+{
+  "slug": "vada-pav",
+  "title": "Vada Pav",
+  "tagline": "Mumbai's finest — spiced potato fritter in a soft bun.",
+  "image": "image.webp",
+  "emoji": "🍔",
+  "chef": "Raja",
+  "cuisine": "Indian",
+  "course": "Snack",
+  "tags": [
+    "street-food",
+    "vegetarian",
+    "deep-fried",
+    "cheat-day",
+    "mumbai"
+  ],
+  "flavor": [
+    "spicy",
+    "savory"
+  ],
+  "ratings": {
+    "overall": 5,
+    "difficulty": 1,
+    "availability": 5
+  },
+  "servings": 2,
+  "servingsNote": "4 vadas, 2 pav each",
+  "time": {
+    "prep": 20,
+    "cook": 25,
+    "total": 45
+  },
+  "macros": {
+    "perServing": {
+      "calories": 990,
+      "protein": 22,
+      "carbs": 115,
+      "fat": 48,
+      "fibre": null
+    },
+    "whole": {
+      "calories": 1980,
+      "protein": 44,
+      "carbs": 230,
+      "fat": 96,
+      "fibre": null
+    }
+  },
+  "macroNotes": [
+    "Heads up — this is a cheat-day item. At ~990 kcal a serving it eats most of a 1600–1800 kcal day, and the protein-to-calorie ratio is poor because of the deep fry.",
+    "One vada pav instead of two → ~495 kcal, ~11 g protein.",
+    "Air-fry the vadas (200°C / 400°F, 12–15 min, spray with oil) instead of deep frying → saves ~250 kcal per serving.",
+    "Protein boost: stir 40 g of soaked, squeezed, finely chopped soya chunks into the potato masala. Adds ~10 g protein per serving for ~35 kcal each. Barely changes the taste.",
+    "Whole-wheat pav saves nothing calorically but adds ~4 g fibre."
+  ],
+  "ingredients": [
+    {
+      "group": "For the potato masala (vada filling)",
+      "items": [
+        "3 medium potatoes (~400 g / 2 cups mashed), boiled",
+        "8 cloves garlic",
+        "3 green chillies (adjust to taste)",
+        "1 tsp cumin seeds (jeera)",
+        "2 tbsp oil",
+        "1/2 tsp turmeric (haldi)",
+        "3/4 tsp salt, to taste",
+        "3 tbsp fresh coriander (hara dhaniya), chopped"
+      ]
+    },
+    {
+      "group": "For the besan batter",
+      "items": [
+        "1 cup besan (gram flour, ~120 g)",
+        "1/4 tsp turmeric",
+        "1/2 tsp salt",
+        "1 pinch eno (fruit salt) — add right before frying",
+        "~1/2 cup water (add slowly)"
+      ]
+    },
+    {
+      "group": "To assemble",
+      "items": [
+        "4 pav (soft dinner rolls)",
+        "Oil for deep frying (~2 cups)",
+        "Optional: green chutney, dry garlic chutney, fried green chillies"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Boil the potatoes",
+      "body": "Boil 3 medium potatoes (~400 g) until fork-tender, peel, and mash them. Set aside."
+    },
+    {
+      "title": "Make the paste",
+      "body": "In a mixer/grinder, blitz 8 cloves garlic + 3 green chillies + 1 tsp cumin seeds into a coarse paste. Don't make it a fine purée — a bit of texture is good."
+    },
+    {
+      "title": "Temper it",
+      "body": "Heat 2 tbsp oil in a pan over medium heat. Add the garlic-chilli-cumin paste and fry gently until the raw smell goes, about 1–2 minutes."
+    },
+    {
+      "title": "Season",
+      "body": "Add 1/2 tsp turmeric and 3/4 tsp salt. Stir for 30 seconds."
+    },
+    {
+      "title": "Add the potato",
+      "body": "Tip in the mashed potato (~2 cups) and mix well, mashing everything together in the pan so the masala coats it evenly. Cook 2 minutes."
+    },
+    {
+      "title": "Finish the masala",
+      "body": "Turn off the heat and stir in 3 tbsp chopped fresh coriander. That's your vada masala. Let it cool enough to handle."
+    },
+    {
+      "title": "Shape",
+      "body": "Roll the masala into 4 balls (roughly golf-ball sized, ~90 g each)."
+    },
+    {
+      "title": "Make the batter",
+      "body": "Whisk 1 cup besan + 1/4 tsp turmeric + 1/2 tsp salt + 1 pinch eno with ~1/2 cup water, added a little at a time. You want it thick — pakora-batter thick, so it clings to the ball and doesn't run off. Do not add too much water. It should coat the back of a spoon heavily."
+    },
+    {
+      "title": "Fry",
+      "body": "Heat ~2 cups oil to 175°C / 350°F (a drop of batter should sizzle and rise). Dip each ball fully in the batter and lower it into the oil. Fry 3–4 minutes, turning, until golden and crisp. Drain on paper towels."
+    },
+    {
+      "title": "Assemble",
+      "body": "Slice the pav, add chutney if using, drop in the hot vada, press, and eat immediately."
+    }
+  ],
+  "notes": [
+    "On the chillies: the original note says \"tikha jaise chahiye waise kam-zyada kar lena\" — dial the heat up or down as you like. 3 is medium."
+  ],
+  "source": "Scale up freely — 5–6 large potatoes makes about 10 vadas.",
+  "diet": "veg"
+}

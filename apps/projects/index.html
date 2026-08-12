@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Assemblies</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&family=Overpass+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ground:#123a66;
+    --ground-2:#0f3159;
+    --ground-deep:#0e2f54;
+    --ink:#eaf3ff;
+    --ink-2:#a9c9ef;
+    --ink-3:#6f9bcf;
+    --cyan:#8fd0ff;
+    --accent:#ff7a45;
+    --accent-soft:#ffb27f;
+    --grid-fine:rgba(200,225,255,.05);
+    --grid-mid:rgba(200,225,255,.10);
+    --frame:rgba(214,232,255,.55);
+    --hair:rgba(214,232,255,.26);
+    --hair-2:rgba(214,232,255,.14);
+    --sans:'Overpass',sans-serif;
+    --mono:'Overpass Mono',ui-monospace,monospace;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%}
+  body{
+    font-family:var(--sans);
+    color:var(--ink);
+    background-color:var(--ground);
+    background-image:
+      radial-gradient(130% 100% at 50% -20%, rgba(120,180,255,.16), transparent 62%),
+      linear-gradient(var(--grid-fine) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-fine) 1px, transparent 1px),
+      linear-gradient(var(--grid-mid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-mid) 1px, transparent 1px);
+    background-size:100% 100%, 20px 20px, 20px 20px, 100px 100px, 100px 100px;
+    -webkit-font-smoothing:antialiased;
+    line-height:1.5;
+    overflow:hidden;
+  }
+  ::selection{background:var(--accent);color:#221007}
+  a{color:inherit}
+  button{font-family:inherit}
+
+  .app{display:flex;flex-direction:column;height:100%;position:relative}
+
+  /* faint cyanotype vignette */
+  .app::after{
+    content:"";position:absolute;inset:0;pointer-events:none;z-index:20;
+    background:radial-gradient(135% 105% at 50% 42%, transparent 58%, rgba(6,22,44,.5) 100%);
+  }
+  /* fixed inner drawing frame */
+  .sheet-edge{position:absolute;inset:9px;z-index:15;pointer-events:none;border:1px solid var(--hair-2)}
+  .sheet-edge::before{content:"";position:absolute;inset:5px;border:1px solid var(--hair-2)}
+  .corner{position:absolute;width:13px;height:13px;border:1.4px solid var(--frame);z-index:16;pointer-events:none}
+  .corner.tl{top:9px;left:9px;border-right:0;border-bottom:0}
+  .corner.tr{top:9px;right:9px;border-left:0;border-bottom:0}
+  .corner.bl{bottom:9px;left:9px;border-right:0;border-top:0}
+  .corner.br{bottom:9px;right:9px;border-left:0;border-top:0}
+
+  /* ---------- TOP BAR (sheet header) ---------- */
+  .topbar{
+    display:flex;align-items:stretch;flex:none;z-index:18;position:relative;
+    border-bottom:1px solid var(--hair);
+    background:linear-gradient(rgba(14,47,84,.5),rgba(14,47,84,.2));
+    font-family:var(--mono);
+  }
+  .topbar .brand{
+    display:flex;align-items:center;gap:9px;padding:9px 15px;
+    border-right:1px solid var(--hair);white-space:nowrap;
+    font-size:10.5px;letter-spacing:.14em;color:var(--ink-2);
+  }
+  .topbar .brand .no{color:var(--accent);font-weight:700}
+  .topbar .brand .dot{width:6px;height:6px;background:var(--accent);border-radius:50%;
+    box-shadow:0 0 0 3px rgba(255,122,69,.18)}
+  .topbar .sheet-title{
+    flex:1;display:flex;align-items:center;gap:10px;padding:9px 15px;
+    font-size:10.5px;letter-spacing:.16em;color:var(--ink-3);text-transform:uppercase;
+    min-width:0;overflow:hidden;
+  }
+  .topbar .sheet-title b{color:var(--ink);font-weight:600;letter-spacing:.06em}
+  .topbar .proj-label{font-size:11px;letter-spacing:.02em;font-weight:800;font-family:var(--sans);
+    color:var(--cyan);text-transform:uppercase;letter-spacing:.04em}
+  .topbar .rev{
+    display:flex;align-items:center;gap:7px;padding:9px 15px;
+    border-left:1px solid var(--hair);white-space:nowrap;
+    font-size:10px;letter-spacing:.12em;color:var(--ink-3);
+  }
+  .topbar .rev b{color:var(--accent);font-weight:700;font-size:12px}
+  @media(max-width:620px){.topbar .sheet-title .desc-lab{display:none}}
+  @media(max-width:440px){.topbar .rev{display:none}}
+
+  /* ---------- STAGE ---------- */
+  .stage{flex:1;display:flex;min-height:0;position:relative;z-index:5}
+
+  /* ---------- SIDEBAR / SHEET INDEX ---------- */
+  .rail{
+    flex:none;width:236px;display:flex;flex-direction:column;min-height:0;
+    border-right:1px solid var(--hair);
+    background:linear-gradient(rgba(11,36,66,.35),rgba(11,36,66,.1));
+  }
+  .rail-head{
+    padding:14px 16px 10px;border-bottom:1px solid var(--hair-2);
+    font-family:var(--mono);font-size:9.5px;letter-spacing:.18em;color:var(--ink-3);
+    text-transform:uppercase;display:flex;justify-content:space-between;
+  }
+  .rail-head b{color:var(--accent)}
+  .plate-list{list-style:none;margin:0;padding:8px;display:flex;flex-direction:column;gap:6px}
+  .plate-btn{
+    width:100%;text-align:left;background:transparent;border:1px solid var(--hair-2);
+    color:var(--ink-2);padding:12px 13px;cursor:pointer;position:relative;
+    display:block;transition:background .28s var(--ease,ease),border-color .28s ease,color .28s ease;
+    --ease:cubic-bezier(.16,1,.3,1);
+  }
+  .plate-btn .pn{font-family:var(--mono);font-size:9px;letter-spacing:.14em;color:var(--ink-3);
+    display:flex;justify-content:space-between;margin-bottom:7px}
+  .plate-btn .pn .idx{color:var(--accent)}
+  .plate-btn .pt{font-size:1.18rem;font-weight:800;letter-spacing:.01em;line-height:1;
+    text-transform:uppercase;color:var(--ink);transition:color .28s ease}
+  .plate-btn .pd{font-family:var(--mono);font-size:9px;letter-spacing:.06em;color:var(--ink-3);
+    margin-top:6px;text-transform:uppercase}
+  .plate-btn::before{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;
+    background:var(--accent);transform:scaleY(0);transform-origin:top;
+    transition:transform .3s cubic-bezier(.16,1,.3,1)}
+  .plate-btn:hover{background:rgba(143,208,255,.05);border-color:var(--hair)}
+  .plate-btn:focus-visible{outline:none;border-color:var(--cyan);box-shadow:0 0 0 1px var(--cyan) inset}
+  .plate-btn.active{background:rgba(143,208,255,.08);border-color:var(--frame)}
+  .plate-btn.active::before{transform:scaleY(1)}
+  .plate-btn.active .pt{color:var(--cyan)}
+
+  .rail-spacer{flex:1;min-height:8px}
+
+  /* title block pinned to rail bottom */
+  .titleblock{
+    margin:8px;border:1.4px solid var(--frame);
+    background:rgba(13,44,80,.55);font-family:var(--mono);flex:none;
+    box-shadow:4px 5px 0 rgba(6,22,44,.28);
+  }
+  .titleblock .tb-title{padding:8px 10px;border-bottom:1px solid var(--hair-2)}
+  .titleblock .tb-title .lab{font-size:7.5px;letter-spacing:.16em;color:var(--ink-3);display:block;margin-bottom:2px}
+  .titleblock .tb-title .val{font-size:11px;color:var(--cyan);letter-spacing:.05em;font-weight:600}
+  .titleblock .tb-grid{display:grid;grid-template-columns:repeat(2,1fr)}
+  .titleblock .cell{padding:6px 10px;border-right:1px solid var(--hair-2);border-bottom:1px solid var(--hair-2)}
+  .titleblock .cell:nth-child(2n){border-right:0}
+  .titleblock .cell:nth-last-child(-n+2){border-bottom:0}
+  .titleblock .lab{font-size:7.5px;letter-spacing:.14em;color:var(--ink-3);display:block;margin-bottom:2px}
+  .titleblock .val{font-size:10.5px;letter-spacing:.03em;color:var(--ink);font-weight:600}
+  .titleblock .val.acc{color:var(--accent)}
+
+  /* rail as horizontal strip on narrow */
+  @media(max-width:720px){
+    .stage{flex-direction:column}
+    .rail{width:auto;flex:none;border-right:0;border-bottom:1px solid var(--hair);flex-direction:column}
+    .rail-head{display:none}
+    .plate-list{flex-direction:row;overflow-x:auto;padding:8px;gap:6px}
+    .plate-btn{min-width:150px;flex:1 0 auto;padding:9px 11px}
+    .plate-btn .pd{display:none}
+    .titleblock{display:none}
+    .rail-spacer{display:none}
+  }
+  @media(max-width:440px){
+    .plate-btn{min-width:120px}
+    .plate-btn .pt{font-size:1rem}
+  }
+
+  /* ---------- PLATE AREA ---------- */
+  .plate-area{flex:1;min-width:0;min-height:0;position:relative;overflow:hidden}
+  .plate{
+    position:absolute;inset:0;overflow-y:auto;overflow-x:hidden;
+    padding:22px 26px 26px;
+    display:none;
+  }
+  .plate.active{display:block}
+  .plate::-webkit-scrollbar{width:9px}
+  .plate::-webkit-scrollbar-thumb{background:var(--hair);border-radius:9px}
+  .plate::-webkit-scrollbar-track{background:transparent}
+
+  /* plate header */
+  .plate-head{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;flex-wrap:wrap;
+    padding-bottom:16px;border-bottom:1px solid var(--hair);margin-bottom:20px}
+  .plate-head .pn{font-family:var(--mono);font-size:10px;letter-spacing:.18em;color:var(--accent);margin-bottom:8px}
+  .plate-head h2{margin:0;font-size:clamp(2rem,5.5vw,3.4rem);font-weight:800;letter-spacing:-.02em;
+    text-transform:uppercase;line-height:.86}
+  .plate-head .tagline{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;color:var(--ink-3);
+    margin-top:9px;text-transform:uppercase}
+  .plate-head .meta{text-align:right;font-family:var(--mono);font-size:9.5px;color:var(--ink-3);
+    letter-spacing:.08em;line-height:1.9;flex:none}
+  .plate-head .meta .k{color:var(--ink-3)}
+  .plate-head .meta .v{color:var(--ink-2)}
+  .plate-head .meta a{color:var(--accent);text-decoration:none;letter-spacing:.04em}
+  .plate-head .meta a:hover{color:var(--accent-soft)}
+  @media(max-width:520px){.plate-head .meta{text-align:left}}
+
+  /* plate body: drawing + info */
+  .plate-body{display:grid;grid-template-columns:1.55fr 1fr;gap:0;
+    border:1px solid var(--hair);background:rgba(12,40,74,.3)}
+  .diagram{padding:22px 22px 14px;border-right:1px solid var(--hair);position:relative;
+    background:
+      repeating-linear-gradient(135deg, rgba(143,208,255,.028) 0 2px, transparent 2px 10px);}
+  .diagram .dcap{position:absolute;top:10px;left:14px;font-family:var(--mono);font-size:8.5px;
+    letter-spacing:.14em;color:var(--ink-3);text-transform:uppercase}
+  .diagram .dscale{position:absolute;bottom:8px;right:14px;font-family:var(--mono);font-size:8.5px;
+    letter-spacing:.1em;color:var(--ink-3)}
+  .diagram svg{display:block;width:100%;height:auto;overflow:visible;margin-top:14px}
+  .info{padding:22px 22px;display:flex;flex-direction:column}
+  .info .lead{margin:0 0 16px;color:var(--ink-2);font-weight:300;font-size:1rem;line-height:1.6}
+  .info .lead b{color:var(--ink);font-weight:600}
+
+  .spec{border-top:1px solid var(--hair-2);margin:0 0 18px}
+  .spec div{display:flex;justify-content:space-between;gap:12px;padding:8px 0;
+    border-bottom:1px solid var(--hair-2);font-family:var(--mono);font-size:10.5px;letter-spacing:.03em}
+  .spec .k{color:var(--ink-3);letter-spacing:.08em}
+  .spec .v{color:var(--ink);text-align:right}
+  .spec .v.acc{color:var(--accent)}
+
+  .chips{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:18px}
+  .chip{font-family:var(--mono);font-size:9.5px;letter-spacing:.09em;color:var(--ink-2);
+    border:1px solid var(--hair);padding:3px 9px;text-transform:uppercase;
+    background:rgba(143,208,255,.03)}
+  .info .spacer{flex:1;min-height:8px}
+
+  .btn{
+    font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+    text-decoration:none;padding:12px 16px;border:1px solid var(--accent);color:#241005;
+    display:inline-flex;align-items:center;gap:10px;background:var(--accent);cursor:pointer;
+    align-self:flex-start;font-weight:600;
+    transition:background .25s ease,border-color .25s ease,transform .25s ease;
+  }
+  .btn .k{color:#7a2c05;font-weight:700}
+  .btn:hover,.btn:focus-visible{background:var(--accent-soft);border-color:var(--accent-soft);outline:none;transform:translateY(-1px)}
+  .btn:focus-visible{box-shadow:0 0 0 2px rgba(255,178,127,.4)}
+
+  @media(max-width:900px){
+    .plate-body{grid-template-columns:1fr}
+    .diagram{border-right:0;border-bottom:1px solid var(--hair)}
+  }
+  @media(max-width:720px){.plate{padding:18px 18px 22px}}
+
+  /* plate footer dimension strip */
+  .plate-foot{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;
+    margin-top:16px;padding-top:12px;border-top:1px solid var(--hair-2);
+    font-family:var(--mono);font-size:9px;letter-spacing:.1em;color:var(--ink-3);text-transform:uppercase}
+  .plate-foot .n{color:var(--ink-2)}
+
+  /* schematic svg helpers */
+  .node-box{fill:rgba(143,208,255,.05);stroke:var(--cyan);stroke-width:1.3}
+  .node-box.acc{stroke:var(--accent);fill:rgba(255,122,69,.07)}
+  .node-lbl{font-family:'Overpass Mono',monospace;font-size:11px;fill:var(--ink);letter-spacing:.03em;font-weight:600}
+  .node-sub{font-family:'Overpass Mono',monospace;font-size:8.5px;fill:var(--ink-3);letter-spacing:.05em}
+  .flow{stroke:var(--ink-2);stroke-width:1.2;fill:none}
+  .callout-line{stroke:var(--accent);stroke-width:1;fill:none}
+  .callout-txt{font-family:'Overpass Mono',monospace;font-size:9px;fill:var(--accent-soft);letter-spacing:.06em}
+  .dim{stroke:var(--cyan);stroke-width:1.1;fill:none}
+  .dim-ext{stroke:var(--ink-3);stroke-width:1}
+  .dim-txt{font-family:'Overpass Mono',monospace;font-size:9.5px;fill:var(--cyan);letter-spacing:.04em}
+
+  /* ---------- DRAW-ON ANIMATION ---------- */
+  .draw{stroke-dasharray:var(--len,900);stroke-dashoffset:var(--len,900)}
+  .plate.animate .draw{animation:drawin 1.15s cubic-bezier(.16,1,.3,1) forwards}
+  @keyframes drawin{to{stroke-dashoffset:0}}
+  .fade{opacity:0;transform:translateY(10px)}
+  .plate.animate .fade{animation:fadein .7s cubic-bezier(.16,1,.3,1) forwards}
+  @keyframes fadein{to{opacity:1;transform:none}}
+  .plate.animate .d1{animation-delay:.08s}
+  .plate.animate .d2{animation-delay:.18s}
+  .plate.animate .d3{animation-delay:.28s}
+  .plate.animate .d4{animation-delay:.4s}
+  /* svg node groups stagger */
+  .nodeg{opacity:0}
+  .plate.animate .nodeg{animation:fadein .55s cubic-bezier(.16,1,.3,1) forwards}
+
+  @media(prefers-reduced-motion:reduce){
+    .draw{stroke-dashoffset:0 !important;animation:none !important}
+    .fade,.nodeg{opacity:1 !important;transform:none !important;animation:none !important}
+  }
+
+  /* ============================================================
+     PHONE — full-screen standalone (rail=strip, schematic scrolls)
+     ============================================================ */
+  @media(max-width:640px){
+    .plate{padding:16px 15px 20px}
+    .plate-head h2{font-size:clamp(1.7rem,9vw,2.4rem)}
+    /* schematic kept legible: horizontal scroll inside its own box */
+    .diagram{overflow-x:auto;-webkit-overflow-scrolling:touch;padding:20px 16px 14px}
+    .diagram svg{min-width:440px}
+    .info{padding:18px 16px}
+    /* spec rows: give the value room, still no page overflow */
+    .spec div{gap:10px}
+    /* sheet-index chips stay tappable */
+    .plate-btn{min-height:44px}
+    .btn{min-height:44px}
+  }
+  @media(max-width:430px){
+    .topbar .brand{padding:8px 11px;font-size:10px}
+    .plate{padding:14px 13px 18px}
+    .plate-head{gap:10px}
+    .plate-head h2{font-size:clamp(1.6rem,10vw,2.1rem)}
+    .diagram svg{min-width:400px}
+    .plate-foot{font-size:8.5px;gap:8px}
+  }
+</style>
+</head>
+<body>
+<div class="app">
+  <span class="corner tl"></span><span class="corner tr"></span>
+  <span class="corner bl"></span><span class="corner br"></span>
+  <div class="sheet-edge" aria-hidden="true"></div>
+
+  <!-- TOP BAR -->
+  <header class="topbar">
+    <div class="brand"><span class="dot"></span><span class="no">SHT&nbsp;02</span> ASSEMBLIES</div>
+    <div class="sheet-title">
+      <span class="desc-lab">GENERAL ARRANGEMENT · PROJECTION 3RD ANGLE ·</span>
+      <span class="proj-label" id="active-name">AI Support Platform</span>
+    </div>
+    <div class="rev">DWG RC-2026-02 · REV <b>C</b></div>
+  </header>
+
+  <div class="stage">
+    <!-- SHEET INDEX RAIL -->
+    <nav class="rail" aria-label="Assembly index">
+      <div class="rail-head"><span>SHEET INDEX</span><b>4 UNITS</b></div>
+      <ul class="plate-list" role="tablist" aria-label="Projects">
+        <li>
+          <button class="plate-btn active" role="tab" aria-selected="true" aria-controls="plate-recap" id="tab-recap" data-target="recap">
+            <span class="pn"><span class="idx">ASM-01</span><span>REV C</span></span>
+            <span class="pt">AI Support Platform</span>
+            <span class="pd">Generative AI · RAG</span>
+          </button>
+        </li>
+        <li>
+          <button class="plate-btn" role="tab" aria-selected="false" aria-controls="plate-cvar" id="tab-cvar" data-target="cvar" tabindex="-1">
+            <span class="pn"><span class="idx">ASM-02</span><span>REV B</span></span>
+            <span class="pt">Doc Summarization</span>
+            <span class="pd">NLP · Transformers</span>
+          </button>
+        </li>
+        <li>
+          <button class="plate-btn" role="tab" aria-selected="false" aria-controls="plate-qmind" id="tab-qmind" data-target="qmind" tabindex="-1">
+            <span class="pn"><span class="idx">ASM-03</span><span>REV A</span></span>
+            <span class="pt">QueryMind</span>
+            <span class="pd">GenAI · Text-to-SQL</span>
+          </button>
+        </li>
+        <li>
+          <button class="plate-btn" role="tab" aria-selected="false" aria-controls="plate-vguard" id="tab-vguard" data-target="vguard" tabindex="-1">
+            <span class="pn"><span class="idx">ASM-04</span><span>REV A</span></span>
+            <span class="pt">VulnGuard AI</span>
+            <span class="pd">LLM · Security</span>
+          </button>
+        </li>
+      </ul>
+      <div class="rail-spacer"></div>
+      <aside class="titleblock" aria-label="Drawing title block">
+        <div class="tb-title"><span class="lab">DRAWING TITLE</span><span class="val">PROJECTS — ASSEMBLIES</span></div>
+        <div class="tb-grid">
+          <div class="cell"><span class="lab">DRAWN BY</span><span class="val">RA</span></div>
+          <div class="cell"><span class="lab">CHK'D</span><span class="val">RA</span></div>
+          <div class="cell"><span class="lab">SCALE</span><span class="val">1:1</span></div>
+          <div class="cell"><span class="lab">REV</span><span class="val acc">C</span></div>
+        </div>
+      </aside>
+    </nav>
+
+    <!-- PLATE AREA -->
+    <div class="plate-area">
+
+      <!-- ===== RECAP ===== -->
+      <section class="plate active animate" id="plate-recap" role="tabpanel" aria-labelledby="tab-recap" tabindex="0">
+        <div class="plate-head">
+          <div class="fade d1">
+            <div class="pn">PART No. ASM-01 · FLAGSHIP</div>
+            <h2>AI Support Platform</h2>
+            <div class="tagline">Multi-Agent RAG Platform for Enterprise Support</div>
+          </div>
+          <div class="meta fade d1">
+            <span class="k">MATL</span> <span class="v">GENERATIVE AI</span><br>
+            <span class="k">QTY</span> <span class="v">1</span> · <span class="k">SCALE</span> <span class="v">1:1</span><br>
+            <span style="opacity:.6">Private &middot; internal system</span>
+          </div>
+        </div>
+
+        <div class="plate-body">
+          <div class="diagram">
+            <span class="dcap">FIG.01 — PIPELINE OVERVIEW</span>
+            <span class="dscale">SCALE 1:1</span>
+            <svg viewBox="0 0 540 250" aria-label="Project One pipeline schematic">
+              <defs><marker id="pa1" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="var(--ink-2)"/></marker></defs>
+              <!-- top dimension line -->
+              <line class="dim-ext draw" style="--len:36" x1="24" y1="30" x2="24" y2="58"/>
+              <line class="dim-ext draw" style="--len:36" x1="516" y1="30" x2="516" y2="58"/>
+              <line class="dim draw" style="--len:500" x1="24" y1="38" x2="516" y2="38"/>
+              <rect x="248" y="30" width="46" height="16" fill="var(--ground)"/>
+              <text class="dim-txt" x="271" y="42" text-anchor="middle">512.0</text>
+              <!-- flow -->
+              <path class="flow draw" style="--len:60" d="M104,84 L156,84" marker-end="url(#pa1)"/>
+              <path class="flow draw" style="--len:60" d="M262,84 L318,84" marker-end="url(#pa1)"/>
+              <path class="flow draw" style="--len:70" d="M392,106 L392,158" marker-end="url(#pa1)"/>
+              <path class="flow draw" style="--len:70" d="M318,180 L262,180" marker-end="url(#pa1)"/>
+              <path class="flow draw" style="--len:130" d="M156,180 L104,180 L104,112" marker-end="url(#pa1)"/>
+              <!-- nodes -->
+              <g class="nodeg" style="animation-delay:.15s"><rect class="node-box" x="26" y="66" width="78" height="38"/><text class="node-lbl" x="65" y="84" text-anchor="middle">TICKET</text><text class="node-sub" x="65" y="97" text-anchor="middle">Zoho Desk</text></g>
+              <g class="nodeg" style="animation-delay:.25s"><rect class="node-box" x="156" y="62" width="106" height="46"/><text class="node-lbl" x="209" y="81" text-anchor="middle">RAG SEARCH</text><text class="node-sub" x="209" y="95" text-anchor="middle">rerank + retrieve</text></g>
+              <g class="nodeg" style="animation-delay:.35s"><rect class="node-box acc" x="318" y="62" width="112" height="46"/><text class="node-lbl" x="374" y="81" text-anchor="middle" fill="var(--accent-soft)">MCP SERVERS</text><text class="node-sub" x="374" y="95" text-anchor="middle">SQL + APIs</text></g>
+              <g class="nodeg" style="animation-delay:.45s"><rect class="node-box" x="318" y="158" width="112" height="46"/><text class="node-lbl" x="374" y="177" text-anchor="middle">FINE-TUNED LLM</text><text class="node-sub" x="374" y="191" text-anchor="middle">domain model</text></g>
+              <g class="nodeg" style="animation-delay:.55s"><rect class="node-box" x="156" y="158" width="106" height="46"/><text class="node-lbl" x="209" y="177" text-anchor="middle">SOLUTION</text><text class="node-sub" x="209" y="191" text-anchor="middle">troubleshooting steps</text></g>
+              <!-- callout -->
+              <path class="callout-line draw" style="--len:16" d="M374,50 L374,62"/><circle cx="374" cy="49" r="2.5" fill="var(--accent)"/>
+              <text class="callout-txt" x="374" y="44" text-anchor="middle">① MULTI-AGENT</text>
+              <text class="callout-txt" x="156" y="234">RESULT — ADOPTED BY 200+ SUPPORT TECHNICIANS</text>
+            </svg>
+          </div>
+
+          <div class="info">
+            <p class="lead fade d2"><b>The flagship credential.</b> Production multi-agent AI assistant that ingests support tickets, retrieves institutional knowledge with reranked RAG, queries enterprise systems through custom MCP servers, and generates context-aware troubleshooting steps &mdash; used by 200+ support technicians daily.</p>
+            <div class="spec fade d3">
+              <div><span class="k">DOMAIN</span><span class="v">ENTERPRISE SUPPORT AI</span></div>
+              <div><span class="k">METHOD</span><span class="v">RAG + MULTI-AGENT + MCP</span></div>
+              <div><span class="k">RESULT</span><span class="v">200+ TECHNICIANS, DAILY USE</span></div>
+              <div><span class="k">STATUS</span><span class="v acc">PRODUCTION · INTERNAL</span></div>
+            </div>
+            <div class="chips fade d3">
+              <span class="chip">RAG</span><span class="chip">Multi-Agent</span><span class="chip">MCP</span>
+            </div>
+            <div class="spacer"></div>
+            <span class="btn fade d4" style="opacity:.6;cursor:default"><span class="k">§</span> PRIVATE · INTERNAL SYSTEM</span>
+          </div>
+        </div>
+
+        <div class="plate-foot">
+          <span>DETAIL A · <span class="n">MULTI-AGENT RAG LOOP</span></span>
+          <span>SHEET 02 · PLATE 01 / 04 · DO NOT SCALE FROM DRAWING</span>
+        </div>
+      </section>
+
+      <!-- ===== CVAR ===== -->
+      <section class="plate" id="plate-cvar" role="tabpanel" aria-labelledby="tab-cvar" tabindex="0" hidden>
+        <div class="plate-head">
+          <div class="fade d1">
+            <div class="pn">PART No. ASM-02</div>
+            <h2>Doc Summarization</h2>
+            <div class="tagline">LLM Document Intelligence Service</div>
+          </div>
+          <div class="meta fade d1">
+            <span class="k">MATL</span> <span class="v">NLP / LLM</span><br>
+            <span class="k">QTY</span> <span class="v">1</span> · <span class="k">SCALE</span> <span class="v">1:1</span><br>
+            <span style="opacity:.6">Private project</span>
+          </div>
+        </div>
+
+        <div class="plate-body">
+          <div class="diagram">
+            <span class="dcap">FIG.02 — PIPELINE OVERVIEW</span>
+            <span class="dscale">SCALE 1:1</span>
+            <svg viewBox="0 0 540 250" aria-label="Project Two pipeline schematic">
+              <defs><marker id="pa2" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="var(--ink-2)"/></marker></defs>
+              <line class="dim-ext draw" style="--len:36" x1="24" y1="30" x2="24" y2="58"/>
+              <line class="dim-ext draw" style="--len:36" x1="516" y1="30" x2="516" y2="58"/>
+              <line class="dim draw" style="--len:500" x1="24" y1="38" x2="516" y2="38"/>
+              <rect x="250" y="30" width="42" height="16" fill="var(--ground)"/>
+              <text class="dim-txt" x="271" y="42" text-anchor="middle">1080p</text>
+              <!-- horizontal flow -->
+              <path class="flow draw" style="--len:56" d="M94,84 L146,84" marker-end="url(#pa2)"/>
+              <path class="flow draw" style="--len:56" d="M250,84 L302,84" marker-end="url(#pa2)"/>
+              <path class="flow draw" style="--len:56" d="M406,84 L458,84" marker-end="url(#pa2)"/>
+              <!-- down flows -->
+              <path class="flow draw" style="--len:70" d="M198,108 L198,158" marker-end="url(#pa2)"/>
+              <path class="flow draw" style="--len:70" d="M354,108 L354,158" marker-end="url(#pa2)"/>
+              <g class="nodeg" style="animation-delay:.15s"><rect class="node-box" x="22" y="66" width="72" height="38"/><text class="node-lbl" x="58" y="84" text-anchor="middle">PDF/DOCX</text><text class="node-sub" x="58" y="97" text-anchor="middle">upload</text></g>
+              <g class="nodeg" style="animation-delay:.25s"><rect class="node-box acc" x="146" y="62" width="104" height="46"/><text class="node-lbl" x="198" y="81" text-anchor="middle" fill="var(--accent-soft)">CHUNKING</text><text class="node-sub" x="198" y="95" text-anchor="middle">long-context split</text></g>
+              <g class="nodeg" style="animation-delay:.35s"><rect class="node-box" x="302" y="62" width="104" height="46"/><text class="node-lbl" x="354" y="81" text-anchor="middle">TRANSFORMER</text><text class="node-sub" x="354" y="95" text-anchor="middle">summarize</text></g>
+              <g class="nodeg" style="animation-delay:.45s"><rect class="node-box" x="458" y="66" width="60" height="38"/><text class="node-lbl" x="488" y="84" text-anchor="middle">API</text><text class="node-sub" x="488" y="97" text-anchor="middle">FastAPI</text></g>
+              <g class="nodeg" style="animation-delay:.5s"><rect class="node-box" x="140" y="158" width="116" height="44"/><text class="node-lbl" x="198" y="176" text-anchor="middle">RELEVANCE</text><text class="node-sub" x="198" y="190" text-anchor="middle">key sections</text></g>
+              <g class="nodeg" style="animation-delay:.58s"><rect class="node-box" x="296" y="158" width="116" height="44"/><text class="node-lbl" x="354" y="176" text-anchor="middle">SUMMARY</text><text class="node-sub" x="354" y="190" text-anchor="middle">faithful output</text></g>
+              <path class="callout-line draw" style="--len:16" d="M198,50 L198,62"/><circle cx="198" cy="49" r="2.5" fill="var(--accent)"/>
+              <text class="callout-txt" x="198" y="44" text-anchor="middle">② LONG-CONTEXT</text>
+              <text class="callout-txt" x="140" y="232">REF — CONCISE, FAITHFUL DOCUMENT SUMMARIES</text>
+            </svg>
+          </div>
+
+          <div class="info">
+            <p class="lead fade d2"><b>Concise, faithful summaries at scale.</b> Document intelligence service producing summaries of long PDF and DOCX files using transformer-based models, with chunking and semantic relevance extraction to retain key information across sections beyond a single context window.</p>
+            <div class="spec fade d3">
+              <div><span class="k">DOMAIN</span><span class="v">DOCUMENT INTELLIGENCE</span></div>
+              <div><span class="k">METHOD</span><span class="v">TRANSFORMER SUMMARIZATION</span></div>
+              <div><span class="k">OUTPUTS</span><span class="v">FASTAPI SERVICE</span></div>
+              <div><span class="k">STATUS</span><span class="v acc">PRIVATE PROJECT</span></div>
+            </div>
+            <div class="chips fade d3">
+              <span class="chip">NLP</span><span class="chip">Transformers</span><span class="chip">FastAPI</span>
+            </div>
+            <div class="spacer"></div>
+            <span class="btn fade d4" style="opacity:.6;cursor:default"><span class="k">‹›</span> PRIVATE PROJECT</span>
+          </div>
+        </div>
+
+        <div class="plate-foot">
+          <span>DETAIL B · <span class="n">LONG-CONTEXT CHUNKING</span></span>
+          <span>SHEET 02 · PLATE 02 / 04 · DO NOT SCALE FROM DRAWING</span>
+        </div>
+      </section>
+
+      <!-- ===== QMIND ===== -->
+      <section class="plate" id="plate-qmind" role="tabpanel" aria-labelledby="tab-qmind" tabindex="0" hidden>
+        <div class="plate-head">
+          <div class="fade d1">
+            <div class="pn">PART No. ASM-03</div>
+            <h2>QueryMind</h2>
+            <div class="tagline">GenAI Text-to-SQL Analytics Assistant</div>
+          </div>
+          <div class="meta fade d1">
+            <span class="k">MATL</span> <span class="v">GENERATIVE AI</span><br>
+            <span class="k">QTY</span> <span class="v">1</span> · <span class="k">SCALE</span> <span class="v">1:1</span><br>
+            <span style="opacity:.6">Private project</span>
+          </div>
+        </div>
+
+        <div class="plate-body">
+          <div class="diagram">
+            <span class="dcap">FIG.03 — PIPELINE OVERVIEW</span>
+            <span class="dscale">SCALE 1:1</span>
+            <svg viewBox="0 0 540 250" aria-label="QueryMind pipeline schematic">
+              <defs><marker id="pa3" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="var(--ink-2)"/></marker></defs>
+              <line class="dim-ext draw" style="--len:36" x1="24" y1="30" x2="24" y2="58"/>
+              <line class="dim-ext draw" style="--len:36" x1="516" y1="30" x2="516" y2="58"/>
+              <line class="dim draw" style="--len:500" x1="24" y1="38" x2="516" y2="38"/>
+              <rect x="248" y="30" width="46" height="16" fill="var(--ground)"/>
+              <text class="dim-txt" x="271" y="42" text-anchor="middle">SQL</text>
+              <path class="flow draw" style="--len:56" d="M94,84 L146,84" marker-end="url(#pa3)"/>
+              <path class="flow draw" style="--len:56" d="M250,84 L302,84" marker-end="url(#pa3)"/>
+              <path class="flow draw" style="--len:56" d="M406,84 L454,84" marker-end="url(#pa3)"/>
+              <path class="flow draw" style="--len:70" d="M198,108 L198,158" marker-end="url(#pa3)"/>
+              <path class="flow draw" style="--len:70" d="M354,108 L354,158" marker-end="url(#pa3)"/>
+              <g class="nodeg" style="animation-delay:.15s"><rect class="node-box" x="22" y="66" width="72" height="38"/><text class="node-lbl" x="58" y="84" text-anchor="middle">QUESTION</text><text class="node-sub" x="58" y="97" text-anchor="middle">natural language</text></g>
+              <g class="nodeg" style="animation-delay:.25s"><rect class="node-box acc" x="146" y="62" width="104" height="46"/><text class="node-lbl" x="198" y="81" text-anchor="middle" fill="var(--accent-soft)">SQL GEN</text><text class="node-sub" x="198" y="95" text-anchor="middle">LangChain + SQLAlchemy</text></g>
+              <g class="nodeg" style="animation-delay:.35s"><rect class="node-box" x="302" y="62" width="104" height="46"/><text class="node-lbl" x="354" y="81" text-anchor="middle">EXECUTE</text><text class="node-sub" x="354" y="95" text-anchor="middle">relational DB</text></g>
+              <g class="nodeg" style="animation-delay:.45s"><rect class="node-box" x="454" y="62" width="64" height="46"/><text class="node-lbl" x="486" y="81" text-anchor="middle">VIZ</text><text class="node-sub" x="486" y="95" text-anchor="middle">Streamlit</text></g>
+              <g class="nodeg" style="animation-delay:.5s"><rect class="node-box" x="140" y="158" width="116" height="44"/><text class="node-lbl" x="198" y="176" text-anchor="middle">SCHEMA RAG</text><text class="node-sub" x="198" y="190" text-anchor="middle">context retrieval</text></g>
+              <g class="nodeg" style="animation-delay:.58s"><rect class="node-box" x="296" y="158" width="116" height="44"/><text class="node-lbl" x="354" y="176" text-anchor="middle">RESULT</text><text class="node-sub" x="354" y="190" text-anchor="middle">answer + chart</text></g>
+              <path class="callout-line draw" style="--len:16" d="M198,50 L198,62"/><circle cx="198" cy="49" r="2.5" fill="var(--accent)"/>
+              <text class="callout-txt" x="198" y="44" text-anchor="middle">③ TEXT-TO-SQL</text>
+              <text class="callout-txt" x="150" y="232">REF — NO-CODE ANALYTICS FOR NON-TECHNICAL USERS</text>
+            </svg>
+          </div>
+
+          <div class="info">
+            <p class="lead fade d2"><b>Ask a question, get a chart.</b> Intelligent data analytics assistant that converts natural-language questions into SQL using LLMs and executes them against relational databases. Combines LangChain, SQLAlchemy, and RAG for schema-aware query generation, with interactive Streamlit and Plotly visualizations for non-technical users.</p>
+            <div class="spec fade d3">
+              <div><span class="k">DOMAIN</span><span class="v">DATA ANALYTICS / GENAI</span></div>
+              <div><span class="k">METHOD</span><span class="v">TEXT-TO-SQL + RAG</span></div>
+              <div><span class="k">OUTPUTS</span><span class="v">STREAMLIT DASHBOARD</span></div>
+              <div><span class="k">STATUS</span><span class="v acc">PRIVATE PROJECT</span></div>
+            </div>
+            <div class="chips fade d3">
+              <span class="chip">Text-to-SQL</span><span class="chip">LangChain</span><span class="chip">Streamlit</span>
+            </div>
+            <div class="spacer"></div>
+            <span class="btn fade d4" style="opacity:.6;cursor:default"><span class="k">§</span> PRIVATE PROJECT</span>
+          </div>
+        </div>
+
+        <div class="plate-foot">
+          <span>DETAIL C · <span class="n">SCHEMA-AWARE QUERY GENERATION</span></span>
+          <span>SHEET 02 · PLATE 03 / 04 · DO NOT SCALE FROM DRAWING</span>
+        </div>
+      </section>
+
+      <!-- ===== VGUARD ===== -->
+      <section class="plate" id="plate-vguard" role="tabpanel" aria-labelledby="tab-vguard" tabindex="0" hidden>
+        <div class="plate-head">
+          <div class="fade d1">
+            <div class="pn">PART No. ASM-04</div>
+            <h2>VulnGuard AI</h2>
+            <div class="tagline">LLM-Powered Source Code Vulnerability Analyzer</div>
+          </div>
+          <div class="meta fade d1">
+            <span class="k">MATL</span> <span class="v">LLM / SECURITY</span><br>
+            <span class="k">QTY</span> <span class="v">1</span> · <span class="k">SCALE</span> <span class="v">1:1</span><br>
+            <span style="opacity:.6">Private project</span>
+          </div>
+        </div>
+
+        <div class="plate-body">
+          <div class="diagram">
+            <span class="dcap">FIG.04 — PIPELINE OVERVIEW</span>
+            <span class="dscale">SCALE 1:1</span>
+            <svg viewBox="0 0 540 250" aria-label="VulnGuard AI pipeline schematic">
+              <defs><marker id="pa4" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="var(--ink-2)"/></marker></defs>
+              <line class="dim-ext draw" style="--len:36" x1="24" y1="30" x2="24" y2="58"/>
+              <line class="dim-ext draw" style="--len:36" x1="516" y1="30" x2="516" y2="58"/>
+              <line class="dim draw" style="--len:500" x1="24" y1="38" x2="516" y2="38"/>
+              <rect x="248" y="30" width="46" height="16" fill="var(--ground)"/>
+              <text class="dim-txt" x="271" y="42" text-anchor="middle">CVE</text>
+              <path class="flow draw" style="--len:56" d="M94,84 L146,84" marker-end="url(#pa4)"/>
+              <path class="flow draw" style="--len:56" d="M250,84 L302,84" marker-end="url(#pa4)"/>
+              <path class="flow draw" style="--len:56" d="M406,84 L458,84" marker-end="url(#pa4)"/>
+              <path class="flow draw" style="--len:70" d="M198,108 L198,158" marker-end="url(#pa4)"/>
+              <path class="flow draw" style="--len:70" d="M354,108 L354,158" marker-end="url(#pa4)"/>
+              <g class="nodeg" style="animation-delay:.15s"><rect class="node-box" x="22" y="66" width="72" height="38"/><text class="node-lbl" x="58" y="84" text-anchor="middle">CODE</text><text class="node-sub" x="58" y="97" text-anchor="middle">source upload</text></g>
+              <g class="nodeg" style="animation-delay:.25s"><rect class="node-box acc" x="146" y="62" width="104" height="46"/><text class="node-lbl" x="198" y="81" text-anchor="middle" fill="var(--accent-soft)">STATIC SCAN</text><text class="node-sub" x="198" y="95" text-anchor="middle">Semgrep + Bandit</text></g>
+              <g class="nodeg" style="animation-delay:.35s"><rect class="node-box" x="302" y="62" width="104" height="46"/><text class="node-lbl" x="354" y="81" text-anchor="middle">LLM REASON</text><text class="node-sub" x="354" y="95" text-anchor="middle">severity + fix</text></g>
+              <g class="nodeg" style="animation-delay:.45s"><rect class="node-box" x="458" y="66" width="60" height="38"/><text class="node-lbl" x="488" y="84" text-anchor="middle">REPORT</text><text class="node-sub" x="488" y="97" text-anchor="middle">remediation</text></g>
+              <g class="nodeg" style="animation-delay:.5s"><rect class="node-box" x="140" y="158" width="116" height="44"/><text class="node-lbl" x="198" y="176" text-anchor="middle">OWASP / CWE</text><text class="node-sub" x="198" y="190" text-anchor="middle">knowledge base</text></g>
+              <g class="nodeg" style="animation-delay:.58s"><rect class="node-box" x="296" y="158" width="116" height="44"/><text class="node-lbl" x="354" y="176" text-anchor="middle">FAISS RAG</text><text class="node-sub" x="354" y="190" text-anchor="middle">context retrieval</text></g>
+              <path class="callout-line draw" style="--len:16" d="M198,50 L198,62"/><circle cx="198" cy="49" r="2.5" fill="var(--accent)"/>
+              <text class="callout-txt" x="198" y="44" text-anchor="middle">④ SAST + LLM RAG</text>
+              <text class="callout-txt" x="130" y="232">REF — SQLI · XSS · INSECURE AUTH · SECURE FIXES</text>
+            </svg>
+          </div>
+
+          <div class="info">
+            <p class="lead fade d2"><b>Find it, explain it, fix it.</b> AI-powered source code vulnerability analyzer combining LLM reasoning, static analysis, and Retrieval-Augmented Generation to detect SQL injection, XSS, command injection, insecure authentication, and hardcoded credentials. Integrates Semgrep and Bandit findings with LLM-based reasoning, grounded in OWASP and CWE knowledge indexed in a FAISS vector store, to explain vulnerabilities and generate secure remediation suggestions.</p>
+            <div class="spec fade d3">
+              <div><span class="k">DOMAIN</span><span class="v">APPLICATION SECURITY</span></div>
+              <div><span class="k">METHOD</span><span class="v">SAST + LLM + RAG</span></div>
+              <div><span class="k">OUTPUTS</span><span class="v">SEVERITY + REMEDIATION</span></div>
+              <div><span class="k">STATUS</span><span class="v acc">PRIVATE PROJECT</span></div>
+            </div>
+            <div class="chips fade d3">
+              <span class="chip">LLM Security</span><span class="chip">RAG</span><span class="chip">FAISS</span>
+            </div>
+            <div class="spacer"></div>
+            <span class="btn fade d4" style="opacity:.6;cursor:default"><span class="k">‹›</span> PRIVATE PROJECT</span>
+          </div>
+        </div>
+
+        <div class="plate-foot">
+          <span>DETAIL D · <span class="n">OWASP/CWE-GROUNDED REMEDIATION</span></span>
+          <span>SHEET 02 · PLATE 04 / 04 · DO NOT SCALE FROM DRAWING</span>
+        </div>
+      </section>
+
+
+
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.plate-btn'));
+  var panels = {
+    recap: document.getElementById('plate-recap'),
+    cvar: document.getElementById('plate-cvar'),
+    qmind: document.getElementById('plate-qmind'),
+    vguard: document.getElementById('plate-vguard')
+  };
+  var nameEl = document.getElementById('active-name');
+  var names = {recap:'AI Support Platform', cvar:'Doc Summarization', qmind:'QueryMind', vguard:'VulnGuard AI'};
+
+  function activate(key, focusPanel){
+    tabs.forEach(function(t){
+      var on = t.dataset.target === key;
+      t.classList.toggle('active', on);
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      t.tabIndex = on ? 0 : -1;
+    });
+    Object.keys(panels).forEach(function(k){
+      var p = panels[k];
+      var on = k === key;
+      p.classList.toggle('active', on);
+      if(on){ p.hidden = false; }
+      else { p.hidden = true; }
+      // restart animation
+      p.classList.remove('animate');
+      if(on){
+        // force reflow so the animation replays
+        void p.offsetWidth;
+        p.classList.add('animate');
+        p.scrollTop = 0;
+      }
+    });
+    nameEl.textContent = names[key];
+    if(focusPanel){ panels[key].focus({preventScroll:true}); }
+  }
+
+  tabs.forEach(function(t){
+    t.addEventListener('click', function(){ activate(t.dataset.target, false); });
+  });
+
+  // arrow-key navigation across the tablist
+  var list = document.querySelector('.plate-list');
+  list.addEventListener('keydown', function(e){
+    var i = tabs.indexOf(document.activeElement);
+    if(i < 0) return;
+    var ni = -1;
+    if(e.key === 'ArrowDown' || e.key === 'ArrowRight') ni = (i+1) % tabs.length;
+    else if(e.key === 'ArrowUp' || e.key === 'ArrowLeft') ni = (i-1+tabs.length) % tabs.length;
+    else if(e.key === 'Home') ni = 0;
+    else if(e.key === 'End') ni = tabs.length-1;
+    if(ni >= 0){
+      e.preventDefault();
+      tabs[ni].focus();
+      activate(tabs[ni].dataset.target, false);
+    }
+  });
+})();
+</script>
+</body>
+</html>

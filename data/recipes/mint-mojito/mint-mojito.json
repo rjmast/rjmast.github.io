@@ -1,0 +1,99 @@
+{
+  "slug": "mint-mojito",
+  "title": "Mint Mojito",
+  "tagline": "Virgin mojito — muddled mint and lime topped with cold club soda. Add white rum if you're not.",
+  "image": "image.webp",
+  "emoji": "🍹",
+  "chef": "Raja",
+  "cuisine": "Cuban",
+  "course": "Drink",
+  "tags": [
+    "drink",
+    "no-cook",
+    "quick"
+  ],
+  "flavor": [
+    "fresh",
+    "tangy",
+    "sweet"
+  ],
+  "ratings": {
+    "overall": 4,
+    "difficulty": 1,
+    "availability": 4
+  },
+  "servings": 2,
+  "servingsNote": "2 tall glasses",
+  "time": {
+    "prep": 5,
+    "cook": 0,
+    "total": 5
+  },
+  "macros": {
+    "perServing": {
+      "calories": 100,
+      "protein": 0,
+      "carbs": 26,
+      "fat": 0,
+      "fibre": 0
+    },
+    "whole": {
+      "calories": 200,
+      "protein": 0,
+      "carbs": 52,
+      "fat": 0,
+      "fibre": 0
+    }
+  },
+  "macroNotes": [
+    "Estimated from ingredients — virgin version. Nearly all the calories are the sugar.",
+    "Cut it right down by using 1 tbsp sugar per glass instead of 2, or swapping to stevia — takes it to ~25-50 kcal a glass.",
+    "Adding 2 oz (60 ml) white rum per glass adds ~130 kcal each. It's a drink, so there's no sensible protein add here — keep it as the refresher it is."
+  ],
+  "ingredients": [
+    {
+      "group": "Per 2 glasses",
+      "items": [
+        "20 fresh mint leaves (~10 per glass), plus sprigs to garnish",
+        "1 lime, cut into wedges (half a lime per glass)",
+        "4 tbsp sugar (~2 tbsp per glass, to taste)",
+        "2 cups (~500 ml) club soda / sparkling water, chilled",
+        "Ice cubes",
+        "Optional: 4 oz (120 ml) white rum — 2 oz per glass"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Muddle mint and lime",
+      "body": "Into each sturdy glass put ~10 mint leaves and 2 lime wedges. Muddle gently with a muddler or the back of a spoon to release the mint oils and lime juice — press, don't shred, or the mint turns bitter."
+    },
+    {
+      "title": "Add the sugar",
+      "body": "Add ~2 tbsp sugar per glass and muddle again to work it into the mint and lime. Adjust to taste if you like it sweeter or sharper."
+    },
+    {
+      "title": "Squeeze in the rest",
+      "body": "Squeeze the juice from the remaining 2 lime wedges into each glass and drop the spent wedges in."
+    },
+    {
+      "title": "Ice it",
+      "body": "Fill each glass with ice cubes."
+    },
+    {
+      "title": "Top and stir",
+      "body": "Add 2 oz white rum per glass if making it boozy, then top with chilled club soda (~1 cup per glass). Stir gently to combine without knocking the fizz out."
+    },
+    {
+      "title": "Garnish and serve",
+      "body": "Garnish with a mint sprig and a lime wedge, and serve immediately while it's cold and fizzy."
+    }
+  ],
+  "notes": [
+    "Leave out the rum for a virgin mojito — it's just as refreshing.",
+    "Muddle the mint gently; over-crushing releases bitter compounds from the leaves.",
+    "Serve straight away — club soda goes flat fast once poured."
+  ],
+  "source": "Adapted from my own cooking notes.",
+  "diet": "veg"
+}

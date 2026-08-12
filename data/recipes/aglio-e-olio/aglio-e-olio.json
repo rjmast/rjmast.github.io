@@ -1,0 +1,116 @@
+{
+  "slug": "aglio-e-olio",
+  "title": "Aglio e Olio",
+  "tagline": "Naples' one-pan pasta — garlic, good olive oil, chilli, and a splash of pasta water.",
+  "image": "image.webp",
+  "emoji": "🍝",
+  "chef": "Raja",
+  "cuisine": "Italian",
+  "course": "Main",
+  "tags": [
+    "pasta",
+    "italian",
+    "quick",
+    "vegetarian",
+    "comfort-food"
+  ],
+  "flavor": [
+    "garlicky",
+    "savory",
+    "spicy"
+  ],
+  "ratings": {
+    "overall": 5,
+    "difficulty": 2,
+    "availability": 4
+  },
+  "servings": 2,
+  "servingsNote": "",
+  "time": {
+    "prep": 10,
+    "cook": 15,
+    "total": 25
+  },
+  "macros": {
+    "perServing": {
+      "calories": 620,
+      "protein": 13,
+      "carbs": 71,
+      "fat": 31,
+      "fibre": 4
+    },
+    "whole": {
+      "calories": 1240,
+      "protein": 26,
+      "carbs": 142,
+      "fat": 63,
+      "fibre": 8
+    }
+  },
+  "macroNotes": [
+    "Estimated from ingredients.",
+    "Authentic aglio e olio is deliberately protein-poor — it's mostly pasta and oil. Per serving is ~620 kcal, most of it from the olive oil.",
+    "To make it a gym meal, top with 150 g grilled/pan-seared chicken breast (~50 g protein for 2) or toss in a handful of prawns at the garlic stage. Soya chunks don't belong in this delicate dish.",
+    "Cut ~150 kcal per serving by dropping the olive oil to 3 tbsp total and leaning harder on pasta water for the silky finish."
+  ],
+  "ingredients": [
+    {
+      "group": "Pasta",
+      "items": [
+        "200 g spaghetti (dry)",
+        "1 tbsp salt for the pasta water",
+        "Reserve ~1/2 cup (120 ml) starchy pasta water before draining"
+      ]
+    },
+    {
+      "group": "Garlic oil",
+      "items": [
+        "6-8 cloves garlic (~30 g), thinly sliced",
+        "4-5 tbsp extra virgin olive oil (use the best you have — it carries the whole dish)",
+        "1 to 1.5 tsp red chilli flakes (to taste)",
+        "1 tbsp butter (optional — richness boost if your olive oil is a cheap, low-aroma one)"
+      ]
+    },
+    {
+      "group": "Finish",
+      "items": [
+        "Small bunch fresh parsley (~2 tbsp chopped), optional but traditional",
+        "Black pepper, a pinch (optional)",
+        "Salt to taste (be generous at the end if you under-salted the water)"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Salt the water and boil",
+      "body": "Bring a large pot of water to a rolling boil and add 1 tbsp salt — salt it like the sea, this is the pasta's only chance to season from within. Add 200 g spaghetti and cook until al dente (1 minute less than the packet says). If you forgot to salt the water, don't panic — you'll salt the pasta directly when tossing."
+    },
+    {
+      "title": "Reserve pasta water",
+      "body": "Before draining, scoop out ~1/2 cup (120 ml) of the starchy pasta water. This starch is what emulsifies the oil into a silky sauce — do not skip it."
+    },
+    {
+      "title": "Gently cook the garlic",
+      "body": "While the pasta cooks, heat 4-5 tbsp olive oil in a wide pan over low to medium-low heat. Add the 6-8 sliced garlic cloves and cook gently 2-3 minutes until just light golden — never brown. Browned garlic turns bitter and ruins the dish. If your olive oil is cheap and low-aroma, drop in 1 tbsp butter here for richness."
+    },
+    {
+      "title": "Bloom the chilli",
+      "body": "Stir in 1 to 1.5 tsp red chilli flakes and cook just 20-30 seconds to release the aroma. Keep the heat low so nothing burns."
+    },
+    {
+      "title": "Toss with pasta water",
+      "body": "Add the drained spaghetti straight into the pan along with a splash of the reserved pasta water. Toss hard and continuously over medium heat for about 1-2 minutes — the sauce should turn glossy and cling to the strands, not sit as oil in the bottom. Add more pasta water a splash at a time until it's silky, not oily. If the water was unsalted, sprinkle salt directly now and taste."
+    },
+    {
+      "title": "Finish and serve",
+      "body": "Turn off the heat, toss in ~2 tbsp chopped parsley and a pinch of black pepper if using. Taste a strand and adjust salt and chilli. Plate immediately while it's shiny and hot."
+    }
+  ],
+  "notes": [
+    "Traditionally no cheese goes in aglio e olio. If you must, grate a little Parmigiano-Reggiano — but never soft mozzarella, which clumps and stretches into a sticky ball in the hot pasta. If you only have mozzarella, tear a few small bits over the plate after serving instead of tossing it in.",
+    "Cheap olive oil trick: gently warm 5 tbsp oil with 2 lightly smashed garlic cloves over low heat for 4-5 minutes (just tiny bubbles, no browning), rest 5 minutes, fish out the cloves — then cook the sliced garlic in that now-infused oil.",
+    "Scales cleanly: 100 g pasta + 3-4 garlic cloves + ~2.5 tbsp oil per person. For 500 g pasta use 12-16 cloves and 10-12 tbsp oil."
+  ],
+  "source": "Adapted from my own cooking notes.",
+  "diet": "veg"
+}

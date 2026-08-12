@@ -1,0 +1,140 @@
+{
+  "slug": "malai-broccoli-dahi-sholay",
+  "title": "Malai Broccoli & Dahi ke Sholay",
+  "tagline": "Oven-roasted creamy hung-curd broccoli plus crispy baked dahi-paneer bread rolls, off one master marinade.",
+  "image": "image.webp",
+  "emoji": "🥦",
+  "chef": "Raja",
+  "cuisine": "Indian",
+  "course": "Snack",
+  "tags": [
+    "vegetarian",
+    "paneer",
+    "oven-baked",
+    "snack",
+    "marinade"
+  ],
+  "flavor": [
+    "creamy",
+    "savory",
+    "tangy"
+  ],
+  "ratings": {
+    "overall": 4,
+    "difficulty": 4,
+    "availability": 4
+  },
+  "servings": 2,
+  "servingsNote": "Snack dinner — broccoli as a side, sholay as the bites",
+  "time": {
+    "prep": 30,
+    "cook": 22,
+    "total": 52
+  },
+  "macros": {
+    "perServing": {
+      "calories": 540,
+      "protein": 24,
+      "carbs": 55,
+      "fat": 22,
+      "fibre": 5
+    },
+    "whole": {
+      "calories": 1080,
+      "protein": 48,
+      "carbs": 110,
+      "fat": 44,
+      "fibre": 10
+    }
+  },
+  "macroNotes": [
+    "Estimated from ingredients across both items.",
+    "Protein comes from the hung curd, paneer and cheese (~24 g per serving). Bump it by using paneer made from double-toned milk, or swap 30 g of the paneer for extra hung curd.",
+    "The bread in the sholay is the main carb/calorie load — use 4 slices instead of 6, or brown-bread slices, to trim ~120 kcal per serving.",
+    "Soya doesn't belong in these delicate items; the paneer + curd already carry the protein."
+  ],
+  "ingredients": [
+    {
+      "group": "Master marinade (split between both)",
+      "items": [
+        "Hung curd (thick, well-drained): 3 tbsp for broccoli + 1/2 cup (120 g) for sholay",
+        "Ginger-garlic paste: 1 tsp total",
+        "1 green chilli, finely chopped",
+        "Black pepper: 1/2 tsp total",
+        "Chaat masala: 1 tsp total",
+        "Kasuri methi: 1/2 tsp crushed",
+        "Salt to taste"
+      ]
+    },
+    {
+      "group": "Malai broccoli (add-ons)",
+      "items": [
+        "~150 g broccoli florets, cut bite-size",
+        "1 tbsp fresh cream / malai",
+        "1 tsp cornflour (binds the coating)",
+        "1 tbsp grated cheese (optional but good)",
+        "1/2 tsp lemon juice"
+      ]
+    },
+    {
+      "group": "Dahi ke sholay filling (add-ons)",
+      "items": [
+        "75-100 g paneer, crumbled",
+        "1/4 tsp roasted cumin powder",
+        "1 tbsp chopped coriander",
+        "1 tbsp cornflour (keeps the filling tight)",
+        "2 tbsp grated cheese (optional)"
+      ]
+    },
+    {
+      "group": "Sholay shell & coating",
+      "items": [
+        "6 slices bread, crusts trimmed, flattened with a rolling pin",
+        "2 tbsp milk OR a thin slurry (1 tbsp flour + water) for sealing/coating",
+        "Breadcrumbs (best) or crushed cornflakes/rusk for the crust",
+        "Oil spray / brush"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Make the master marinade",
+      "body": "Whisk together the hung curd (keep the two portions separate — 3 tbsp for broccoli, 1/2 cup for sholay), 1 tsp ginger-garlic paste, 1 chopped green chilli, 1/2 tsp black pepper, 1 tsp chaat masala, 1/2 tsp crushed kasuri methi and salt. This is your shared base."
+    },
+    {
+      "title": "Blanch the broccoli",
+      "body": "Wash ~150 g broccoli florets well and blanch in boiling water for just 60-90 seconds, then drain very well. This step matters — raw broccoli roasts unevenly, and a quick blanch fixes the texture without turning it to mush."
+    },
+    {
+      "title": "Marinate the broccoli",
+      "body": "To the 3 tbsp marinade portion add 1 tbsp cream/malai, 1 tsp cornflour, 1 tbsp grated cheese and 1/2 tsp lemon juice. Mix to a thick paste, coat the drained broccoli, and rest 20 minutes."
+    },
+    {
+      "title": "Mix the sholay filling",
+      "body": "To the 1/2 cup marinade portion add 75-100 g crumbled paneer, 1/4 tsp roasted cumin powder, 1 tbsp chopped coriander, 1 tbsp cornflour and 2 tbsp grated cheese. It must be THICK, not runny — if loose, add more cornflour or paneer, or it'll leak while baking."
+    },
+    {
+      "title": "Assemble the sholay",
+      "body": "Flatten 6 trimmed bread slices with a rolling pin. Put 1-1.5 tbsp filling on each, roll or fold, and seal the edges with a dab of water. Dip each roll in 2 tbsp milk or the thin slurry, then coat in breadcrumbs. Mist or brush with oil."
+    },
+    {
+      "title": "Bake the sholay first",
+      "body": "Bake the sholay at 200°C for 18-22 minutes, flipping at 10-12 minutes. If still pale at the end, broil/grill 2 minutes for colour."
+    },
+    {
+      "title": "Add the broccoli",
+      "body": "Spread the marinated broccoli on a lined tray with space between pieces and roast at 220°C for 12-15 minutes (slot it in for the last stretch of the sholay bake). Broil the last 2-3 minutes if you want char."
+    },
+    {
+      "title": "Serve together",
+      "body": "Both finish around the same time. Serve the malai broccoli hot alongside the crispy dahi ke sholay, with green chutney if you have it."
+    }
+  ],
+  "notes": [
+    "One master marinade, then split and customise: broccoli wants a clingy creamy coat (cream + cheese + cornflour + lemon); the sholay filling wants to stay tight and low-moisture (paneer + less lemon + extra cornflour) so it doesn't leak.",
+    "Oven dahi ke sholay won't be quite as crisp as deep-fried, but with a breadcrumb coat and an oil mist they get surprisingly close.",
+    "Efficient timeline: hang the curd, prep + blanch broccoli, mix both marinades, assemble sholay, bake sholay first, add broccoli for the final 12-15 minutes."
+  ],
+  "source": "Adapted from my own cooking notes.",
+  "diet": "veg"
+}

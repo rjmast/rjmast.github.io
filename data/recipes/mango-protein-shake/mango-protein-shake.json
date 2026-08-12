@@ -1,0 +1,94 @@
+{
+  "slug": "mango-protein-shake",
+  "title": "Mango Vanilla Protein Shake",
+  "tagline": "A clean, high-protein mango shake — half mango, half vanilla whey, real Alphonso for when the mangoes aren't sweet enough.",
+  "image": "image.webp",
+  "emoji": "🥭",
+  "chef": "Raja",
+  "cuisine": "Fusion",
+  "course": "Drink",
+  "tags": [
+    "high-protein",
+    "drink",
+    "quick",
+    "no-cook",
+    "gym-meal"
+  ],
+  "flavor": [
+    "sweet",
+    "fresh",
+    "creamy"
+  ],
+  "ratings": {
+    "overall": 4,
+    "difficulty": 1,
+    "availability": 3
+  },
+  "servings": 2,
+  "servingsNote": "",
+  "time": {
+    "prep": 5,
+    "cook": 0,
+    "total": 5
+  },
+  "macros": {
+    "perServing": {
+      "calories": 265,
+      "protein": 25,
+      "carbs": 19,
+      "fat": 5,
+      "fibre": 2
+    },
+    "whole": {
+      "calories": 530,
+      "protein": 50,
+      "carbs": 38,
+      "fat": 10,
+      "fibre": 4
+    }
+  },
+  "macroNotes": [
+    "Estimated from ingredients: Nakpro Impact Whey (166 kcal / 24 g protein per heaped scoop), toned milk, and the Raw Pressery juice (44 kcal / 100 ml).",
+    "Very clean already — high protein (~25 g), moderate carbs, low fat. To trim ~50-70 kcal/serving, drop milk to 100 ml + more ice/water.",
+    "Skip the mango juice if your fresh mango is sweet enough — it's just extra sugar otherwise. Add it only to fix bland mangoes.",
+    "It's a drink, so no soya. For a thicker, higher-protein smoothie, add a half scoop more whey or a spoon of Greek yogurt per serving; for a bulk/post-workout version keep the juice and full milk for glycogen refill."
+  ],
+  "ingredients": [
+    {
+      "group": "For 2 servings",
+      "items": [
+        "2 heaped scoops whey — 1 mango + 1 vanilla (Nakpro Impact Whey)",
+        "300 ml toned milk",
+        "1 medium mango (~200 g), chopped",
+        "80 ml Raw Pressery Alphonso mango juice (optional, for sweetness)",
+        "Ice cubes, as needed",
+        "Tiny pinch of salt (enhances the mango — underrated trick)"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Load the blender",
+      "body": "Add 300 ml milk, 80 ml Raw Pressery Alphonso juice (if using) and a handful of ice cubes to the blender."
+    },
+    {
+      "title": "Add mango and protein",
+      "body": "Add the chopped mango (~200 g) and 2 heaped scoops of whey — 1 mango + 1 vanilla for a balanced flavour rather than a one-note mango overload."
+    },
+    {
+      "title": "Blend",
+      "body": "Blend 20-30 seconds until completely smooth."
+    },
+    {
+      "title": "Adjust and pour",
+      "body": "Adjust thickness with more ice or a splash of water. Add a tiny pinch of salt to lift the mango sweetness, then pour into 2 glasses."
+    }
+  ],
+  "notes": [
+    "The 1 mango + 1 vanilla split tastes more balanced than two mango scoops — the fresh mango already dominates the flavour.",
+    "Per serving this is 1 scoop of whey, 150 ml milk, 40 ml juice and half a mango.",
+    "Only add the Raw Pressery juice when the fresh mangoes aren't sweet — otherwise it just adds sugar without much benefit."
+  ],
+  "source": "Adapted from my own cooking notes.",
+  "diet": "veg"
+}

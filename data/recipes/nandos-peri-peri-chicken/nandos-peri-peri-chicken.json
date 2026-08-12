@@ -1,0 +1,141 @@
+{
+  "slug": "nandos-peri-peri-chicken",
+  "title": "Nando's-Style Peri Peri Chicken",
+  "tagline": "Homemade peri peri sauce, air-fried chicken and herby wedges — the whole Nando's plate.",
+  "image": "image.webp",
+  "emoji": "🍗",
+  "chef": "Raja",
+  "cuisine": "Portuguese Fusion",
+  "course": "Main",
+  "tags": [
+    "high-protein",
+    "chicken",
+    "air-fryer",
+    "marinade",
+    "gym-meal",
+    "restaurant-style"
+  ],
+  "flavor": [
+    "spicy",
+    "tangy",
+    "smoky",
+    "garlicky"
+  ],
+  "ratings": {
+    "overall": 4,
+    "difficulty": 3,
+    "availability": 3
+  },
+  "servings": 2,
+  "servingsNote": "Sauce makes ~200-250 ml — enough for this plus 2-3 more chicken meals in the fridge.",
+  "time": {
+    "prep": 30,
+    "cook": 25,
+    "total": 55
+  },
+  "macros": {
+    "perServing": {
+      "calories": 620,
+      "protein": 48,
+      "carbs": 40,
+      "fat": 28,
+      "fibre": 5
+    },
+    "whole": {
+      "calories": 1240,
+      "protein": 96,
+      "carbs": 80,
+      "fat": 56,
+      "fibre": 10
+    }
+  },
+  "macroNotes": [
+    "Estimated from ingredients (500 g boneless chicken thigh + wedges from ~300 g potato + a portion of the sauce). Thigh is what drives the fat here.",
+    "Leaner version: use chicken breast instead of thigh — drops it to roughly ~480 kcal / 52 g protein per serving with far less fat. Air-frying (vs pan or deep fry) already keeps oil minimal.",
+    "The wedges are the carb load. Air-fry them with just 1-2 tsp oil, and if you're cutting, halve the potato and lean on the chicken.",
+    "The peri peri sauce itself is negligible calories per serving — most of the oil in the batch stays in the jar."
+  ],
+  "ingredients": [
+    {
+      "group": "Peri peri sauce (makes ~200-250 ml)",
+      "items": [
+        "2 red bell peppers (capsicum) — use only 1 for a stronger chilli-forward sauce",
+        "8-10 dried Kashmiri/Byadgi red chillies, soaked in hot water 15-20 min (or 6-8 fresh red chillies)",
+        "1 onion, quartered",
+        "10-12 garlic cloves (blend most cooked, keep 2-3 raw for punch)",
+        "80 ml white vinegar",
+        "1 lemon, juiced (plus zest)",
+        "1 tbsp smoked paprika (or Kashmiri chilli powder + tiny pinch garam masala)",
+        "3/4 tsp dried oregano",
+        "1/2 tsp black or white pepper",
+        "1 tbsp sugar (or 1 tbsp honey — pick one)",
+        "1 bay leaf",
+        "60-80 ml oil (olive or neutral)",
+        "1 to 1.5 tsp salt, to taste"
+      ]
+    },
+    {
+      "group": "Chicken",
+      "items": [
+        "500 g chicken — thigh (juicier) or breast (leaner), boneless; or bone-in if you prefer",
+        "4-5 tbsp peri peri sauce (for marinating)",
+        "1/2 tsp salt"
+      ]
+    },
+    {
+      "group": "Herby wedges",
+      "items": [
+        "2 large potatoes (~300 g), cut into even wedges",
+        "1-2 tsp oil",
+        "1/2 tsp salt",
+        "1/2 tsp paprika or Kashmiri chilli",
+        "1/2 tsp garlic powder",
+        "1/2 tsp oregano / mixed herbs",
+        "Pinch cornflour (optional, extra crisp)"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Roast the sauce base",
+      "body": "Char the 2 capsicums, onion and (fresh) chillies on an open flame or hot pan until the skins blister and blacken in spots. This char is what gives the smoky Nando's note — don't skip it. If using dried chillies, soak them in hot water 15-20 min first so they blend smooth, don't blend them dry."
+    },
+    {
+      "title": "Cook the base",
+      "body": "Simmer the roasted capsicum + onion + chillies + 8-9 garlic cloves + 80 ml vinegar + lemon juice and zest + 1 tbsp smoked paprika + 3/4 tsp oregano + 1/2 tsp pepper + 1 tbsp sugar + 1 bay leaf + 1-1.5 tsp salt for 10-15 minutes until slightly thickened. Longer simmer = better keeping quality."
+    },
+    {
+      "title": "Blend and emulsify",
+      "body": "Remove the bay leaf. Blend everything smooth, drizzling in the 60-80 ml oil while blending so it emulsifies. Add the 2-3 raw garlic cloves at the very end for a sharp top note. Taste: it should read acid > garlic > chilli, with capsicum as background body, NOT the star."
+    },
+    {
+      "title": "Marinate the chicken",
+      "body": "Coat the 500 g chicken with 4-5 tbsp of the sauce + 1/2 tsp salt. Marinate at least 30 minutes, ideally 2-4 hours (or overnight — the sauce also tastes far better the next day once the flavours integrate). Bottle the rest of the sauce for later."
+    },
+    {
+      "title": "Prep the wedges",
+      "body": "Cut 2 potatoes (~300 g) into even wedges. For the no-boil route, soak them in water 15-20 min to pull out starch, then dry completely. (For crispier/fluffier, parboil 5-6 min instead, drain and dry.) Toss with 1-2 tsp oil, 1/2 tsp salt, 1/2 tsp paprika, 1/2 tsp garlic powder, 1/2 tsp oregano and a pinch of cornflour. Dry potatoes are the key to crisp — wet ones just steam."
+    },
+    {
+      "title": "Air-fry the chicken",
+      "body": "Shake excess marinade off the chicken (dripping sauce burns and turns bitter — light coating only). Air-fry at 180C for 12-15 minutes, flipping halfway, then bump to 200C for a final 3-5 minutes for colour. Boneless ~15-18 min total, bone-in ~20-25 min. Brush a little fresh sauce on in the last 2-3 minutes for flavour without burning the marinade."
+    },
+    {
+      "title": "Air-fry the wedges",
+      "body": "Air-fry the wedges at 200C for 18-22 minutes (or ~15-18 if parboiled), shaking halfway. Don't crowd the basket or they steam instead of crisping."
+    },
+    {
+      "title": "Finish and plate",
+      "body": "Toss the hot wedges with a spoon of peri peri sauce + a little chopped fresh garlic and a squeeze of lemon. Squeeze lemon over the chicken too and sprinkle a little salt + chilli flakes — that final acid instantly rebalances everything."
+    }
+  ],
+  "notes": [
+    "If the batch comes out too capsicumy/peppery — that green shimla-mirch smell is the classic peri peri failure. Cause: too much capsicum vs acid + garlic + chilli. Fix a finished batch by blending in 1-2 tbsp more vinegar + 1/2 tbsp lemon + 2-3 raw garlic cloves + 1/2 tsp salt + a pinch of sugar; add more soaked-chilli paste or paprika if it's still capsicum-heavy. A hacky rescue is 1 tsp ketchup (sweet + acid + body masks the capsicum).",
+    "Next-batch prevention: use just 1 capsicum, roast it until properly charred, and lean harder on chilli + vinegar + garlic. Target ratio in the mouth is acid > garlic > chilli > oil > capsicum.",
+    "Always judge peri peri the NEXT day — fresh it smells harsh and disjointed; after 12-24 hours in the fridge the flavours settle and the capsicum note drops. Cooking it onto chicken also mellows it a lot.",
+    "Storage: fridge 2-3 months (high vinegar + cooked base + oil layer on top + a sterilised jar), freezer 4-6 months in small portions.",
+    "This slots into a weekend batch-cook system: peri peri sauce + a dry rub + a yogurt/tandoori marinade covers a week of easy chicken."
+  ],
+  "source": "Adapted from my own cooking notes.",
+  "diet": "non-veg"
+}

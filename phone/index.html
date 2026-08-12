@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>RajaOS · Mobile</title>
+  <meta name="description" content="Rajapandiyan Arivazhagan — AI/LLM Engineer. Portfolio as a phone OS.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="../shared/tokens.css">
+  <link rel="stylesheet" href="phone.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+</head>
+<body>
+  <div class="phone">
+    <div class="screen" id="screen">
+
+      <!-- status bar -->
+      <header class="statusbar" aria-hidden="true">
+        <span class="sb-clock" id="sb-clock">9:41</span>
+        <span class="sb-cluster">
+          <!-- signal -->
+          <svg class="sb-ic" width="18" height="12" viewBox="0 0 18 12" fill="#eaf2ff" aria-hidden="true">
+            <rect x="0"  y="8"  width="3" height="4"  rx="1"/>
+            <rect x="5"  y="5.5" width="3" height="6.5" rx="1"/>
+            <rect x="10" y="3"  width="3" height="9"  rx="1"/>
+            <rect x="15" y="0.5" width="3" height="11.5" rx="1"/>
+          </svg>
+          <!-- wifi -->
+          <svg class="sb-ic" width="17" height="12" viewBox="0 0 24 18" fill="none" stroke="#eaf2ff" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M2 6.5a15 15 0 0 1 20 0"/>
+            <path d="M5.5 10.5a10 10 0 0 1 13 0"/>
+            <path d="M9 14.5a5 5 0 0 1 6 0"/>
+            <circle cx="12" cy="17" r="0.6" fill="#eaf2ff" stroke="none"/>
+          </svg>
+          <!-- battery -->
+          <svg class="sb-ic" width="26" height="13" viewBox="0 0 26 13" fill="none" aria-hidden="true">
+            <rect x="1" y="1" width="21" height="11" rx="3" stroke="#eaf2ff" stroke-width="1.3" opacity=".65"/>
+            <rect x="3" y="3" width="15" height="7" rx="1.4" fill="#eaf2ff"/>
+            <path d="M24 4.5v4" stroke="#eaf2ff" stroke-width="1.6" stroke-linecap="round" opacity=".65"/>
+          </svg>
+        </span>
+      </header>
+
+      <!-- home screen -->
+      <main class="home" id="home">
+        <div class="wordmark" aria-hidden="true">
+          <span class="wm-mark" id="wm-mark"></span>
+          <span class="wm-text">RAJA</span>
+        </div>
+        <section class="grid" id="grid" aria-label="Apps"></section>
+      </main>
+
+      <!-- dock -->
+      <nav class="dock" id="dock" aria-label="Dock"></nav>
+
+      <!-- full-screen app layer -->
+      <section class="app-layer" id="app-layer" aria-hidden="true">
+        <header class="app-bar">
+          <span class="app-bar-title" id="app-bar-title"></span>
+          <button class="app-close" id="app-close" type="button" aria-label="Close app">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg>
+          </button>
+        </header>
+        <div class="app-stage" id="app-stage"></div>
+      </section>
+
+    </div>
+  </div>
+  <script src="phone.js"></script>
+</body>
+</html>

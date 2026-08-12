@@ -1,0 +1,119 @@
+{
+  "slug": "paneer-butter-masala",
+  "title": "Paneer Butter Masala",
+  "tagline": "Creamy, buttery tomato-cashew makhani with soft paneer cubes.",
+  "image": "image.webp",
+  "emoji": "🧀",
+  "chef": "Raja",
+  "cuisine": "Indian",
+  "course": "Main",
+  "tags": [
+    "paneer",
+    "curry",
+    "vegetarian",
+    "comfort-food",
+    "restaurant-style",
+    "indian"
+  ],
+  "flavor": [
+    "creamy",
+    "rich",
+    "savory",
+    "tangy"
+  ],
+  "ratings": {
+    "overall": 4.5,
+    "difficulty": 2,
+    "availability": 5
+  },
+  "servings": 2,
+  "servingsNote": "",
+  "time": {
+    "prep": 15,
+    "cook": 30,
+    "total": 45
+  },
+  "macros": {
+    "perServing": {
+      "calories": 610,
+      "protein": 23,
+      "carbs": 28,
+      "fat": 44,
+      "fibre": 5
+    },
+    "whole": {
+      "calories": 1220,
+      "protein": 46,
+      "carbs": 56,
+      "fat": 88,
+      "fibre": 10
+    }
+  },
+  "macroNotes": [
+    "Estimated from ingredients. This is a rich gravy — most of the calories are butter, cream and cashews.",
+    "Lean it out: drop the cream to 2 tbsp and finish with 3 tbsp of hung curd / Greek yogurt whisked in off the heat instead. Saves ~120 kcal a serving and bumps protein. Use half the butter (1 tbsp) and you save another ~100 kcal.",
+    "Protein boost: this is already paneer-heavy (~36 g protein from 200 g paneer), but you can push it further by adding 100 g of soaked, squeezed soya chunks to the gravy at the simmer stage (+~30 g protein for the pair), or just use 250 g paneer.",
+    "Low-fat paneer swaps in cleanly here and cuts ~150 kcal per serving with no real taste hit in a gravy this rich."
+  ],
+  "ingredients": [
+    {
+      "group": "For the makhani gravy",
+      "items": [
+        "3 medium tomatoes (~350 g), roughly chopped",
+        "12-15 cashews (~30 g), soaked in warm water 10 min",
+        "1 medium onion (~120 g), roughly chopped",
+        "1.5 tbsp ginger-garlic paste",
+        "2 tbsp (30 g) butter",
+        "1 tbsp oil",
+        "1 tsp Kashmiri red chilli powder (for colour)",
+        "1/2 tsp turmeric",
+        "1/2 tsp garam masala",
+        "1 tsp sugar (balances the tomato)",
+        "3/4 tsp salt, to taste"
+      ]
+    },
+    {
+      "group": "To finish",
+      "items": [
+        "200 g paneer, cut into 2 cm cubes",
+        "3 tbsp (45 ml) fresh cream",
+        "1 tsp kasuri methi (dried fenugreek), crushed",
+        "1 tbsp (15 g) butter, to finish",
+        "2 tbsp fresh coriander, chopped"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Cook the tomato base",
+      "body": "Heat 1 tbsp oil + 1 tbsp butter in a pan on medium. Add the chopped onion (~120 g) and cook 4-5 min until soft, then add 3 chopped tomatoes (~350 g) and the soaked 30 g cashews. Cook 8-10 minutes until the tomatoes fully break down and the oil starts to separate. Tip: if you added tomatoes in two batches and they're uneven, splash in 2-3 tbsp water, cover, drop to medium-low and stir every 2 min for 5-7 min so they all soften together before you blend."
+    },
+    {
+      "title": "Blend smooth",
+      "body": "Cool slightly, then blend the tomato-cashew-onion mix into a completely smooth puree. Pass it through a strainer if you want it silky like the restaurant version."
+    },
+    {
+      "title": "Bloom the spices",
+      "body": "In the same pan, melt 1 tbsp (15 g) butter. Add 1.5 tbsp ginger-garlic paste and saute 30-45 seconds until the raw smell goes — do NOT skip this. Add 1 tsp Kashmiri chilli powder and 1/2 tsp turmeric, stir for 10 seconds so they don't burn."
+    },
+    {
+      "title": "Simmer the gravy",
+      "body": "Pour the blended puree back in. Add 1 tsp sugar and 3/4 tsp salt. Simmer on low 8-10 minutes, stirring, until it thickens and darkens and butter beads on the surface."
+    },
+    {
+      "title": "Add paneer and cream",
+      "body": "Stir in 3 tbsp (45 ml) cream and 1/2 tsp garam masala, then slide in the 200 g paneer cubes. Simmer gently 3-4 minutes — don't boil hard or the cream can split."
+    },
+    {
+      "title": "Finish",
+      "body": "Turn off the heat. Crush 1 tsp kasuri methi between your palms and stir it in with a final 1 tbsp (15 g) butter. Garnish with 2 tbsp chopped coriander. Rest 5 minutes before serving — the flavour rounds out."
+    }
+  ],
+  "notes": [
+    "Forgot the ginger-garlic paste? Don't dump it in raw at the end. Heat a little butter in a small pan, saute 1-1.5 tsp of the paste for 30-45 seconds until the raw smell goes, then stir that into the finished gravy and simmer 2-3 min. Raw paste added late tastes harsh.",
+    "For extra silkiness soak the paneer in warm water for 10 min before adding — it stays soft.",
+    "No cream on hand? A homemade Greek-yogurt-style hung curd (strain regular dahi in a cloth for 3-4 hours) works and adds protein — just whisk it in off the heat so it doesn't curdle."
+  ],
+  "source": "Adapted from my own cooking notes.",
+  "diet": "veg"
+}

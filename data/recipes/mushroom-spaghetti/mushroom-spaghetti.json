@@ -1,0 +1,120 @@
+{
+  "slug": "mushroom-spaghetti",
+  "title": "Creamy Mushroom Spaghetti",
+  "tagline": "Browned mushrooms in a garlicky parmesan cream sauce over spaghetti.",
+  "image": "image.webp",
+  "emoji": "🍝",
+  "chef": "Raja",
+  "cuisine": "Italian",
+  "course": "Main",
+  "tags": [
+    "pasta",
+    "vegetarian",
+    "comfort-food",
+    "italian",
+    "quick",
+    "soya"
+  ],
+  "flavor": [
+    "creamy",
+    "umami",
+    "savory",
+    "cheesy"
+  ],
+  "ratings": {
+    "overall": 5,
+    "difficulty": 3,
+    "availability": 4
+  },
+  "servings": 2,
+  "servingsNote": "",
+  "time": {
+    "prep": 10,
+    "cook": 25,
+    "total": 35
+  },
+  "macros": {
+    "perServing": {
+      "calories": 820,
+      "protein": 28,
+      "carbs": 88,
+      "fat": 40,
+      "fibre": 6
+    },
+    "whole": {
+      "calories": 1640,
+      "protein": 56,
+      "carbs": 176,
+      "fat": 80,
+      "fibre": 12
+    }
+  },
+  "macroNotes": [
+    "Estimated from ingredients. At ~820 kcal a serving this is a big meal — the cream and cheese carry most of the fat.",
+    "Cut it down: swap the heavy cream for whole milk + 1 tsp cornflour (thickens the same way) to save ~180 kcal per serving, and use 1 tbsp olive oil instead of 3.",
+    "Protein boost: add 100 g of soaked, squeezed soya chunks (50 g per serving) — chop them small, brown them with the mushrooms so they soak up flavour. Adds ~30 g protein across the pair and turns a carb-heavy plate into a proper gym meal. Grilled chicken (150 g) works too if you're not keeping it veg."
+  ],
+  "ingredients": [
+    {
+      "group": "Pasta",
+      "items": [
+        "225 g spaghetti",
+        "1-2 tbsp salt (for the pasta water)"
+      ]
+    },
+    {
+      "group": "Mushroom cream sauce",
+      "items": [
+        "340 g mushrooms (button/cremini), sliced",
+        "2 tbsp olive oil",
+        "1 tbsp (15 g) butter",
+        "2 cloves garlic, minced",
+        "1 small onion (~80 g), finely chopped",
+        "120 ml heavy cream",
+        "50 g parmesan, grated",
+        "1/2 tsp black pepper",
+        "Salt, to taste",
+        "2 tbsp fresh parsley, chopped (garnish)"
+      ]
+    },
+    {
+      "group": "Optional protein boost",
+      "items": [
+        "100 g dry soya chunks, soaked in hot water and squeezed dry, finely chopped"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Boil the spaghetti",
+      "body": "Bring a large pot of water (4-5 litres) to a rolling boil, add 1-2 tbsp salt, then add the 225 g spaghetti. Note: get it to a full boil BEFORE adding the pasta — if you drop it in early, crank the heat to high and stir frequently so it doesn't clump or stick. Cook to al dente (usually 8-10 min), then drain. Reserve 1/2 cup of pasta water; don't rinse the spaghetti."
+    },
+    {
+      "title": "Sweat the aromatics",
+      "body": "In a large skillet heat 2 tbsp olive oil + 1 tbsp (15 g) butter over medium. Add 2 minced garlic cloves and the chopped onion (~80 g) and cook 3-4 minutes until soft and translucent."
+    },
+    {
+      "title": "Brown the mushrooms (don't rush)",
+      "body": "Add the 340 g sliced mushrooms (and the chopped 100 g soaked soya chunks now, if using). Cook on medium-high 7-10 minutes. They'll release water first — keep cooking until ALL that liquid evaporates and the mushrooms start to brown. This is the whole flavour base; if you add cream while they're still watery the sauce tastes flat."
+    },
+    {
+      "title": "Make the cream sauce",
+      "body": "Lower the heat. Pour in 120 ml heavy cream and let it simmer gently 2-3 minutes until slightly thickened. Season with 1/2 tsp black pepper and salt to taste."
+    },
+    {
+      "title": "Melt in the cheese",
+      "body": "Stir in 50 g grated parmesan until it melts into a smooth sauce. If it's too thick, loosen it with a splash of the reserved pasta water."
+    },
+    {
+      "title": "Toss and serve",
+      "body": "Add the drained spaghetti to the skillet and toss 1-2 minutes so every strand is coated, adding more pasta water if needed for a glossy sauce. Plate and finish with 2 tbsp chopped parsley and extra parmesan."
+    }
+  ],
+  "notes": [
+    "The single most important step is drying out the mushrooms fully before the cream goes in — it concentrates the flavour and gives a proper sauce texture.",
+    "A splash of dry white wine after the mushrooms brown (let it cook off 2-3 min) adds depth, but it's optional and not needed.",
+    "Scales cleanly to 4 — double everything and use ~1.5 lb mushrooms."
+  ],
+  "source": "Adapted from my own cooking notes.",
+  "diet": "veg"
+}

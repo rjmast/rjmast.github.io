@@ -1,0 +1,138 @@
+{
+  "slug": "chicken-biryani",
+  "title": "Chicken Biryani",
+  "tagline": "Diet-friendly, chicken-heavy dum biryani scaled up from a packet mix for 1 kg chicken.",
+  "image": "image.webp",
+  "emoji": "🍛",
+  "chef": "Raja",
+  "cuisine": "Indian",
+  "course": "Main",
+  "tags": [
+    "high-protein",
+    "chicken",
+    "rice",
+    "one-pot",
+    "gym-meal",
+    "restaurant-style",
+    "indian"
+  ],
+  "flavor": [
+    "spicy",
+    "savory",
+    "rich",
+    "smoky"
+  ],
+  "ratings": {
+    "overall": 5,
+    "difficulty": 2,
+    "availability": 3
+  },
+  "servings": 4,
+  "servingsNote": "Chicken-heavy — lighter on rice per portion.",
+  "time": {
+    "prep": 40,
+    "cook": 45,
+    "total": 85
+  },
+  "macros": {
+    "perServing": {
+      "calories": 550,
+      "protein": 37,
+      "carbs": 52,
+      "fat": 21,
+      "fibre": 3
+    },
+    "whole": {
+      "calories": 2200,
+      "protein": 148,
+      "carbs": 208,
+      "fat": 84,
+      "fibre": 12
+    }
+  },
+  "macroNotes": [
+    "Estimated for 1 kg curry-cut bone-in chicken + 300 g raw rice + 200 g curd + 1 onion + 1 tbsp oil + 1 tbsp ghee + packet mix. Bone-in inflates the raw weight — actual edible meat is ~650-700 g, so per-plate protein is lower than the 1 kg suggests.",
+    "Swap to 1 kg chicken BREAST and the whole pot becomes roughly ~1900-2100 kcal / ~230-250 g protein with only ~35-45 g fat — bodybuilder macros while still eating real biryani.",
+    "Air-fry the onions instead of deep-frying (160-170C, 12-18 min, light oil spray) to save ~80-120 kcal with almost all the flavour.",
+    "Keeping rice low (300 g for 1 kg chicken vs the packet's 200 g per 500 g) is the main lever that makes this diet-friendly — go down to 250 g if you want it even more chicken-forward, though 300 g stops it turning wet and pulao-like."
+  ],
+  "ingredients": [
+    {
+      "group": "Chicken marinade",
+      "items": [
+        "1 kg curry-cut bone-in chicken (skin removed), or breast for a leaner version",
+        "200 g curd (dahi)",
+        "1 packet (50 g) biryani mix (e.g. Suhana)",
+        "1 tbsp MDH Chicken Masala",
+        "2 tbsp ginger-garlic paste",
+        "1 tbsp lemon juice",
+        "1 tsp Kashmiri chilli powder",
+        "1/2 tsp turmeric",
+        "1 tsp cumin powder",
+        "1/2 tsp garam masala",
+        "1 tsp salt (packet is already ~33% salt — go easy)"
+      ]
+    },
+    {
+      "group": "Rice",
+      "items": [
+        "300 g basmati rice (~1.5 cups), washed and soaked 20-30 min",
+        "Salt, for parboiling"
+      ]
+    },
+    {
+      "group": "Layering + finish",
+      "items": [
+        "1 large onion, thinly sliced",
+        "1 tbsp oil",
+        "1 tbsp ghee (plus 1 tsp to finish)",
+        "1 small bunch coriander (~1/2 cup chopped)",
+        "1 handful mint leaves",
+        "75 ml warm milk + 12-15 saffron strands",
+        "1 pinch sugar (optional, helps saffron colour)"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Marinate the chicken",
+      "body": "Mix 1 kg chicken with 200 g curd, the full 50 g biryani packet, 1 tbsp MDH Chicken Masala, 2 tbsp ginger-garlic paste, 1 tbsp lemon juice, 1 tsp Kashmiri chilli, 1/2 tsp turmeric, 1 tsp cumin powder, 1/2 tsp garam masala and 1 tsp salt. Rest at least 30 min, ideally 2-4 hours. Taste the marinade for salt before cooking — the packet already carries a lot."
+    },
+    {
+      "title": "Parboil the rice to 80%",
+      "body": "Boil the soaked 300 g rice in plenty of salted water until 80% cooked — the grain should still have a firm core. Drain. Cooking it to 80% now means the dum finishes it perfectly without going mushy."
+    },
+    {
+      "title": "Fry the onions",
+      "body": "Air-fry 1 sliced onion at 170C for 12-15 min (shake every 4-5 min) or fry in 1 tbsp oil until deep golden. Reserve half for garnish. Air-frying saves ~80-120 kcal."
+    },
+    {
+      "title": "Steep the saffron milk",
+      "body": "Warm 75 ml milk, crush 12-15 saffron strands into it with an optional pinch of sugar, and let it sit 15-20 min while you cook."
+    },
+    {
+      "title": "Cook the chicken masala",
+      "body": "Heat the pot with 1 tbsp ghee (plus 1 tbsp oil if the onions were air-fried). Add all the marinated chicken and cook on medium-high 12-15 minutes until it's ~70-80% cooked, the gravy has thickened and oil just starts to separate. If it's watery, cook 5 more minutes uncovered — you want a thick masala layer, not a curry. Stir in half the fried onions and 2/3 of the mint and coriander."
+    },
+    {
+      "title": "Layer",
+      "body": "Spread the chicken evenly across the bottom. Layer all the 80% cooked rice on top — do NOT mix. Scatter the remaining fried onions, remaining 1/3 mint and coriander, then drizzle all the saffron milk evenly over the surface and dot with 1 tsp ghee."
+    },
+    {
+      "title": "Dum",
+      "body": "Cover tightly (wrap foil around the rim or put a damp cloth under the lid if it's loose). Cook 5 minutes on medium, then 15 minutes on low, then turn the heat OFF and rest 10 minutes undisturbed — don't open it. If the chicken gravy looked wet before layering, do 5 min medium + 20 min low instead."
+    },
+    {
+      "title": "Serve",
+      "body": "Open the lid, and with a spoon gently lift portions from the bottom up rather than stirring — you want bites with white rice, saffron rice and chicken masala mixed naturally."
+    }
+  ],
+  "notes": [
+    "The packet is built for 500 g chicken + 200 g rice. Scaled over 1 kg chicken + 300 g rice, the extra 1 tbsp MDH Chicken Masala + 1/2 tsp garam masala + 1/2 tsp chilli powder are what stop the chicken tasting under-seasoned.",
+    "1 kg 'curry cut' in India usually means bone-in, skin off — only ~650-700 g is actual edible meat, so don't be fooled by the raw weight when counting protein.",
+    "Onions add sweetness, body and aroma. If you cut them entirely, compensate with extra mint, extra coriander and 1 tbsp lemon juice.",
+    "300 g rice is the sweet spot for 1 kg chicken — 250 g goes too wet and meaty, more than 300 g dilutes the diet benefit."
+  ],
+  "source": "Adapted from my own cooking notes.",
+  "diet": "non-veg"
+}

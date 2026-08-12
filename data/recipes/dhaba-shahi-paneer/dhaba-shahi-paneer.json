@@ -1,0 +1,175 @@
+{
+  "slug": "dhaba-shahi-paneer",
+  "title": "Dhaba-Style Shahi Paneer",
+  "tagline": "Restaurant-grade paneer in a rich onion-tomato-cashew gravy, finished with a home-roasted dry masala.",
+  "image": "image.webp",
+  "emoji": "🧀",
+  "chef": "Raja",
+  "cuisine": "Indian",
+  "course": "Main",
+  "tags": [
+    "paneer",
+    "vegetarian",
+    "curry",
+    "restaurant-style",
+    "comfort-food",
+    "high-protein",
+    "indian"
+  ],
+  "flavor": [
+    "rich",
+    "creamy",
+    "spicy",
+    "savory"
+  ],
+  "ratings": {
+    "overall": 4.5,
+    "difficulty": 4,
+    "availability": 4
+  },
+  "servings": 2,
+  "servingsNote": "Generous 2 servings; scale the gravy up freely for a crowd",
+  "time": {
+    "prep": 15,
+    "cook": 40,
+    "total": 55
+  },
+  "macros": {
+    "perServing": {
+      "calories": 1050,
+      "protein": 40,
+      "carbs": 22,
+      "fat": 90,
+      "fibre": 5
+    },
+    "whole": {
+      "calories": 2100,
+      "protein": 80,
+      "carbs": 44,
+      "fat": 180,
+      "fibre": 10
+    }
+  },
+  "macroNotes": [
+    "Estimated from ingredients.",
+    "Heads up — at ~1050 kcal a serving this eats well over half a 1600–1800 kcal day, and almost all of it is fat from paneer + ghee + cream. Delicious, but treat it as a treat meal.",
+    "Concrete cuts: use 2 tbsp ghee total instead of 6, skip the finishing cream, and pan-sear (or air-fry) the paneer dry instead of frying it in 2–3 tbsp mustard oil → saves ~350–400 kcal per serving without hurting flavour.",
+    "Protein is already strong (~40 g/serving from 400 g paneer). If you want more without more fat, stir in 40 g of soaked, squeezed, chopped soya chunks with the sautéed paneer at step 8 — adds ~10 g protein per serving and soaks up the gravy well."
+  ],
+  "ingredients": [
+    {
+      "group": "For the gravy",
+      "items": [
+        "2 tbsp ghee",
+        "2 cloves",
+        "1 black cardamom",
+        "2 green cardamoms",
+        "6–7 black peppercorns",
+        "1 inch ginger, peeled & chopped",
+        "1 green chilli (mild), cut diagonally",
+        "2 large onions (~250 g), roughly chopped",
+        "1 heaped tbsp degi/Kashmiri red chilli powder",
+        "2 tbsp coriander powder",
+        "1/4 tsp turmeric",
+        "2 large tomatoes (~200 g), roughly diced",
+        "1/2 cup (120 g) curd, beaten",
+        "8 cashew nuts",
+        "1.5 cups water",
+        "Salt, to taste"
+      ]
+    },
+    {
+      "group": "For the dry masala (makes a batch — you only need ~1 tbsp here, store the rest)",
+      "items": [
+        "4–5 black cardamoms",
+        "7–8 green cardamoms",
+        "2 tbsp coriander seeds",
+        "1.5 tbsp cumin seeds (jeera)",
+        "1 heaped tbsp black peppercorns",
+        "3–4 cloves",
+        "2 tsp fennel seeds (saunf)",
+        "2–3 tbsp kasuri methi (dry fenugreek leaves)",
+        "1/4 tsp salt"
+      ]
+    },
+    {
+      "group": "For the sautéed paneer",
+      "items": [
+        "400 g paneer — cut ~350 g into cubes, keep ~50 g aside to grate",
+        "2 tbsp mustard oil",
+        "1/2 tsp cumin seeds",
+        "1 green chilli, slit",
+        "1 medium onion, finely chopped",
+        "1 large capsicum, finely chopped",
+        "1 medium tomato, finely chopped",
+        "1 tbsp tender coriander stems, finely chopped",
+        "1 tsp degi red chilli powder",
+        "1 tbsp prepared dry masala (from above)"
+      ]
+    },
+    {
+      "group": "To finish & garnish",
+      "items": [
+        "1 cup water",
+        "1 tsp sugar (optional)",
+        "1 tbsp ghee",
+        "1–2 tbsp fresh coriander, finely chopped",
+        "1/4 tsp kasuri methi, crushed",
+        "1–2 tbsp fresh cream"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Temper for the gravy",
+      "body": "Heat 2 tbsp ghee in a handi/heavy pot. Once hot, add 2 cloves, 1 black cardamom, 2 green cardamoms and 6–7 black peppercorns and let them splutter."
+    },
+    {
+      "title": "Soften the onions",
+      "body": "Add 1 inch chopped ginger, 1 diagonally-cut green chilli and 2 large chopped onions. Cook until the onions turn translucent."
+    },
+    {
+      "title": "Bloom the spices",
+      "body": "Add 1 heaped tbsp degi red chilli powder, 2 tbsp coriander powder and 1/4 tsp turmeric. Sauté for 1 minute so the spices bloom in the ghee."
+    },
+    {
+      "title": "Cook the tomatoes",
+      "body": "Add 2 diced tomatoes, salt to taste and 1/2 cup beaten curd. Cook until the tomatoes go completely mushy and the fat starts to separate."
+    },
+    {
+      "title": "Simmer & blend",
+      "body": "Add 8 cashews and 1.5 cups water, cover, and simmer 10–12 minutes on medium. Cool to room temperature (important — hot liquid in a blender splatters), then blend to a smooth gravy. Set aside."
+    },
+    {
+      "title": "Roast the dry masala",
+      "body": "In a dry pan on low heat, roast 4–5 black cardamoms, 7–8 green cardamoms, 2 tbsp coriander seeds, 1.5 tbsp cumin, 1 heaped tbsp black peppercorns, 3–4 cloves, 2 tsp fennel and 1/4 tsp salt for 3–4 minutes until aromatic. Turn off the heat, add 2–3 tbsp kasuri methi, toss, then grind to a fine powder. This makes more than you need — store the extra in a jar (it is a fragrant, fennel-forward blend, NOT plain garam masala)."
+    },
+    {
+      "title": "Start the paneer sauté",
+      "body": "In a pan, heat 2 tbsp mustard oil until it just smokes, then cool it slightly and add 1/2 tsp cumin; let it splutter. Add 1 slit green chilli, 1 chopped onion, 1 chopped capsicum, 1 chopped tomato and 1 tbsp coriander stems. Cook 7–8 minutes on high until softened and lightly charred."
+    },
+    {
+      "title": "Coat the paneer",
+      "body": "Add 1 tsp degi red chilli powder, 1 tbsp prepared dry masala and the ~350 g paneer cubes. Sauté on medium until every cube is coated and lightly golden. Set aside."
+    },
+    {
+      "title": "Build the final curry",
+      "body": "In the same handi, add 1 cup water and the blended gravy and bring to a simmer. Stir in the ~50 g grated paneer (it melts in and thickens the gravy), salt to taste and 1 tsp sugar. Cook 5–6 minutes."
+    },
+    {
+      "title": "Combine & finish",
+      "body": "Fold the sautéed paneer into the gravy. Finish with 1 tbsp ghee and 1–2 tbsp chopped coriander. Transfer to a dish and garnish with 1/4 tsp crushed kasuri methi and 1–2 tbsp fresh cream."
+    },
+    {
+      "title": "Serve",
+      "body": "Serve hot with roti, naan or kulcha."
+    }
+  ],
+  "notes": [
+    "The 'dry masala' is a custom home blend (fennel + kasuri methi heavy) — it is not garam masala, though it plays a similar finishing role. The batch keeps for weeks in an airtight jar.",
+    "A hand blender works directly in the pot for the gravy — just cool it slightly first and keep the head fully submerged to avoid splatter.",
+    "Amul/salted paneer plus salted gravy can get salty fast; salt the gravy conservatively and adjust at the end."
+  ],
+  "source": "Adapted from my own cooking notes.",
+  "diet": "veg"
+}

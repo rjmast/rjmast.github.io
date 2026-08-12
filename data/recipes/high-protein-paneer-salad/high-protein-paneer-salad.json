@@ -1,0 +1,127 @@
+{
+  "slug": "high-protein-paneer-salad",
+  "title": "High-Protein Paneer Salad",
+  "tagline": "Pan-roasted Schezwan paneer over massaged kale and lettuce with a tangy Greek-yogurt dressing.",
+  "image": "image.webp",
+  "emoji": "🥗",
+  "chef": "Raja",
+  "cuisine": "Fusion",
+  "course": "Salad",
+  "tags": [
+    "high-protein",
+    "gym-meal",
+    "salad",
+    "paneer",
+    "pan-fried",
+    "low-carb",
+    "meal-prep"
+  ],
+  "flavor": [
+    "spicy",
+    "tangy",
+    "umami",
+    "fresh",
+    "creamy"
+  ],
+  "ratings": {
+    "overall": 4,
+    "difficulty": 2,
+    "availability": 3
+  },
+  "servings": 2,
+  "servingsNote": "",
+  "time": {
+    "prep": 15,
+    "cook": 8,
+    "total": 23
+  },
+  "macros": {
+    "perServing": {
+      "calories": 470,
+      "protein": 32,
+      "carbs": 16,
+      "fat": 30,
+      "fibre": 4
+    },
+    "whole": {
+      "calories": 940,
+      "protein": 64,
+      "carbs": 32,
+      "fat": 60,
+      "fibre": 8
+    }
+  },
+  "macroNotes": [
+    "Estimated from ingredients (300 g paneer split across two + Greek yogurt dressing + veg + nuts). Strong protein-to-calorie ratio and low carb — a proper cutting-phase salad.",
+    "Leaner: use low-fat paneer to drop ~150 kcal per serving and minimise the pan oil.",
+    "Protein boost: swap the roasted peanuts for roasted chana (leaner) or add 50 g soaked, squeezed soya chunks pan-roasted alongside the paneer for +~15 g protein across the pair without much fat.",
+    "The Greek-yogurt-based dressing already adds protein — if you want it creamier and higher-protein still, use hung curd instead of oil in the dressing."
+  ],
+  "ingredients": [
+    {
+      "group": "Schezwan paneer",
+      "items": [
+        "300 g paneer, cut into medium cubes",
+        "2-3 tsp Schezwan sauce",
+        "1/2 tsp garlic powder",
+        "1/4 tsp black pepper",
+        "1 tsp curd (optional, helps the coating cling)",
+        "Salt, a tiny pinch (sauce is already salty)",
+        "1-2 tsp oil, for pan-roasting",
+        "A squeeze of lemon or splash of pickle brine, to finish"
+      ]
+    },
+    {
+      "group": "Salad base",
+      "items": [
+        "2 cups kale, finely chopped",
+        "2 cups lettuce (iceberg or romaine)",
+        "1 capsicum, sliced",
+        "1 cucumber, sliced",
+        "4-8 gherkins, sliced",
+        "2-3 tbsp roasted peanuts or roasted chana",
+        "Pinch of salt + few drops lemon (for massaging the kale)"
+      ]
+    },
+    {
+      "group": "Greek yogurt dressing",
+      "items": [
+        "6 tbsp Greek yogurt (or hung curd)",
+        "2 tsp mustard",
+        "1-2 tsp lemon juice",
+        "1 tsp gherkin/pickle brine",
+        "Black pepper, to taste",
+        "Tiny pinch garlic powder (optional)"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Marinate the paneer",
+      "body": "Toss the 300 g paneer cubes with 2-3 tsp Schezwan sauce, 1/2 tsp garlic powder, 1/4 tsp black pepper, 1 tsp curd and just a tiny pinch of salt. Rest 5-10 minutes. Cut them medium, not small, so they don't dry out."
+    },
+    {
+      "title": "Massage the kale",
+      "body": "Put the 2 cups chopped kale in a bowl with a pinch of salt and a few drops of lemon, and massage it with your hands for 1-2 minutes until it softens and darkens. This actually matters — raw un-massaged kale is bitter and tough."
+    },
+    {
+      "title": "Pan-roast the paneer",
+      "body": "Heat 1-2 tsp oil in a pan on medium-high. Add the paneer and let it sit undisturbed so one side crisps before flipping — aim for golden edges and a little char. If it releases water your heat is too low; if the sauce burns it's too high or added too early. Finish with a squeeze of lemon or splash of pickle brine (and a tiny pinch MSG if you want the restaurant hit)."
+    },
+    {
+      "title": "Mix the dressing",
+      "body": "Whisk 6 tbsp Greek yogurt + 2 tsp mustard + 1-2 tsp lemon juice + 1 tsp pickle brine + black pepper (and an optional tiny pinch garlic powder). Keep it clean — the paneer is doing the spicy heavy lifting, so no Schezwan in the dressing. Taste before adding salt; the brine already has some."
+    },
+    {
+      "title": "Assemble",
+      "body": "Bed of massaged kale + lettuce. Scatter the sliced capsicum and cucumber. Pile the hot Schezwan paneer on top, add the roasted peanuts/chana, then the sliced gherkins last so they stay crunchy. Drizzle the dressing and toss lightly — don't overmix once the paneer is in."
+    }
+  ],
+  "notes": [
+    "Keep the roles separate: paneer = heat + umami + fat, dressing = cool + tang, gherkins = sharp crunch. That layering is what makes it taste composed instead of a flat mixed bowl.",
+    "Add gherkins and dressing at the very end to keep everything crisp. If it gets too sour, fix it with fat (oil/yogurt), not sugar.",
+    "Garlic powder belongs in the paneer marinade (binds to the surface, survives the heat), not dumped raw into the dressing where it turns pungent."
+  ],
+  "source": "Adapted from my own cooking notes.",
+  "diet": "veg"
+}

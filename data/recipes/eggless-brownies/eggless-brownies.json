@@ -1,0 +1,93 @@
+{
+  "slug": "eggless-brownies",
+  "title": "Eggless Brownies",
+  "tagline": "Fudgy boxed brownies with no eggs — yogurt does the job and nobody can tell.",
+  "image": "image.webp",
+  "emoji": "🍫",
+  "chef": "Raja",
+  "cuisine": "American",
+  "course": "Dessert",
+  "tags": [
+    "dessert",
+    "vegetarian",
+    "oven-baked",
+    "cheat-day",
+    "comfort-food"
+  ],
+  "flavor": [
+    "sweet",
+    "rich"
+  ],
+  "ratings": {
+    "overall": 5,
+    "difficulty": 1,
+    "availability": 5
+  },
+  "servings": 9,
+  "servingsNote": "One standard boxed mix, cut into 9 squares.",
+  "time": {
+    "prep": 10,
+    "cook": 30,
+    "total": 40
+  },
+  "macros": {
+    "perServing": {
+      "calories": 245,
+      "protein": 3,
+      "carbs": 35,
+      "fat": 10,
+      "fibre": 1
+    },
+    "whole": {
+      "calories": 2205,
+      "protein": 27,
+      "carbs": 315,
+      "fat": 90,
+      "fibre": 9
+    }
+  },
+  "macroNotes": [
+    "Estimated for a typical boxed mix — check your box, they vary. This is a cheat-day treat: sugar and fat heavy, low protein.",
+    "One square (~245 kcal) is a reasonable single hit; two starts eating a real chunk of a 1600–1800 kcal day.",
+    "Protein boost that actually works in brownies: swap the plain yogurt for Greek yogurt, or whisk a scoop of chocolate whey into the batter (add a splash more liquid if it stiffens). That's the right move here since soya/savoury protein doesn't belong in a dessert."
+  ],
+  "ingredients": [
+    {
+      "group": "Batter",
+      "items": [
+        "1 boxed brownie mix (calls for 2 eggs)",
+        "1/2 cup (120 g) plain yogurt — replaces both eggs (1/4 cup per egg)",
+        "Oil and water as stated on the box",
+        "Optional: chocolate chips or chopped nuts"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Preheat",
+      "body": "Heat the oven to the temperature on the box (usually ~180°C / 350°F) and grease or line your baking tin."
+    },
+    {
+      "title": "Replace the eggs",
+      "body": "Instead of 2 eggs, use 1/2 cup (120 g) plain yogurt — 1/4 cup per egg. Yogurt is the best swap here: it keeps the brownies moist and fudgy and adds no competing flavour (unlike banana). Applesauce (1/4 cup per egg) also works if you prefer."
+    },
+    {
+      "title": "Mix the batter",
+      "body": "Combine the brownie mix with the 1/2 cup yogurt plus the oil and water quantities printed on the box. Stir until just combined — don't overmix. Fold in chocolate chips or nuts if using."
+    },
+    {
+      "title": "Bake",
+      "body": "Pour into the tin and bake for the box's stated time (roughly 25–35 min). Since yogurt makes a slightly denser batter than eggs, check a few minutes early — a skewer should come out with a few moist crumbs, not wet batter."
+    },
+    {
+      "title": "Cool and cut",
+      "body": "Let the brownies cool fully in the tin before cutting into 9 squares — they firm up as they cool and cut much cleaner."
+    }
+  ],
+  "notes": [
+    "Other egg swaps that work per egg: 1/4 cup mashed banana (adds banana flavour), or 1 tbsp vinegar + 1 tsp baking soda (leavening, best combined with one of the wet swaps). Yogurt is the cleanest all-rounder.",
+    "Eggless batter is a touch denser, so slightly under-baking keeps them fudgy rather than cakey."
+  ],
+  "source": "Adapted from my own cooking notes.",
+  "diet": "veg"
+}

@@ -1,0 +1,122 @@
+{
+  "slug": "garlic-chilli-chicken-wrap",
+  "title": "Garlic Chilli Chicken Wrap",
+  "tagline": "Pan-charred garlic chilli chicken rolled into an egg wrap — a street-style kathi roll.",
+  "image": "image.webp",
+  "emoji": "🌯",
+  "chef": "Raja",
+  "cuisine": "Fusion",
+  "course": "Main",
+  "tags": [
+    "high-protein",
+    "wrap",
+    "chicken",
+    "quick",
+    "street-food",
+    "pan-fried",
+    "gym-meal"
+  ],
+  "flavor": [
+    "spicy",
+    "garlicky",
+    "smoky",
+    "savory"
+  ],
+  "ratings": {
+    "overall": 5,
+    "difficulty": 2,
+    "availability": 4
+  },
+  "servings": 2,
+  "servingsNote": "",
+  "time": {
+    "prep": 10,
+    "cook": 20,
+    "total": 30
+  },
+  "macros": {
+    "perServing": {
+      "calories": 545,
+      "protein": 39,
+      "carbs": 35,
+      "fat": 24,
+      "fibre": 4
+    },
+    "whole": {
+      "calories": 1090,
+      "protein": 78,
+      "carbs": 70,
+      "fat": 48,
+      "fibre": 8
+    }
+  },
+  "macroNotes": [
+    "Estimated from ingredients, assuming shop-bought pre-marinated garlic chilli chicken.",
+    "The mayo and the egg carry most of the fat. Swap mayo for hung curd or Greek-yogurt mint sauce to drop ~80 kcal and ~9 g fat per wrap while keeping it creamy.",
+    "Already solid protein (~39 g/wrap). For more, use egg whites only (skip yolks) and pack in 40-50 g extra chicken, or add a slice of paneer."
+  ],
+  "ingredients": [
+    {
+      "group": "Chicken",
+      "items": [
+        "350 g pre-marinated garlic chilli chicken (shop-bought, boneless)",
+        "3-4 tbsp water (to rescue the marinade from burning)",
+        "1 tsp butter + 1 clove garlic, optional finish"
+      ]
+    },
+    {
+      "group": "Egg wraps",
+      "items": [
+        "2 large rotis, parathas or tortillas",
+        "2 eggs, beaten (one per wrap)",
+        "1/2 tsp oil for the pan"
+      ]
+    },
+    {
+      "group": "To assemble",
+      "items": [
+        "Pickled jalapeños, to taste",
+        "2 tbsp mayo (or mint hung-curd sauce)",
+        "Sliced onion + a squeeze of lemon, optional",
+        "Grated cheese, optional"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Sear the chicken",
+      "body": "Put the 350 g pre-marinated chicken into a hot pan in a single layer and sear ~3 minutes on the first side without moving it. Flip and sear the other side 3 minutes. You want browning and some char — that's flavour, not a mistake."
+    },
+    {
+      "title": "The key fix — drop the heat and add water",
+      "body": "The marinade (sugar and spices) burns fast on high heat. As soon as both sides are seared, lower the heat to LOW, add 3-4 tbsp water and cover with a lid. This stops the burning, loosens the caramelised marinade, and cooks the inside through."
+    },
+    {
+      "title": "Cook it through",
+      "body": "Let it cook covered on low for 5-6 minutes. Cut open the biggest piece — if it's white with clear juices and no pink, it's done. If slightly pink, add 2 more tbsp water and cook 2 more minutes."
+    },
+    {
+      "title": "Optional finish",
+      "body": "For proper garlic chilli chicken, toss in 1 tsp butter + 1 minced garlic clove at the end and let it coat the pieces for 30 seconds."
+    },
+    {
+      "title": "Make the egg wrap",
+      "body": "Wipe the pan, add 1/2 tsp oil on medium heat and pour in 1 beaten egg. Immediately lay a roti on top of the wet egg and press so it sticks. Flip after ~30 seconds so the roti side warms. Repeat for the second wrap."
+    },
+    {
+      "title": "Assemble",
+      "body": "Egg-side up, spread 1 tbsp mayo (or mint hung-curd sauce), add half the chicken, jalapeños, and onion + lemon if using. Roll tight."
+    },
+    {
+      "title": "Toast the roll",
+      "body": "Give the rolled wrap a final toast in the dry pan, seam-side down, for a crisp shell that locks everything in. Slice and eat hot."
+    }
+  ],
+  "notes": [
+    "The whole technique here is sear -> low cook -> repurpose: start on lower heat, add the 2-3 tbsp water EARLY to save the marinade, and finish with butter + garlic for restaurant-level flavour.",
+    "A well-charred marinade tastes smoky and tandoori-like — that char is the good kind, not burnt.",
+    "Capsicum + onion sautéed alongside, or a squeeze of lemon at the end, both level it up."
+  ],
+  "source": "Adapted from my own cooking notes.",
+  "diet": "non-veg"
+}

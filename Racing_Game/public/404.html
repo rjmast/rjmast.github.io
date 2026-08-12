@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>race_in_progress</title>
+  <!--
+    SPA fallback for GitHub Pages.
+    GH Pages serves this for any unknown URL. We rewrite the URL into a
+    form the main app can understand (?/path) and redirect to '/'. The
+    matching restore script in index.html turns it back into the original
+    pathname before the JS bundle runs, so /AB12X lands at index.html with
+    pathname=/AB12X.
+    Adapted from rafrex/spa-github-pages.
+  -->
+  <script>
+    (function() {
+      var pathSegmentsToKeep = 1; // 1 because we live at eeman1113.github.io/race_in_progress/ (project page, one subdir)
+      var l = window.location;
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
+        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+        l.hash
+      );
+    })();
+  </script>
+</head>
+<body></body>
+</html>

@@ -1,0 +1,126 @@
+{
+  "slug": "asian-paneer-noodles",
+  "title": "Asian Paneer Noodles (No Onion-Garlic)",
+  "tagline": "Glossy Schezwan-soy noodles with crispy marinated paneer — no onion or garlic.",
+  "image": "image.webp",
+  "emoji": "🍜",
+  "chef": "Raja",
+  "cuisine": "Indo-Chinese",
+  "course": "Main",
+  "tags": [
+    "noodles",
+    "paneer",
+    "high-protein",
+    "stir-fry",
+    "indo-chinese",
+    "quick",
+    "marinade"
+  ],
+  "flavor": [
+    "spicy",
+    "umami",
+    "savory",
+    "tangy"
+  ],
+  "ratings": {
+    "overall": 4.5,
+    "difficulty": 2,
+    "availability": 4
+  },
+  "servings": 2,
+  "servingsNote": "Uses spaghetti as the noodle — works perfectly for this style.",
+  "time": {
+    "prep": 20,
+    "cook": 15,
+    "total": 35
+  },
+  "macros": {
+    "perServing": {
+      "calories": 740,
+      "protein": 30,
+      "carbs": 66,
+      "fat": 28,
+      "fibre": 5
+    },
+    "whole": {
+      "calories": 1480,
+      "protein": 60,
+      "carbs": 132,
+      "fat": 56,
+      "fibre": 10
+    }
+  },
+  "macroNotes": [
+    "Estimated from ingredients. Solid gym-meal ratio thanks to 200 g paneer (~36 g protein) on top of the wheat noodles.",
+    "Lean version: use low-fat paneer (saves ~150 kcal a serving) and cut the finishing oil/butter — the Schezwan and chilli oil carry plenty of flavour on their own.",
+    "Want more protein without more fat: push paneer to 250 g, or add a whisked egg tossed through the noodles at the end for a scramble."
+  ],
+  "ingredients": [
+    {
+      "group": "Paneer + quick marinade",
+      "items": [
+        "200 g paneer, cut into 2 cm cubes",
+        "1 tsp soy sauce",
+        "1 tsp Schezwan sauce",
+        "1/2 tsp chilli oil",
+        "1/4 tsp black pepper",
+        "1 tiny pinch MSG (optional)",
+        "1 tsp oil"
+      ]
+    },
+    {
+      "group": "Noodles + stir-fry",
+      "items": [
+        "180 g spaghetti (or Hakka noodles)",
+        "1 large capsicum (~150 g), thinly sliced",
+        "2 tbsp oil",
+        "1 tbsp Schezwan sauce",
+        "1 tbsp soy sauce",
+        "1-2 tsp chilli oil",
+        "1 tsp vinegar (or lemon juice)",
+        "1 pinch sugar",
+        "1 tiny pinch MSG (optional)",
+        "Black pepper, to taste",
+        "1 tsp butter, to finish (optional)"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Marinate the paneer",
+      "body": "Mix 1 tsp soy sauce + 1 tsp Schezwan sauce + 1/2 tsp chilli oil + 1/4 tsp black pepper + a pinch of MSG + 1 tsp oil in a bowl. Toss the 200 g paneer cubes in it and leave 15-20 minutes. Keep the coating light, not watery — don't add salt, the soy already has it."
+    },
+    {
+      "title": "Boil and cool the noodles",
+      "body": "Cook the 180 g spaghetti in salted water until just done (slightly under, not soft). Drain, rinse briefly under cool water to stop the cooking and stop sticking, then toss with a few drops of oil. Rinsing matters here — it keeps the noodles separate for the stir-fry."
+    },
+    {
+      "title": "Sear the paneer",
+      "body": "Heat a pan on medium-high. Add the marinated paneer in a single layer and sear undisturbed so the edges caramelise — because of the marinade use medium-high (not max) so it sticks and browns instead of burning. Turn to get golden crisp edges all over, ~4-5 min. Remove and set aside."
+    },
+    {
+      "title": "Char the capsicum",
+      "body": "Same pan, add 2 tbsp oil on high heat. Add the sliced capsicum (~150 g) and cook just 2-3 minutes — you want a slight char but still crunchy. Don't overcook it or the dish goes soft and dull."
+    },
+    {
+      "title": "Build the sauce",
+      "body": "Push the capsicum to the side and add 1 tbsp Schezwan sauce + 1 tbsp soy sauce + 1-2 tsp chilli oil + 1 tsp vinegar + a pinch of sugar + a tiny pinch of MSG. Let it sizzle 10-15 seconds so it deepens."
+    },
+    {
+      "title": "Toss it all together",
+      "body": "Add the noodles and toss hard on high heat so they coat evenly, adding a splash of water if dry. Let them sit untouched for 10-15 seconds once to catch a little char, then toss again. Add plenty of black pepper."
+    },
+    {
+      "title": "Finish with paneer",
+      "body": "Fold the seared paneer back in at the very end and toss just to warm through — don't cook it again or you'll lose the crust. Finish with a tiny knob of butter and a few drops of chilli oil on top for aroma."
+    }
+  ],
+  "notes": [
+    "No onion or garlic on purpose. The flavour comes from browning the paneer, high heat on the capsicum, soy/Schezwan umami and the vinegar acid — hit those and it doesn't taste empty.",
+    "Marinating the paneer is a high-ROI move if you have 15-20 min — it becomes a flavour carrier inside the noodles instead of just texture. Skip salt, the soy covers it.",
+    "Only have capsicum? Fine. Good technique beats more veg. But carrot, cabbage, beans or mushroom all work if you have them — cook the harder veg first.",
+    "Skip herbs like basil here — it clashes with soy and chilli. Coriander is okay if you want a garnish."
+  ],
+  "source": "Adapted from my own cooking notes.",
+  "diet": "veg"
+}

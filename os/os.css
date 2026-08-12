@@ -1,0 +1,367 @@
+/* ===========================================================================
+   RajaOS — shell chrome
+   Desktop · menu bar · dock · window manager · boot screen
+   =========================================================================== */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;                 /* the OS never scrolls; only window bodies do */
+  overscroll-behavior: none;
+  font-family: var(--font-ui);
+  color: var(--ink);
+  background: #08306b;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+button { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+/* ===========================================================================
+   Desktop + wallpaper
+   =========================================================================== */
+#desktop {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  /* the wallpaper is the low-poly portrait; deep-blue is the fallback ground */
+  background: #08306b url("../assets/wallpaper/wallpaper.png") center top / cover no-repeat;
+}
+/* scrims: keep the menubar + dock legible over the photo, gentle corner vignette —
+   deliberately light so the portrait stays crisp */
+#desktop::after {
+  content: "";
+  position: absolute; inset: 0; pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(4,12,30,.30) 0%, transparent 13%, transparent 80%, rgba(4,12,30,.34) 100%),
+    radial-gradient(132% 122% at 50% 40%, transparent 60%, rgba(4,12,30,.34) 100%);
+}
+
+/* ---------------------------------------------------------------------------
+   Wallpaper — STATIC wordmark + a separate orbital animation circling it.
+   Sits at the very back (z:0); windows always float above it.
+   --------------------------------------------------------------------------- */
+#wall {
+  position: absolute; inset: 0; z-index: 0; overflow: hidden;
+  pointer-events: none;
+}
+/* --- the name: a static wallpaper wordmark flanking the portrait: YOUR NAME · face · YOUR NAME.
+   It is ALWAYS fully opaque — the life comes from a gentle per-letter wave plus a slow
+   glow "breath", so something is always happening but the name never blinks out. --- */
+.wall-name {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 clamp(16px, 4.5vw, 96px);
+}
+.wm {
+  font-family: var(--font-mono, "JetBrains Mono", ui-monospace, monospace);
+  font-weight: 800; letter-spacing: -.05em; line-height: .8;
+  font-size: clamp(38px, 8.6vw, 150px);
+  color: #f7952f;
+  display: inline-flex;
+  animation: wm-glow 5.6s ease-in-out infinite;
+}
+.wm-r { text-align: right; }
+.wm .l {
+  display: inline-block;
+  text-shadow: 0 10px 28px rgba(4,12,30,.6), 0 1px 0 rgba(0,0,0,.28);
+  animation: wm-wave 3.8s ease-in-out infinite;
+  animation-delay: var(--d, 0s);
+  will-change: transform;
+}
+/* small vertical wave — starts and ends at 0, so it loops seamlessly (never clunky) */
+@keyframes wm-wave {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-.07em); }
+}
+/* warm glow that swells and recedes — text stays solid, only the halo breathes */
+@keyframes wm-glow {
+  0%, 100% { filter: drop-shadow(0 0 0 rgba(247,149,47,0)); }
+  50%      { filter: drop-shadow(0 0 22px rgba(247,149,47,.5)); }
+}
+
+/* boot-in reveal for the chrome */
+#menubar, #dock, #desk-icons { transition: opacity .5s var(--ease-out), transform .5s var(--ease-out); }
+body.booting #menubar { opacity: 0; transform: translateY(-8px); }
+body.booting #dock    { opacity: 0; transform: translate(-50%, 14px); }
+body.booting #desk-icons { opacity: 0; transform: translateY(6px); }
+
+/* ===========================================================================
+   Menu bar
+   =========================================================================== */
+#menubar {
+  position: fixed; top: 0; left: 0; right: 0;
+  height: var(--menubar-h);
+  display: flex; align-items: center; gap: 2px;
+  padding: 0 10px;
+  background: rgba(248,250,253,.72);
+  -webkit-backdrop-filter: blur(22px) saturate(1.6);
+          backdrop-filter: blur(22px) saturate(1.6);
+  border-bottom: 1px solid rgba(120,140,170,.18);
+  box-shadow: 0 1px 0 rgba(255,255,255,.4);
+  font-size: 13px; line-height: 1;
+  color: var(--ink);
+  z-index: 9000;
+  -webkit-user-select: none; user-select: none;
+}
+#menubar .mb-mark {
+  width: 19px; height: 19px; border-radius: 6px; margin-right: 4px;
+  display: grid; place-items: center;
+  background: linear-gradient(160deg, var(--blue), var(--blue-deep));
+  box-shadow: var(--shadow-tile);
+}
+#menubar .mb-mark svg { width: 12px; height: 12px; }
+#menubar .mb-app { font-weight: 700; padding: 3px 9px; border-radius: 6px; }
+#menubar .mb-menu {
+  font-weight: 450; padding: 3px 9px; border-radius: 6px; cursor: default;
+  color: #26313f;
+}
+#menubar .mb-menu:hover, #menubar .mb-app:hover { background: rgba(11,95,214,.14); }
+#menubar .mb-spacer { flex: 1; }
+#menubar .mb-status { display: flex; align-items: center; gap: 12px; color: #263447; }
+#menubar .mb-status svg { display: block; opacity: .82; }
+#menubar .mb-clock { font-variant-numeric: tabular-nums; font-weight: 500; letter-spacing: .01em; }
+#menubar .mb-clock .mb-date { color: var(--ink-2); margin-right: 8px; font-weight: 450; }
+
+/* ===========================================================================
+   Desktop icons
+   =========================================================================== */
+#desk-icons {
+  position: fixed; top: calc(var(--menubar-h) + 14px); right: 14px;
+  display: flex; flex-direction: column; gap: 6px; z-index: 5;
+}
+.desk-icon {
+  width: 90px; padding: 8px 4px 6px; border: 1px solid transparent; border-radius: 10px;
+  display: flex; flex-direction: column; align-items: center; gap: 5px;
+  cursor: default; -webkit-user-select: none; user-select: none;
+  text-align: center;
+}
+.desk-icon .di-glyph {
+  width: 46px; height: 46px; border-radius: 11px; display: grid; place-items: center;
+  box-shadow: var(--shadow-tile);
+}
+.desk-icon .di-label {
+  font-size: 12px; color: #fff; line-height: 1.25; max-width: 84px;
+  padding: 1px 5px; border-radius: 4px;
+  text-shadow: 0 1px 2px rgba(6,18,40,.55);
+}
+.desk-icon.sel { background: rgba(11,95,214,.28); border-color: rgba(255,255,255,.4); }
+.desk-icon.sel .di-label { background: var(--blue); text-shadow: none; }
+
+/* ===========================================================================
+   Windows
+   =========================================================================== */
+#windows { position: fixed; inset: 0; pointer-events: none; z-index: 50; }
+.win {
+  position: fixed; top: 0; left: 0;
+  min-width: 320px; min-height: 200px;
+  display: flex; flex-direction: column;
+  background: var(--paper);
+  border-radius: var(--radius-win);
+  box-shadow: var(--shadow-win);
+  overflow: hidden;
+  pointer-events: auto;
+  will-change: transform;
+  border: 0.5px solid rgba(120,140,170,.35);
+}
+.win.focused { box-shadow: var(--shadow-win-focus); }
+.win.maximizing { transition: transform .28s var(--ease-out), width .28s var(--ease-out), height .28s var(--ease-out); }
+
+.win-bar {
+  flex: 0 0 auto; height: 38px;
+  display: flex; align-items: center; gap: 10px; padding: 0 12px;
+  background: linear-gradient(var(--titlebar-a), var(--titlebar-b));
+  border-bottom: 1px solid var(--line);
+  position: relative;
+  -webkit-user-select: none; user-select: none;
+  touch-action: none;
+}
+.win-title {
+  position: absolute; left: 0; right: 0; text-align: center;
+  font-size: 13px; font-weight: 600; color: var(--ink-2);
+  pointer-events: none; padding: 0 96px;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.win.focused .win-title { color: var(--ink); }
+
+/* traffic lights */
+.traffic { display: flex; gap: 8px; z-index: 1; }
+.tl {
+  width: 12px; height: 12px; border-radius: 50%; border: none; padding: 0;
+  display: grid; place-items: center; cursor: pointer;
+  box-shadow: inset 0 0 0 .5px rgba(0,0,0,.12);
+}
+.tl.c { background: var(--tl-red); }
+.tl.m { background: var(--tl-amber); }
+.tl.f { background: var(--tl-green); }
+.win:not(.focused) .tl { background: var(--tl-off); }
+.tl svg { width: 8px; height: 8px; opacity: 0; transition: opacity .12s; color: rgba(30,10,0,.6); }
+.win-bar:hover .tl svg { opacity: .7; }
+
+.win-body { flex: 1 1 auto; overflow: auto; position: relative; background: var(--paper); }
+.win-body::-webkit-scrollbar { width: 12px; height: 12px; }
+.win-body::-webkit-scrollbar-thumb { background: #c7d0dc; border: 3px solid var(--paper); border-radius: 8px; }
+.win-body::-webkit-scrollbar-thumb:hover { background: #aab6c6; }
+
+/* app interior hosted in an iframe (each app is its own visual world) */
+.win-body.framed { overflow: hidden; padding: 0; background: var(--paper); }
+.win-body.framed.loading { background: var(--paper-2); }
+.app-frame {
+  display: block; width: 100%; height: 100%; border: 0;
+  background: transparent;
+  opacity: 0; transition: opacity .32s var(--ease-out);
+}
+.app-frame.ready { opacity: 1; }
+/* tiny loading shimmer under a not-yet-loaded frame */
+.frame-spin {
+  position: absolute; inset: 0; display: grid; place-items: center;
+  pointer-events: none; color: var(--ink-3);
+}
+.frame-spin i {
+  width: 22px; height: 22px; border-radius: 50%;
+  border: 2px solid var(--line); border-top-color: var(--blue);
+  animation: spin .7s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+/* click-shield: lets an unfocused window's iframe raise on first click,
+   then gets out of the way so the app receives events when focused */
+.frame-shield { position: absolute; inset: 0; z-index: 3; }
+.win.focused .frame-shield { pointer-events: none; }
+
+/* resize handles */
+.win-rz { position: absolute; z-index: 2; }
+.win-rz.e  { top: 8px; bottom: 8px; right: -3px; width: 8px; cursor: ew-resize; }
+.win-rz.s  { left: 8px; right: 8px; bottom: -3px; height: 8px; cursor: ns-resize; }
+.win-rz.se { right: -2px; bottom: -2px; width: 16px; height: 16px; cursor: nwse-resize; }
+
+/* placeholder interior used by Phase-1 stub apps */
+.stub {
+  height: 100%; min-height: 260px; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 14px; text-align: center;
+  padding: 40px; color: var(--ink-2);
+}
+.stub .stub-glyph { width: 72px; height: 72px; border-radius: 18px; display: grid; place-items: center; box-shadow: var(--shadow-tile); }
+.stub h2 { margin: 6px 0 0; font-size: 21px; color: var(--ink); letter-spacing: -.02em; }
+.stub p  { margin: 0; max-width: 34ch; line-height: 1.5; font-size: 14px; }
+.stub .stub-tag {
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: .04em;
+  color: var(--blue); background: var(--blue-050); padding: 4px 10px; border-radius: 999px;
+}
+
+/* ===========================================================================
+   Dock
+   =========================================================================== */
+#dock {
+  position: fixed; left: 50%; bottom: 8px; transform: translateX(-50%);
+  display: flex; align-items: flex-end; gap: 7px;
+  padding: var(--dock-pad) 11px;
+  background: rgba(255,255,255,.46);
+  -webkit-backdrop-filter: blur(26px) saturate(1.7);
+          backdrop-filter: blur(26px) saturate(1.7);
+  border: 1px solid rgba(255,255,255,.55);
+  border-radius: 20px;
+  box-shadow: var(--shadow-dock);
+  z-index: 9000;
+}
+.dock-item {
+  position: relative; width: 50px; height: 50px; border: none; padding: 0;
+  border-radius: var(--radius-tile); background: transparent; cursor: pointer;
+  display: grid; place-items: center;
+  transform-origin: bottom center;
+  transition: transform .22s var(--ease-out);
+}
+.dock-item .tile {
+  width: 50px; height: 50px; border-radius: var(--radius-tile);
+  display: grid; place-items: center; box-shadow: var(--shadow-tile);
+}
+.dock-item:hover { transform: translateY(-9px) scale(1.14); }
+.dock-item:active { transform: translateY(-4px) scale(1.05); }
+.dock-item .tip {
+  position: absolute; bottom: calc(100% + 12px); left: 50%; transform: translateX(-50%) scale(.9);
+  background: rgba(20,32,46,.92); color: #fff; font-size: 12px; font-weight: 500;
+  padding: 4px 9px; border-radius: 7px; white-space: nowrap; pointer-events: none;
+  opacity: 0; transition: opacity .15s, transform .15s var(--ease-out);
+}
+.dock-item .tip::after {
+  content: ""; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
+  border: 5px solid transparent; border-top-color: rgba(20,32,46,.92);
+}
+.dock-item:hover .tip { opacity: 1; transform: translateX(-50%) scale(1); }
+.dock-item .run {
+  position: absolute; bottom: -6px; left: 50%; transform: translateX(-50%);
+  width: 4px; height: 4px; border-radius: 50%; background: #1b2a3c; opacity: 0;
+  transition: opacity .2s;
+}
+.dock-item.running .run { opacity: .85; }
+.dock-sep { width: 1px; align-self: stretch; margin: 6px 3px; background: rgba(30,50,80,.18); }
+
+/* ===========================================================================
+   Boot screen
+   =========================================================================== */
+#boot {
+  position: fixed; inset: 0; z-index: 99999;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 26px; padding: 32px;
+  background: radial-gradient(circle at 50% 38%, #0e2148 0%, #060d1c 70%);
+  color: #cddffb; font-family: var(--font-mono);
+  transition: opacity .5s ease, transform .5s var(--ease-out);
+}
+#boot.gone { opacity: 0; transform: scale(1.03); pointer-events: none; }
+#boot .boot-mark { width: 78px; height: 78px; }
+#boot .boot-mark svg { width: 100%; height: 100%; }
+#boot .boot-title { font-size: 14px; letter-spacing: .16em; color: #9fc0f5; text-transform: uppercase; }
+#boot .boot-log {
+  width: min(560px, 88vw); min-height: 150px; font-size: 12.5px; line-height: 1.7;
+  color: #9db8e0; white-space: pre-wrap;
+}
+#boot .boot-log .ok { color: var(--orange); }
+#boot .boot-log .dim { color: #5f76a0; }
+#boot .boot-log .caret {
+  display: inline-block; width: 8px; height: 15px; background: #cddffb;
+  vertical-align: -2px; animation: blink 1s steps(1) infinite;
+}
+@keyframes blink { 50% { opacity: 0; } }
+#boot .boot-prog { width: min(560px, 88vw); height: 3px; background: rgba(157,184,224,.18); border-radius: 3px; overflow: hidden; }
+#boot .boot-prog i { display: block; height: 100%; width: 100%; transform-origin: left center; transform: scaleX(0); background: linear-gradient(90deg, var(--blue), #58a6ff); border-radius: 3px; transition: transform .18s linear; }
+#boot .boot-skip { position: fixed; bottom: 20px; font-size: 11px; letter-spacing: .08em; color: #5c76a4; }
+
+/* ===========================================================================
+   Small-screen notice (desktop-first)
+   =========================================================================== */
+#screen-notice {
+  position: fixed; inset: 0; z-index: 99998; display: none;
+  flex-direction: column; align-items: center; justify-content: center; gap: 18px;
+  padding: 36px; text-align: center;
+  background: radial-gradient(circle at 50% 35%, #0f4db0, #08306b);
+  color: #eaf2ff; font-family: var(--font-ui);
+}
+#screen-notice .sn-mark { width: 62px; height: 62px; }
+#screen-notice h2 { margin: 4px 0 0; font-size: 22px; letter-spacing: -.02em; }
+#screen-notice p { margin: 0; max-width: 30ch; line-height: 1.55; color: #c6d8f5; font-size: 14px; }
+#screen-notice .sn-spin {
+  width: 30px; height: 30px; margin-top: 4px; border-radius: 50%;
+  border: 3px solid rgba(255,255,255,.22); border-top-color: #f2913f;
+  animation: sn-spin .8s linear infinite;
+}
+@keyframes sn-spin { to { transform: rotate(360deg); } }
+#screen-notice .sn-desktop {
+  margin-top: 8px; color: #bcd2f5; font-size: 13px; letter-spacing: .01em;
+  text-decoration: underline; text-underline-offset: 3px; opacity: .82;
+}
+#screen-notice .sn-desktop:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) { #screen-notice .sn-spin { animation: none; } }
+body.small #screen-notice { display: flex; }
+
+/* ===========================================================================
+   Reduced motion
+   =========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  #menubar, #dock, #desk-icons, #boot, .dock-item, .tl svg, .app-frame { transition: none !important; }
+  .win.maximizing { transition: none !important; }
+  #boot .caret, .frame-spin i { animation: none !important; }
+  /* the wallpaper name rests fully visible — no wave, no glow breath */
+  .wm, .wm .l { animation: none !important; }
+}

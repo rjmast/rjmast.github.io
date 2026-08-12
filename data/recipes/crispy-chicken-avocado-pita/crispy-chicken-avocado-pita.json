@@ -1,0 +1,106 @@
+{
+  "slug": "crispy-chicken-avocado-pita",
+  "title": "Crispy Chicken Avocado Pita",
+  "tagline": "Crispy chicken, smashed avocado and garlic mayo folded into a toasted pita — tastes like a restaurant wrap.",
+  "image": "image.webp",
+  "emoji": "🥙",
+  "chef": "Raja",
+  "cuisine": "Middle Eastern",
+  "course": "Main",
+  "tags": [
+    "wrap",
+    "chicken",
+    "quick",
+    "comfort-food",
+    "middle-eastern"
+  ],
+  "flavor": [
+    "creamy",
+    "savory",
+    "fresh",
+    "tangy"
+  ],
+  "ratings": {
+    "overall": 5,
+    "difficulty": 1.5,
+    "availability": 4
+  },
+  "servings": 2,
+  "servingsNote": "1 loaded pita each.",
+  "time": {
+    "prep": 10,
+    "cook": 12,
+    "total": 22
+  },
+  "macros": {
+    "perServing": {
+      "calories": 760,
+      "protein": 29,
+      "carbs": 65,
+      "fat": 43,
+      "fibre": 7
+    },
+    "whole": {
+      "calories": 1520,
+      "protein": 58,
+      "carbs": 130,
+      "fat": 86,
+      "fibre": 14
+    }
+  },
+  "macroNotes": [
+    "Estimated for 200 g nuggets + 1 pita + 75 g avocado + 15 g garlic mayo per pita. The mayo and avocado push the fat right up.",
+    "These particular nuggets are protein-poor for their calories (211 kcal / 11 g protein per 100 g — lots of breading), so the protein-to-calorie ratio is mediocre.",
+    "Best swap for macros: replace most of the garlic mayo with a sauce of 50 g Greek yogurt + 1 tsp garlic mayo + lemon. That drops each pita to ~550 kcal / ~32 g protein and tastes closer to a proper shawarma.",
+    "Air-frying the nuggets (no extra oil) instead of pan/oven keeps the fat down. Adding shredded chicken breast or extra egg is the cleanest way to lift protein."
+  ],
+  "ingredients": [
+    {
+      "group": "Per pita (recipe makes 2)",
+      "items": [
+        "2 pita breads",
+        "24 chicken nuggets (~400 g total, 12 per pita)",
+        "150 g avocado (~75 g per pita)",
+        "2 tbsp garlic mayo (~15 g per pita)",
+        "Lettuce, shredded",
+        "1 tomato, sliced",
+        "A few red onion slices",
+        "Lemon juice",
+        "Salt and black pepper",
+        "Optional: hot sauce, pickled jalapeños or pickled onions"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Crisp the nuggets",
+      "body": "Air-fry the 24 nuggets at 200°C for 8–10 min (or per packet in the oven) until very crispy. Crispiness is the whole point — don't pull them early."
+    },
+    {
+      "title": "Make the avocado smash",
+      "body": "Mash 150 g avocado with a good squeeze of lemon, a pinch of salt and black pepper."
+    },
+    {
+      "title": "Prep the veg",
+      "body": "Shred the lettuce and slice 1 tomato and a few red onion rings."
+    },
+    {
+      "title": "Warm the pitas",
+      "body": "Heat each pita on a dry pan for 30–45 sec a side so it's soft and foldable."
+    },
+    {
+      "title": "Assemble",
+      "body": "Onto each pita spread half the avocado smash, then lettuce, tomato, onion, 12 nuggets (halved for easier eating), a drizzle of 1 tbsp garlic mayo and hot sauce if using. Add pickles here if you have them."
+    },
+    {
+      "title": "Final toast",
+      "body": "Fold each pita and press it on a hot pan for 1–2 min a side. This crisps the outside and is what makes it taste like a restaurant wrap rather than an assembled snack."
+    }
+  ],
+  "notes": [
+    "Pickled jalapeños or pickled onions are the biggest upgrade for almost no calories — the acidity cuts through the mayo and avocado. A squeeze of lemon over the nuggets right before wrapping does the same.",
+    "For a leaner build, use 8–10 nuggets, load up on lettuce/tomato/onion, and swap most of the mayo for a Greek yogurt garlic sauce."
+  ],
+  "source": "Adapted from my own cooking notes.",
+  "diet": "non-veg"
+}

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Recipe Book — Rajapandiyan Arivazhagan</title>
+  <meta name="description" content="A field-notes recipe book — high-protein home cooking.">
+  <meta name="theme-color" content="#08306b">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+  <style>
+    html,body{margin:0;height:100%;overflow:hidden;background:#efe9dc;}
+    iframe{position:fixed;inset:0;width:100%;height:100%;border:0;display:block;}
+
+    /* Brief "best on desktop" splash — only shown on phone-sized screens,
+       then it fades out and reveals the recipe book. Never blocks. */
+    #splash{
+      position:fixed;inset:0;z-index:10;display:none;
+      flex-direction:column;align-items:center;justify-content:center;gap:16px;
+      padding:36px;text-align:center;
+      background:radial-gradient(circle at 50% 35%,#0f4db0,#08306b);
+      color:#eaf2ff;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;
+      transition:opacity .5s ease;
+    }
+    #splash svg{width:56px;height:56px;}
+    #splash h2{margin:2px 0 0;font-size:20px;letter-spacing:-.02em;}
+    #splash p{margin:0;max-width:28ch;line-height:1.5;color:#c6d8f5;font-size:13.5px;}
+    #splash .spin{
+      width:28px;height:28px;border-radius:50%;
+      border:3px solid rgba(255,255,255,.22);border-top-color:#f2913f;
+      animation:spin .8s linear infinite;
+    }
+    @keyframes spin{to{transform:rotate(360deg);}}
+    #splash.gone{opacity:0;pointer-events:none;}
+    @media (max-width:640px){ #splash{display:flex;} }
+    @media (prefers-reduced-motion:reduce){ #splash .spin{animation:none;} }
+  </style>
+</head>
+<body>
+  <iframe src="../apps/recipes/index.html" title="Recipe Book — Rajapandiyan Arivazhagan"></iframe>
+
+  <div id="splash" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="12" r="8" stroke="#fff" stroke-width="1.7"/>
+      <path d="M12 4.5v15M4.5 12h15" stroke="#fff" stroke-width="1.1" opacity=".55"/>
+      <circle cx="12" cy="12" r="2.3" fill="#f6923c"/>
+    </svg>
+    <h2>Best viewed on desktop</h2>
+    <p>Opening the recipe book&hellip;</p>
+    <div class="spin" aria-hidden="true"></div>
+  </div>
+
+  <script>
+    (function(){
+      var s=document.getElementById('splash');
+      if(!s) return;
+      var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+      setTimeout(function(){
+        s.classList.add('gone');
+        setTimeout(function(){ s.style.display='none'; }, 550);
+      }, reduce ? 700 : 1500);
+    })();
+  </script>
+</body>
+</html>

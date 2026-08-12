@@ -1,0 +1,109 @@
+{
+  "slug": "mango-froyo",
+  "title": "High-Protein Mango Froyo",
+  "tagline": "Frozen mango blended with Greek yogurt and mango protein into a soft-serve you don't need a machine for.",
+  "image": "image.webp",
+  "emoji": "🥭",
+  "chef": "Raja",
+  "cuisine": "Fusion",
+  "course": "Dessert",
+  "tags": [
+    "high-protein",
+    "dessert",
+    "no-cook",
+    "quick",
+    "gym-meal",
+    "vegetarian"
+  ],
+  "flavor": [
+    "sweet",
+    "creamy",
+    "fresh",
+    "tangy"
+  ],
+  "ratings": {
+    "overall": 4.5,
+    "difficulty": 1,
+    "availability": 4
+  },
+  "servings": 2,
+  "servingsNote": "",
+  "time": {
+    "prep": 10,
+    "cook": 0,
+    "total": 10
+  },
+  "macros": {
+    "perServing": {
+      "calories": 250,
+      "protein": 22,
+      "carbs": 30,
+      "fat": 4,
+      "fibre": 3
+    },
+    "whole": {
+      "calories": 500,
+      "protein": 44,
+      "carbs": 60,
+      "fat": 8,
+      "fibre": 6
+    }
+  },
+  "macroNotes": [
+    "Estimated from ingredients. Genuinely good macros for a dessert — high protein, low fat, and sweetened with stevia instead of sugar.",
+    "The protein comes from the Greek yogurt (~200-250 g) plus 1 scoop mango protein powder; no need for soya here.",
+    "Freezing the mango and using thick yogurt (not extra milk) keeps it from turning icy or chalky. Don't add more than 1 scoop of protein powder or the texture goes stretchy.",
+    "Creamier / higher-cal treat version: add 1 tbsp cream, 1 tbsp milk powder, half a banana or 8-10 soaked cashews. Cutting version: more ice, more yogurt, less milk, lean on stevia."
+  ],
+  "ingredients": [
+    {
+      "group": "Base",
+      "items": [
+        "1 large ripe mango (~200 g), cubed and frozen 4-5 hours",
+        "200-250 g thick curd / Greek yogurt",
+        "1 scoop mango protein powder",
+        "60-100 ml milk (add gradually)",
+        "2-4 stevia tablets, dissolved in a spoon of warm milk/water first",
+        "1 pinch salt"
+      ]
+    },
+    {
+      "group": "Optional",
+      "items": [
+        "Few drops lemon juice (makes the mango pop)",
+        "Tiny splash vanilla or pinch cardamom",
+        "Toppings: roasted almonds, crushed digestive biscuit, dark chocolate shavings, saffron, toasted coconut"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Freeze the mango",
+      "body": "Cube 1 large mango (~200 g) and freeze at least 4-5 hours. Freezing the fruit is the trick that gives body and stops it going icy — don't skip it."
+    },
+    {
+      "title": "Dissolve the stevia",
+      "body": "Dissolve 2-4 stevia tablets in a spoon of warm milk or water first, so it blends in evenly instead of leaving a bitter speck."
+    },
+    {
+      "title": "Blend thick",
+      "body": "Blend the frozen mango + 200-250 g Greek yogurt + 1 scoop mango protein powder + the dissolved stevia + 1 pinch salt. Add a few drops of lemon if using. Keep the yogurt thick and go easy on liquid."
+    },
+    {
+      "title": "Adjust to soft-serve",
+      "body": "Add the 60-100 ml milk slowly while blending, only as much as needed to reach a thick soft-serve consistency. Too much milk makes it thin and icy."
+    },
+    {
+      "title": "Eat now or firm up",
+      "body": "Eat immediately as froyo, or for more of an ice-cream texture freeze another 1-2 hours — stir once at ~45 min so it doesn't set icy. Top with roasted almonds, dark chocolate shavings or crushed biscuit."
+    }
+  ],
+  "notes": [
+    "Fresh mango + mango protein together tastes far better than protein powder alone — the real fruit fixes the artificial flavour.",
+    "Protein powders can turn frozen desserts chalky or stretchy: 1 scoop max, thick yogurt, a pinch of salt, and not too much milk keeps it smooth.",
+    "If you happen to have xanthan gum, ~1/4 tsp is the secret behind 'anabolic ice cream' texture — it stops iciness in a low-fat mix.",
+    "Fastest lazy version: just blend frozen mango + 1 scoop protein + ice + milk for something between a smoothie bowl and soft-serve."
+  ],
+  "source": "Adapted from my own cooking notes.",
+  "diet": "veg"
+}

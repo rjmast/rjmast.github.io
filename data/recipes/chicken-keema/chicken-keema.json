@@ -1,0 +1,140 @@
+{
+  "slug": "chicken-keema",
+  "title": "Chicken Keema",
+  "tagline": "Lean, high-protein keema from home-minced chicken breast, khade masale, and chicken masala.",
+  "image": "image.webp",
+  "emoji": "🍛",
+  "chef": "Raja",
+  "cuisine": "Indian",
+  "course": "Main",
+  "tags": [
+    "chicken",
+    "high-protein",
+    "gym-meal",
+    "indian",
+    "meal-prep"
+  ],
+  "flavor": [
+    "spicy",
+    "savory",
+    "rich"
+  ],
+  "ratings": {
+    "overall": 3,
+    "difficulty": 2,
+    "availability": 5
+  },
+  "servings": 2,
+  "servingsNote": "2 large servings (or 3 medium)",
+  "time": {
+    "prep": 15,
+    "cook": 25,
+    "total": 40
+  },
+  "macros": {
+    "perServing": {
+      "calories": 415,
+      "protein": 59,
+      "carbs": 18,
+      "fat": 10,
+      "fibre": 4
+    },
+    "whole": {
+      "calories": 830,
+      "protein": 118,
+      "carbs": 36,
+      "fat": 20,
+      "fibre": 8
+    }
+  },
+  "macroNotes": [
+    "Estimated from ingredients — 500 g chicken breast delivers ~115 g protein across the batch.",
+    "This is about as clean as a gym meal gets: ~59 g protein per serving, low fat, moderate carbs. Doesn't need much cutting.",
+    "Already peak protein, so soya is optional here — but you can stretch it further and cheaper by adding 50 g dry soya granules (soaked, squeezed dry) with the mince."
+  ],
+  "ingredients": [
+    {
+      "group": "Main",
+      "items": [
+        "500 g chicken breast, cut into chunks and pulsed to a coarse mince in a mixer grinder",
+        "2 medium onions, finely chopped",
+        "2 tomatoes, finely chopped or pureed",
+        "1 tbsp ginger-garlic paste",
+        "2 green chillies (optional)",
+        "2 tbsp curd (adds moisture)",
+        "1 tbsp oil or ghee"
+      ]
+    },
+    {
+      "group": "Whole spices (khade masale)",
+      "items": [
+        "1 bay leaf",
+        "1 inch cinnamon",
+        "2 cloves",
+        "2 green cardamom",
+        "1 tsp cumin seeds"
+      ]
+    },
+    {
+      "group": "Ground spices",
+      "items": [
+        "1 tsp turmeric",
+        "1 tsp red chilli powder",
+        "1 tsp coriander powder",
+        "1 tsp cumin powder",
+        "1.5 tbsp chicken masala (MDH or your usual)",
+        "1/2 tsp black pepper (optional)",
+        "Salt to taste"
+      ]
+    },
+    {
+      "group": "Finish",
+      "items": [
+        "Handful fresh coriander, chopped",
+        "Squeeze of lemon",
+        "Optional dhaba touch: 1 tsp crushed kasuri methi / 1/2 tsp garam masala / 1 tsp butter"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Mince the chicken",
+      "body": "Cut 500 g chicken breast into cubes and pulse in a mixer grinder in short bursts — stop the moment it's a coarse mince, do not run it to a paste or the keema turns rubbery. Chilling the chicken first gives a cleaner mince."
+    },
+    {
+      "title": "Temper the whole spices",
+      "body": "Heat 1 tbsp oil/ghee in a pan. Add 1 bay leaf, 1 inch cinnamon, 2 cloves, 2 green cardamom and 1 tsp cumin seeds; let them splutter 20 seconds."
+    },
+    {
+      "title": "Brown the onions",
+      "body": "Add the 2 finely chopped onions with a pinch of salt and cook till properly golden brown — don't rush this, give it 7-8 minutes. This is the flavour base."
+    },
+    {
+      "title": "Aromatics",
+      "body": "Add 1 tbsp ginger-garlic paste and 2 green chillies; cook 1 minute until the raw smell goes."
+    },
+    {
+      "title": "Tomato masala",
+      "body": "Add the 2 chopped tomatoes and cook till soft and the oil separates. Add 1 tsp turmeric, 1 tsp red chilli, 1 tsp coriander powder, 1 tsp cumin powder and 1.5 tbsp chicken masala; cook 2 minutes."
+    },
+    {
+      "title": "Add the mince",
+      "body": "Add the coarse chicken mince and break up the lumps aggressively with the spatula. Cook on medium-high until the colour changes fully. (If adding soya, stir in 50 g soaked, squeezed-dry soya granules now.)"
+    },
+    {
+      "title": "Moisture and simmer",
+      "body": "Stir in 2 tbsp curd + 1/4 cup water and simmer 8-10 minutes. Breast is lean — pull it off the heat as soon as it's cooked through, over-simmering dries it out. Taste for salt."
+    },
+    {
+      "title": "Finish",
+      "body": "Stir in a handful of chopped coriander and a squeeze of lemon. For dhaba flavour, crush in 1 tsp kasuri methi or 1/2 tsp garam masala, or swirl in 1 tsp butter."
+    }
+  ],
+  "notes": [
+    "Breast mince turns rubbery if over-processed or overcooked — pulse coarse and stop cooking the moment it's done.",
+    "Dry gym-meal version: skip excess tomato water and cook till crumbly and dry; eat with rice or roti.",
+    "Juicy wrap version: keep it a little saucy and stuff into a roti with sliced onions and a spoon of curd."
+  ],
+  "source": "Adapted from my own cooking notes.",
+  "diet": "non-veg"
+}

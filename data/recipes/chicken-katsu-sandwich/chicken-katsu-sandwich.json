@@ -1,0 +1,128 @@
+{
+  "slug": "chicken-katsu-sandwich",
+  "title": "Chicken Katsu Sandwich",
+  "tagline": "Air-fried breaded chicken cutlet in toasted bread with garlic mayo and a quick katsu sauce.",
+  "image": "image.webp",
+  "emoji": "🥪",
+  "chef": "Raja",
+  "cuisine": "Japanese",
+  "course": "Main",
+  "tags": [
+    "sandwich",
+    "chicken",
+    "air-fryer",
+    "high-protein",
+    "japanese",
+    "restaurant-style"
+  ],
+  "flavor": [
+    "savory",
+    "creamy",
+    "umami"
+  ],
+  "ratings": {
+    "overall": 5,
+    "difficulty": 2,
+    "availability": 4
+  },
+  "servings": 2,
+  "servingsNote": "",
+  "time": {
+    "prep": 15,
+    "cook": 15,
+    "total": 30
+  },
+  "macros": {
+    "perServing": {
+      "calories": 520,
+      "protein": 40,
+      "carbs": 42,
+      "fat": 19,
+      "fibre": 3
+    },
+    "whole": {
+      "calories": 1040,
+      "protein": 80,
+      "carbs": 84,
+      "fat": 38,
+      "fibre": 6
+    }
+  },
+  "macroNotes": [
+    "Estimated from ingredients.",
+    "Already a strong macro profile — ~40 g protein per serving from the chicken breast, and air-frying keeps the fat low.",
+    "To cut ~120 kcal per serving: use a single slice of bread open-faced or a light 30 kcal bread, and thin the garlic mayo with a spoon of hung curd.",
+    "Soya doesn't fit a katsu sando — the chicken cutlet is the point. Protein is already high."
+  ],
+  "ingredients": [
+    {
+      "group": "Chicken cutlet",
+      "items": [
+        "300 g chicken breast (2 pieces), butterflied and pounded to even thickness",
+        "1 egg, beaten (binder)",
+        "50-60 g breadcrumbs (panko if you can get it — crunchier)",
+        "1/2 tsp salt, 1/2 tsp black pepper, 1/2 tsp garlic powder, 1/2 tsp paprika, 1/4 tsp chilli powder",
+        "Oil spray for the air fryer"
+      ]
+    },
+    {
+      "group": "Garlic mayo",
+      "items": [
+        "3 tbsp mayonnaise",
+        "1 small clove garlic, grated (or 1/4 tsp garlic powder)",
+        "1/2 tsp lemon juice",
+        "Pinch of salt + pepper"
+      ]
+    },
+    {
+      "group": "Quick katsu sauce",
+      "items": [
+        "2 tbsp ketchup",
+        "1 tsp soy sauce",
+        "1/2 tsp Worcestershire sauce (optional)",
+        "1/4 tsp sugar"
+      ]
+    },
+    {
+      "group": "To assemble",
+      "items": [
+        "4 slices bread (or 2 buns), toasted",
+        "A few lettuce leaves or shredded cabbage",
+        "Tomato slices and thin onion (optional)"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Pound and season",
+      "body": "Butterfly the 300 g chicken breast and pound to an even thickness so it cooks evenly. Season aggressively all over with 1/2 tsp salt, 1/2 tsp pepper, 1/2 tsp garlic powder, 1/2 tsp paprika and 1/4 tsp chilli powder."
+    },
+    {
+      "title": "Bread it (egg wash matters)",
+      "body": "Dip each piece in 1 beaten egg, then press firmly into 50-60 g breadcrumbs so a thick coat sticks. The egg wash is what makes breadcrumbs grip — if you skip it, spread a very thin layer of mayo on the chicken instead as a binder, or mist with oil and press the crumbs on hard, then rest 5-10 min before cooking."
+    },
+    {
+      "title": "Air fry",
+      "body": "Spray both sides with oil. Air fry at 200°C for 10-12 minutes, flipping halfway, until golden and the internal temp hits 75°C. (Oven: 220°C for 18-20 min, flipping halfway.)"
+    },
+    {
+      "title": "Mix the sauces",
+      "body": "Stir 3 tbsp mayo + grated garlic + 1/2 tsp lemon juice + salt/pepper for the garlic mayo. Separately mix 2 tbsp ketchup + 1 tsp soy sauce + 1/2 tsp Worcestershire + 1/4 tsp sugar for the katsu sauce."
+    },
+    {
+      "title": "Toast and build",
+      "body": "Toast 4 slices bread. Spread garlic mayo on the bottom slice, lay down lettuce or shredded cabbage (this keeps the bread from going soggy), add the hot chicken cutlet, spoon over the katsu sauce, add tomato/onion if using, and close with the top slice."
+    },
+    {
+      "title": "Press and cut",
+      "body": "Press the sandwich gently, slice in half, and eat while the cutlet is still crisp."
+    }
+  ],
+  "notes": [
+    "The egg-wash lesson: skipping it gives a thinner, patchier coat and some crumbs fall off — the sandwich still tastes great because the sauce and bread carry it, but for proper katsu crunch, use the egg (or a mayo layer) as a binder.",
+    "Make-ahead: you can bread the chicken and keep it in the fridge in a single layer on a wire rack, loosely covered, and cook within 8-12 hours — but only if you used a binder, or the crumbs dry out and fall off. Mist with oil before cooking.",
+    "Same breaded cutlet works as chicken parm (top with pizza sauce + mozzarella, air fry 2-4 min at 180°C) or stuffed into a pita as a shawarma-style wrap."
+  ],
+  "source": "Adapted from my own cooking notes.",
+  "diet": "non-veg"
+}

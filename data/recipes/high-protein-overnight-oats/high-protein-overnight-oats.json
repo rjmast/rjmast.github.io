@@ -1,0 +1,119 @@
+{
+  "slug": "high-protein-overnight-oats",
+  "title": "High-Protein Overnight Oats",
+  "tagline": "Chocolate-vanilla protein overnight oats loaded with blueberries, banana and mango — tastes like a milkshake, eats like breakfast.",
+  "image": "image.webp",
+  "emoji": "🥣",
+  "chef": "Raja",
+  "cuisine": "Continental",
+  "course": "Breakfast",
+  "tags": [
+    "high-protein",
+    "breakfast",
+    "no-cook",
+    "meal-prep",
+    "gym-meal",
+    "quick"
+  ],
+  "flavor": [
+    "sweet",
+    "creamy",
+    "fresh"
+  ],
+  "ratings": {
+    "overall": 4.5,
+    "difficulty": 1,
+    "availability": 4
+  },
+  "servings": 2,
+  "servingsNote": "",
+  "time": {
+    "prep": 10,
+    "cook": 0,
+    "total": 10
+  },
+  "macros": {
+    "perServing": {
+      "calories": 600,
+      "protein": 45,
+      "carbs": 80,
+      "fat": 12,
+      "fibre": 14
+    },
+    "whole": {
+      "calories": 1200,
+      "protein": 90,
+      "carbs": 160,
+      "fat": 24,
+      "fibre": 28
+    }
+  },
+  "macroNotes": [
+    "Estimated using whey + low-fat milk. Total time is mostly the overnight chill (~6 hrs).",
+    "The fruit stack drives the carbs up fast. For a leaner cut version: 40 g oats/serving, 150 ml milk, drop the mango to 40 g/serving and use half a banana — lands around 450-500 kcal with ~40 g protein.",
+    "If your vanilla whey is heavily sweetened, banana + mango can make it very sweet — cut the banana back first.",
+    "Already high protein from whey. Want it thicker and even higher protein? Blend in 100 g hung curd/Greek yogurt per serving (+8-15 g protein, cheesecake-like texture)."
+  ],
+  "ingredients": [
+    {
+      "group": "Base (for 2)",
+      "items": [
+        "100 g rolled oats",
+        "60 g vanilla whey protein (2 scoops)",
+        "400 ml unsweetened milk (dairy / almond / soy)",
+        "16 g (~2 tbsp) unsweetened cocoa powder",
+        "20 g chia seeds (optional, improves texture + satiety)",
+        "Pinch cinnamon",
+        "Tiny pinch salt (makes the chocolate pop)"
+      ]
+    },
+    {
+      "group": "Fruit (for 2)",
+      "items": [
+        "100 g blueberries",
+        "120 g banana (about 1 medium)",
+        "160 g mango, chopped"
+      ]
+    },
+    {
+      "group": "Optional",
+      "items": [
+        "10-20 g peanut butter (richer, adds calories)"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Mix the dry base",
+      "body": "In two jars (or one big one), combine 60 g vanilla whey + 16 g cocoa + 20 g chia + a pinch of cinnamon + a tiny pinch of salt. Mixing the powders first stops the protein clumping later."
+    },
+    {
+      "title": "Whisk in the milk",
+      "body": "Add 400 ml milk slowly while whisking, so the protein dissolves smooth instead of going lumpy."
+    },
+    {
+      "title": "Stir in the oats",
+      "body": "Stir in 100 g rolled oats until everything is evenly wet."
+    },
+    {
+      "title": "Add the fruit",
+      "body": "Fold in the 100 g blueberries and 120 g banana. Keep the 160 g chopped mango (and extra blueberries if you like) on top so the texture stays nice — mango going mushy overnight isn't ideal."
+    },
+    {
+      "title": "Chill",
+      "body": "Cover and refrigerate a minimum of 6 hours, ideally overnight."
+    },
+    {
+      "title": "Adjust and eat",
+      "body": "In the morning: if too thick, loosen with a splash of milk; if too thin, stir in 5-10 g more oats. Add the peanut butter now if using."
+    }
+  ],
+  "notes": [
+    "Vanilla whey + chocolate oats/cocoa tastes like a chocolate-vanilla milkshake, and vanilla is actually easier to balance than chocolate protein (which can taste artificial).",
+    "Flavour ranking: chocolate + vanilla + banana + blueberry is elite; mango is fine but the banana does most of the heavy lifting.",
+    "If using a composite product like MuscleBlaze Protein Oats instead of plain oats, cut the added whey to ~20-25 g and skip the cocoa if the oats are already chocolate-flavoured, or it becomes fake-chocolate overload.",
+    "No curd/yogurt needed — milk + whey sets perfectly on its own. Add yogurt only if you specifically want thick, pudding-like oats."
+  ],
+  "source": "Adapted from my own cooking notes.",
+  "diet": "veg"
+}

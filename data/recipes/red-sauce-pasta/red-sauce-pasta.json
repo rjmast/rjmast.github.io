@@ -1,0 +1,128 @@
+{
+  "slug": "red-sauce-pasta",
+  "title": "Red Sauce Pasta",
+  "tagline": "Fresh marinara from blanched tomatoes — bright, garlicky and better than any jar.",
+  "image": "image.webp",
+  "emoji": "🍝",
+  "chef": "Raja",
+  "cuisine": "Italian",
+  "course": "Main",
+  "tags": [
+    "pasta",
+    "italian",
+    "vegetarian",
+    "high-protein",
+    "comfort-food"
+  ],
+  "flavor": [
+    "tangy",
+    "savory",
+    "herby",
+    "fresh"
+  ],
+  "ratings": {
+    "overall": 4,
+    "difficulty": 2,
+    "availability": 5
+  },
+  "servings": 2,
+  "servingsNote": "",
+  "time": {
+    "prep": 15,
+    "cook": 30,
+    "total": 45
+  },
+  "macros": {
+    "perServing": {
+      "calories": 560,
+      "protein": 28,
+      "carbs": 82,
+      "fat": 14,
+      "fibre": 9
+    },
+    "whole": {
+      "calories": 1120,
+      "protein": 56,
+      "carbs": 164,
+      "fat": 28,
+      "fibre": 18
+    }
+  },
+  "macroNotes": [
+    "Estimated from ingredients. This is a genuinely lean, high-volume meal — the tomatoes and soya keep it filling for the calories.",
+    "The soya chunks are what make this gym-friendly: they push protein from ~10 g to ~28 g per serving for barely any extra calories.",
+    "Skip the parmesan and use 1 tbsp oil instead of 3 to drop another ~120 kcal per serving.",
+    "For a non-veg version, drop the soya and toss in 150 g pan-seared chicken breast per serving instead."
+  ],
+  "ingredients": [
+    {
+      "group": "Sauce",
+      "items": [
+        "5–6 medium tomatoes (~500 g), blanched and puréed",
+        "2–3 tbsp olive oil (mustard oil works too)",
+        "4 garlic cloves, minced",
+        "1 medium onion, finely chopped (optional)",
+        "1/2 tsp red chilli flakes",
+        "1/2 tsp dried oregano",
+        "1/2 tsp dried basil (or a few fresh leaves)",
+        "1/2 tsp sugar (balances the acidity)",
+        "1 tsp salt, to taste",
+        "2 tbsp tomato paste (optional, for extra body)"
+      ]
+    },
+    {
+      "group": "Pasta + protein",
+      "items": [
+        "200 g pasta (penne, fusilli or spaghetti)",
+        "100 g dry soya chunks (50 g per serving)",
+        "Salt for the pasta water",
+        "Grated parmesan and fresh basil, to finish (optional)"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Blanch and purée the tomatoes",
+      "body": "Score an 'X' on the base of 5–6 tomatoes, drop into boiling water for 30–60 sec, then into cold water. Peel and blend to a smooth purée. Blending only the tomatoes (not the garlic/onion) keeps the sautéed flavours layered and the sauce richer."
+    },
+    {
+      "title": "Prep the soya",
+      "body": "Boil 100 g soya chunks in salted water for 5 min, drain, and — this bit matters — squeeze each chunk dry with your hands so they can soak up sauce instead of water. Roughly chop or halve them."
+    },
+    {
+      "title": "Boil the pasta",
+      "body": "Cook 200 g pasta in well-salted water ('salty like the sea') until al dente, about 1 min less than the packet. Before draining, save 1 cup of pasta water. Do not rinse the pasta."
+    },
+    {
+      "title": "Sauté the aromatics",
+      "body": "Heat 2–3 tbsp olive oil on medium. Add 4 minced garlic cloves and cook until fragrant; add the chopped onion (if using) and cook until translucent. If using tomato paste, stir in 2 tbsp now and cook 1–2 min to deepen it."
+    },
+    {
+      "title": "Cook the sauce",
+      "body": "Pour in the tomato purée and add 1/2 tsp chilli flakes, 1/2 tsp oregano and 1/2 tsp basil. Simmer on low 10–15 min, stirring, until it thickens and loses the raw-tomato edge."
+    },
+    {
+      "title": "Season",
+      "body": "Add 1 tsp salt and 1/2 tsp sugar. Taste and adjust — a pinch of salt at a time. Remember the parmesan (if using) is salty, so go easy."
+    },
+    {
+      "title": "Add the soya",
+      "body": "Stir the squeezed soya chunks into the sauce and simmer 3–4 min so they drink up the flavour."
+    },
+    {
+      "title": "Toss it together",
+      "body": "Add the drained pasta to the sauce with a splash of the reserved pasta water. Toss over low heat until every piece is coated and glossy, loosening with more pasta water as needed."
+    },
+    {
+      "title": "Serve",
+      "body": "Plate up, top with grated parmesan and torn basil if you have them, and eat hot."
+    }
+  ],
+  "notes": [
+    "Forgot to save pasta water? Fake it: stir 1/4 tsp salt + 1/4 tsp cornflour into 1 cup hot water and use that — the starch helps the sauce cling. Or swirl a little hot water around the empty pasta pot to pick up the leftover starch. If the sauce is just thin, simmer it down or finish with a knob of butter.",
+    "Only have mustard oil? It works — heat it until it just smokes to kill the pungency, then lower the heat before adding garlic. Finish with a little butter or cream if the flavour feels too sharp.",
+    "For 4 people, roughly double everything: 8–10 tomatoes and 400–450 g pasta."
+  ],
+  "source": "Adapted from my own cooking notes.",
+  "diet": "veg"
+}

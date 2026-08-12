@@ -1,0 +1,148 @@
+{
+  "slug": "chicken-shawarma",
+  "title": "Chicken Shawarma",
+  "tagline": "Street-style spiced chicken wraps with a quick garlic-mayo toum, layered to shop-level.",
+  "image": "image.webp",
+  "emoji": "🌯",
+  "chef": "Raja",
+  "cuisine": "Middle Eastern",
+  "course": "Main",
+  "tags": [
+    "chicken",
+    "high-protein",
+    "gym-meal",
+    "wrap",
+    "middle-eastern",
+    "marinade",
+    "grilled",
+    "meal-prep",
+    "street-food"
+  ],
+  "flavor": [
+    "garlicky",
+    "tangy",
+    "smoky",
+    "savory"
+  ],
+  "ratings": {
+    "overall": 4.5,
+    "difficulty": 3,
+    "availability": 3
+  },
+  "servings": 2,
+  "servingsNote": "2 loaded wraps; scale the marinade for weekly meal prep",
+  "time": {
+    "prep": 20,
+    "cook": 20,
+    "total": 40
+  },
+  "macros": {
+    "perServing": {
+      "calories": 750,
+      "protein": 50,
+      "carbs": 48,
+      "fat": 40,
+      "fibre": 4
+    },
+    "whole": {
+      "calories": 1500,
+      "protein": 100,
+      "carbs": 96,
+      "fat": 80,
+      "fibre": 8
+    }
+  },
+  "macroNotes": [
+    "Estimated from ingredients (thigh version).",
+    "Solid protein (~50 g/serving), but fat runs high from thighs + the mayo garlic sauce. Fine on a normal training day, heavy on a cut.",
+    "To cut ~150–200 kcal per serving: use chicken breast instead of thigh (slice thin, don't overcook), and make the toum with more yogurt and less mayo (e.g. 2 tbsp mayo + 3 tbsp Greek yogurt).",
+    "Add pickles and cabbage/onion freely — near-zero calories and they cut the richness."
+  ],
+  "ingredients": [
+    {
+      "group": "Chicken & marinade",
+      "items": [
+        "500 g boneless chicken thighs (juicier) — or breast for a leaner wrap",
+        "3 tbsp thick curd/yogurt",
+        "2 tbsp oil",
+        "1 tbsp lemon juice (or 1 tsp vinegar)",
+        "1 tsp paprika or Kashmiri chilli powder (colour, not heat)",
+        "1 tsp cumin powder",
+        "1 tsp coriander powder",
+        "1/2 tsp turmeric",
+        "1/2–1 tsp black pepper",
+        "1/2 tsp garlic powder (or 4–5 crushed garlic cloves)",
+        "1/2 tsp ginger paste",
+        "1/2 tsp cinnamon, allspice or garam masala",
+        "1 tsp salt",
+        "Optional: 1 tbsp tahini (very authentic Middle Eastern note)"
+      ]
+    },
+    {
+      "group": "Quick garlic sauce (toum shortcut)",
+      "items": [
+        "4 tbsp mayonnaise",
+        "1 tbsp yogurt",
+        "2–3 garlic cloves, grated",
+        "1/2–1 tsp lemon juice",
+        "Salt + black pepper",
+        "Optional: 1 tsp tahini"
+      ]
+    },
+    {
+      "group": "Basin-toss finish (do not skip — this is the shop trick)",
+      "items": [
+        "1 tsp butter",
+        "1 tsp lemon juice",
+        "1 tbsp of the garlic sauce"
+      ]
+    },
+    {
+      "group": "To assemble",
+      "items": [
+        "2 pita or rumali roti",
+        "Pickles or jalapeños",
+        "Shredded cabbage and/or sliced onion",
+        "Optional: fries, for a Lebanese-style wrap",
+        "Hot sauce, to taste"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Marinate",
+      "body": "Mix the marinade — 3 tbsp curd, 2 tbsp oil, 1 tbsp lemon juice, 1 tsp paprika, 1 tsp cumin, 1 tsp coriander, 1/2 tsp turmeric, 1/2–1 tsp pepper, 1/2 tsp garlic powder, 1/2 tsp ginger paste, 1/2 tsp cinnamon/garam masala, 1 tsp salt (and 1 tbsp tahini if using) — and coat 500 g chicken thighs. Rest at least 1 hour, ideally overnight. For the juiciest street-style bite, slice thin."
+    },
+    {
+      "title": "Make the garlic sauce",
+      "body": "Stir 4 tbsp mayo, 1 tbsp yogurt, 2–3 grated garlic cloves, 1/2–1 tsp lemon juice, salt and pepper (and 1 tsp tahini if using) until smooth. This is what makes shawarma taste like shawarma. Set aside."
+    },
+    {
+      "title": "Cook the chicken",
+      "body": "STOVE-TOP (best browning): sear on a hot cast-iron/heavy pan with a drizzle of oil, medium-high, until char spots appear, flip, cook through. OTG: 220°C, roast thin slices 12–14 minutes, then grill/broil 2–3 minutes for char — flip at the 10–12 min mark and don't leave thin slices a full 20 minutes or they dry out. AIR FRYER: 190°C for 12–15 minutes, shake once, then 200°C for 2–3 minutes to brown."
+    },
+    {
+      "title": "Rest & slice",
+      "body": "Rest the chicken 2–3 minutes so the juices settle, then slice into thin shawarma strips."
+    },
+    {
+      "title": "Basin-toss (the key upgrade)",
+      "body": "Put the hot chicken in a bowl and toss with 1 tsp butter, 1 tsp lemon juice and 1 tbsp of the garlic sauce. This is exactly what shawarma shops do before wrapping — it makes the meat softer, juicier and saucier, and rescues breast if you used it."
+    },
+    {
+      "title": "Assemble in layers",
+      "body": "Warm the pita/rumali. Spread a base layer of garlic sauce, lay the chicken in a long even strip (not one central mound), add pickles/jalapeños, then a second thin drizzle of garlic sauce through the middle, a little cabbage/onion for crunch, and an optional streak of hot sauce. Layering the sauce twice — not just against the bread — is what pushes it to 10/10."
+    },
+    {
+      "title": "Roll & toast",
+      "body": "Roll tight. For the shop-style crust, brush a tiny bit of oil or butter on the outside and toast the wrapped roll on a tawa until golden with light char spots."
+    }
+  ],
+  "notes": [
+    "Thighs are more forgiving and stay juicy through the longer home cook; breast works but slice it thin and pull it early, then rely on the basin-toss to keep it soft.",
+    "The biggest quality jump comes from even chicken distribution, double-layering the sauce, and the butter/lemon basin-toss.",
+    "A little cabbage or lightly-salted onion adds crunch, moisture and structure without changing the flavour."
+  ],
+  "source": "Adapted from my own cooking notes.",
+  "diet": "non-veg"
+}

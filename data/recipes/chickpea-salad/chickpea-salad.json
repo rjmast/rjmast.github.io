@@ -1,0 +1,117 @@
+{
+  "slug": "chickpea-salad",
+  "title": "Chickpea Salad",
+  "tagline": "A fresh, 10-minute no-cook chickpea salad, boosted with soya chunks for gym-day protein.",
+  "image": "image.webp",
+  "emoji": "🥗",
+  "chef": "Raja",
+  "cuisine": "Mediterranean",
+  "course": "Salad",
+  "tags": [
+    "high-protein",
+    "salad",
+    "no-cook",
+    "quick",
+    "vegetarian",
+    "soya",
+    "meal-prep"
+  ],
+  "flavor": [
+    "fresh",
+    "tangy",
+    "savory",
+    "herby"
+  ],
+  "ratings": {
+    "overall": 4,
+    "difficulty": 1,
+    "availability": 4
+  },
+  "servings": 2,
+  "servingsNote": "",
+  "time": {
+    "prep": 10,
+    "cook": 5,
+    "total": 15
+  },
+  "macros": {
+    "perServing": {
+      "calories": 500,
+      "protein": 40,
+      "carbs": 52,
+      "fat": 18,
+      "fibre": 15
+    },
+    "whole": {
+      "calories": 1000,
+      "protein": 80,
+      "carbs": 104,
+      "fat": 36,
+      "fibre": 30
+    }
+  },
+  "macroNotes": [
+    "Estimated from ingredients, including the soya chunks.",
+    "Most of the fat is olive oil — 2-3 tbsp is 240-360 kcal, so measure it. Use 1.5 tbsp to bring a serving down to ~430 kcal.",
+    "Protein is high (~40 g/serving) thanks to the soya chunks. Without soya it's ~14 g/serving — in that case add feta or top with a boiled egg or two for the protein.",
+    "Naturally very high fibre (~15 g/serving); drain and rinse the chickpeas well to keep it easy on the gut."
+  ],
+  "ingredients": [
+    {
+      "group": "Salad",
+      "items": [
+        "1 can (400 g) chickpeas, drained & rinsed",
+        "100 g dry soya chunks (50 g per serving), boiled and chopped",
+        "1 cucumber, diced",
+        "1-2 tomatoes, diced (or a handful of cherry tomatoes, halved)",
+        "1/4 red onion, finely chopped",
+        "A handful of fresh parsley or cilantro, chopped"
+      ]
+    },
+    {
+      "group": "Dressing",
+      "items": [
+        "2-3 tbsp olive oil",
+        "Juice of 1 lemon (or lime)",
+        "Salt & black pepper, to taste",
+        "Chilli flakes, optional"
+      ]
+    },
+    {
+      "group": "Optional toppings",
+      "items": [
+        "Feta cheese",
+        "Avocado, diced"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Prep the soya",
+      "body": "Boil 100 g dry soya chunks for 4-5 minutes, drain, and squeeze them dry hard (squeezing matters — waterlogged soya dilutes the dressing and tastes bland). Chop into small bite-sized pieces."
+    },
+    {
+      "title": "Combine",
+      "body": "In a bowl, combine the 400 g rinsed chickpeas, the chopped soya, 1 diced cucumber, 1-2 diced tomatoes, 1/4 finely chopped red onion and a handful of chopped parsley or cilantro."
+    },
+    {
+      "title": "Dress it",
+      "body": "Drizzle over 2-3 tbsp olive oil and the juice of 1 lemon. Season with salt and black pepper, and chilli flakes if you want heat."
+    },
+    {
+      "title": "Toss and rest",
+      "body": "Toss well and let it sit 5 minutes so the flavours blend and the soya soaks up the dressing."
+    },
+    {
+      "title": "Top and serve",
+      "body": "Top with feta or diced avocado before serving, if using."
+    }
+  ],
+  "notes": [
+    "Meal-prep friendly: keeps in the fridge 3-4 days. If prepping ahead, hold the avocado and add it fresh so it doesn't brown.",
+    "Squeezing the boiled soya dry is the one step that actually matters here — do it properly.",
+    "Skip the soya if you'd rather keep it a light Mediterranean side; then lean on feta or a boiled egg for protein."
+  ],
+  "source": "Adapted from my own cooking notes.",
+  "diet": "veg"
+}

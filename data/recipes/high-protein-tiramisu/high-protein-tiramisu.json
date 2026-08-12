@@ -1,0 +1,116 @@
+{
+  "slug": "high-protein-tiramisu",
+  "title": "High-Protein Tiramisu",
+  "tagline": "Hung curd + vanilla whey cream, Marie Gold biscuits soaked in espresso, dusted with cocoa. No-bake.",
+  "image": "image.webp",
+  "emoji": "🍮",
+  "chef": "Raja",
+  "cuisine": "Italian",
+  "course": "Dessert",
+  "tags": [
+    "dessert",
+    "high-protein",
+    "no-cook",
+    "gym-meal",
+    "meal-prep"
+  ],
+  "flavor": [
+    "sweet",
+    "creamy",
+    "rich"
+  ],
+  "ratings": {
+    "overall": 4,
+    "difficulty": 1,
+    "availability": 4
+  },
+  "servings": 2,
+  "servingsNote": "One lunchbox-sized tray, split into 2",
+  "time": {
+    "prep": 15,
+    "cook": 0,
+    "total": 15
+  },
+  "macros": {
+    "perServing": {
+      "calories": 325,
+      "protein": 28,
+      "carbs": 27,
+      "fat": 7,
+      "fibre": 1
+    },
+    "whole": {
+      "calories": 650,
+      "protein": 56,
+      "carbs": 54,
+      "fat": 14,
+      "fibre": 2
+    }
+  },
+  "macroNotes": [
+    "Estimated from ingredients — the vanilla whey plus hung curd is what pushes this to ~28 g protein per serving, rare for a dessert.",
+    "Protein boost is already built in (whey). To push it higher, use a second half-scoop of whey and thin with a splash of milk.",
+    "Biscuits are the calorie lever: 6 Marie Gold instead of 8 saves ~40 kcal across the batch. For a harder cut, swap some biscuits for a toasted whole-wheat bread slice cut into fingers and dipped in coffee."
+  ],
+  "ingredients": [
+    {
+      "group": "Coffee cream",
+      "items": [
+        "300 g hung curd (thick, very well-drained)",
+        "1 scoop (~30 g) vanilla whey protein",
+        "15-20 ml of the espresso (the rest is for soaking)",
+        "1/4 tsp vanilla extract (optional but recommended)",
+        "Tiny pinch of salt",
+        "Sweetener only if needed: 1-2 tsp honey or a little stevia/erythritol",
+        "1-2 tsp milk if the cream is too thick"
+      ]
+    },
+    {
+      "group": "Coffee soak",
+      "items": [
+        "1 espresso shot (30-40 ml) OR 1 tsp instant coffee + 35 ml hot water, cooled"
+      ]
+    },
+    {
+      "group": "Layers",
+      "items": [
+        "8 Marie Gold biscuits",
+        "1-2 tsp cocoa powder for dusting"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Brew and cool the coffee",
+      "body": "Pull 1 espresso shot (or mix 1 tsp instant coffee with 35 ml hot water) and let it cool completely. This matters — hot coffee dissolves Marie biscuits into soup instantly. Split it: keep ~15-20 ml for the cream, the rest for soaking."
+    },
+    {
+      "title": "Make the coffee cream",
+      "body": "Whisk 300 g hung curd with 1 scoop (30 g) vanilla whey, 1/4 tsp vanilla, a pinch of salt, and 15-20 ml of the espresso until smooth. Adding coffee to the cream (not just the soak) masks the whey twang and makes it taste properly tiramisu-like. Taste and add 1-2 tsp honey only if needed. If too thick add 1-2 tsp milk; if loose, chill 10-15 min. You want a thick frosting texture."
+    },
+    {
+      "title": "Soak the biscuits",
+      "body": "Dip each Marie Gold in the remaining coffee for just 0.5-1 second per side — they have the structural integrity of wet cardboard, so any longer and they collapse. (Or brush the coffee on instead.)"
+    },
+    {
+      "title": "Layer it up",
+      "body": "In a lunchbox-sized container, lay a base of soaked biscuits, spread over half the cream, add another biscuit layer, then the rest of the cream. If you only manage a single thick layer that's fine — tiramisu is forgiving and it becomes more of a tiramisu pudding."
+    },
+    {
+      "title": "Dust with cocoa",
+      "body": "Dust the top generously with 1-2 tsp cocoa powder (and a little between layers if you want stronger chocolate notes)."
+    },
+    {
+      "title": "Chill",
+      "body": "Refrigerate at least 2 hours, ideally overnight. This is the most important step — fresh it tastes like a yogurt shake, but chilled the coffee blooms, cocoa softens, whey integrates and the biscuits go cake-like."
+    }
+  ],
+  "notes": [
+    "Coffee in the cream AND the soak beats coffee-in-soak-only for this protein version — it distributes the flavour and hides the whey taste. Don't dump the whole shot into the cream though, or it goes runny.",
+    "Going biscuit-heavy makes it too dense — Marie Gold absorbs moisture aggressively, so it balances out after an overnight chill. For best texture aim for roughly 1 part biscuit to 2 parts cream.",
+    "Optional upgrades: 5 g cream cheese for authentic tang, a pinch of cinnamon, or a few drops of coffee essence.",
+    "Protein desserts always taste better the next day — don't judge it right after assembly."
+  ],
+  "source": "Adapted from my own cooking notes.",
+  "diet": "veg"
+}

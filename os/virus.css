@@ -1,0 +1,265 @@
+/* ===========================================================================
+   Virus.exe — playful "malware" gimmick overlay
+   Self-contained. Sits above the entire OS. Paired with os/virus.js.
+   All z-indexes are far above the shell (shell tops out at 99999).
+   =========================================================================== */
+
+/* Root layer that hosts every popup + the antivirus notification.
+   The BSOD gets its own even-higher layer. */
+.rv-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 2000000;
+  pointer-events: none;          /* let non-interactive gaps pass through */
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+}
+.rv-layer * { box-sizing: border-box; }
+
+/* --------------------------------------------------------------------------
+   Malware popups
+   -------------------------------------------------------------------------- */
+.rv-popup {
+  position: absolute;
+  pointer-events: auto;
+  min-width: 236px;
+  max-width: 366px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  border-radius: 12px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.34), 0 2px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  color: #16202e;
+  animation: rv-pop-in 260ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  will-change: transform, opacity;
+}
+.rv-popup__bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: #fff;
+  background: linear-gradient(180deg, #ff5b5b, #e23b3b);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+}
+.rv-popup__bar--blue  { background: linear-gradient(180deg, #2f8bff, #0b5fd6); }
+.rv-popup__bar--green { background: linear-gradient(180deg, #37c76a, #17a34a); }
+.rv-popup__bar--purple{ background: linear-gradient(180deg, #a76bff, #7c3aed); }
+.rv-popup__dot {
+  width: 11px; height: 11px; border-radius: 50%;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08) inset;
+  flex: 0 0 auto;
+}
+.rv-popup__title { flex: 1 1 auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.rv-popup__x {
+  pointer-events: none;
+  font-size: 13px;
+  opacity: 0.9;
+  font-weight: 800;
+}
+.rv-popup__body {
+  padding: 18px 18px 20px;
+  text-align: center;
+}
+.rv-popup__emoji {
+  font-size: 56px;
+  line-height: 1;
+  display: block;
+  margin: 2px 0 12px;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.18));
+}
+.rv-popup__text {
+  font-size: 16px;
+  font-weight: 650;
+  line-height: 1.3;
+}
+.rv-popup__sub {
+  margin-top: 9px;
+  font-size: 11px;
+  color: #5a6675;
+  font-weight: 600;
+}
+.rv-popup__btn {
+  margin-top: 12px;
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 8px;
+  background: linear-gradient(180deg, #2f8bff, #0b5fd6);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+  box-shadow: 0 3px 0 rgba(8, 48, 107, 0.6);
+}
+
+/* Spinning "downloading more RAM" popup */
+.rv-popup__spinner {
+  width: 34px; height: 34px;
+  margin: 4px auto 12px;
+  border-radius: 50%;
+  border: 4px solid rgba(11, 95, 214, 0.2);
+  border-top-color: #0b5fd6;
+  animation: rv-spin 800ms linear infinite;
+}
+
+/* Emoji burst — single floating giant emoji */
+.rv-emoji {
+  position: absolute;
+  pointer-events: none;
+  font-size: 64px;
+  line-height: 1;
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.28));
+  animation: rv-float 2600ms ease-out forwards;
+  will-change: transform, opacity;
+}
+
+/* --------------------------------------------------------------------------
+   Antivirus notification (top-right, always clickable, above popups)
+   -------------------------------------------------------------------------- */
+.rv-antivirus {
+  position: fixed;
+  top: 40px;
+  right: 18px;
+  z-index: 2100000;
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 340px;
+  padding: 13px 16px;
+  border: 0;
+  border-radius: 14px;
+  text-align: left;
+  cursor: pointer;
+  color: #eaf2ff;
+  background: linear-gradient(160deg, #0b5fd6, #08306b);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 20px 55px rgba(3, 20, 48, 0.55), 0 0 0 1px rgba(11, 95, 214, 0.4);
+  animation: rv-slide-in 340ms cubic-bezier(0.16, 1, 0.3, 1) both,
+             rv-pulse 2.2s ease-in-out 0.6s infinite;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+}
+.rv-antivirus:hover  { filter: brightness(1.08); }
+.rv-antivirus:active { transform: scale(0.98); }
+.rv-antivirus:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
+.rv-antivirus__shield {
+  font-size: 30px;
+  line-height: 1;
+  flex: 0 0 auto;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.35));
+}
+.rv-antivirus__txt { display: flex; flex-direction: column; gap: 2px; }
+.rv-antivirus__title { font-size: 13.5px; font-weight: 800; }
+.rv-antivirus__sub   { font-size: 11.5px; font-weight: 650; opacity: 0.85; }
+
+/* --------------------------------------------------------------------------
+   Blue Screen of Death — covers the ENTIRE OS
+   Windows homage: palette intentionally off-system.
+   -------------------------------------------------------------------------- */
+.rv-bsod {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483000;           /* top of everything */
+  pointer-events: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(28px, 9vw, 160px);
+  color: #ffffff;
+  background: #0078d7;
+  font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  animation: rv-bsod-in 240ms ease-out both;
+  overflow: auto;
+}
+.rv-bsod__face {
+  font-size: clamp(64px, 11vw, 128px);
+  font-weight: 300;
+  line-height: 1;
+  margin-bottom: clamp(16px, 4vh, 40px);
+}
+.rv-bsod__msg {
+  font-size: clamp(20px, 2.6vw, 34px);
+  font-weight: 400;
+  line-height: 1.35;
+  max-width: 22ch;
+  margin: 0 0 clamp(20px, 4vh, 42px);
+}
+.rv-bsod__pct {
+  font-size: clamp(20px, 2.6vw, 34px);
+  font-weight: 400;
+  margin: 0 0 clamp(24px, 5vh, 52px);
+}
+.rv-bsod__meta {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  max-width: 62ch;
+}
+.rv-bsod__qr {
+  flex: 0 0 auto;
+  width: 96px; height: 96px;
+  background:
+    conic-gradient(#000 90deg, #fff 90deg 180deg, #000 180deg 270deg, #fff 270deg) 0 0 / 24px 24px;
+  border: 6px solid #fff;
+  image-rendering: pixelated;
+  opacity: 0.92;
+}
+.rv-bsod__details { font-size: clamp(12px, 1.4vw, 16px); line-height: 1.55; }
+.rv-bsod__details p { margin: 0 0 8px; }
+.rv-bsod__stop { font-weight: 700; letter-spacing: 0.02em; }
+.rv-bsod__recover {
+  margin-top: clamp(18px, 3vh, 30px);
+  align-self: flex-start;
+  padding: 11px 22px;
+  border: 2px solid #fff;
+  border-radius: 6px;
+  background: transparent;
+  color: #fff;
+  font-size: clamp(13px, 1.5vw, 17px);
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+}
+.rv-bsod__recover:hover  { background: #fff; color: #0078d7; }
+.rv-bsod__recover:focus-visible { outline: 3px solid #ffd400; outline-offset: 3px; }
+.rv-bsod__hint { margin-top: 14px; font-size: clamp(12px, 1.4vw, 16px); opacity: 0.9; }
+
+/* --------------------------------------------------------------------------
+   Keyframes
+   -------------------------------------------------------------------------- */
+@keyframes rv-pop-in {
+  from { opacity: 0; transform: translate3d(0, 14px, 0) scale(0.86) rotate(var(--rv-rot, 0deg)); }
+  to   { opacity: 1; transform: translate3d(0, 0, 0) scale(1) rotate(var(--rv-rot, 0deg)); }
+}
+@keyframes rv-slide-in {
+  from { opacity: 0; transform: translate3d(30px, -12px, 0) scale(0.9); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes rv-pulse {
+  0%, 100% { box-shadow: 0 20px 55px rgba(3, 20, 48, 0.55), 0 0 0 1px rgba(11, 95, 214, 0.4); }
+  50%      { box-shadow: 0 20px 55px rgba(3, 20, 48, 0.55), 0 0 0 5px rgba(47, 139, 255, 0.35); }
+}
+@keyframes rv-spin { to { transform: rotate(360deg); } }
+@keyframes rv-float {
+  0%   { opacity: 0; transform: translate3d(0, 20px, 0) scale(0.4) rotate(var(--rv-rot, 0deg)); }
+  18%  { opacity: 1; }
+  100% { opacity: 0; transform: translate3d(var(--rv-dx, 0px), -180px, 0) scale(1.6) rotate(var(--rv-rot, 0deg)); }
+}
+@keyframes rv-bsod-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* --------------------------------------------------------------------------
+   Reduced motion: keep the joke, drop the violence
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .rv-popup   { animation: rv-pop-in 200ms ease-out both; }
+  .rv-emoji   { animation: rv-float 2600ms ease-out forwards; }
+  .rv-spin, .rv-popup__spinner { animation-duration: 1400ms; }
+  .rv-antivirus { animation: rv-slide-in 300ms ease-out both; } /* no pulse */
+  .rv-bsod    { animation: none; }
+}

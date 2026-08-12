@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>raja@portfolio — about</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+/* ============ About — a live terminal ============ */
+:root{
+  --outer:#0d0c0f;
+  --win:#16151a;
+  --win2:#1b1a20;
+  --panel:#1e1d24;
+  --line:#2b2a33;
+  --line-soft:#232229;
+  --text:#e9e3d7;      /* soft off-white */
+  --dim:#9a9484;       /* comments / secondary */
+  --dimmer:#6f6a5f;
+  --amber:#e8b45c;     /* primary accent · paths */
+  --amber-soft:#f0cd93;
+  --cyan:#6fd3e0;      /* commands */
+  --green:#8ed97a;     /* success / metrics */
+  --pink:#df8fb8;      /* tags / strings */
+  --violet:#b3a6f0;    /* keywords */
+  --red:#f0776a;
+  --sel:rgba(232,180,92,.24);
+  --mono:'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{
+  background:radial-gradient(120% 90% at 50% -10%, #211d18 0%, var(--outer) 58%);
+  color:var(--text);
+  font-family:var(--mono);
+  font-size:14.5px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+  letter-spacing:-0.01em;
+  overflow:hidden;
+}
+::selection{background:var(--sel);color:var(--amber-soft)}
+a{color:var(--cyan);text-decoration:none;text-underline-offset:3px}
+a:hover{text-decoration:underline}
+:focus-visible{outline:2px solid var(--amber);outline-offset:2px;border-radius:3px}
+
+/* ---------- app shell ---------- */
+.app{
+  height:100%;
+  display:grid;
+  grid-template-columns:1fr minmax(230px,264px);
+  grid-template-rows:auto 1fr;
+  grid-template-areas:
+    "topbar topbar"
+    "term   side";
+}
+@media(max-width:760px){
+  .app{
+    grid-template-columns:1fr;
+    grid-template-rows:auto auto 1fr;
+    grid-template-areas:
+      "topbar"
+      "side"
+      "term";
+  }
+}
+
+/* ---------- slim status strip (app content, not OS chrome) ---------- */
+.topbar{
+  grid-area:topbar;
+  display:flex;align-items:center;gap:10px;
+  padding:8px 16px;
+  background:linear-gradient(var(--win2),#171620);
+  border-bottom:1px solid var(--line);
+  font-size:12px;color:var(--dim);
+  z-index:5;
+}
+.topbar .ico{color:var(--amber)}
+.topbar .name b{color:var(--text);font-weight:600}
+.topbar .spacer{flex:1}
+.topbar .meta{color:var(--dimmer);display:none}
+@media(min-width:560px){.topbar .meta{display:block}}
+.topbar .clock{color:var(--green);font-variant-numeric:tabular-nums}
+
+/* subtle scanline overlay over the whole app */
+.app::after{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:20;
+  background:
+    radial-gradient(130% 100% at 50% 0%, transparent 66%, rgba(0,0,0,.26) 100%),
+    repeating-linear-gradient(0deg, rgba(0,0,0,0) 0 3px, rgba(0,0,0,.04) 3px 4px);
+  mix-blend-mode:multiply;opacity:.5;
+}
+
+/* ---------- terminal pane ---------- */
+.term{
+  grid-area:term;
+  min-height:0;min-width:0;
+  display:flex;flex-direction:column;
+  position:relative;
+}
+.transcript{
+  flex:1;min-height:0;
+  overflow-y:auto;overflow-x:hidden;
+  padding:clamp(14px,2.6vw,26px) clamp(14px,2.8vw,30px) 14px;
+}
+.transcript::-webkit-scrollbar{width:10px}
+.transcript::-webkit-scrollbar-thumb{background:var(--line);border-radius:6px;border:2px solid transparent;background-clip:padding-box}
+.transcript::-webkit-scrollbar-thumb:hover{background:#3a3944;background-clip:padding-box}
+
+/* prompt line */
+.pl{margin:0;white-space:pre-wrap;word-break:break-word}
+.prompt{color:var(--dim)}
+.usr{color:var(--green)}
+.at{color:var(--dim)}
+.host{color:var(--violet)}
+.path{color:var(--amber)}
+.sym{color:var(--dim)}
+.cmd{color:var(--cyan)}
+.arg{color:var(--amber-soft)}
+.flag{color:var(--pink)}
+.str{color:var(--pink)}
+.kw{color:var(--violet)}
+.ok{color:var(--green)}
+.warn{color:var(--amber)}
+.muted{color:var(--dim)}
+
+/* command block spacing */
+.block{margin:0 0 22px;animation:appear .34s cubic-bezier(.16,1,.3,1) both}
+.rm .block{animation:none}
+@keyframes appear{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.out{margin:6px 0 0;color:var(--text)}
+
+/* blinking block cursor */
+.cur{
+  display:inline-block;width:.55em;height:1.1em;vertical-align:-.2em;
+  background:var(--amber);margin-left:2px;border-radius:1px;
+  animation:blink 1.05s steps(1,end) infinite;
+}
+@keyframes blink{50%{opacity:0}}
+.rm .cur{animation:none;opacity:.85}
+
+/* boot lines */
+.boot .line{white-space:pre-wrap;min-height:1.5em}
+
+/* ---------- neofetch splash ---------- */
+.neo{
+  display:grid;grid-template-columns:1fr;gap:18px;
+  margin:12px 0 8px;padding:18px clamp(14px,2.5vw,22px);
+  border:1px solid var(--line);border-radius:10px;
+  background:linear-gradient(180deg, rgba(232,180,92,.05), transparent 40%),var(--win2);
+}
+@media(min-width:640px){.neo{grid-template-columns:auto 1fr;gap:30px;align-items:center}}
+.ascii{
+  margin:0;font-size:clamp(9px,2.2vw,12.5px);line-height:1.08;font-weight:800;
+  color:var(--amber);
+  background:linear-gradient(160deg,var(--amber-soft),var(--amber) 45%,#c98f3e);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+  filter:drop-shadow(0 2px 6px rgba(232,180,92,.15));
+  white-space:pre;overflow-x:auto;
+}
+.info{font-size:13px;line-height:1.85}
+.info .k{color:var(--cyan);display:inline-block;min-width:88px}
+.info .sepline{color:var(--dim)}
+.info .title{color:var(--green);font-weight:700}
+.info .v{color:var(--text)}
+.swatch{display:flex;gap:6px;margin-top:10px}
+.swatch i{width:20px;height:12px;border-radius:2px;display:block}
+
+/* generic content */
+.md-h{color:var(--amber-soft);font-weight:700}
+.bullet{color:var(--amber)}
+.tag{
+  display:inline-block;font-size:11.5px;padding:1px 9px;margin:3px 4px 3px 0;
+  border:1px solid var(--line);border-radius:20px;color:var(--pink);
+  background:rgba(223,143,184,.06);white-space:nowrap;letter-spacing:0;
+}
+.tag::before{content:"["}.tag::after{content:"]"}
+.tag b{font-weight:400}
+.para{margin:8px 0;max-width:72ch}
+
+/* git log */
+.git{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--win2)}
+.commit{display:grid;grid-template-columns:auto 1fr;gap:0;border-bottom:1px solid var(--line-soft)}
+.commit:last-child{border-bottom:0}
+.graph{color:var(--amber);padding:15px 4px 15px 15px;white-space:pre;user-select:none;font-weight:700;position:relative}
+.commit:not(:last-child) .graph::after{
+  content:"";position:absolute;left:calc(15px + .28em);top:42px;bottom:-1px;
+  width:2px;background:linear-gradient(var(--amber),rgba(232,180,92,.25));opacity:.5;
+}
+.cbody{padding:14px 18px 15px 6px}
+.cmeta{font-size:12px;color:var(--dim);margin-bottom:2px}
+.cmeta .h{color:var(--amber)}
+.cmeta .ref{color:var(--green);background:rgba(142,217,122,.09);padding:0 6px;border-radius:10px;border:1px solid rgba(142,217,122,.2)}
+.cmeta .ref.b{color:var(--cyan);border-color:rgba(111,211,224,.25);background:rgba(111,211,224,.08)}
+.ctitle{font-size:14.5px;color:var(--text);font-weight:700;margin:3px 0}
+.ctitle .co{color:var(--cyan)}
+.cdesc{color:var(--text);font-size:13px;line-height:1.68;margin:8px 0 2px;max-width:66ch}
+.cdesc .m{color:var(--green);font-weight:600}
+.stack{margin-top:8px}
+.stack .lbl{color:var(--dim);font-size:12px;margin-right:6px}
+
+/* project tree */
+.tree{border:1px solid var(--line);border-radius:10px;background:var(--win2);overflow:hidden}
+.proj{
+  display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:start;
+  padding:15px 18px;border-bottom:1px solid var(--line-soft);transition:background .25s ease;
+}
+.proj:last-child{border-bottom:0}
+.proj:hover{background:rgba(232,180,92,.04)}
+.tw{color:var(--dim);white-space:pre;user-select:none;font-weight:700;padding-top:2px}
+.pname{color:var(--amber);font-weight:700;font-size:14.5px;letter-spacing:0}
+.pname .ext{color:var(--dim);font-weight:400}
+.pdesc{color:var(--text);font-size:13px;line-height:1.66;margin:5px 0 8px;max-width:64ch}
+.pdesc .m{color:var(--green)}
+.popen{
+  align-self:center;font-size:12px;color:var(--cyan);white-space:nowrap;
+  border:1px solid var(--line);padding:5px 12px;border-radius:7px;
+  background:rgba(111,211,224,.05);transition:.2s;
+}
+.popen:hover{background:rgba(111,211,224,.13);text-decoration:none}
+.popen::before{content:"→ "}
+.badge2{font-size:11px;color:var(--amber-soft);margin-left:6px}
+@media(max-width:520px){.proj{grid-template-columns:auto 1fr}.popen{grid-column:2}}
+
+/* research paper */
+.paper{
+  border:1px solid var(--line);border-top:1px solid rgba(232,180,92,.4);
+  border-radius:8px;background:linear-gradient(120deg,rgba(232,180,92,.06),transparent 60%),var(--win2);
+  padding:18px 20px;
+}
+.paper .doi{font-size:12px;color:var(--dim)}
+.paper h3{margin:6px 0 4px;font-size:17px;color:var(--amber-soft);letter-spacing:-.02em}
+.paper .auth{font-size:12.5px;color:var(--cyan);margin-bottom:10px}
+.paper .abs{font-size:13px;line-height:1.72;color:var(--text);max-width:70ch}
+.paper .abs .kw{color:var(--violet)}
+.paper .cite{margin-top:13px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.badge{font-size:11px;color:var(--green);border:1px solid rgba(142,217,122,.25);background:rgba(142,217,122,.07);padding:3px 10px;border-radius:20px}
+
+/* htop meters */
+.meters{border:1px solid var(--line);border-radius:10px;background:var(--win2);padding:14px 16px}
+.mrow{display:grid;grid-template-columns:118px 1fr auto;gap:10px;align-items:center;padding:3px 0;font-size:12px}
+@media(max-width:520px){.mrow{grid-template-columns:92px 1fr auto}}
+.mrow .mk{color:var(--cyan)}
+.bar{height:11px;border:1px solid var(--line);border-radius:3px;background:#141319;overflow:hidden;position:relative}
+.bar i{display:block;height:100%;width:var(--w,60%);border-radius:2px 0 0 2px;transform:scaleX(0);transform-origin:left center;transition:transform 1s cubic-bezier(.16,1,.3,1)}
+.bar.on i{transform:scaleX(1)}
+.rm .bar i{transform:scaleX(1);transition:none}
+.mrow .mp{color:var(--dim);font-size:12px;min-width:40px;text-align:right}
+
+/* connect grid + cta */
+.links{display:grid;grid-template-columns:1fr;gap:0;border:1px solid var(--line);border-radius:10px;background:var(--win2);overflow:hidden}
+@media(min-width:560px){.links{grid-template-columns:1fr 1fr}}
+.lrow{display:flex;align-items:center;gap:12px;padding:13px 16px;border-bottom:1px solid var(--line-soft);transition:background .2s;color:inherit}
+@media(min-width:560px){.lrow:nth-child(odd){border-right:1px solid var(--line-soft)}}
+.lrow:hover{background:rgba(232,180,92,.04)}
+.lrow .g{color:var(--amber);font-weight:700;width:1.3em;text-align:center}
+.lrow .lk{color:var(--dim);font-size:12px;min-width:72px}
+.lrow .lv{color:var(--cyan)}
+.cta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+.cta{
+  display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;
+  padding:10px 16px;border-radius:8px;border:1px solid var(--line);
+  color:var(--text);background:var(--win2);transition:.22s ease;
+}
+.cta:hover{text-decoration:none;transform:translateY(-1px);border-color:var(--amber);color:var(--amber-soft)}
+.cta.pri{background:linear-gradient(var(--amber),#d69f43);color:#1a140a;border-color:#e8b45c;font-weight:700}
+.cta.pri:hover{color:#120d05;box-shadow:0 10px 24px -12px rgba(0,0,0,.7)}
+.cta .k{color:var(--cyan)}
+.cta.pri .k{color:#3a2c12}
+
+/* help list */
+.helpgrid{display:grid;grid-template-columns:auto 1fr;gap:2px 16px;margin-top:6px;font-size:13px}
+.helpgrid .hc{color:var(--cyan)}
+.helpgrid .hd{color:var(--dim)}
+
+/* ---------- input bar (pinned) ---------- */
+.inputwrap{
+  border-top:1px solid var(--line);
+  background:linear-gradient(180deg,#161520,#141319);
+  padding:12px clamp(14px,2.8vw,30px) 14px;
+}
+.inputbar{display:flex;align-items:center;gap:9px}
+.inputbar .ps{color:var(--dim);white-space:nowrap;user-select:none;font-size:13px}
+.inputbar .ps .usr{color:var(--green)}
+.inputbar .ps .path{color:var(--amber)}
+#cli{
+  flex:1;min-width:0;background:transparent;border:0;color:var(--text);
+  font:inherit;font-size:14px;caret-color:var(--amber);letter-spacing:-.01em;
+}
+#cli:focus{outline:none}
+.inputbar .cur{margin-left:-4px}
+.hint{color:var(--dimmer);font-size:11px;margin:7px 2px 0}
+.hint b{color:var(--cyan)}
+
+/* ---------- cheat-sheet sidebar ---------- */
+.side{
+  grid-area:side;
+  min-height:0;min-width:0;
+  border-left:1px solid var(--line);
+  background:linear-gradient(180deg,var(--win2),#151419);
+  display:flex;flex-direction:column;
+  overflow:hidden;
+}
+.side-h{
+  padding:12px 16px 8px;font-size:11px;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--dimmer);border-bottom:1px solid var(--line-soft);
+}
+.side-h b{color:var(--amber)}
+.cmds{list-style:none;margin:0;padding:8px;overflow-y:auto;flex:1;min-height:0}
+.cmds::-webkit-scrollbar{width:8px}
+.cmds::-webkit-scrollbar-thumb{background:var(--line);border-radius:6px}
+.cmdbtn{
+  display:block;width:100%;text-align:left;cursor:pointer;
+  background:transparent;border:1px solid transparent;border-radius:8px;
+  padding:8px 10px;margin:1px 0;color:var(--text);font:inherit;
+  transition:background .16s ease,border-color .16s ease;
+}
+.cmdbtn:hover,.cmdbtn:focus-visible{background:rgba(232,180,92,.07);border-color:var(--line)}
+.cmdbtn .c{color:var(--cyan);font-size:13px;font-weight:500}
+.cmdbtn .c::before{content:"$ ";color:var(--dim)}
+.cmdbtn .d{color:var(--dim);font-size:11px;display:block;margin-top:1px;line-height:1.4}
+
+/* narrow: sidebar becomes a horizontal chip strip */
+@media(max-width:760px){
+  .side{border-left:0;border-bottom:1px solid var(--line);max-height:none}
+  .side-h{display:none}
+  .cmds{
+    display:flex;gap:6px;overflow-x:auto;overflow-y:hidden;padding:9px 12px;
+    flex:0 0 auto;
+  }
+  .cmdbtn{width:auto;flex:0 0 auto;padding:6px 12px;border-color:var(--line);white-space:nowrap}
+  .cmdbtn .d{display:none}
+}
+
+/* ============================================================
+   PHONE — full-screen standalone (transcript + cheat-strip stacked)
+   ============================================================ */
+@media(max-width:640px){
+  body{font-size:14px}
+  /* command chips stay tappable (≥44px) */
+  .cmds{padding:8px 12px}
+  .cmdbtn{min-height:44px;display:inline-flex;align-items:center}
+  /* 16px input avoids iOS focus-zoom; keep it reachable */
+  #cli{font-size:16px}
+  .neo{padding:14px 14px;gap:14px}
+  /* long content columns wrap rather than force width */
+  .para,.cdesc,.pdesc,.paper .abs{max-width:none}
+}
+@media(max-width:430px){
+  .topbar{padding:7px 12px;gap:8px}
+  .transcript{padding:14px 14px 12px}
+  .inputwrap{padding:10px 14px 12px}
+  .cta{width:100%;justify-content:center}
+  .cta-row{gap:8px}
+  .neo{padding:13px 13px}
+}
+</style>
+</head>
+<body>
+<div class="app" id="app">
+
+  <!-- slim status strip -->
+  <div class="topbar" aria-hidden="false">
+    <span class="ico">◈</span>
+    <span class="name">zsh · <b>raja@portfolio</b></span>
+    <span class="spacer"></span>
+    <span class="meta">— open to work · AI/LLM Engineer &nbsp;·&nbsp;</span>
+    <span class="clock" id="clock">--:--</span>
+  </div>
+
+  <!-- cheat-sheet -->
+  <nav class="side" aria-label="command cheat sheet">
+    <div class="side-h">commands · <b>click to run</b></div>
+    <ul class="cmds" id="cmds">
+      <li><button class="cmdbtn" data-cmd="whoami"><span class="c">whoami</span><span class="d">one-line identity</span></button></li>
+      <li><button class="cmdbtn" data-cmd="about"><span class="c">about</span><span class="d">read about.md</span></button></li>
+      <li><button class="cmdbtn" data-cmd="experience"><span class="c">experience</span><span class="d">git log of roles</span></button></li>
+      <li><button class="cmdbtn" data-cmd="projects"><span class="c">projects</span><span class="d">project tree</span></button></li>
+      <li><button class="cmdbtn" data-cmd="skills"><span class="c">skills</span><span class="d">proficiency meters</span></button></li>
+      <li><button class="cmdbtn" data-cmd="resume"><span class="c">resume</span><span class="d">open résumé ↗</span></button></li>
+      <li><button class="cmdbtn" data-cmd="contact"><span class="c">contact</span><span class="d">socials &amp; email</span></button></li>
+      <li><button class="cmdbtn" data-cmd="clear"><span class="c">clear</span><span class="d">clear the screen</span></button></li>
+      <li><button class="cmdbtn" data-cmd="help"><span class="c">help</span><span class="d">list commands</span></button></li>
+    </ul>
+  </nav>
+
+  <!-- terminal -->
+  <div class="term">
+    <div class="transcript" id="transcript" tabindex="-1"></div>
+    <div class="inputwrap">
+      <label class="inputbar" for="cli">
+        <span class="ps"><span class="usr">raja</span>@portfolio:<span class="path">~</span>$</span>
+        <input id="cli" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="type a command" placeholder="type a command… (try: help)">
+        <span class="cur" aria-hidden="true"></span>
+      </label>
+      <p class="hint">Enter to run · ↑/↓ history · or click a command on the <b>right</b>.</p>
+    </div>
+  </div>
+
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var root=document.documentElement;
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  if(reduce)root.classList.add('rm');
+
+  var xscr=document.getElementById('transcript');
+  var cli=document.getElementById('cli');
+
+  var PROMPT='<span class="prompt"><span class="usr">raja</span><span class="at">@</span><span class="host">portfolio</span><span class="sym">:</span><span class="path">~</span><span class="sym">$</span></span> ';
+
+  function esc(s){return s.replace(/[<>&]/g,function(m){return {'<':'&lt;','>':'&gt;','&':'&amp;'}[m];});}
+  function atBottom(){return xscr.scrollHeight-xscr.scrollTop-xscr.clientHeight<80;}
+  function toBottom(){xscr.scrollTop=xscr.scrollHeight;}
+  function append(node){xscr.appendChild(node);toBottom();}
+
+  /* ---------- command output renderers (real content) ---------- */
+  var OUT={
+    whoami:function(){return '<div class="out"><span class="ok">raja</span> — <span class="warn">AI/LLM Engineer</span> @ Zoho Corporation · <span class="muted">builds production AI systems that actually ship</span> · <span class="muted">open to work</span>.</div>';},
+
+    about:function(){return '<div class="out">'
+      +'<p class="para"><span class="md-h"># Raja — AI/LLM Engineer</span></p>'
+      +'<p class="para">I build production AI systems, not demos. 9+ years in software engineering, currently at '
+      +'<span class="warn">Zoho Corporation</span>, where I architected a multi-agent AI support platform adopted '
+      +'by 200+ technicians in daily production use. My work spans <span class="kw">retrieval-augmented generation</span> '
+      +'to <span class="kw">self-hosted LLM infrastructure</span> — I care about systems that hold up under real '
+      +'production load, not just in a demo.</p>'
+      +'<p class="para"><span class="bullet">›</span> <span class="muted">Interests:</span> LLM systems &amp; agentic AI · reverse engineering · self-hosted infra</p>'
+      +'<p class="para"><span class="bullet">›</span> <span class="muted">Philosophy:</span> <span class="str">"I build AI systems that survive contact with production."</span></p>'
+      +'</div>';},
+
+    experience:function(){return '<div class="out git">'
+      +'<div class="commit"><div class="graph">* │</div><div class="cbody">'
+      +'<div class="cmeta"><span class="h">a3f9c1e</span> — <span class="ref b">HEAD → main</span> <span class="ref">origin/zoho</span> · <span class="muted">2019&ndash;present</span></div>'
+      +'<div class="ctitle"><span class="co">feat(genai):</span> Member Technical Staff @ Zoho Corporation</div>'
+      +'<div class="cdesc">Architected and shipped a production multi-agent AI support platform — retrieval-augmented generation, custom MCP servers, and fine-tuned LLMs — <span class="m">adopted by 200+ support technicians</span>. Also built enterprise-scale web crawlers and reverse-engineered Windows installers for patch automation.</div>'
+      +'<div class="stack"><span class="lbl">stack:</span><span class="tag"><b>Python</b></span><span class="tag"><b>LangChain</b></span><span class="tag"><b>LangGraph</b></span><span class="tag"><b>MCP</b></span><span class="tag"><b>RAG</b></span><span class="tag"><b>Docker</b></span></div>'
+      +'</div></div>'
+      +'<div class="commit"><div class="graph">* │</div><div class="cbody">'
+      +'<div class="cmeta"><span class="h">7b2e0d4</span> · <span class="muted">2017&ndash;2019</span></div>'
+      +'<div class="ctitle"><span class="co">feat(data):</span> Data Analyst @ MicroPrecision</div>'
+      +'<div class="cdesc">Automated recurring data collection, cleaning, and reporting workflows with Python and SQL — replacing manual spreadsheet processes and improving data consistency across engineering and operations reporting.</div>'
+      +'<div class="stack"><span class="lbl">stack:</span><span class="tag"><b>Python</b></span><span class="tag"><b>pandas</b></span><span class="tag"><b>SQL</b></span></div>'
+      +'</div></div>'
+      +'</div>';},
+
+    projects:function(){return '<div class="out tree">'
+      +'<div class="proj"><span class="tw">├─</span><div>'
+      +'<span class="pname">AI Support Automation Platform<span class="ext">/</span></span><span class="badge2">★ flagship</span>'
+      +'<div class="pdesc">Production multi-agent AI assistant used by <span class="m">200+ support technicians</span> — retrieval-augmented generation, custom MCP servers, and fine-tuned LLMs generating context-aware troubleshooting steps grounded in historical cases.</div>'
+      +'<div><span class="tag">RAG</span><span class="tag">Multi-Agent</span><span class="tag">MCP</span></div></div>'
+      +'<span class="popen" style="opacity:.55;cursor:default" title="Internal enterprise system">private · internal</span></div>'
+      +'<div class="proj"><span class="tw">├─</span><div>'
+      +'<span class="pname">Document Summarization Tool<span class="ext">/</span></span>'
+      +'<div class="pdesc">Document intelligence service producing concise, faithful summaries of long PDF/DOCX files using transformer-based models, with chunking to handle long-context documents — exposed as a FastAPI service.</div>'
+      +'<div><span class="tag">NLP</span><span class="tag">Transformers</span></div></div>'
+      +'<span class="popen" style="opacity:.55;cursor:default" title="Private project">private</span></div>'
+      +'<div class="proj"><span class="tw">├─</span><div>'
+      +'<span class="pname">QueryMind<span class="ext">/</span></span>'
+      +'<div class="pdesc">GenAI text-to-SQL analytics assistant — converts natural-language questions into SQL using LangChain and RAG for schema-aware query generation, with interactive Streamlit and Plotly visualizations for non-technical users.</div>'
+      +'<div><span class="tag">Text-to-SQL</span><span class="tag">LangChain</span><span class="tag">Streamlit</span></div></div>'
+      +'<span class="popen" style="opacity:.55;cursor:default" title="Private project">private</span></div>'
+      +'<div class="proj"><span class="tw">└─</span><div>'
+      +'<span class="pname">VulnGuard AI<span class="ext">/</span></span>'
+      +'<div class="pdesc">LLM-powered source code vulnerability analyzer — combines Semgrep/Bandit static analysis with RAG over OWASP/CWE knowledge to detect SQLi, XSS, and insecure auth, and generate secure remediation guidance.</div>'
+      +'<div><span class="tag">LLM Security</span><span class="tag">RAG</span><span class="tag">FAISS</span></div></div>'
+      +'<span class="popen" style="opacity:.55;cursor:default" title="Private project">private</span></div>'
+      +'</div>';},
+
+    skills:function(){
+      var rows=[
+        ['Python',95,'#8ed97a','#c7e88a'],['RAG & Retrieval Systems',92,'#8ed97a','#c7e88a'],
+        ['LangChain / Agentic AI',90,'#e8b45c','#f0cd93'],['Model Context Protocol (MCP)',87,'#e8b45c','#f0cd93'],
+        ['LLM Fine-Tuning & Prompting',84,'#b3a6f0','#d0c8f7'],['Text-to-SQL & Data Analytics',82,'#b3a6f0','#d0c8f7'],
+        ['AI Security (Semgrep/Bandit/OWASP)',79,'#6fd3e0','#9be6ef'],['Automation & Reverse Engineering',80,'#6fd3e0','#9be6ef']
+      ];
+      var h='<div class="out meters">';
+      rows.forEach(function(r){
+        h+='<div class="mrow"><span class="mk">'+r[0]+'</span>'
+          +'<span class="bar"><i style="--w:'+r[1]+'%;background:linear-gradient(90deg,'+r[2]+','+r[3]+')"></i></span>'
+          +'<span class="mp">'+r[1]+'%</span></div>';
+      });
+      return h+'</div>';
+    },
+
+    contact:function(){return '<div class="out">'
+      +'<p class="para"><span class="muted">HTTP/2</span> <span class="ok">200 OK</span> — <span class="muted">let\'s build something. Reply channels open:</span></p>'
+      +'<div class="links">'
+      +'<a class="lrow" href="https://github.com/rjmast" target="_blank" rel="noopener"><span class="g">⌥</span><span class="lk">github</span><span class="lv">@rjmast</span></a>'
+      +'<a class="lrow" href="https://x.com/rajapandiyan_a" target="_blank" rel="noopener"><span class="g">✕</span><span class="lk">x/twitter</span><span class="lv">@rajapandiyan_a</span></a>'
+      +'<a class="lrow" href="https://www.linkedin.com/in/rajapandiyan-arivazhagan-03530392/" target="_blank" rel="noopener"><span class="g">in</span><span class="lk">linkedin</span><span class="lv">rajapandiyan-arivazhagan</span></a>'
+      +'<a class="lrow" href="mailto:rajapandiyanar@gmail.com"><span class="g">@</span><span class="lk">email</span><span class="lv">rajapandiyanar@gmail.com</span></a>'
+      +'</div>'
+      +'<div class="cta-row">'
+      +'<a class="cta pri" href="mailto:rajapandiyanar@gmail.com"><span class="k">$</span> mail rajapandiyanar@gmail.com</a>'
+      +'<a class="cta" href="../documents/index.html#resume" target="_blank" rel="noopener"><span class="k">$</span> open resume</a>'
+      +'</div></div>';},
+
+    help:function(){
+      var items=[
+        ['whoami','one-line identity'],['about','read about.md'],['experience','git log of roles'],
+        ['projects','project tree with links'],['skills','proficiency meters'],
+        ['resume','open the résumé in a new tab'],['contact','socials &amp; email'],
+        ['clear','clear the transcript'],['help','this list']
+      ];
+      var h='<div class="out"><p class="para"><span class="ok">available commands</span> — type one, or click it in the sidebar:</p><div class="helpgrid">';
+      items.forEach(function(it){h+='<span class="hc">'+it[0]+'</span><span class="hd">'+it[1]+'</span>';});
+      return h+'</div></div>';
+    }
+  };
+
+  var ALIASES={
+    exp:'experience',work:'experience',jobs:'experience',
+    proj:'projects','ls':'projects',
+    htop:'skills',top:'skills',
+    connect:'contact',social:'contact',socials:'contact',links:'contact',email:'contact',
+    cv:'resume',neofetch:'__neo',me:'whoami',id:'whoami'
+  };
+
+  /* ---------- echo + run ---------- */
+  function echo(cmdText){
+    var p=document.createElement('p');
+    p.className='pl';
+    p.innerHTML=PROMPT+'<span class="cmd">'+esc(cmdText)+'</span>';
+    return p;
+  }
+
+  function runMeters(block){
+    var bars=block.querySelectorAll('.bar');
+    if(!bars.length)return;
+    if(reduce){bars.forEach(function(b){b.classList.add('on');});return;}
+    requestAnimationFrame(function(){setTimeout(function(){
+      bars.forEach(function(b){b.classList.add('on');});
+    },60);});
+  }
+
+  function respond(raw){
+    var c=(raw||'').trim();
+    if(!c)return;
+    var key=c.toLowerCase();
+    key=ALIASES[key]||key;
+
+    var block=document.createElement('div');
+    block.className='block';
+    block.appendChild(echo(c));
+
+    if(key==='clear'){
+      // wipe everything, keep it clean
+      xscr.innerHTML='';
+      var pl=document.createElement('p');
+      pl.className='pl muted';
+      pl.innerHTML='<span class="muted">screen cleared · type </span><span class="cmd">help</span><span class="muted"> to see commands</span>';
+      var b2=document.createElement('div');b2.className='block';b2.appendChild(pl);
+      xscr.appendChild(b2);toBottom();
+      return;
+    }
+    if(key==='__neo'){ appendNeofetch(); return; }
+
+    var render=OUT[key];
+    if(render){
+      var wrap=document.createElement('div');
+      wrap.innerHTML=render();
+      block.appendChild(wrap.firstChild);
+      if(key==='resume'){
+        window.open('../documents/index.html#resume','_blank','noopener');
+      }
+      append(block);
+      runMeters(block);
+      return;
+    }
+
+    // unknown
+    var err=document.createElement('div');
+    err.className='out';
+    err.innerHTML='<span class="warn">zsh: command not found: '+esc(c)+'</span> — try <span class="cmd">help</span>';
+    block.appendChild(err);
+    append(block);
+  }
+
+  /* resume renderer (opens tab + prints note) */
+  OUT.resume=function(){
+    return '<div class="out"><span class="ok">opening</span> résumé in a new tab… '
+      +'<a class="popen" href="../documents/index.html#resume" target="_blank" rel="noopener">open résumé</a>'
+      +'<div class="muted" style="margin-top:6px;font-size:12px">If the tab was blocked, click the link above.</div></div>';
+  };
+
+  /* ---------- neofetch splash builder ---------- */
+  function neofetchHTML(){
+    return '<section class="neo" aria-label="system information">'
+      +'<pre class="ascii" aria-hidden="true">   ┌──────┐\n   │  &gt;_  │\n   └──────┘\n   [ raja ]</pre>'
+      +'<div class="info">'
+      +'<div><span class="title">raja</span><span class="sepline">@</span><span class="title">portfolio</span></div>'
+      +'<div class="sepline">───────────────────────</div>'
+      +'<div><span class="k">host</span><span class="v">Raja</span></div>'
+      +'<div><span class="k">role</span><span class="v">AI/LLM Engineer</span></div>'
+      +'<div><span class="k">kernel</span><span class="v">Python · LangChain · RAG</span></div>'
+      +'<div><span class="k">shell</span><span class="v">shipping production GenAI systems</span></div>'
+      +'<div><span class="k">uptime</span><span class="v">9+ yrs · shipping systems that ship</span></div>'
+      +'<div><span class="k">packages</span><span class="v">2 roles · 4 projects</span></div>'
+      +'<div><span class="k">status</span><span class="ok">● online — open to work</span></div>'
+      +'<div class="swatch" aria-hidden="true"><i style="background:#f0776a"></i><i style="background:#e8b45c"></i><i style="background:#8ed97a"></i><i style="background:#6fd3e0"></i><i style="background:#b3a6f0"></i><i style="background:#df8fb8"></i></div>'
+      +'</div></section>';
+  }
+  function appendNeofetch(){
+    var b=document.createElement('div');b.className='block';
+    var w=document.createElement('div');w.innerHTML=neofetchHTML();
+    b.appendChild(w.firstChild);
+    append(b);
+  }
+
+  /* ---------- boot sequence (signature open) ---------- */
+  var bootLines=[
+    {t:'  [ ✓ ] loading kernel  ',c:'ok',tail:'system ready'},
+    {t:'  [ ✓ ] mounting  ',c:'ok',tail:'~/experience  ~/projects'},
+    {t:'  [ ✓ ] loading profile  ',c:'ok',tail:'python · langchain · rag'},
+    {t:'  [ ✓ ] identity verified  ',c:'ok',tail:'Raja — AI/LLM Engineer'},
+    {t:'  boot complete in 0.42s — welcome.',c:'warn',tail:''}
+  ];
+  var BOOTCMD='./boot.sh --profile raja';
+
+  var bootBlock,bootLinesWrap,typeSpan,bootDone=false,skipBoot;
+
+  function finishBoot(){
+    if(bootDone)return;bootDone=true;
+    if(skipBoot)clearTimeout(skipBoot);
+    // ensure cmd + all lines present
+    if(typeSpan)typeSpan.textContent=BOOTCMD;
+    if(bootLinesWrap && bootLinesWrap.children.length<bootLines.length){
+      bootLinesWrap.innerHTML='';
+      bootLines.forEach(function(o){bootLinesWrap.appendChild(buildBootLine(o));});
+    }
+    appendNeofetch();
+    // welcome hint block
+    var b=document.createElement('div');b.className='block';
+    b.innerHTML='<p class="pl muted"><span class="muted">Type a command below or click one on the right — try </span><span class="cmd">help</span><span class="muted">.</span></p>';
+    xscr.appendChild(b);
+    toBottom();
+    cli.focus();
+  }
+
+  function buildBootLine(o){
+    var d=document.createElement('div');d.className='line';
+    var s='<span class="'+o.c+'">'+o.t+'</span>';
+    if(o.tail)s+='<span class="muted">'+o.tail+'</span>';
+    d.innerHTML=s;return d;
+  }
+
+  function startBoot(){
+    bootBlock=document.createElement('div');bootBlock.className='block boot';
+    var pl=document.createElement('p');pl.className='pl';
+    pl.innerHTML=PROMPT+'<span class="cmd type"></span>';
+    bootBlock.appendChild(pl);
+    bootLinesWrap=document.createElement('div');
+    bootBlock.appendChild(bootLinesWrap);
+    xscr.appendChild(bootBlock);
+    typeSpan=pl.querySelector('.type');
+
+    if(reduce){
+      typeSpan.textContent=BOOTCMD;
+      bootLines.forEach(function(o){bootLinesWrap.appendChild(buildBootLine(o));});
+      finishBoot();
+      return;
+    }
+    // safety: auto-finish if something stalls
+    skipBoot=setTimeout(finishBoot,4200);
+
+    var i=0;
+    (function typeCmd(){
+      if(bootDone)return;
+      if(i<=BOOTCMD.length){
+        typeSpan.textContent=BOOTCMD.slice(0,i);i++;
+        setTimeout(typeCmd,26+Math.random()*34);
+      }else{
+        var li=0;
+        (function printLine(){
+          if(bootDone)return;
+          if(li<bootLines.length){
+            var el=buildBootLine(bootLines[li]);el.style.opacity=0;
+            bootLinesWrap.appendChild(el);toBottom();
+            requestAnimationFrame(function(){el.style.transition='opacity .3s ease';el.style.opacity=1;});
+            li++;setTimeout(printLine,175);
+          }else{
+            setTimeout(finishBoot,220);
+          }
+        })();
+      }
+    })();
+  }
+
+  /* skip boot on first interaction */
+  function skipHandler(){ if(!bootDone)finishBoot(); }
+
+  /* ---------- input handling + history ---------- */
+  var history=[],hpos=-1;
+  function submit(){
+    var v=cli.value;
+    if(v.trim()){history.push(v);}
+    hpos=history.length;
+    respond(v);
+    cli.value='';
+  }
+  cli.addEventListener('keydown',function(e){
+    if(e.key==='Enter'){e.preventDefault(); if(!bootDone){finishBoot();return;} submit();}
+    else if(e.key==='ArrowUp'){
+      if(!history.length)return;e.preventDefault();
+      hpos=Math.max(0,hpos-1);cli.value=history[hpos]||'';
+      requestAnimationFrame(function(){cli.selectionStart=cli.selectionEnd=cli.value.length;});
+    }else if(e.key==='ArrowDown'){
+      if(!history.length)return;e.preventDefault();
+      hpos=Math.min(history.length,hpos+1);
+      cli.value=hpos===history.length?'':(history[hpos]||'');
+    }
+  });
+
+  /* cheat-sheet clicks */
+  [].slice.call(document.querySelectorAll('.cmdbtn')).forEach(function(b){
+    b.addEventListener('click',function(){
+      if(!bootDone){finishBoot();}
+      respond(b.getAttribute('data-cmd'));
+      cli.focus();
+    });
+  });
+
+  /* refocus input when clicking anywhere in the app (not on links/buttons) */
+  document.getElementById('app').addEventListener('mousedown',function(e){
+    var t=e.target;
+    if(t.closest('a')||t.closest('button')||t.closest('input'))return;
+    // don't steal selection
+    if(window.getSelection && String(window.getSelection())) return;
+    setTimeout(function(){cli.focus();},0);
+  });
+  xscr.addEventListener('click',skipHandler);
+
+  /* clock */
+  function tick(){
+    var d=new Date();
+    var h=d.getHours(),m=d.getMinutes();
+    document.getElementById('clock').textContent=(h<10?'0':'')+h+':'+(m<10?'0':'')+m;
+  }
+  tick();setInterval(tick,15000);
+
+  /* go */
+  startBoot();
+})();
+</script>
+</body>
+</html>

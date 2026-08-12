@@ -1,0 +1,127 @@
+{
+  "slug": "basil-pesto-pasta",
+  "title": "Basil Pesto Pasta",
+  "tagline": "Fresh cashew-basil pesto (no parmesan) tossed through fusilli with starchy pasta water for a silky, no-cook sauce.",
+  "image": "image.webp",
+  "emoji": "🌿",
+  "chef": "Raja",
+  "cuisine": "Italian",
+  "course": "Main",
+  "tags": [
+    "pasta",
+    "italian",
+    "vegetarian",
+    "quick",
+    "comfort-food",
+    "meal-prep"
+  ],
+  "flavor": [
+    "herby",
+    "nutty",
+    "garlicky",
+    "fresh"
+  ],
+  "ratings": {
+    "overall": 5,
+    "difficulty": 2,
+    "availability": 2
+  },
+  "servings": 2,
+  "servingsNote": "Pesto keeps a few days in the fridge, so scale the pasta up or down separately",
+  "time": {
+    "prep": 10,
+    "cook": 15,
+    "total": 25
+  },
+  "macros": {
+    "perServing": {
+      "calories": 705,
+      "protein": 17,
+      "carbs": 92,
+      "fat": 30,
+      "fibre": 5
+    },
+    "whole": {
+      "calories": 1410,
+      "protein": 34,
+      "carbs": 184,
+      "fat": 60,
+      "fibre": 10
+    }
+  },
+  "macroNotes": [
+    "Estimated from ingredients.",
+    "This is carb-heavy and, for a gym meal, protein-poor (~17 g/serving) since there is no parmesan or meat. Add protein.",
+    "Best protein boost: 150–200 g grilled/pan-seared chicken breast per serving turns it into a balanced ~45 g protein meal. Pan-seared shrimp or golden pan-fried tofu/paneer also work. Soya chunks don't suit a delicate pesto — go with one of these instead.",
+    "To trim calories, use 3 tbsp olive oil instead of 4 and lean on pasta water for silkiness — the starch does the emulsifying, not extra oil."
+  ],
+  "ingredients": [
+    {
+      "group": "Cashew pesto (no parmesan)",
+      "items": [
+        "1.5–2 packed cups fresh basil leaves (thick stems removed)",
+        "35–40 g cashews (about 1/4 cup), lightly toasted",
+        "2 medium garlic cloves",
+        "4 tbsp (60 ml) extra-virgin olive oil, plus more to loosen",
+        "3/4 tsp salt (extra important since there's no parmesan)",
+        "1/2 tsp freshly ground black pepper",
+        "2 tsp lemon juice"
+      ]
+    },
+    {
+      "group": "Pasta",
+      "items": [
+        "200 g fusilli (spirals grip pesto better than spaghetti)",
+        "1 tbsp salt, for the pasta water",
+        "1 cup pasta water, reserved before draining"
+      ]
+    },
+    {
+      "group": "Optional protein add-in",
+      "items": [
+        "150–200 g grilled or pan-seared chicken breast per serving (recommended for a gym meal)"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Toast the cashews",
+      "body": "Lightly toast 35–40 g cashews in a dry pan for 2–3 minutes until just golden. This deepens the nutty flavour that stands in for parmesan."
+    },
+    {
+      "title": "Blend the base",
+      "body": "In a mixer, blend the toasted cashews and 2 garlic cloves first until finely chopped."
+    },
+    {
+      "title": "Finish the pesto",
+      "body": "Add 1.5–2 packed cups basil, 4 tbsp olive oil, 3/4 tsp salt, 1/2 tsp black pepper and 2 tsp lemon juice. Blend until mostly smooth, adding another 1–2 tbsp olive oil (or a splash of cold water) if it's too thick. You'll get a small katori of pesto — that's normal, basil shrinks a lot; it's enough for 200 g pasta once loosened with pasta water. It can be made ahead: cover the surface with a thin layer of olive oil and refrigerate."
+    },
+    {
+      "title": "Boil the fusilli",
+      "body": "Boil 200 g fusilli in well-salted water (1 tbsp salt) until al dente, usually 9–11 minutes — taste for a slight bite in the centre."
+    },
+    {
+      "title": "Reserve water & drain",
+      "body": "Before draining, scoop out 1 cup of the starchy pasta water. Drain the fusilli but do NOT rinse it — the surface starch helps the sauce cling."
+    },
+    {
+      "title": "Toss off the heat",
+      "body": "Let the pasta sit 30–60 seconds so it's not piping hot, then add it to the pan with all the pesto. Keep the heat OFF (cooking pesto darkens the basil and turns the garlic harsh). Add 3 tbsp pasta water and toss 30–60 seconds until glossy, adding a little more water as needed."
+    },
+    {
+      "title": "Fix it if it's watery",
+      "body": "If it pools and looks watery (easy to over-add the reserved water), put the pan on LOW heat and stir constantly for 30–60 seconds — the excess evaporates and the starch emulsifies the sauce. It also thickens as it rests 2–3 minutes."
+    },
+    {
+      "title": "Adjust & serve",
+      "body": "Taste and adjust: a pinch more salt if flat, a squeeze more lemon for brightness, black pepper on top. Because there's no parmesan it usually needs a touch more salt than classic pesto."
+    }
+  ],
+  "notes": [
+    "Cashews are the best cheap swap for pine nuts. A small cube of processed cheese or 1 tsp nutritional yeast can be blended in for extra umami if you have it.",
+    "Fusilli beats spaghetti here — the spirals trap the sauce. If using spaghetti, same method.",
+    "Make the pesto ahead and cook the pasta fresh at night; the flavour actually improves as the garlic and basil meld. Loosen the cold pesto with warm pasta water when mixing."
+  ],
+  "source": "Adapted from my own cooking notes.",
+  "diet": "veg"
+}

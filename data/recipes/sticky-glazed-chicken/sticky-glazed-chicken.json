@@ -1,0 +1,131 @@
+{
+  "slug": "sticky-glazed-chicken",
+  "title": "Sticky Glazed Chicken",
+  "tagline": "One seared chicken base, two glazes — honey-garlic or bright orange. Great in a bowl or a wrap.",
+  "image": "image.webp",
+  "emoji": "🍗",
+  "chef": "Raja",
+  "cuisine": "Fusion",
+  "course": "Main",
+  "tags": [
+    "chicken",
+    "high-protein",
+    "pan-fried",
+    "air-fryer",
+    "wrap"
+  ],
+  "flavor": [
+    "sweet",
+    "savory",
+    "garlicky"
+  ],
+  "ratings": {
+    "overall": 3,
+    "difficulty": 2,
+    "availability": 4
+  },
+  "servings": 2,
+  "servingsNote": "",
+  "time": {
+    "prep": 15,
+    "cook": 15,
+    "total": 30
+  },
+  "macros": {
+    "perServing": {
+      "calories": 430,
+      "protein": 45,
+      "carbs": 33,
+      "fat": 12,
+      "fibre": 1
+    },
+    "whole": {
+      "calories": 860,
+      "protein": 90,
+      "carbs": 66,
+      "fat": 24,
+      "fibre": 2
+    }
+  },
+  "macroNotes": [
+    "Estimated from ingredients using chicken breast and the honey-garlic glaze.",
+    "Excellent gym macros — ~45 g protein per serving. Chicken thigh is juicier but adds ~120 kcal per serving in fat.",
+    "The glaze sugar (honey) is the main calorie lever: drop honey to 3 tbsp and skip the finishing butter to save ~80 kcal per serving.",
+    "Soya doesn't suit this seared-chicken dish; protein is already high without it."
+  ],
+  "ingredients": [
+    {
+      "group": "Chicken",
+      "items": [
+        "400 g boneless chicken — breast (leaner) or thigh (juicier), cut into bite-size pieces",
+        "1 tbsp soy sauce",
+        "1 tbsp cornflour (cornstarch) — for light crispness and to help the glaze cling",
+        "1/2 tsp black pepper",
+        "1/2 tsp salt (skip if your soy is very salty)",
+        "1.5 tbsp oil for searing"
+      ]
+    },
+    {
+      "group": "Honey-garlic glaze (option A)",
+      "items": [
+        "4 tbsp honey",
+        "2 tbsp soy sauce",
+        "1 tbsp rice or apple cider vinegar (balances the sweetness — don't skip)",
+        "1 tbsp ketchup or oyster sauce (depth)",
+        "5-6 garlic cloves, finely minced",
+        "1/2 tsp chilli flakes (optional)",
+        "1/4 cup (60 ml) water",
+        "1 tsp butter (optional finish)"
+      ]
+    },
+    {
+      "group": "Orange glaze (option B)",
+      "items": [
+        "1/2 cup (120 ml) fresh orange juice — ~2 kinnows or 2-3 Nagpur santras",
+        "1 tsp orange zest (no white pith)",
+        "1 tbsp soy sauce",
+        "1-2 tsp honey (taste first — Indian oranges are sweet)",
+        "1 tsp Dijon mustard (optional, Western body)",
+        "1 small garlic clove, minced",
+        "1/2 tsp cornflour + 1 tbsp water (slurry, to thicken)",
+        "1 tsp butter (optional finish)"
+      ]
+    },
+    {
+      "group": "Garnish",
+      "items": [
+        "Spring onions, sliced",
+        "Sesame seeds"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Marinate the chicken",
+      "body": "Toss the 400 g chicken pieces with 1 tbsp soy sauce, 1 tbsp cornflour, 1/2 tsp pepper and 1/2 tsp salt. Rest 10 minutes (even 5 helps) — the cornflour gives a light crust that grabs the glaze."
+    },
+    {
+      "title": "Sear (or air fry)",
+      "body": "Heat a wide pan on medium-high with 1.5 tbsp oil. Add the chicken in a single layer (don't crowd) and cook 2-3 minutes per side until golden and cooked through. Remove and set aside. For extra crisp, air fry at 200°C for 10-12 min instead, then glaze at the end."
+    },
+    {
+      "title": "Build your glaze",
+      "body": "Lower heat to medium. For HONEY-GARLIC: sauté the minced garlic (+ 1/2 tsp chilli flakes) 15-20 seconds without browning, then add 4 tbsp honey, 2 tbsp soy, 1 tbsp vinegar, 1 tbsp ketchup/oyster sauce and 1/4 cup water; simmer 1-2 min until slightly thick. For ORANGE: sauté the garlic 20 sec, add 1/2 cup orange juice, 1 tsp zest, 1 tbsp soy and 1-2 tsp honey; simmer 3-4 min, then stir in the cornflour slurry and reduce until it coats a spoon."
+    },
+    {
+      "title": "Glaze the chicken",
+      "body": "Return the chicken to the pan and toss continuously on medium heat 1-2 minutes until the sauce turns glossy and coats every piece. Swirl in 1 tsp butter at the end if using. If too thick, add 1-2 tbsp water; too thin, simmer 30-40 sec more — you want sticky, not syrupy or watery."
+    },
+    {
+      "title": "Finish",
+      "body": "Kill the heat, scatter over spring onions and sesame seeds. Serve over rice, in a bowl with stir-fried veg, or wrap it up."
+    }
+  ],
+  "notes": [
+    "Wrap version: warm a tortilla/roti, spread a thin strip of light mayo (1.5 tbsp mayo + 1/2 tsp lemon), lay lettuce or cabbage FIRST as a moisture barrier, then the glazed chicken (don't pour extra sauce — honey glazes leak), optional onion/cheese, and roll tight. Toast seam-side down 30-40 sec to seal.",
+    "Kinnow oranges are the best for the orange glaze; with sweet mausambi add a squeeze of lemon for brightness, and with Nagpur santra cut the honey.",
+    "Defrost note: microwave-defrosted chicken can throw a brief warm/fatty smell and pool some fat — that's usually fine. Tip out the pooled liquid, rinse once, pat very dry, and cook straight away on high heat. If the smell is sour, sulphury or ammonia-like and persists after rinsing, throw it out — cooking won't fix spoiled chicken."
+  ],
+  "source": "Adapted from my own cooking notes.",
+  "diet": "non-veg"
+}

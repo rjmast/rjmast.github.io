@@ -1,0 +1,154 @@
+{
+  "slug": "fried-rice",
+  "title": "Fried Rice",
+  "tagline": "Takeaway-style wok fried rice — veg, egg, or high-protein chicken.",
+  "image": "image.webp",
+  "emoji": "🍚",
+  "chef": "Raja",
+  "cuisine": "Indo-Chinese",
+  "course": "Main",
+  "tags": [
+    "stir-fry",
+    "rice",
+    "high-protein",
+    "gym-meal",
+    "quick",
+    "egg",
+    "chicken",
+    "indo-chinese"
+  ],
+  "flavor": [
+    "umami",
+    "savory",
+    "garlicky"
+  ],
+  "ratings": {
+    "overall": 4.5,
+    "difficulty": 2,
+    "availability": 4
+  },
+  "servings": 3,
+  "servingsNote": "Base makes 3; chicken+egg version is the full high-protein build.",
+  "time": {
+    "prep": 20,
+    "cook": 15,
+    "total": 35
+  },
+  "macros": {
+    "perServing": {
+      "calories": 520,
+      "protein": 42,
+      "carbs": 55,
+      "fat": 14,
+      "fibre": 3
+    },
+    "whole": {
+      "calories": 1560,
+      "protein": 126,
+      "carbs": 165,
+      "fat": 42,
+      "fibre": 9
+    }
+  },
+  "macroNotes": [
+    "Macros shown are for the chicken + egg version (450 g thighs + 9 eggs, 3 servings) — about 50 g protein per serving, which is excellent for a rice meal.",
+    "Veg-only version: drop to ~330 kcal and ~9 g protein per serving. Egg-only (add 4 eggs to the veg base): ~400 kcal, ~18 g protein per serving.",
+    "To push protein even harder without more calories: use 5–6 eggs and cut the rice to 1 cup raw. Rice contributes only ~10 g protein total, so shifting the ratio toward meat/egg is the move.",
+    "Oil control: instead of adding more oil in the wok, splash in 1–2 tbsp water when things start sticking — restaurants do this in high-heat wok cooking."
+  ],
+  "ingredients": [
+    {
+      "group": "Rice (make ahead)",
+      "items": [
+        "1.5 cups raw basmati rice (~3.5–4 cups cooked), cooked with slightly less water than usual so grains stay firm",
+        "Best case: cooled and refrigerated 1–2 hours or overnight"
+      ]
+    },
+    {
+      "group": "Protein — pick one (or combine)",
+      "items": [
+        "VEG: skip meat/egg, or add 100–150 g extra veg",
+        "EGG: 3–4 eggs, beaten with a pinch of salt",
+        "CHICKEN + EGG (high protein): 450 g boneless chicken thighs (juicier) or breast, cut small + 9 eggs beaten with a pinch each of salt, MSG and pepper"
+      ]
+    },
+    {
+      "group": "Chicken marinade (if using chicken)",
+      "items": [
+        "1 tbsp light soy sauce",
+        "1/2 tsp MSG",
+        "1/4 tsp white or black pepper",
+        "1 tsp cornflour (optional, improves texture)"
+      ]
+    },
+    {
+      "group": "Aromatics & veg",
+      "items": [
+        "6 cloves garlic, finely chopped",
+        "1 tbsp ginger, finely chopped",
+        "3 spring onions, whites and greens separated (or 1 small onion)",
+        "1/2 cup (60 g) carrot, finely diced",
+        "1/2 cup (70 g) beans, capsicum or baby corn, chopped small"
+      ]
+    },
+    {
+      "group": "Sauces & seasoning",
+      "items": [
+        "3 tbsp light soy sauce (total)",
+        "1.25 tsp MSG (total) — this is the takeaway-umami trick",
+        "1/2 tsp white or black pepper",
+        "1/2 tsp sugar",
+        "1 tsp white vinegar",
+        "Few drops sesame oil, to finish",
+        "1.5 tbsp neutral oil",
+        "Salt, to taste"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Use cold rice",
+      "body": "Cook 1.5 cups basmati with slightly less water than normal so the grains stay firm, spread it on a tray to cool, and ideally fridge it 1–2 hours. Cold, dry rice fries instead of steaming — this is the single biggest factor for proper fried-rice texture. If your rice is fresh, at least spread it out and cool it fully first."
+    },
+    {
+      "title": "Marinate the chicken (chicken version)",
+      "body": "Cut 450 g chicken thighs into small bite-size pieces and toss with 1 tbsp soy sauce, 1/2 tsp MSG, 1/4 tsp pepper and 1 tsp cornflour. Rest 10 minutes."
+    },
+    {
+      "title": "Sear the chicken",
+      "body": "Get a wok or large pan ripping hot. Add 1 tbsp oil, lay the chicken in a single layer (don't overcrowd — crowding steams it) and cook 3–4 minutes until browned. Remove and set aside."
+    },
+    {
+      "title": "Scramble the eggs",
+      "body": "Same pan, few drops of oil. For 9 eggs, cook in 2 batches: pour in, let them set slightly like an omelette, then break into large soft curds. Large curds give a better restaurant texture than tiny bits. Remove and set aside. (Egg-only version: use 3–4 eggs the same way.)"
+    },
+    {
+      "title": "Aromatics",
+      "body": "Add the remaining ~0.5 tbsp oil. Add 6 chopped garlic + 1 tbsp ginger and cook just 20–30 seconds — garlic first but briefly, don't burn it. Add the carrots and beans/capsicum/baby corn and stir-fry 1 minute (baby corn doesn't need pre-cooking; it stays slightly crunchy)."
+    },
+    {
+      "title": "Fry the rice",
+      "body": "Add the cold rice, break up any clumps and toss aggressively on high heat. For extra flavour, let it sit untouched for ~30 seconds to pick up a little char (wok hei) before stirring. Add 1.5 tbsp of the soy sauce, 1/2 tsp MSG, 1/2 tsp sugar and the pepper. Toss well for 2 minutes."
+    },
+    {
+      "title": "Separate a plain veg portion",
+      "body": "If someone wants it plain veg, scoop their portion out now, before the meat and egg go back in. Season it with the remaining soy to taste and set aside."
+    },
+    {
+      "title": "Combine",
+      "body": "Return the chicken, eggs and spring onion whites to the pan. Add the rest of the soy sauce and MSG (about 1.5 tbsp soy + 0.75 tsp MSG remaining) and stir-fry 1–2 minutes."
+    },
+    {
+      "title": "Finish",
+      "body": "Kill the heat and toss through the spring onion greens, 1 tsp vinegar and a few drops of sesame oil. Serve immediately."
+    }
+  ],
+  "notes": [
+    "Cold day-old rice, very high heat, and the MSG + soy combo are what make this taste like takeaway rather than home fried rice.",
+    "Chicken thigh stays juicier and is harder to overcook than breast; breast is leaner if you're cutting fat.",
+    "Baby corn goes in with the other veg — no need to pre-cook it. White vinegar added at the end gives a subtle tang; a little green chilli or chilli sauce warms it up.",
+    "If you accidentally cook the rice too wet, drain it, dry it uncovered on low heat 10–15 min, then cool/fridge it before frying."
+  ],
+  "source": "Adapted from my own cooking notes.",
+  "diet": "veg"
+}

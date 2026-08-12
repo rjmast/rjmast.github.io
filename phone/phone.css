@@ -1,0 +1,269 @@
+/* ===========================================================================
+   RajaOS — Mobile
+   A deliberately minimal phone OS. One app at a time, no windows, no drag.
+   Shares palette tokens with the desktop shell (../shared/tokens.css).
+   =========================================================================== */
+
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  overscroll-behavior: none;
+  font-family: var(--font-ui);
+  -webkit-font-smoothing: antialiased;
+}
+body {
+  /* desktop preview backdrop behind the phone frame */
+  background: radial-gradient(140% 120% at 50% -10%, #0f2f66 0%, #08213f 55%, #04162c 100%);
+  display: grid;
+  place-items: center;
+}
+
+/* --- Phone frame (desktop preview) ------------------------------------- */
+.phone {
+  position: relative;
+  width: 390px;
+  height: 844px;
+  max-height: 96dvh;
+  border-radius: 46px;
+  padding: 5px;
+  background: linear-gradient(150deg, #1b2532, #0a0f17);
+  box-shadow:
+    0 40px 90px -20px rgba(2, 10, 26, .8),
+    0 0 0 2px rgba(255, 255, 255, .04) inset,
+    0 2px 6px rgba(255, 255, 255, .12) inset;
+}
+.screen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 42px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  /* blueprint-blue wallpaper: gradient ground + orange bloom + faint grid */
+  background:
+    radial-gradient(90% 55% at 78% 8%, rgba(242, 107, 29, .22), transparent 60%),
+    radial-gradient(80% 60% at 12% 96%, rgba(242, 107, 29, .10), transparent 62%),
+    linear-gradient(165deg, #0d4bab 0%, #0a3a86 42%, #08306b 100%);
+}
+.screen::before {
+  /* faint blueprint grid overlay */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, .05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, .05) 1px, transparent 1px);
+  background-size: 34px 34px;
+  mask-image: radial-gradient(120% 100% at 50% 40%, #000 55%, transparent 100%);
+  pointer-events: none;
+}
+
+/* --- Status bar -------------------------------------------------------- */
+.statusbar {
+  position: relative;
+  z-index: 3;
+  flex: 0 0 auto;
+  height: 46px;
+  padding: env(safe-area-inset-top) 26px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #eaf2ff;
+}
+.sb-clock {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: .01em;
+  font-variant-numeric: tabular-nums;
+}
+.sb-cluster { display: inline-flex; align-items: center; gap: 7px; }
+.sb-ic { display: block; }
+
+/* --- Home -------------------------------------------------------------- */
+.home {
+  position: relative;
+  z-index: 2;
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 8px 20px 4px;
+  overflow: hidden;          /* home NEVER scrolls */
+}
+.wordmark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin: 6px 0 22px;
+  opacity: .82;
+}
+.wm-mark { display: inline-flex; }
+.wm-text {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: .42em;
+  padding-left: .42em;
+  color: rgba(255, 227, 205, .9);
+}
+
+.grid {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-content: start;
+  gap: 22px 12px;
+}
+
+/* --- App icons --------------------------------------------------------- */
+.app-icon {
+  appearance: none;
+  border: 0;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  color: #eef3fb;
+  font: inherit;
+}
+.icon-tile {
+  display: grid;
+  place-items: center;
+  border-radius: 15px;
+  box-shadow: var(--shadow-tile);
+  overflow: hidden;
+  transition: transform .18s var(--ease-out);
+}
+.grid .icon-tile { width: 58px; height: 58px; }
+.icon-label {
+  font-size: 11.5px;
+  font-weight: 500;
+  letter-spacing: .005em;
+  text-align: center;
+  line-height: 1.15;
+  max-width: 74px;
+  text-shadow: 0 1px 3px rgba(3, 12, 30, .55);
+}
+.app-icon:active .icon-tile { transform: scale(.9); }
+.app-icon:focus-visible { outline: none; }
+.app-icon:focus-visible .icon-tile {
+  outline: 2.5px solid #eaf2ff;
+  outline-offset: 3px;
+}
+
+/* --- Dock -------------------------------------------------------------- */
+.dock {
+  position: relative;
+  z-index: 2;
+  flex: 0 0 auto;
+  margin: 0 14px calc(14px + env(safe-area-inset-bottom));
+  padding: 12px 8px;
+  display: flex;
+  justify-content: space-around;
+  gap: 8px;
+  border-radius: 30px;
+  background: rgba(9, 28, 66, .42);
+  border: 1px solid rgba(255, 255, 255, .12);
+  box-shadow:
+    0 12px 30px -8px rgba(4, 14, 38, .5),
+    inset 0 1px 0 rgba(255, 255, 255, .16);
+  backdrop-filter: blur(18px) saturate(1.3);
+  -webkit-backdrop-filter: blur(18px) saturate(1.3);
+}
+.dock .app-icon { gap: 0; }
+.dock .icon-tile { width: 56px; height: 56px; }
+
+/* --- App layer (one app, full screen) ---------------------------------- */
+.app-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  background: var(--paper);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform-origin: 50% 50%;
+}
+.app-layer.open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.app-bar {
+  flex: 0 0 auto;
+  height: calc(46px + env(safe-area-inset-top));
+  padding: env(safe-area-inset-top) 8px 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(180deg, var(--titlebar-a), var(--titlebar-b));
+  border-bottom: 1px solid var(--line);
+}
+.app-bar-title {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+.app-close {
+  appearance: none;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  color: var(--ink);
+  background: var(--paper-2);
+  transition: background .15s var(--ease-out), transform .12s var(--ease-out);
+}
+.app-close:hover { background: var(--paper-3); }
+.app-close:active { transform: scale(.92); }
+.app-close:focus-visible { outline: 2.5px solid var(--blue); outline-offset: 2px; }
+.app-stage {
+  flex: 1 1 auto;
+  min-height: 0;
+  position: relative;
+  background: var(--paper);
+}
+.app-stage iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+/* --- Real phones: edge to edge ----------------------------------------- */
+@media (max-width: 480px) {
+  body { background: none; }
+  .phone {
+    width: 100%;
+    height: 100dvh;
+    max-height: none;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+  .screen { border-radius: 0; }
+}
+
+/* --- Reduced motion ---------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .icon-tile, .app-close { transition: none; }
+}

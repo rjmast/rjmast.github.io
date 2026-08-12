@@ -1,0 +1,135 @@
+{
+  "slug": "buffalo-cauliflower",
+  "title": "Buffalo Cauliflower",
+  "tagline": "Besan-battered baked cauliflower tossed in a sticky desi buffalo sauce.",
+  "image": "image.webp",
+  "emoji": "🥦",
+  "chef": "Raja",
+  "cuisine": "Fusion",
+  "course": "Snack",
+  "tags": [
+    "vegetarian",
+    "oven-baked",
+    "snack",
+    "cheat-day",
+    "street-food",
+    "fusion"
+  ],
+  "flavor": [
+    "spicy",
+    "tangy",
+    "savory"
+  ],
+  "ratings": {
+    "overall": 4.5,
+    "difficulty": 2,
+    "availability": 4
+  },
+  "servings": 2,
+  "servingsNote": "1 small cauliflower feeds 2 as a starter.",
+  "time": {
+    "prep": 15,
+    "cook": 30,
+    "total": 45
+  },
+  "macros": {
+    "perServing": {
+      "calories": 320,
+      "protein": 11,
+      "carbs": 40,
+      "fat": 13,
+      "fibre": 6
+    },
+    "whole": {
+      "calories": 640,
+      "protein": 22,
+      "carbs": 80,
+      "fat": 26,
+      "fibre": 12
+    }
+  },
+  "macroNotes": [
+    "Estimated from ingredients — baked, not deep-fried, so it stays reasonable.",
+    "The besan batter gives it real plant protein (~11 g/serving) and it's baked, so calories are moderate for a snacky dish. Most of the fat is the butter/ghee in the sauce — cut the sauce butter to 1 tbsp to save ~50 kcal per serving.",
+    "Protein boost: serve with a Greek-yogurt or hung-curd raita dip (adds ~6–8 g protein), or add 1 tbsp whey-neutral to the besan is not advised — instead stir a spoon of curd into the dip. Soya doesn't fit here."
+  ],
+  "ingredients": [
+    {
+      "group": "Cauliflower & batter",
+      "items": [
+        "1 small cauliflower, cut into florets",
+        "1/2 cup (60 g) besan (gram flour)",
+        "2 tbsp rice flour (for extra crunch)",
+        "1/2 tsp red chilli powder",
+        "1/2 tsp Kashmiri chilli powder (colour without much heat)",
+        "1/2 tsp garam masala",
+        "1/2 tsp cumin powder",
+        "1/2 tsp salt",
+        "~1/2 cup (120 ml) water (adjust for a thick but pourable batter)",
+        "1 tbsp oil, for drizzling"
+      ]
+    },
+    {
+      "group": "Desi buffalo sauce",
+      "items": [
+        "2 tbsp butter or ghee (ghee gives deeper flavour)",
+        "3 tbsp hot sauce (or the homemade sub below)",
+        "1 tbsp honey (balances heat, adds stickiness)",
+        "1/2 tsp garlic paste",
+        "1/2 tsp black pepper",
+        "1 tbsp water, to thin if needed"
+      ]
+    },
+    {
+      "group": "Homemade hot-sauce substitute (if you have no hot sauce)",
+      "items": [
+        "2 tbsp red chilli sauce (Ching's or Schezwan)",
+        "1 tbsp tomato ketchup",
+        "1 tsp vinegar (or lemon juice)",
+        "1/2 tsp red chilli powder",
+        "1/2 tsp honey or sugar",
+        "1/2 tsp garlic paste"
+      ]
+    },
+    {
+      "group": "To serve",
+      "items": [
+        "Chopped coriander",
+        "Raita or a mild spiced-yogurt dip"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Make the batter",
+      "body": "Whisk 1/2 cup besan, 2 tbsp rice flour, 1/2 tsp red chilli, 1/2 tsp Kashmiri chilli, 1/2 tsp garam masala, 1/2 tsp cumin powder and 1/2 tsp salt. Add ~1/2 cup water gradually to a thick but pourable batter — thick enough to coat and cling, not runny. Coat only just before baking; batter-marinated florets sit and go soggy."
+    },
+    {
+      "title": "Coat",
+      "body": "Dip the cauliflower florets in the batter so each is evenly coated, letting the excess drip off."
+    },
+    {
+      "title": "Bake",
+      "body": "Preheat the oven to 220°C (425°F). Lay the florets on a greased tray, drizzle or brush with 1 tbsp oil, and bake 20–25 minutes, flipping halfway, until golden and crispy."
+    },
+    {
+      "title": "Make the sauce",
+      "body": "Heat 2 tbsp butter or ghee in a pan, add 1/2 tsp garlic paste and sauté a few seconds. Stir in 3 tbsp hot sauce (or the homemade sub), 1 tbsp honey, 1/2 tsp black pepper and 1 tbsp water. Cook 1 minute until glossy and combined."
+    },
+    {
+      "title": "Toss",
+      "body": "Toss the baked cauliflower in the buffalo sauce until well coated. For a stickier, slightly caramelised finish, return it to the oven for another 5 minutes."
+    },
+    {
+      "title": "Serve",
+      "body": "Garnish with chopped coriander and serve hot with raita or a spiced-yogurt dip."
+    }
+  ],
+  "notes": [
+    "The sauce goes perfectly sticky and caramelised.",
+    "Milder option (for anyone with low spice tolerance): batter their portion without the two chilli powders — use 1/4 tsp turmeric and 1/2 tsp coriander powder instead — bake it on one side of the tray, and toss it in a mild sauce made without hot sauce (add 1 extra tbsp ketchup + 1/2 tsp honey). Do the mild batch first, then add the hot sauce and chilli powder to the same pan and toss the rest. You can always add more hot sauce to your own portion after separating it.",
+    "For meal prep: keep the batter dry mix and florets separate, coat and bake only when ready, or par-bake the florets 10–15 min and finish later — batter-coating in advance makes it soggy."
+  ],
+  "source": "Adapted from my own cooking notes.",
+  "diet": "veg"
+}

@@ -1,0 +1,147 @@
+{
+  "slug": "egg-chilli-garlic-noodles",
+  "title": "Egg Chilli Garlic Noodles",
+  "tagline": "Wok-hot Hakka noodles with scrambled egg, loads of garlic, and chilli oil instead of bottled sauce.",
+  "image": "image.webp",
+  "emoji": "🍜",
+  "chef": "Raja",
+  "cuisine": "Indo-Chinese",
+  "course": "Main",
+  "tags": [
+    "noodles",
+    "indo-chinese",
+    "stir-fry",
+    "egg",
+    "high-protein",
+    "restaurant-style"
+  ],
+  "flavor": [
+    "spicy",
+    "garlicky",
+    "savory"
+  ],
+  "ratings": {
+    "overall": 5,
+    "difficulty": 2,
+    "availability": 4
+  },
+  "servings": 2,
+  "servingsNote": "",
+  "time": {
+    "prep": 15,
+    "cook": 15,
+    "total": 30
+  },
+  "macros": {
+    "perServing": {
+      "calories": 780,
+      "protein": 47,
+      "carbs": 76,
+      "fat": 28,
+      "fibre": 6
+    },
+    "whole": {
+      "calories": 1560,
+      "protein": 94,
+      "carbs": 152,
+      "fat": 56,
+      "fibre": 12
+    }
+  },
+  "macroNotes": [
+    "Estimated from ingredients (includes the soya chunks and 3 eggs).",
+    "The 100 g soya chunks are doing heavy lifting here — they add ~50 g protein across the two servings for barely any calories. Without them this drops to ~700 kcal and ~28 g protein per serving.",
+    "To cut ~150 kcal per serving: use 150 g noodles instead of 200 g and drop to 1.5 tbsp oil total — the chilli oil already brings fat and flavour."
+  ],
+  "ingredients": [
+    {
+      "group": "Noodles",
+      "items": [
+        "200 g Hakka noodles (or any wheat noodles)",
+        "1 tbsp oil + 1 tsp salt for boiling",
+        "1 tsp oil for tossing after draining"
+      ]
+    },
+    {
+      "group": "Protein",
+      "items": [
+        "3 eggs, whisked with a pinch of salt + pepper",
+        "100 g dry soya chunks (50 g per serving) — soaked in hot water 10 min, squeezed very dry, chopped small"
+      ]
+    },
+    {
+      "group": "Heat & aromatics",
+      "items": [
+        "1.5 tbsp finely chopped garlic (10-12 cloves) — be generous",
+        "1 to 1.5 tbsp chilli oil (adjust to tolerance)",
+        "1 tsp chilli flakes",
+        "1-2 dried red chillies, broken (optional)",
+        "1 onion, sliced",
+        "1 green chilli, slit",
+        "1/2 cup cabbage, shredded",
+        "1/2 cup capsicum, thin strips"
+      ]
+    },
+    {
+      "group": "Indian spice layer (the sauce replacement)",
+      "items": [
+        "1/4 tsp Kashmiri chilli powder (colour, mild heat)",
+        "1 small pinch turmeric",
+        "1/2 tsp crushed coriander seeds OR garam masala (light hand)"
+      ]
+    },
+    {
+      "group": "Balance & finish",
+      "items": [
+        "1 tsp vinegar or lemon juice",
+        "1/2 tsp sugar",
+        "2 tbsp oil (neutral — sunflower/rice bran, not olive)",
+        "Salt + black pepper to taste",
+        "Spring onion greens or coriander to finish",
+        "1/2 tbsp butter (optional, for street-style richness)"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Boil the noodles",
+      "body": "Boil 200 g noodles in water with 1 tbsp oil + 1 tsp salt until just al dente (firm — they cook more in the wok). Drain immediately, rinse under cold water, and toss with 1 tsp oil. Keep them dry — wet noodles make the whole dish soggy."
+    },
+    {
+      "title": "Prep the soya",
+      "body": "Soak 100 g dry soya chunks in hot water for 10 minutes, then squeeze them out very dry — this step matters, wet soya waters down the wok and won't take on flavour. Chop them small so they mix through like mince."
+    },
+    {
+      "title": "Scramble the eggs",
+      "body": "Heat a pan on high with 1 tsp oil. Pour in the 3 whisked eggs and scramble into large soft chunks — don't overcook or break them too fine. Remove and set aside."
+    },
+    {
+      "title": "Build the garlic-chilli base",
+      "body": "Heat the wok on high until very hot, add 2 tbsp neutral oil. Add 1.5 tbsp chopped garlic and stir till light golden. Add the 1-2 dried red chillies + 1 tsp chilli flakes and toss for 5 seconds — don't burn them."
+    },
+    {
+      "title": "Fry the veg and soya",
+      "body": "Add the sliced onion + slit green chilli and toss 30 seconds. Add the cabbage + capsicum and stir-fry on high 1 minute so they stay crunchy. Add the squeezed, chopped soya and toss 1 minute so it picks up the garlic and heat."
+    },
+    {
+      "title": "Bloom the spices",
+      "body": "Lower the flame slightly and add 1/4 tsp Kashmiri chilli powder, a pinch of turmeric, and 1/2 tsp crushed coriander seeds (or garam masala). Stir immediately so they bloom in the oil but don't burn — this is what replaces the bottled sauce."
+    },
+    {
+      "title": "Toss in noodles + chilli oil",
+      "body": "Add the dry noodles and 1 to 1.5 tbsp chilli oil. Toss hard on high heat using tongs or two ladles so everything coats evenly. Return the scrambled eggs. Season with salt, pepper, and 1/2 tsp sugar, then splash in 1 tsp vinegar or lemon juice for sharpness."
+    },
+    {
+      "title": "Finish",
+      "body": "Add 1/2 tbsp butter for richness if using, toss in spring onion greens or coriander, give one final toss on high heat and turn off. Serve immediately."
+    }
+  ],
+  "notes": [
+    "This is the no-bottled-sauce version — chilli oil + Indian spices stand in for chilli garlic sauce and give equal or better flavour. If you do have the sauces, swap in 1.5 tbsp chilli garlic sauce + 1 tbsp soy + 1 tbsp vinegar at the noodle stage.",
+    "High heat is everything: preheat the pan 2 minutes before adding oil, and don't overcrowd with veg or you lose the smoky wok flavour.",
+    "Wash your veg before chopping.",
+    "Add the eggs at the very end so the pieces stay intact."
+  ],
+  "source": "Adapted from my own cooking notes.",
+  "diet": "non-veg"
+}

@@ -1,0 +1,133 @@
+{
+  "slug": "cheese-paneer-garlic-dosa",
+  "title": "Cheese Paneer Garlic Dosa",
+  "tagline": "College-canteen style dosa loaded with garlic chutney, soft seasoned paneer and melty Amul cheese.",
+  "image": "image.webp",
+  "emoji": "🧀",
+  "chef": "Raja",
+  "cuisine": "Indian",
+  "course": "Breakfast",
+  "tags": [
+    "paneer",
+    "vegetarian",
+    "breakfast",
+    "comfort-food",
+    "high-protein",
+    "street-food",
+    "indian"
+  ],
+  "flavor": [
+    "cheesy",
+    "garlicky",
+    "savory",
+    "spicy"
+  ],
+  "ratings": {
+    "overall": 5,
+    "difficulty": 2,
+    "availability": 4
+  },
+  "servings": 2,
+  "servingsNote": "2 large dosas — uses ready dosa batter",
+  "time": {
+    "prep": 20,
+    "cook": 20,
+    "total": 40
+  },
+  "macros": {
+    "perServing": {
+      "calories": 575,
+      "protein": 30,
+      "carbs": 45,
+      "fat": 30,
+      "fibre": 3
+    },
+    "whole": {
+      "calories": 1150,
+      "protein": 60,
+      "carbs": 90,
+      "fat": 60,
+      "fibre": 6
+    }
+  },
+  "macroNotes": [
+    "Estimated from ingredients (2 dosas, 200 g paneer + 2 Amul cubes).",
+    "Good protein for a breakfast (~30 g/serving), but butter + cheese push the fat up. Most of the swing is the cooking butter.",
+    "Leaner: use less butter around the edges and just 1 cheese cube total instead of 2 — still tastes canteen-legit and drops ~120–150 kcal per dosa.",
+    "Next-day protein boost: make it an egg dosa — soft-scramble 3 eggs (stop at ~85–90% cooked, it finishes inside the dosa) and spread over the dosa before folding, adds ~18–20 g protein."
+  ],
+  "ingredients": [
+    {
+      "group": "Dosa",
+      "items": [
+        "Ready dosa batter (~2–3 ladles / 350–400 g)",
+        "Butter or ghee, for cooking (canteen taste = butter)"
+      ]
+    },
+    {
+      "group": "Garlic chutney spread",
+      "items": [
+        "8 garlic cloves",
+        "2 dried red chillies (or 1 tsp red chilli powder)",
+        "1/2 tsp salt",
+        "1 tsp oil",
+        "1–2 tbsp water"
+      ]
+    },
+    {
+      "group": "Paneer filling",
+      "items": [
+        "200 g paneer (Mother Dairy / pre-packaged), grated",
+        "1 small onion, finely chopped",
+        "1 green chilli, finely chopped",
+        "1 tsp ginger, grated",
+        "2 tbsp coriander, chopped",
+        "1/4 tsp red chilli powder",
+        "Pinch turmeric (optional)",
+        "Pinch chaat masala (optional, very canteen)",
+        "Very little salt (cheese is salty)",
+        "1 tsp butter or oil",
+        "2 tbsp milk"
+      ]
+    },
+    {
+      "group": "Cheese",
+      "items": [
+        "2 Amul cheese cubes, grated (or mozzarella — Amul is the authentic canteen taste)"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Soften the paneer (do not skip)",
+      "body": "Grate all 200 g paneer, put it in a bowl, and pour hot water (~80–90°C, not violently boiling) over it until submerged. Leave 10 minutes, then drain and gently squeeze out excess water. Pre-packaged paneer is rubbery straight from the pack; this hot-water soak rehydrates it soft. Don't fry it first (turns to eraser) or boil it long."
+    },
+    {
+      "title": "Make the garlic chutney",
+      "body": "Blend/crush 8 garlic cloves, 2 dried red chillies, 1/2 tsp salt and 1–2 tbsp water into a thick paste. Heat 1 tsp oil in a tiny pan and cook the paste 30–45 seconds just to mellow the raw bite. (If you want an aggressive raw-garlic kick like some canteens, skip cooking.) Set aside."
+    },
+    {
+      "title": "Cook the paneer filling",
+      "body": "Heat 1 tsp butter/oil, add the chopped onion, green chilli and 1 tsp ginger and cook 1–2 minutes until the onion softens — don't brown. Add 1/4 tsp red chilli powder, a pinch of turmeric and very little salt. Add the softened paneer and 2 tbsp milk, mix gently, and cook only 30–60 seconds — you're warming and seasoning, not frying. Finish with 2 tbsp coriander and a pinch of chaat masala. Target texture: soft, moist, creamy crumble."
+    },
+    {
+      "title": "Spread the dosa",
+      "body": "Heat the tava well — a sprinkle of water should dance instantly; wipe off the excess. Pour a ladle of batter in the centre and spread thin in circles. Add 1 tsp butter around the edges and cook until the top starts drying."
+    },
+    {
+      "title": "Assemble",
+      "body": "Spread a thin layer of garlic chutney over the dosa. Add half the paneer filling evenly. Top with 1 grated cheese cube. Press lightly."
+    },
+    {
+      "title": "Crisp & fold",
+      "body": "Cook another 1–2 minutes on medium until the bottom is crisp and the cheese melts. For canteen crisp, press lightly with the spatula and drizzle a tiny bit more butter. Fold and serve. Repeat for the second dosa."
+    }
+  ],
+  "notes": [
+    "Don't overload the filling or the dosa tears and becomes a sad uttapam hybrid.",
+    "For extra canteen creaminess, toss the drained paneer with 1 tbsp curd/milk and a pinch of chaat masala and let it sit 5 minutes before filling.",
+    "Optional street-food upgrade: add thin onion slices + capsicum with the paneer."
+  ],
+  "source": "Adapted from my own cooking notes.",
+  "diet": "veg"
+}

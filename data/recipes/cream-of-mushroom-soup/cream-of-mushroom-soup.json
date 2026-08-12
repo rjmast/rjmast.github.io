@@ -1,0 +1,116 @@
+{
+  "slug": "cream-of-mushroom-soup",
+  "title": "Cream of Mushroom Soup",
+  "tagline": "Velvety soup of deeply browned mushrooms in a garlicky thyme cream.",
+  "image": "image.webp",
+  "emoji": "🍲",
+  "chef": "Raja",
+  "cuisine": "Continental",
+  "course": "Side",
+  "tags": [
+    "vegetarian",
+    "comfort-food",
+    "continental",
+    "one-pot",
+    "low-carb"
+  ],
+  "flavor": [
+    "creamy",
+    "umami",
+    "savory",
+    "rich",
+    "herby"
+  ],
+  "ratings": {
+    "overall": 4,
+    "difficulty": 2,
+    "availability": 4
+  },
+  "servings": 2,
+  "servingsNote": "About 250 g mushrooms makes a rich bowl for 2 as a starter, or a light meal.",
+  "time": {
+    "prep": 10,
+    "cook": 25,
+    "total": 35
+  },
+  "macros": {
+    "perServing": {
+      "calories": 400,
+      "protein": 10,
+      "carbs": 22,
+      "fat": 31,
+      "fibre": 3
+    },
+    "whole": {
+      "calories": 800,
+      "protein": 20,
+      "carbs": 44,
+      "fat": 62,
+      "fibre": 6
+    }
+  },
+  "macroNotes": [
+    "Estimated from ingredients. Rich but protein-poor — mushrooms are mostly water and the calories are butter + cream.",
+    "Lean it out: use whole milk thickened with the flour roux and just a small splash of cream at the end instead of a full 100 ml. Cuts ~120-150 kcal per serving.",
+    "Protein boost (soya doesn't suit a smooth soup): stir 2-3 tbsp Greek yogurt into each bowl off the heat, or add ~120 g shredded cooked chicken. A scoop of unflavoured whey whisked in off-heat also works if you want a pure macro hit."
+  ],
+  "ingredients": [
+    {
+      "group": "Soup",
+      "items": [
+        "250 g mushrooms (button/cremini), sliced (save a few for garnish)",
+        "3 tbsp (45 g) butter",
+        "1 small onion (~80 g), finely chopped",
+        "2 cloves garlic, minced",
+        "2 tbsp (16 g) plain flour",
+        "400 ml vegetable stock (or water + 1 stock cube)",
+        "150 ml milk",
+        "80-100 ml cream",
+        "1/2 tsp fresh or dried thyme",
+        "1/2 tsp black pepper",
+        "Salt, to taste"
+      ]
+    },
+    {
+      "group": "To finish",
+      "items": [
+        "A few reserved sauteed mushroom slices",
+        "1 tbsp chopped parsley or extra thyme",
+        "A swirl of cream"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Brown the mushrooms hard",
+      "body": "Melt 2 tbsp (30 g) of the butter in a pot on medium-high. Add the 250 g sliced mushrooms and cook 8-10 minutes. They'll release a lot of water first — keep going until ALL of it evaporates and the mushrooms are properly browned. This browning is the entire flavour of the soup, so don't rush it. Scoop out a few slices for garnish."
+    },
+    {
+      "title": "Soften the aromatics",
+      "body": "Add the last 1 tbsp (15 g) butter, then the chopped onion (~80 g) and 2 minced garlic cloves. Cook 3-4 minutes until soft, not coloured."
+    },
+    {
+      "title": "Make the roux",
+      "body": "Sprinkle in 2 tbsp (16 g) flour and stir constantly for 1-2 minutes to cook off the raw taste — this is what thickens the soup to that velvety body."
+    },
+    {
+      "title": "Add liquid and simmer",
+      "body": "Slowly pour in 400 ml stock while stirring so no lumps form, then add 150 ml milk, 1/2 tsp thyme and 1/2 tsp black pepper. Simmer gently 8-10 minutes until it thickens slightly."
+    },
+    {
+      "title": "Blend (optional)",
+      "body": "For a smooth soup, blend about two-thirds of it (immersion blender or jug) and leave the rest chunky for texture. Skip this step entirely if you like it rustic and chunky."
+    },
+    {
+      "title": "Finish with cream",
+      "body": "Stir in 80-100 ml cream, warm through on low (don't boil hard or it can split), and season with salt to taste. Serve topped with the reserved mushrooms, a swirl of cream and chopped parsley or thyme."
+    }
+  ],
+  "notes": [
+    "Drying the mushrooms out completely before anything else goes in is the make-or-break step — watery mushrooms = flat, thin soup.",
+    "No cream? Extra milk + the roux still gives a creamy body; a spoon of Greek yogurt off the heat adds tang and protein.",
+    "Scales cleanly — double everything and use ~500 g mushrooms for 4."
+  ],
+  "source": "Adapted from my own cooking notes.",
+  "diet": "veg"
+}

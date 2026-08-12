@@ -1,0 +1,165 @@
+{
+  "slug": "butter-chicken",
+  "title": "Butter Chicken",
+  "tagline": "Tandoori-charred chicken in a rich, creamy tomato gravy — restaurant-style makhani at home.",
+  "image": "image.webp",
+  "emoji": "🍛",
+  "chef": "Raja",
+  "cuisine": "Indian",
+  "course": "Main",
+  "tags": [
+    "chicken",
+    "high-protein",
+    "curry",
+    "restaurant-style",
+    "otg",
+    "marinade",
+    "gym-meal"
+  ],
+  "flavor": [
+    "creamy",
+    "rich",
+    "spicy",
+    "tangy"
+  ],
+  "ratings": {
+    "overall": 5,
+    "difficulty": 4.5,
+    "availability": 5
+  },
+  "servings": 2,
+  "servingsNote": "Generous — 450 g chicken makes 2 hearty plates with roti or rice.",
+  "time": {
+    "prep": 30,
+    "cook": 45,
+    "total": 75
+  },
+  "macros": {
+    "perServing": {
+      "calories": 650,
+      "protein": 55,
+      "carbs": 22,
+      "fat": 33,
+      "fibre": 4
+    },
+    "whole": {
+      "calories": 1300,
+      "protein": 110,
+      "carbs": 44,
+      "fat": 66,
+      "fibre": 8
+    }
+  },
+  "macroNotes": [
+    "Estimated from ingredients. The bulk of the calories come from butter, ghee and cream — protein is excellent thanks to 450 g chicken.",
+    "To cut ~150 kcal per serving: use 1 tbsp cream instead of 3 and skip the ghee tadka (you lose a little richness but keep the flavor).",
+    "Chicken breast is leaner (less fat, ~same protein); boneless thigh is juicier and much more forgiving if you overcook it slightly.",
+    "Soya chunks don't belong in a makhani. If you want even more protein, throw a handful of cubed paneer into the gravy in the last 5 minutes, or serve over a bed of soaked-and-squeezed soya added to the rice."
+  ],
+  "ingredients": [
+    {
+      "group": "Cleaning wash",
+      "items": [
+        "1 tsp salt",
+        "Juice of 1/2 lemon"
+      ]
+    },
+    {
+      "group": "Tandoori marinade (450 g boneless chicken breast or thigh, cut into medium cubes)",
+      "items": [
+        "3 tbsp hung curd (thick dahi — drain the watery part)",
+        "1 tbsp ginger-garlic paste",
+        "1 tsp Kashmiri red chilli powder (for colour, not heat)",
+        "1/2 tsp regular red chilli powder (for heat)",
+        "1/2 tsp turmeric (haldi)",
+        "1 tsp coriander powder (dhaniya)",
+        "1/2 tsp cumin powder (jeera)",
+        "1/2 tsp garam masala",
+        "1 tsp salt",
+        "1 tbsp oil",
+        "1 tsp kasuri methi, crushed in the palm",
+        "Optional: 1/2 tsp mustard oil (tandoor-style depth) + 1/2 tsp sugar"
+      ]
+    },
+    {
+      "group": "Gravy",
+      "items": [
+        "2 tbsp butter + 1 tbsp oil (oil stops the butter burning)",
+        "2 medium onions, very finely chopped or paste",
+        "1 tbsp ginger-garlic paste",
+        "3 medium tomatoes (~350 g), grated or blended to a purée",
+        "1 tsp Kashmiri chilli powder",
+        "1/2–1 tsp regular chilli powder (to taste)",
+        "1 tsp coriander powder",
+        "1/2 tsp cumin powder",
+        "1/2 tsp garam masala",
+        "1 tsp sugar or honey (balances the tomato acidity)",
+        "Salt, to taste",
+        "1/2 cup water or chicken stock",
+        "2–3 tbsp fresh cream or malai",
+        "1 tsp kasuri methi, crushed, to finish"
+      ]
+    },
+    {
+      "group": "Tandoori tadka (optional but does the heavy lifting)",
+      "items": [
+        "1 tbsp ghee",
+        "1 pinch garam masala",
+        "1 pinch chilli powder"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Clean the chicken",
+      "body": "Rub 450 g cubed chicken with 1 tsp salt and the juice of 1/2 lemon, rinse once, and pat completely dry with a cloth or tissue. Dry chicken grips the marinade far better — don't skip the drying."
+    },
+    {
+      "title": "Marinate",
+      "body": "Mix 3 tbsp hung curd, 1 tbsp ginger-garlic paste, 1 tsp Kashmiri chilli, 1/2 tsp regular chilli, 1/2 tsp turmeric, 1 tsp coriander powder, 1/2 tsp cumin powder, 1/2 tsp garam masala, 1 tsp salt, 1 tbsp oil and 1 tsp crushed kasuri methi into a thick paste. Coat the chicken, cover, and rest in the fridge — minimum 2 hours, ideally 4–6 for restaurant-level flavour. Keep it in the FRIDGE, never the freezer (ice crystals turn it rubbery and split the marinade)."
+    },
+    {
+      "title": "Bring to room temp",
+      "body": "Take the chicken out 20–30 minutes before cooking so it doesn't seize up. Reserve any leftover marinade in the bowl — you'll cook it into the gravy."
+    },
+    {
+      "title": "Char the chicken (OTG / air-fryer)",
+      "body": "Preheat OTG to 200–220°C (both rods) for 10 min. Lay the pieces on a greased tray with small gaps (crowding steams instead of roasting). Roast 12–14 min, then flip, brush lightly with ghee/oil, and roast another 10–12 min. If liquid pools on the tray, dab it off with tissue so it browns instead of stewing. Finish 2–3 min under the top rod only for char. Pull it while still slightly juicy — it finishes in the gravy. Air-fryer: 200°C, 8 min, flip and spray oil, 7–9 min more."
+    },
+    {
+      "title": "Pan-sear option",
+      "body": "No oven? Heat 1 tbsp oil/butter in a pan on medium-high and sear the chicken 4–5 min per side until golden and slightly charred. It doesn't need to be cooked through — it finishes in the gravy. Use medium heat and don't go past 4 min a side for breast, or it turns rubbery."
+    },
+    {
+      "title": "Start the gravy",
+      "body": "Heat 2 tbsp butter + 1 tbsp oil. Cook 2 finely chopped onions until golden. Add 1 tbsp ginger-garlic paste and fry 1 minute until the raw smell goes."
+    },
+    {
+      "title": "Cook the tomatoes down",
+      "body": "Add the purée of 3 grated tomatoes. Cook on medium 8–10 min until it thickens and oil separates at the edges. Grated tomatoes are actually better here — smoother, faster. Resist adding extra tomato/puree to 'bulk it up'; too much makes it sharp and curry-like rather than creamy makhani."
+    },
+    {
+      "title": "Spice it",
+      "body": "Add 1 tsp Kashmiri chilli, 1/2–1 tsp regular chilli, 1 tsp coriander powder, 1/2 tsp cumin powder, 1/2 tsp garam masala, 1 tsp sugar and salt to taste. Cook 4–5 min. Now tip in the leftover marinade plus 1–2 tbsp water used to rinse the bowl, and cook it fully (5–7 min, until it darkens) since it touched raw chicken."
+    },
+    {
+      "title": "Tandoori tadka",
+      "body": "In a small bowl heat 1 tbsp ghee with a pinch each of garam masala and chilli powder until hot, then pour it — sizzling — straight into the gravy. This is the restaurant 'chatpata' punch."
+    },
+    {
+      "title": "Simmer the chicken",
+      "body": "Add the charred chicken and 1/2 cup water or stock. Cover and simmer 5–6 min. If the chicken felt tight or rubbery off the oven, this low simmer is exactly what softens it back up — give it the full 10–15 min on low if needed."
+    },
+    {
+      "title": "Finish",
+      "body": "Stir in 2–3 tbsp cream and crushed kasuri methi. Taste — if it's too tangy, add a touch more cream/butter or a pinch of sugar to round it out. Rest 10 minutes off the heat before serving so the flavours soak in."
+    }
+  ],
+  "notes": [
+    "First-timer fixes baked in: raw curd smell after adding dahi just means it needs more time — simmer on medium-low until the oil separates and it fades. Rubbery breast = overcooked; the gravy simmer rescues it, and next time pull the chicken sooner.",
+    "Too many tomatoes? Balance the acidity with more cream + butter, a pinch of sugar/honey, or a spoon of cashew paste (8–10 cashews soaked and blended). Butter chicken is very forgiving once you have cream and patience.",
+    "Leftover gravy freezes brilliantly — cool completely, portion small, add a thin film of oil on top, label and freeze up to 2–3 weeks. Freeze in an ice-cube tray to drop into fried rice, egg curry or noodles later."
+  ],
+  "source": "Adapted from my own cooking notes.",
+  "diet": "non-veg"
+}

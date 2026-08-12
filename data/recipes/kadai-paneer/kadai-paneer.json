@@ -1,0 +1,151 @@
+{
+  "slug": "kadai-paneer",
+  "title": "Kadai Paneer",
+  "tagline": "Paneer and peppers in a freshly-ground kadai masala gravy.",
+  "image": "image.webp",
+  "emoji": "🧀",
+  "chef": "Raja",
+  "cuisine": "Indian",
+  "course": "Main",
+  "tags": [
+    "paneer",
+    "curry",
+    "vegetarian",
+    "restaurant-style",
+    "high-protein",
+    "indian"
+  ],
+  "flavor": [
+    "spicy",
+    "savory",
+    "creamy"
+  ],
+  "ratings": {
+    "overall": 4.5,
+    "difficulty": 3,
+    "availability": 4
+  },
+  "servings": 2,
+  "servingsNote": "",
+  "time": {
+    "prep": 20,
+    "cook": 25,
+    "total": 45
+  },
+  "macros": {
+    "perServing": {
+      "calories": 560,
+      "protein": 26,
+      "carbs": 24,
+      "fat": 38,
+      "fibre": 6
+    },
+    "whole": {
+      "calories": 1120,
+      "protein": 52,
+      "carbs": 48,
+      "fat": 76,
+      "fibre": 12
+    }
+  },
+  "macroNotes": [
+    "Estimated from ingredients.",
+    "Most of the calories and fat are from the full-fat paneer and the cream. To lighten it: use 200 g paneer instead of 250 g, skip the 1 tbsp cream, and cook the gravy in 1 tbsp oil instead of oil + ghee — saves ~120 kcal and ~12 g fat per serving.",
+    "Already high protein from the paneer (~26 g/serving). For an even bigger hit, stir in 40 g soaked, squeezed, chopped soya chunks with the gravy, or swap in low-fat paneer."
+  ],
+  "ingredients": [
+    {
+      "group": "Homemade kadai masala (makes a little extra)",
+      "items": [
+        "1.5 tsp coriander seeds",
+        "2 tsp cumin seeds (jeera)",
+        "4-5 Kashmiri red chillies",
+        "1.5 tbsp peppercorns",
+        "1 tbsp salt"
+      ]
+    },
+    {
+      "group": "For the gravy base",
+      "items": [
+        "1 tbsp oil",
+        "1 tsp cumin seeds",
+        "1 inch ginger, chopped",
+        "2 large onions, chopped",
+        "1 tsp ginger-garlic paste",
+        "1/2 tsp turmeric",
+        "1 tsp degi/Kashmiri chilli powder",
+        "1 tsp coriander powder",
+        "2 large tomatoes, pureed",
+        "Salt, to taste"
+      ]
+    },
+    {
+      "group": "For the paneer and peppers",
+      "items": [
+        "1 tsp ghee",
+        "1 tsp oil",
+        "1 medium onion, sliced into petals",
+        "1/2 capsicum (green pepper), sliced",
+        "1 tomato, sliced",
+        "250 g paneer, sliced or cubed",
+        "1 tsp Kashmiri chilli powder",
+        "1 tbsp of the homemade kadai masala",
+        "1 tbsp cream (optional)",
+        "Fresh coriander sprig, to garnish"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Roast the kadai masala",
+      "body": "Dry roast 1.5 tsp coriander seeds + 2 tsp cumin seeds + 4-5 Kashmiri red chillies + 1.5 tbsp peppercorns + 1 tbsp salt in a pan over medium heat for 3-5 minutes, stirring constantly, until you get a nutty aroma and the spices darken slightly. Don't let them burn."
+    },
+    {
+      "title": "Grind it",
+      "body": "Let the roasted spices cool completely, then grind to a fine powder. You'll use 1 tbsp here; store the rest in a jar."
+    },
+    {
+      "title": "Start the gravy",
+      "body": "Heat 1 tbsp oil in a pan over medium heat. Add 1 tsp cumin seeds and 1 inch chopped ginger, sauté until fragrant."
+    },
+    {
+      "title": "Cook the onions",
+      "body": "Add 2 large chopped onions and 1 tsp ginger-garlic paste. Sauté until the raw smell goes and the onions turn soft and golden."
+    },
+    {
+      "title": "Bloom the spices",
+      "body": "Add 1/2 tsp turmeric, 1 tsp degi chilli powder and 1 tsp coriander powder. Sauté for about 1 minute until the spices smell cooked."
+    },
+    {
+      "title": "Simmer the gravy",
+      "body": "Add the puree of 2 large tomatoes and salt to taste, plus a splash of water. Let it cook down until the oil starts to separate, about 6-8 minutes. Set this gravy aside."
+    },
+    {
+      "title": "Sear the peppers",
+      "body": "In a separate wide pan, heat 1 tsp ghee + 1 tsp oil. Add 1 sliced onion, 1/2 sliced capsicum and 1 sliced tomato with a pinch of salt. Sauté on high for a minute so they stay slightly crisp."
+    },
+    {
+      "title": "Add the paneer",
+      "body": "Add 250 g sliced paneer and sauté gently for a minute so it takes on colour without going rubbery."
+    },
+    {
+      "title": "Coat with masala",
+      "body": "Sprinkle in 1 tsp Kashmiri chilli powder and 1 tbsp of the homemade kadai masala. Toss well so the paneer and peppers are coated."
+    },
+    {
+      "title": "Bring it together",
+      "body": "Pour the prepared gravy into the paneer pan and stir well to combine. Simmer 2-3 minutes."
+    },
+    {
+      "title": "Finish",
+      "body": "Stir in 1 tbsp cream (if using), mix, and garnish with a coriander sprig. Serve hot with roti or naan."
+    }
+  ],
+  "notes": [
+    "The homemade kadai masala is the whole point here — don't substitute a shop-bought garam masala. The freshly-roasted peppercorns and Kashmiri chilli are what make it taste like a restaurant kadai.",
+    "Keep the peppers and paneer slightly under-cooked and crisp; they finish cooking in the gravy.",
+    "Scale is linear: to make a full 1 kg batch of paneer, multiply everything by 4."
+  ],
+  "source": "Adapted from my own cooking notes.",
+  "diet": "veg"
+}

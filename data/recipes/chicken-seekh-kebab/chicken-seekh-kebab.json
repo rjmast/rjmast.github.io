@@ -1,0 +1,130 @@
+{
+  "slug": "chicken-seekh-kebab",
+  "title": "Chicken Seekh Kebab",
+  "tagline": "OTG sheet-pan chicken mince — spread like a tray, scored, baked with no added oil, wrapped in flaky Malabar paratha.",
+  "image": "image.webp",
+  "emoji": "🍢",
+  "chef": "Raja",
+  "cuisine": "Indian",
+  "course": "Main",
+  "tags": [
+    "chicken",
+    "high-protein",
+    "gym-meal",
+    "otg",
+    "oven-baked",
+    "wrap",
+    "meal-prep",
+    "indian"
+  ],
+  "flavor": [
+    "smoky",
+    "spicy",
+    "savory"
+  ],
+  "ratings": {
+    "overall": 4,
+    "difficulty": 3,
+    "availability": 4
+  },
+  "servings": 2,
+  "servingsNote": "Bake all 450 g at once; makes 2 wraps.",
+  "time": {
+    "prep": 15,
+    "cook": 25,
+    "total": 40
+  },
+  "macros": {
+    "perServing": {
+      "calories": 680,
+      "protein": 45,
+      "carbs": 43,
+      "fat": 33,
+      "fibre": 3
+    },
+    "whole": {
+      "calories": 1360,
+      "protein": 90,
+      "carbs": 86,
+      "fat": 66,
+      "fibre": 6
+    }
+  },
+  "macroNotes": [
+    "Estimated from ingredients (450 g raw thigh mince split in 2, one Malabar paratha per wrap, minimal oil, no mayo).",
+    "Protein is excellent (~45 g/serving). The bottleneck is fat — it comes from BOTH the chicken thighs and the layered, oily Malabar paratha, not from the cooking method.",
+    "To cut ~150–200 kcal per serving: swap the Malabar paratha for a roomali roti or tortilla. Keeping just 1 paratha per wrap (not 2 smaller ones) is already the better macro call.",
+    "Chicken mince is the protein base here, so no soya needed. If you want to push to ~50–55 g protein at the same calories, add a little more mince per serving rather than more paratha."
+  ],
+  "ingredients": [
+    {
+      "group": "Chicken mince tray",
+      "items": [
+        "450 g chicken thigh mince",
+        "1–2 tsp onion powder (≈ 1 medium onion, but concentrated — start low)",
+        "1 tsp ginger-garlic paste",
+        "1 green chilli, finely chopped",
+        "1 tsp red chilli powder",
+        "1 tsp coriander powder",
+        "1/2 tsp cumin powder",
+        "1/2 tsp garam masala",
+        "3/4–1 tsp salt",
+        "1–2 tbsp curd (adds back moisture the onion powder doesn't)",
+        "1 tsp lemon juice",
+        "Optional: 1 tbsp besan or breadcrumbs, if the mix releases water",
+        "A little oil, only to wipe the tray so it doesn't stick"
+      ]
+    },
+    {
+      "group": "To wrap",
+      "items": [
+        "2 Malabar parathas (store-bought)",
+        "1 onion, thinly sliced",
+        "1 lemon, for squeezing",
+        "1/2 tsp chaat masala or peri-peri sprinkle",
+        "Mint chutney or hung curd + spices, as a base spread"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Mix the mince",
+      "body": "Combine 450 g chicken thigh mince with 1–2 tsp onion powder, 1 tsp ginger-garlic paste, 1 chopped green chilli, 1 tsp red chilli powder, 1 tsp coriander powder, 1/2 tsp cumin, 1/2 tsp garam masala and 3/4–1 tsp salt. Because onion powder adds flavour but no moisture (unlike a real onion), mix in 1–2 tbsp curd and 1 tsp lemon juice so the kebab doesn't bake dry. If the mix feels wet/loose, work in 1 tbsp besan or breadcrumbs."
+    },
+    {
+      "title": "Rest for binding",
+      "body": "Let the mix rest 10–15 minutes — binding improves so it crumbles less after baking."
+    },
+    {
+      "title": "Spread & score",
+      "body": "Line an OTG tray with foil/parchment and wipe it with a little oil. Spread the mince ~1–1.5 cm thick (thicker = rubbery inside, thinner = dries out). Score a square/diamond pattern on the surface — don't cut all the way through. Leave 2–3 mm gaps between sections so heat penetrates and edges brown instead of steaming; run a spoon over the top to smooth cracks."
+    },
+    {
+      "title": "Preheat the OTG",
+      "body": "Preheat to 220°C for 10–15 minutes, both rods on, tray on the middle rack."
+    },
+    {
+      "title": "Bake",
+      "body": "Bake at 200°C for ~20 minutes total. At the 10–12 minute mark, rotate the tray 180° (OTGs have hot spots) — no flipping needed for a spread tray. If water pools, that's normal for thighs; just extend by 2–3 minutes."
+    },
+    {
+      "title": "Top char",
+      "body": "Switch to top rod only, move the tray slightly higher, and grill 4–5 minutes for a browned crust. Watch closely — OTGs burn fast. Done = no pink, juices run clear, light crisp edges."
+    },
+    {
+      "title": "Prep the paratha",
+      "body": "Thaw frozen Malabar parathas 10–15 minutes (don't fully microwave). Dry-roast each side 30–40 seconds on medium, then add a few drops of oil/butter and cook to golden spots with the layers separating. Off the pan, clap it between your hands (or crush lightly) — this separates the layers into that street-style flake."
+    },
+    {
+      "title": "Build the wrap",
+      "body": "Spread a base of mint chutney or spiced hung curd (don't skip — the paratha and lean-ish chicken are both a bit dry). Cut the baked kebab into strips and lay 150–200 g down the centre without overloading. Add sliced onion, a squeeze of lemon and a sprinkle of chaat masala/peri-peri. Fold the bottom up, roll tight, and toast the rolled wrap on the pan 1–2 minutes for structure."
+    }
+  ],
+  "notes": [
+    "This spread-and-score method (a sheet-pan mince bake, not shaped skewers) is faster to prep, cooks more evenly and is easier to portion for macros — you trade away the smoky charred edges and classic 'seekh' bite.",
+    "Onion powder is ~3× as concentrated as fresh: ~1 tbsp powder ≈ 1 medium onion, but start with 1–2 tsp per 450 g and adjust next time.",
+    "Since there's no added oil or mayo, slightly underbake the tray to keep it juicy and lean on the sauce layer and onion + lemon for moisture rather than the chicken."
+  ],
+  "source": "Adapted from my own cooking notes.",
+  "diet": "non-veg"
+}

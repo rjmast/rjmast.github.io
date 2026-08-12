@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Documents — Résumé</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,600&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FBFAF7;
+    --paper-edge:#F3F1EA;
+    --rail:#EEEBE2;
+    --rail-2:#E6E2D6;
+    --ink:#1A1815;
+    --ink-soft:#403c36;
+    --ink-faint:#6d675d;
+    --rule:#d8d3c7;
+    --rule-soft:#e7e2d7;
+    --crimson:#8a1a1a;
+    --crimson-bg:#f6e9e4;
+    --measure:min(680px, 100%);
+  }
+
+  *{box-sizing:border-box;}
+  html,body{ margin:0; height:100%; }
+  html{ -webkit-text-size-adjust:100%; }
+
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Source Serif 4", Georgia, serif;
+    font-optical-sizing:auto;
+    font-size:17px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+    font-feature-settings:"liga" 1, "clig" 1, "kern" 1;
+    overflow:hidden;
+  }
+
+  /* ============ APP SHELL ============ */
+  .app{ height:100%; width:100%; overflow:hidden; }
+
+  /* ===================== READER ===================== */
+  .reader{
+    position:relative;
+    height:100%; width:100%;
+    min-width:0; min-height:0;
+    display:flex; flex-direction:column;
+    background:
+      radial-gradient(120% 60% at 50% -8%, #ffffff 0%, var(--paper) 45%);
+  }
+
+  .toolbar{
+    flex:0 0 auto;
+    display:flex; align-items:center; gap:.7rem; flex-wrap:nowrap;
+    padding:.45rem clamp(.8rem,3vw,1.5rem);
+    background:rgba(251,250,247,.92);
+    backdrop-filter:saturate(1.1) blur(2px);
+    border-bottom:1px solid var(--rule);
+    font-family:"Fira Code", monospace;
+    font-size:11.5px; letter-spacing:.01em;
+    color:var(--ink-faint);
+    z-index:5;
+  }
+  .toolbar .filelabel{
+    display:inline-flex; align-items:center; gap:.45rem;
+    font-family:"Fira Code", monospace; font-size:12.5px; font-weight:500;
+    color:var(--ink); white-space:nowrap;
+    min-width:0;
+  }
+  .toolbar .filelabel .fic{ color:var(--crimson); flex:0 0 auto; display:inline-flex; }
+  .toolbar .filelabel .fic svg{ width:13px; height:16px; display:block; }
+  .toolbar .filelabel .fname{ overflow:hidden; text-overflow:ellipsis; }
+  .toolbar .divide{ width:1px; height:1.1em; background:var(--rule); flex:0 0 auto; }
+  .toolbar .brand{ color:var(--crimson); font-weight:600; letter-spacing:.02em; }
+  .toolbar .arxid{ color:var(--ink-soft); }
+  .toolbar .spacer{ flex:1 1 auto; }
+  .toolbar .pill{
+    color:var(--ink-faint);
+    border:1px solid var(--rule);
+    border-radius:2px;
+    padding:.1rem .42rem;
+    background:#fff;
+    white-space:nowrap;
+  }
+  .btn-open{
+    display:inline-flex; align-items:center; gap:.4rem;
+    font-family:"Fira Code", monospace; font-size:11.5px; font-weight:500;
+    text-decoration:none;
+    color:#fff; background:var(--crimson);
+    padding:.36rem .65rem; border-radius:3px;
+    border:1px solid #6f1414;
+    box-shadow:0 1px 2px rgba(60,20,20,.25);
+    transition:transform .22s cubic-bezier(.2,.8,.2,1), background .2s;
+    white-space:nowrap; flex:0 0 auto;
+    min-height:32px;
+  }
+  .btn-open:hover{ background:#6f1414; transform:translateY(-1px); }
+  .btn-open:focus-visible{ outline:2px solid var(--ink); outline-offset:2px; }
+  .btn-open svg{ width:12px; height:12px; }
+  @media (max-width:560px){ .toolbar .hide-sm{ display:none; } }
+
+  .scroll{
+    flex:1 1 auto;
+    overflow-y:auto;
+    min-height:0;
+    scroll-behavior:smooth;
+  }
+  @media (prefers-reduced-motion: reduce){ .scroll{ scroll-behavior:auto; } }
+
+  .sheet{
+    max-width:820px;
+    margin:0 auto;
+    padding:clamp(1.6rem,4vw,3.4rem) clamp(1.05rem,4vw,2.6rem) 3.5rem;
+    position:relative;
+  }
+
+  /* ---------- doc visibility ---------- */
+  .doc{ display:none; }
+  .doc.active{ display:block; }
+  @keyframes viewIn{ from{ opacity:0; transform:translateY(10px); } to{ opacity:1; transform:none; } }
+  .doc.active{ animation:viewIn .42s cubic-bezier(.16,.84,.3,1); }
+
+  /* ---------- title block ---------- */
+  .titleblock{ text-align:center; margin:.4rem 0 1.9rem; }
+  h1.title{
+    font-weight:600;
+    font-size:clamp(1.5rem,3.4vw,2.25rem);
+    line-height:1.12;
+    letter-spacing:-.02em;
+    margin:.2rem auto .1rem;
+    max-width:26ch;
+    text-wrap:balance;
+  }
+  h1.title .sub{
+    display:block;
+    font-size:clamp(.92rem,1.8vw,1.15rem);
+    font-weight:400; font-style:italic;
+    color:var(--ink-soft);
+    letter-spacing:0;
+    margin-top:.5rem;
+    text-wrap:balance;
+  }
+  .authors{ margin-top:1.1rem; font-size:1.05rem; }
+  .authors .name{ font-weight:600; }
+  .authors sup{ color:var(--crimson); font-weight:600; }
+  .affil{ margin-top:.3rem; font-size:.9rem; color:var(--ink-soft); line-height:1.5; }
+  .affil .sym{ color:var(--crimson); }
+  .datedoi{
+    margin-top:.85rem;
+    font-family:"Fira Code", monospace;
+    font-size:.74rem; color:var(--ink-faint); letter-spacing:.01em;
+  }
+  .datedoi a{ color:var(--crimson); }
+
+  /* ---------- abstract ---------- */
+  .abstract{
+    max-width:600px; margin:1.1rem auto 0;
+    padding:1.05rem 0 1.2rem;
+    border-top:1px solid var(--rule);
+    border-bottom:1px solid var(--rule);
+  }
+  .abstract .lab{
+    text-align:center;
+    font-variant-caps:small-caps; font-feature-settings:"smcp" 1;
+    letter-spacing:.08em; font-weight:600; font-size:.9rem;
+    margin-bottom:.5rem;
+  }
+  .abstract p{
+    text-align:justify; hyphens:auto; -webkit-hyphens:auto;
+    font-size:.95rem; line-height:1.58; margin:0;
+  }
+  .abstract p .lead{ font-style:italic; }
+  .abstract p::first-letter{ font-size:1.04em; font-weight:600; }
+  .keywords{
+    max-width:600px; margin:.85rem auto 0;
+    font-size:.82rem; color:var(--ink-soft); text-align:center;
+  }
+  .keywords b{ font-weight:600; font-variant-caps:small-caps; letter-spacing:.04em; }
+
+  /* ---------- note ---------- */
+  .forthcoming{
+    max-width:var(--measure); margin:1.4rem auto 0;
+    display:flex; align-items:center; gap:.6rem;
+    padding:.6rem .85rem;
+    border:1px dashed var(--rule);
+    border-radius:5px;
+    background:#fffdf9;
+    font-size:.82rem; color:var(--ink-soft);
+    font-style:italic;
+  }
+  .forthcoming .ic{ color:var(--crimson); font-style:normal; flex:0 0 auto; }
+
+  /* ---------- body & sections ---------- */
+  main{ counter-reset:sec fig tbl; margin-top:2.2rem; }
+  section.sec{ margin:2.3rem auto 0; max-width:var(--measure); scroll-margin-top:16px; }
+  h2.sechead{
+    counter-increment:sec;
+    font-size:1.2rem; font-weight:600; letter-spacing:.005em;
+    margin:0 0 .45rem; padding-bottom:.12rem;
+    font-variant-caps:small-caps; font-feature-settings:"smcp" 1;
+  }
+  h2.sechead::before{ content:counter(sec, upper-roman) ".\2002"; font-variant-caps:normal; font-weight:600; }
+  h2.sechead.unnumbered{ counter-increment:none; }
+  h2.sechead.unnumbered::before{ content:none; }
+  h3.subhead{
+    font-size:1rem; font-weight:600; margin:1.3rem 0 .25rem;
+  }
+  h3.subhead.lettered{ counter-increment:sub; }
+  p.body{ text-align:justify; hyphens:auto; -webkit-hyphens:auto; margin:.3rem 0 .75rem; }
+  p.body.noindent{ text-indent:0; }
+  main .doc p.body + p.body{ text-indent:1.4em; }
+  ul.tight{ margin:.4rem 0 .9rem; padding-left:1.2rem; }
+  ul.tight li{ margin:.28rem 0; font-size:.95rem; }
+  ul.tight li b{ font-weight:600; }
+
+  a.ref, a.exlink{
+    color:var(--crimson); text-decoration:none;
+    border-bottom:1px solid rgba(138,26,26,.28);
+    transition:background .2s, border-color .2s;
+  }
+  a.ref:hover, a.exlink:hover{ background:var(--crimson-bg); border-color:var(--crimson); }
+  a.ref:focus-visible, a.exlink:focus-visible{ outline:2px solid var(--crimson); outline-offset:2px; border-radius:2px; }
+
+  .texttt{
+    font-family:"Fira Code", monospace; font-size:.8em;
+    background:var(--paper-edge); border:1px solid var(--rule-soft);
+    border-radius:3px; padding:.02em .32em; color:var(--ink-soft);
+    white-space:nowrap;
+  }
+
+  /* ---------- figure (paper screenshot) ---------- */
+  figure{
+    margin:1.3rem 0; padding:.85rem .85rem .3rem;
+    border:1px solid var(--rule); background:#fffdf9; border-radius:3px;
+    counter-increment:fig;
+  }
+  figure .frame{
+    border:1px solid var(--rule-soft);
+    background:#fff;
+    max-height:340px; overflow:hidden;
+    border-radius:2px;
+    position:relative;
+  }
+  figure .frame img{ width:100%; max-width:100%; height:auto; display:block; }
+  figure .frame::after{
+    content:""; position:absolute; left:0; right:0; bottom:0; height:56px;
+    background:linear-gradient(180deg, rgba(255,253,249,0), #fffdf9);
+    pointer-events:none;
+  }
+  figcaption{
+    margin-top:.6rem; font-size:.82rem; line-height:1.5;
+    color:var(--ink-soft); text-align:left; padding:0 .15rem;
+  }
+  figcaption .fnum{ font-weight:600; color:var(--ink); }
+
+  /* ---------- résumé roles ---------- */
+  .role{ margin-top:.15rem; }
+  .role .rmeta{
+    display:flex; flex-wrap:wrap; align-items:baseline; gap:.5rem;
+    font-size:.82rem; color:var(--ink-faint);
+    font-family:"Fira Code", monospace; margin-bottom:.15rem;
+  }
+  .role .rmeta .yr{ color:var(--crimson); }
+  .stackline{ margin:.4rem 0 .2rem; font-size:.88rem; }
+  .stackline .lbl{ font-style:italic; color:var(--ink-soft); }
+
+  .tablewrap{ margin:1.2rem 0; overflow-x:auto; }
+  table.skills{ width:100%; border-collapse:collapse; font-size:.86rem; min-width:440px; }
+  table.skills caption{
+    caption-side:top; text-align:left; font-size:.82rem; color:var(--ink-soft);
+    margin-bottom:.5rem;
+  }
+  table.skills caption .fnum{ font-weight:600; color:var(--ink); }
+  table.skills thead th{
+    text-align:left; font-weight:600; font-variant-caps:small-caps; letter-spacing:.03em;
+    border-top:1.6px solid var(--ink); border-bottom:1px solid var(--ink); padding:.38rem .55rem;
+  }
+  table.skills td{ padding:.4rem .55rem; border-bottom:1px solid var(--rule-soft); vertical-align:top; }
+  table.skills tbody tr:last-child td{ border-bottom:1.6px solid var(--ink); }
+  table.skills td:first-child{ font-weight:600; white-space:nowrap; }
+  table.skills td .texttt{ font-size:.76em; }
+  table.skills td.num{ font-family:"Fira Code", monospace; white-space:nowrap; }
+  table.skills tr.best td{ background:var(--crimson-bg); }
+
+  .projgrid{ display:grid; gap:.7rem; margin:.7rem 0 0; }
+  .projcard{
+    border:1px solid var(--rule); border-radius:5px; background:#fffdf9;
+    padding:.7rem .85rem;
+  }
+  .projcard .pt{ font-weight:600; font-size:.96rem; margin-bottom:.15rem; }
+  .projcard .pd{ font-size:.86rem; color:var(--ink-soft); margin:0 0 .4rem; text-align:justify; hyphens:auto; }
+  .projcard .plink{ font-family:"Fira Code", monospace; font-size:.72rem; }
+
+  /* ---------- references ---------- */
+  ol.refs{ list-style:none; counter-reset:rr; padding:0; margin:.5rem 0 0; font-size:.86rem; }
+  ol.refs li{
+    counter-increment:rr; position:relative; padding-left:2.4rem; margin:.45rem 0; line-height:1.5;
+  }
+  ol.refs li::before{
+    content:"[" counter(rr) "]"; position:absolute; left:0; top:0;
+    font-family:"Fira Code", monospace; font-size:.8rem; color:var(--ink-soft);
+  }
+  ol.refs a{ color:var(--crimson); text-decoration:none; border-bottom:1px solid rgba(138,26,26,.28); word-break:break-word; }
+  ol.refs a:hover{ background:var(--crimson-bg); }
+  .refauthor{ font-variant-caps:small-caps; letter-spacing:.02em; }
+  .reftitle{ font-style:italic; }
+
+  footer{
+    max-width:var(--measure); margin:2.6rem auto 0; padding-top:.9rem;
+    border-top:1px solid var(--rule);
+    font-size:.72rem; color:var(--ink-faint); font-family:"Fira Code", monospace;
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:.5rem;
+  }
+
+  /* ---------- reveal ---------- */
+  @keyframes rise{ from{ opacity:0; transform:translateY(12px); } to{ opacity:1; transform:none; } }
+  .reveal{ opacity:0; }
+  .reveal.in{ animation:rise .7s cubic-bezier(.16,.84,.3,1) forwards; }
+  @media (prefers-reduced-motion: reduce){
+    .reveal{ opacity:1 !important; animation:none !important; transform:none !important; }
+    .doc.active{ animation:none !important; }
+  }
+  ::selection{ background:var(--crimson-bg); }
+
+  /* ============ responsive ============ */
+  @media (max-width:640px){
+    body{ font-size:16px; }
+    .sheet{ padding-left:1.05rem; padding-right:1.05rem; }
+    .abstract, .keywords{ max-width:100%; }
+    .toolbar .arxid{ display:none; }
+  }
+  @media (max-width:430px){
+    .toolbar{ gap:.5rem; }
+    .btn-open span.olabel{ display:none; }
+    .btn-open{ padding:.4rem .55rem; }
+    table.skills{ font-size:.8rem; }
+  }
+</style>
+</head>
+<body>
+<div class="app" id="app">
+
+  <!-- ===================== READER ===================== -->
+  <div class="reader" id="reader">
+
+    <!-- top bar: shows the current file + open-original link -->
+    <div class="toolbar" id="toolbar">
+      <span class="filelabel">
+        <span class="fic" aria-hidden="true">
+          <svg viewBox="0 0 24 30" fill="none"><path d="M3 1h13l5 5v22a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z" fill="#fff" stroke="currentColor" stroke-width="1.6"/><path d="M16 1v4a1 1 0 0 0 1 1h4" stroke="currentColor" stroke-width="1.6"/></svg>
+        </span>
+        <span class="fname" id="tb-file">resume.pdf</span>
+      </span>
+      <span class="divide" aria-hidden="true"></span>
+      <span class="brand hide-sm" id="tb-brand">Résumé</span>
+      <span class="arxid" id="tb-id">v1.0</span>
+      <span class="pill hide-sm" id="tb-class">PDF</span>
+      <span class="spacer"></span>
+      <span class="pill hide-sm" id="tb-tag">Raja &middot; 2026</span>
+      <a class="btn-open" id="tb-btn" href="../../data/resume.pdf" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3h7v7"/><path d="M21 3l-9 9"/><path d="M19 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h5"/></svg>
+        <span class="olabel" id="tb-btn-label">Download PDF</span>
+      </a>
+    </div>
+
+    <div class="scroll" id="scroll">
+
+      <!-- ============ DOCUMENT: RÉSUMÉ ============ -->
+      <article class="doc active" id="doc-resume" role="document" aria-label="Résumé">
+        <div class="sheet">
+
+          <header class="titleblock reveal">
+            <h1 class="title">Rajapandiyan Arivazhagan
+              <span class="sub">AI/LLM Engineer — Generative AI, RAG &amp; agentic systems in production</span>
+            </h1>
+            <div class="authors">
+              <span class="name">Curriculum Vitæ</span>
+            </div>
+            <div class="affil">
+              <span class="sym">&#9993;</span>&thinsp;<a class="ref" href="mailto:rajapandiyanar@gmail.com">rajapandiyanar@gmail.com</a>
+              &nbsp;&middot;&nbsp; <a class="ref" href="https://www.linkedin.com/in/rajapandiyan-arivazhagan-03530392/" target="_blank" rel="noopener">in/rajapandiyan-arivazhagan</a>
+              &nbsp;&middot;&nbsp; <a class="ref" href="https://github.com/rjmast" target="_blank" rel="noopener">@rjmast</a>
+              &nbsp;&middot;&nbsp; <a class="ref" href="https://x.com/rajapandiyan_a" target="_blank" rel="noopener">@rajapandiyan_a</a>
+            </div>
+            <div class="datedoi">
+              Compiled 2026
+            </div>
+          </header>
+
+          <section class="abstract reveal" aria-label="Summary">
+            <div class="lab">Summary</div>
+            <p><span class="lead">Software engineer with 9+ years of experience, including 7 years at Zoho Corporation (ManageEngine), specializing in Generative AI, LLM application development, and Python backend automation.</span> Designed and deployed to production an enterprise AI support platform used by 200+ support technicians, combining retrieval-augmented generation, multi-agent orchestration, and custom Model Context Protocol (MCP) servers that securely connect AI agents to SQL databases, internal APIs, and enterprise applications. Fine-tuned open-source LLMs on internal support data and operates self-hosted AI infrastructure with prompt-injection and data-masking guardrails, backed by deep experience in Windows reverse engineering, patch automation, and large-scale web crawling.</p>
+          </section>
+          <p class="keywords reveal"><b>Focus:</b> Generative AI &amp; LLMs &middot; RAG &amp; Agentic Systems &middot; Python Backend &middot; Reverse Engineering &amp; Automation</p>
+
+          <main>
+            <section class="sec reveal">
+              <h2 class="sechead">Experience</h2>
+              <p class="body noindent">Reverse-chronological order; representative stacks are given inline.</p>
+
+              <div class="role">
+                <h3 class="subhead">Member Technical Staff — Zoho Corporation (ManageEngine Endpoint Central)</h3>
+                <div class="rmeta"><span class="yr">2019&ndash;present</span> &middot; <span>Generative AI, LLM Engineering &amp; Automation</span></div>
+
+                <p class="body noindent"><b>Generative AI &amp; LLM Engineering</b></p>
+                <ul class="tight">
+                  <li>Architected and deployed to production an enterprise AI support automation platform that ingests customer tickets via Zoho Desk APIs, analyzes technical issues, retrieves institutional knowledge, and generates context-aware troubleshooting procedures &mdash; adopted by 200+ support technicians as part of their daily workflow.</li>
+                  <li>Built an end-to-end Retrieval-Augmented Generation (RAG) pipeline over internal documentation, knowledge base articles, engineering notes, historical support tickets, and solution repositories using intelligent chunking, embedding generation, and semantic indexing.</li>
+                  <li>Improved retrieval precision by implementing reranking and hybrid retrieval over vector search, surfacing more relevant enterprise context and reducing irrelevant retrievals in LLM-generated responses.</li>
+                  <li>Developed custom Model Context Protocol (MCP) servers enabling AI agents to securely access Microsoft SQL Server databases, file systems, internal REST APIs, enterprise applications, and external web resources through governed, tool-based interfaces.</li>
+                  <li>Designed multi-agent architectures using LangChain and LangGraph in which specialized agents collaborate to interpret ticket context, query internal systems, retrieve documentation, reason over historical cases, and recommend validated solutions.</li>
+                  <li>Fine-tuned open-source LLMs on curated internal support data &mdash; customer queries, resolved answers, and product-specific troubleshooting logic &mdash; to improve domain accuracy and reduce generic model responses.</li>
+                  <li>Enforced structured outputs with JSON schema validation and function/tool calling, producing reliably parseable agent responses for downstream automation.</li>
+                  <li>Engineered AI guardrails including prompt injection mitigation and automated masking of sensitive data &mdash; mobile numbers, customer identifiers, and internal confidential information &mdash; before payloads reach language models.</li>
+                  <li>Deployed and operated self-hosted LLM infrastructure with Ollama, Open WebUI, and Docker, keeping enterprise data fully on-premises, and exposed AI capabilities as FastAPI REST services for integration with internal tools.</li>
+                </ul>
+
+                <p class="body noindent"><b>Software Intelligence, Web Crawling &amp; Automation</b></p>
+                <ul class="tight">
+                  <li>Built and maintained enterprise-scale web crawlers using Python, Selenium, BeautifulSoup, and Jsoup to continuously harvest software intelligence &mdash; versions, release notes, download URLs, patch metadata, security advisories, CVE data, and lifecycle information &mdash; across a large portfolio of software vendors.</li>
+                  <li>Engineered resilient crawlers handling JavaScript-rendered pages, authenticated sessions, dynamic content, pagination, and anti-scraping protections, sustaining reliable extraction despite frequent vendor site changes.</li>
+                  <li>Automated continuous vendor release monitoring to detect new versions and security patches immediately, and built Python automation tools, database utilities, and reporting systems that replaced manual engineering workflows.</li>
+                </ul>
+
+                <p class="body noindent"><b>Software Reverse Engineering &amp; Deployment Automation</b></p>
+                <ul class="tight">
+                  <li>Reverse engineered Windows installers (EXE, MSI, MSIX, bootstrap and custom setup packages) to determine silent install/uninstall switches, installer parameters, exit codes, prerequisites, registry modifications, file system changes, services, and package dependencies.</li>
+                  <li>Conducted installer analysis through process and registry monitoring, file system diffing, network traffic inspection, and runtime behavior analysis to uncover undocumented installation parameters, hidden APIs, and internal vendor endpoints.</li>
+                  <li>Built custom deployment workflows for applications lacking official silent installation support, plus installation validation, detection logic, post-install verification, and rollback handling for reliable unattended deployment across enterprise Windows endpoints.</li>
+                  <li>Resolved patch deployment failures through root cause analysis of installer behavior, environment conflicts, and Windows update supersedence.</li>
+                </ul>
+
+                <div class="stackline"><span class="lbl">Stack.&nbsp;</span>
+                  <span class="texttt">Python</span> <span class="texttt">LangChain</span> <span class="texttt">LangGraph</span> <span class="texttt">Hugging Face Transformers</span> <span class="texttt">PyTorch</span> <span class="texttt">OpenAI API</span> <span class="texttt">Ollama</span> <span class="texttt">MCP</span> <span class="texttt">ChromaDB</span> <span class="texttt">Pinecone</span> <span class="texttt">Elasticsearch</span> <span class="texttt">FastAPI</span> <span class="texttt">Docker</span> <span class="texttt">Microsoft SQL Server</span> <span class="texttt">Selenium</span> <span class="texttt">BeautifulSoup</span> <span class="texttt">Jsoup</span> <span class="texttt">Open WebUI</span>
+                </div>
+              </div>
+
+              <div class="role">
+                <h3 class="subhead">Data Analyst — MicroPrecision</h3>
+                <div class="rmeta"><span class="yr">2017&ndash;2019</span> &middot; <span>Data automation &amp; reporting</span></div>
+                <ul class="tight">
+                  <li>Automated recurring data collection, cleaning, and reporting workflows using Python and SQL, replacing manual spreadsheet processes and freeing analyst time for higher-value investigation.</li>
+                  <li>Wrote SQL queries to extract, join, and aggregate operational and production data from relational databases, delivering consistent datasets for business and engineering reporting.</li>
+                  <li>Built Python data pipelines using pandas and NumPy to transform, reconcile, and validate datasets, improving data consistency and reducing manual errors in downstream reports.</li>
+                  <li>Performed exploratory data analysis (EDA) on production and quality data to identify trends, outliers, and process anomalies, surfacing issues that were not visible in standard reports.</li>
+                  <li>Developed recurring operational dashboards and management reports in Excel and Python, translating raw process data into metrics that engineering and operations teams used for decision making.</li>
+                  <li>Implemented automated data quality and validation checks across reporting workflows, improving reliability of figures used in operational reviews.</li>
+                </ul>
+                <div class="stackline"><span class="lbl">Stack.&nbsp;</span>
+                  <span class="texttt">Python</span> <span class="texttt">pandas</span> <span class="texttt">NumPy</span> <span class="texttt">SQL</span> <span class="texttt">Microsoft Excel</span>
+                </div>
+              </div>
+
+              <div class="tablewrap">
+                <table class="skills">
+                  <caption><span class="fnum">Table&nbsp;1:</span> Competency matrix, spanning full technical skill set.</caption>
+                  <thead>
+                    <tr><th scope="col">Domain</th><th scope="col">Focus</th><th scope="col">Stack</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Programming &amp; Backend</td><td>Service development &amp; API integration</td><td><span class="texttt">Python</span> <span class="texttt">Java</span> <span class="texttt">JavaScript</span> <span class="texttt">SQL</span> <span class="texttt">FastAPI</span> <span class="texttt">REST APIs</span></td></tr>
+                    <tr><td>Generative AI &amp; LLMs</td><td>Agentic systems, fine-tuning, tool calling</td><td><span class="texttt">OpenAI API</span> <span class="texttt">Ollama</span> <span class="texttt">LangChain</span> <span class="texttt">LangGraph</span> <span class="texttt">MCP</span> <span class="texttt">Text-to-SQL</span> <span class="texttt">Open WebUI</span></td></tr>
+                    <tr><td>RAG &amp; Semantic Search</td><td>Retrieval pipelines &amp; context management</td><td><span class="texttt">Embedding Models</span> <span class="texttt">Reranking</span> <span class="texttt">Hybrid Retrieval</span> <span class="texttt">Chunking</span> <span class="texttt">Knowledge Base Indexing</span></td></tr>
+                    <tr><td>AI/ML Frameworks &amp; Safety</td><td>Model training &amp; production safety</td><td><span class="texttt">Hugging Face Transformers</span> <span class="texttt">PyTorch</span> <span class="texttt">Semgrep</span> <span class="texttt">Bandit</span> <span class="texttt">OWASP Top 10</span> <span class="texttt">CWE</span></td></tr>
+                    <tr><td>Databases &amp; Vector Search</td><td>Relational &amp; vector storage</td><td><span class="texttt">Microsoft SQL Server</span> <span class="texttt">SQLite</span> <span class="texttt">ChromaDB</span> <span class="texttt">FAISS</span> <span class="texttt">Pinecone</span> <span class="texttt">pgvector</span> <span class="texttt">Elasticsearch</span></td></tr>
+                    <tr><td>DevOps, Crawling &amp; Data</td><td>Automation &amp; data pipelines</td><td><span class="texttt">Docker</span> <span class="texttt">Git</span> <span class="texttt">Linux</span> <span class="texttt">Selenium</span> <span class="texttt">BeautifulSoup</span> <span class="texttt">Jsoup</span></td></tr>
+                    <tr><td>Enterprise &amp; Endpoint Engineering</td><td>Windows patch &amp; deployment automation</td><td><span class="texttt">Installer Analysis (EXE/MSI/MSIX)</span> <span class="texttt">Silent Installation</span> <span class="texttt">CVE Analysis</span> <span class="texttt">Endpoint Management</span></td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section class="sec reveal">
+              <h2 class="sechead">Selected Projects</h2>
+              <div class="projgrid">
+                <div class="projcard">
+                  <div class="pt">AI-Powered Support Automation Platform</div>
+                  <p class="pd">Production multi-agent AI assistant used by 200+ support technicians. Retrieves tickets via Zoho Desk APIs, performs semantic retrieval with reranking across enterprise knowledge sources, queries SQL databases and internal APIs through custom MCP servers, and generates context-aware troubleshooting steps grounded in historical cases. Includes fine-tuned domain models, structured JSON outputs, prompt injection guardrails, and sensitive data masking on self-hosted infrastructure.</p>
+                  <div class="stackline"><span class="lbl">Stack.&nbsp;</span><span class="texttt">Python</span> <span class="texttt">LangChain</span> <span class="texttt">LangGraph</span> <span class="texttt">MCP</span> <span class="texttt">RAG</span> <span class="texttt">ChromaDB</span> <span class="texttt">Ollama</span> <span class="texttt">OpenAI API</span> <span class="texttt">FastAPI</span> <span class="texttt">Docker</span></div>
+                  <div class="plink"><span class="exlink" style="opacity:.6">Private &mdash; internal enterprise system</span></div>
+                </div>
+                <div class="projcard">
+                  <div class="pt">Intelligent Document Summarization Tool (LLM)</div>
+                  <p class="pd">Document intelligence service producing concise, faithful summaries of long PDF and DOCX files using transformer-based summarization models, with chunking and semantic relevance extraction for long-context handling. Exposed as a FastAPI service.</p>
+                  <div class="stackline"><span class="lbl">Stack.&nbsp;</span><span class="texttt">Python</span> <span class="texttt">Hugging Face Transformers</span> <span class="texttt">FastAPI</span></div>
+                  <div class="plink"><span class="exlink" style="opacity:.6">Private project</span></div>
+                </div>
+                <div class="projcard">
+                  <div class="pt">QueryMind (GenAI + Text-to-SQL)</div>
+                  <p class="pd">Intelligent data analytics assistant that converts natural-language questions into SQL queries using LLMs and executes them against relational databases. Combines LangChain, SQLAlchemy, and RAG for schema-aware query generation and contextual responses, with interactive Streamlit and Plotly visualizations enabling non-technical users to explore business data without writing SQL.</p>
+                  <div class="stackline"><span class="lbl">Stack.&nbsp;</span><span class="texttt">Python</span> <span class="texttt">LangChain</span> <span class="texttt">SQLAlchemy</span> <span class="texttt">RAG</span> <span class="texttt">Streamlit</span> <span class="texttt">Plotly</span></div>
+                  <div class="plink"><span class="exlink" style="opacity:.6">Private project</span></div>
+                </div>
+                <div class="projcard">
+                  <div class="pt">VulnGuard AI (LLM + Cybersecurity)</div>
+                  <p class="pd">AI-powered source code vulnerability analyzer combining LLM reasoning, static analysis, and Retrieval-Augmented Generation to detect SQL injection, XSS, command injection, insecure authentication, hardcoded credentials, and unsafe dependencies. Integrates Semgrep and Bandit findings with LLM-based reasoning to explain vulnerabilities, assess severity, and generate secure remediation suggestions, grounded in OWASP and CWE knowledge indexed in a FAISS vector store.</p>
+                  <div class="stackline"><span class="lbl">Stack.&nbsp;</span><span class="texttt">Python</span> <span class="texttt">FastAPI</span> <span class="texttt">LangChain</span> <span class="texttt">FAISS</span> <span class="texttt">Streamlit</span> <span class="texttt">Semgrep</span> <span class="texttt">Bandit</span></div>
+                  <div class="plink"><span class="exlink" style="opacity:.6">Private project</span></div>
+                </div>
+              </div>
+            </section>
+
+            <section class="sec reveal">
+              <h2 class="sechead">Education</h2>
+              <p class="body noindent">Bachelor of Engineering (B.E.), Mechanical Engineering &mdash; Kamaraj College of Engineering and Technology, 2017.</p>
+              <p class="body noindent"><b>Languages.</b> English, Tamil.</p>
+            </section>
+
+            <footer>
+              <span>&copy; 2026 Rajapandiyan Arivazhagan</span>
+              <span>Curriculum Vitæ &middot; AI/LLM Engineer</span>
+            </footer>
+          </main>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var scroll = document.getElementById('scroll');
+  var panel = document.getElementById('doc-resume');
+
+  function runReveal(panel){
+    var reveals = [].slice.call(panel.querySelectorAll('.reveal'));
+    if(reduce || !('IntersectionObserver' in window)){
+      reveals.forEach(function(r){ r.classList.add('in'); }); return;
+    }
+    reveals.forEach(function(r){ r.classList.remove('in'); });
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, {root: scroll, rootMargin:'0px 0px -6% 0px', threshold:0.06});
+    reveals.forEach(function(r){ io.observe(r); });
+    setTimeout(function(){ reveals.slice(0,4).forEach(function(r){ r.classList.add('in'); }); }, 40);
+  }
+
+  runReveal(panel);
+})();
+</script>
+</body>
+</html>

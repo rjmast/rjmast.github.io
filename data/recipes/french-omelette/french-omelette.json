@@ -1,0 +1,102 @@
+{
+  "slug": "french-omelette",
+  "title": "French Omelette",
+  "tagline": "The Michelin-style omelette — pale, silky and custardy, with no browning at all.",
+  "image": "image.webp",
+  "emoji": "🍳",
+  "chef": "Raja",
+  "cuisine": "Continental",
+  "course": "Breakfast",
+  "tags": [
+    "egg",
+    "breakfast",
+    "quick",
+    "high-protein",
+    "continental"
+  ],
+  "flavor": [
+    "creamy",
+    "savory",
+    "rich",
+    "herby"
+  ],
+  "ratings": {
+    "overall": 4,
+    "difficulty": 3,
+    "availability": 5
+  },
+  "servings": 1,
+  "servingsNote": "One 3-egg omelette.",
+  "time": {
+    "prep": 3,
+    "cook": 5,
+    "total": 8
+  },
+  "macros": {
+    "perServing": {
+      "calories": 320,
+      "protein": 20,
+      "carbs": 2,
+      "fat": 27,
+      "fibre": 0
+    },
+    "whole": {
+      "calories": 320,
+      "protein": 20,
+      "carbs": 2,
+      "fat": 27,
+      "fibre": 0
+    }
+  },
+  "macroNotes": [
+    "Estimated from ingredients. Most of the fat is from the butter and yolks — it's rich, but a clean high-protein, low-carb breakfast.",
+    "Soya doesn't belong in a delicate omelette. To push protein up, use 2 whole eggs + 3 egg whites, or fold in a little grated cheese off the heat.",
+    "Cut the butter to 1/2 tbsp to save ~50 kcal — you lose a touch of the glossy finish."
+  ],
+  "ingredients": [
+    {
+      "group": "Omelette (1 serving)",
+      "items": [
+        "3 large eggs (fresh, room temperature)",
+        "1 tbsp whole milk or heavy cream",
+        "Pinch of salt",
+        "White pepper (optional, classic)",
+        "1 tbsp unsalted butter",
+        "Optional: finely chopped chives, tarragon or parsley"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Beat well",
+      "body": "Whisk 3 eggs with 1 tbsp milk/cream, a pinch of salt and a little white pepper vigorously until completely uniform — no streaks of white. You're incorporating a little air, not just mixing."
+    },
+    {
+      "title": "Melt the butter",
+      "body": "Use a small non-stick pan (20 cm / 8-inch) on medium-LOW heat. Melt 1 tbsp butter until it just foams — do not let it brown. Low heat is the whole game here."
+    },
+    {
+      "title": "Stir constantly",
+      "body": "Pour in the eggs and immediately stir with a silicone spatula in small circular motions, gently scrambling while spreading them evenly. Keep everything moving."
+    },
+    {
+      "title": "Form the custard",
+      "body": "Stir for only the first 15–20 seconds. The moment it thickens but still looks creamy and slightly runny, STOP stirring and tilt the pan so any uncooked egg runs underneath. Don't be afraid to lift the pan off the heat for a few seconds if it's cooking too fast."
+    },
+    {
+      "title": "Shape and fold",
+      "body": "When it's barely set but still soft, fold it into thirds like a letter with the spatula and roll it out seam-side down onto the plate."
+    },
+    {
+      "title": "Finish",
+      "body": "Brush the top with a little melted butter for sheen and scatter over chopped herbs. Outside should be smooth and pale yellow with zero browning; inside soft and custardy."
+    }
+  ],
+  "notes": [
+    "If it scrambles and won't shape, the heat was too high or you over-stirred — you still nailed the flavour, which is the hard part. Next time: lower heat, stir only 15–20 sec, then rest and shape.",
+    "Too wet inside? Cover the pan off the heat for 10 seconds — residual heat finishes it perfectly without drying it out.",
+    "Classic tweaks from Michelin kitchens: a touch of cream and a butter finish (Robuchon), fine herbs folded in, and absolutely no colour on the eggs (Keller)."
+  ],
+  "source": "Adapted from my own cooking notes.",
+  "diet": "non-veg"
+}

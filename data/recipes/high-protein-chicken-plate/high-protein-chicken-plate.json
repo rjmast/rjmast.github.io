@@ -1,0 +1,152 @@
+{
+  "slug": "high-protein-chicken-plate",
+  "title": "High-Protein Chicken Breast Plate",
+  "tagline": "Spiced curd-marinated chicken breast with masala potato wedges and charred carrots — or rolled into a high-protein paratha kathi roll.",
+  "image": "image.webp",
+  "emoji": "🍽️",
+  "chef": "Raja",
+  "cuisine": "Indian",
+  "course": "Main",
+  "tags": [
+    "high-protein",
+    "gym-meal",
+    "meal-prep",
+    "chicken",
+    "oven-baked",
+    "wrap",
+    "indian"
+  ],
+  "flavor": [
+    "spicy",
+    "savory",
+    "smoky",
+    "tangy"
+  ],
+  "ratings": {
+    "overall": 4,
+    "difficulty": 2,
+    "availability": 4
+  },
+  "servings": 2,
+  "servingsNote": "One big filling plate each.",
+  "time": {
+    "prep": 20,
+    "cook": 40,
+    "total": 60
+  },
+  "macros": {
+    "perServing": {
+      "calories": 720,
+      "protein": 62,
+      "carbs": 55,
+      "fat": 18,
+      "fibre": 7
+    },
+    "whole": {
+      "calories": 1440,
+      "protein": 124,
+      "carbs": 110,
+      "fat": 36,
+      "fibre": 14
+    }
+  },
+  "macroNotes": [
+    "Estimated from ingredients — the biggest swing is oil, so weigh it (1 tbsp oil is ~120 kcal and easy to over-pour).",
+    "This is a ~720 kcal/serving plate. To cut for a lean day: drop the potato to 150 g/serving, use spray oil instead of poured, and use hung curd not full-fat in the marinade — gets it closer to 550 kcal while keeping ~60 g protein.",
+    "Already high protein from the breast. To push further use egg whites in a bhurji variant, or add a second smaller breast."
+  ],
+  "ingredients": [
+    {
+      "group": "Chicken (curd marinade)",
+      "items": [
+        "500 g chicken breast (2 large), butterflied or lightly pounded even",
+        "200 g thick curd or hung curd (or Greek yogurt)",
+        "2 tsp ginger-garlic paste",
+        "2 tsp lemon juice",
+        "2 tsp Kashmiri red chilli powder",
+        "1 tsp turmeric",
+        "2 tsp coriander powder",
+        "1 tsp cumin powder",
+        "1 tsp garam masala",
+        "1 tsp black pepper",
+        "1.5 tsp salt",
+        "2 tsp mustard oil (or regular oil)",
+        "Pinch kasuri methi, optional"
+      ]
+    },
+    {
+      "group": "Masala potato wedges",
+      "items": [
+        "500 g potatoes (4 medium), cut into wedges",
+        "2 tsp oil",
+        "1 tsp chilli powder",
+        "1 tsp cumin powder",
+        "1 tsp coriander powder",
+        "1/2 tsp turmeric",
+        "1 tsp garlic powder (or grated garlic)",
+        "Salt + black pepper",
+        "Pinch chaat masala after cooking, optional"
+      ]
+    },
+    {
+      "group": "Charred carrots",
+      "items": [
+        "300 g carrots, cut into thick batons",
+        "2 tsp butter (or oil)",
+        "Pinch cumin seeds",
+        "Salt + black pepper",
+        "Pinch chilli flakes",
+        "Small squeeze lemon"
+      ]
+    },
+    {
+      "group": "Serve-as-a-wrap option",
+      "items": [
+        "2 high-protein parathas (or rotis)",
+        "Mint hung-curd sauce (hung curd + mint + roasted cumin + salt)",
+        "Sliced onion + lemon + pinch chaat masala"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Marinate the chicken",
+      "body": "Butterfly 500 g chicken breast into even, thinner pieces (or pound flat) so it cooks evenly and stays juicy. Coat in 200 g curd + 2 tsp ginger-garlic paste + 2 tsp lemon + 2 tsp Kashmiri chilli + 1 tsp turmeric + 2 tsp coriander powder + 1 tsp cumin + 1 tsp garam masala + 1.5 tsp salt + 1 tsp pepper + 2 tsp mustard oil. Marinate at least 30 minutes, ideally 2-4 hours."
+    },
+    {
+      "title": "Parboil the potatoes",
+      "body": "Cut 500 g potatoes into wedges and boil in salted water for 6-8 minutes, only until barely tender. Drain and let them steam-dry 5 minutes — this is what gives crispy outside, fluffy inside."
+    },
+    {
+      "title": "Season the wedges",
+      "body": "Toss the dried wedges with 2 tsp oil + 1 tsp chilli + 1 tsp cumin + 1 tsp coriander powder + 1/2 tsp turmeric + 1 tsp garlic powder + salt + pepper."
+    },
+    {
+      "title": "Prep the carrots",
+      "body": "Toss 300 g carrot batons with a little oil, salt and pepper."
+    },
+    {
+      "title": "Oven roast",
+      "body": "Preheat oven to 220°C. Spread wedges, carrots and chicken on a tray with space between them (don't pile). Roast the potatoes and carrots 30-40 minutes, flipping halfway. Add the thin chicken pieces for their last 18-22 minutes, until internal temp is 74°C (or the thickest part runs clear when cut). Rest the chicken 5 minutes before slicing."
+    },
+    {
+      "title": "No-oven pan method",
+      "body": "Chicken: shake off excess marinade, cook in a little oil on medium 5-7 min first side, 4-6 min second, then cover on low 2 min if needed; rest before slicing. Potatoes: wide pan, 1-1.5 tsp oil, covered on medium 5 min then uncovered until crisp. Carrots: 1 tsp butter + a pinch of cumin seeds, medium-high until charred and softened, finish with a squeeze of lemon."
+    },
+    {
+      "title": "Serve as a plate",
+      "body": "Plate the sliced chicken with the masala wedges and carrots. Sprinkle a pinch of chaat masala on the wedges and finish the carrots with lemon and a pinch of chilli flakes."
+    },
+    {
+      "title": "OR serve as a paratha wrap",
+      "body": "Skip the wedges/carrots — pile the sliced chicken onto a warm high-protein paratha with sliced onion, lemon, chaat masala and a spoon of mint hung-curd sauce, then roll it into a kathi roll."
+    }
+  ],
+  "notes": [
+    "Flavour upgrades (pick one): a green chutney drizzle (coriander + mint + green chilli + lemon + curd) is insane with the chicken; a pinch of kasuri methi + smoked paprika in the marinade gives a dhaba vibe; chilli flakes + garlic + lemon zest on the wedges makes a peri-peri-ish version.",
+    "The paratha route also works as a chicken bhurji or keema plate — dry-ish spiced chicken scooped with paratha and curd + onion.",
+    "Keep chicken pieces thin and even; thick whole breast on high heat dries out."
+  ],
+  "source": "Adapted from my own cooking notes.",
+  "diet": "non-veg"
+}

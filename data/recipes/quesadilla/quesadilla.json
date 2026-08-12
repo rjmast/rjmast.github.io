@@ -1,0 +1,145 @@
+{
+  "slug": "quesadilla",
+  "title": "Quesadilla",
+  "tagline": "Crispy outside, cheesy inside — one high-protein quesadilla, two fillings: seasoned chicken strips or schezwan paneer.",
+  "image": "image.webp",
+  "emoji": "🌯",
+  "chef": "Raja",
+  "cuisine": "Fusion",
+  "course": "Main",
+  "tags": [
+    "chicken",
+    "paneer",
+    "high-protein",
+    "gym-meal",
+    "wrap",
+    "mexican",
+    "fusion",
+    "pan-fried",
+    "meal-prep"
+  ],
+  "flavor": [
+    "cheesy",
+    "spicy",
+    "savory",
+    "tangy"
+  ],
+  "ratings": {
+    "overall": 4,
+    "difficulty": 2,
+    "availability": 4
+  },
+  "servings": 2,
+  "servingsNote": "2 large quesadillas; the chicken filling can be batch-cooked from 500 g for meal prep",
+  "time": {
+    "prep": 15,
+    "cook": 15,
+    "total": 30
+  },
+  "macros": {
+    "perServing": {
+      "calories": 520,
+      "protein": 48,
+      "carbs": 34,
+      "fat": 20,
+      "fibre": 3
+    },
+    "whole": {
+      "calories": 1040,
+      "protein": 96,
+      "carbs": 68,
+      "fat": 40,
+      "fibre": 6
+    }
+  },
+  "macroNotes": [
+    "Estimated for the lean chicken version (2 quesadillas).",
+    "This is a strong gym meal — ~48 g protein for ~520 kcal per serving because the chicken is high and the cheese is controlled (~50 g per quesadilla, not the usual 100 g+).",
+    "Leaner still: use one tortilla open-faced instead of folded, swap in low-fat mozzarella, and use an egg-white wash instead of butter to crisp — drops ~120–150 kcal per serving.",
+    "The schezwan paneer version is vegetarian and still ~30 g protein per serving from 200 g paneer + cheese; add a Greek-yogurt-and-gherkin dip for extra protein with almost no fat."
+  ],
+  "ingredients": [
+    {
+      "group": "Base (both versions)",
+      "items": [
+        "2 large flour tortillas",
+        "4 cheese slices (2 per quesadilla) — slices melt faster and act as a moisture barrier",
+        "1 tsp butter or oil, for crisping (or spray oil)"
+      ]
+    },
+    {
+      "group": "Filling option A — seasoned chicken (per 2 quesadillas)",
+      "items": [
+        "250–300 g chicken breast, cut into thin strips (batch up to 500 g and store the rest)",
+        "1 tsp jeera (cumin) POWDER — not whole seeds",
+        "1/2–3/4 tsp red chilli powder (Kashmiri is milder; regular is stronger, use less)",
+        "1 tsp salt",
+        "1/2 tsp black pepper",
+        "1/2 tsp garlic powder",
+        "1 tsp oil (max), for searing",
+        "1 tsp pickle/gherkin juice or a squeeze of lime, to finish"
+      ]
+    },
+    {
+      "group": "Filling option B — schezwan paneer",
+      "items": [
+        "200 g paneer, crumbled or small cubes",
+        "1–1.5 tbsp schezwan sauce",
+        "1 tbsp oil or butter",
+        "Salt, chilli powder, pepper, to taste",
+        "1 tbsp mayo (for the tortilla + lettuce)"
+      ]
+    },
+    {
+      "group": "Veg & extras (either version)",
+      "items": [
+        "1 onion, sliced/chopped",
+        "1 green capsicum, sliced/chopped",
+        "A few pickled gherkins, sliced and patted dry",
+        "Handful shredded lettuce (kept cold)",
+        "Optional: julienned carrot, Tabasco/hot sauce"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Season the chicken (option A)",
+      "body": "Toss 250–300 g chicken strips with 1 tsp jeera POWDER, 1/2–3/4 tsp red chilli powder, 1 tsp salt, 1/2 tsp black pepper and 1/2 tsp garlic powder. Rest 10–15 minutes. Use powdered jeera, not whole seeds — whole seeds don't distribute on thin strips and give random bitter bites. Measure the jeera carefully: a tablespoon instead of a teaspoon (3× too much) will dominate everything and taste earthy/bitter."
+    },
+    {
+      "title": "Sear the chicken",
+      "body": "Heat a pan medium-high, add 1 tsp oil, spread the strips in a single layer and don't move them for 2 minutes. Flip once browned; total 6–8 minutes until no pink and no water pooling. If liquid appears, raise the heat until it evaporates — wet filling makes a soggy quesadilla. Off the heat, toss with 1 tsp pickle juice or lime for brightness. Rest 3–4 minutes."
+    },
+    {
+      "title": "OR make schezwan paneer (option B)",
+      "body": "Heat a pan with 1 tbsp oil/butter, add the capsicum for 30–40 seconds, then 200 g paneer, 1–1.5 tbsp schezwan sauce and a little salt, chilli powder and pepper. Toss on medium-high until the paneer is hot and slightly crisp. Turn off the heat."
+    },
+    {
+      "title": "Cook the veg",
+      "body": "In the same pan on medium-high with 1 tsp oil, add the onion first for 1–2 minutes, then the capsicum. Cook ~5 minutes until softened with light browning and no water in the pan; season with a small pinch of salt only after 2–3 minutes (early salt pulls water). Don't cook them to sabzi-softness."
+    },
+    {
+      "title": "Prep the cold bits",
+      "body": "Slice the gherkins thin and pat them dry so their brine doesn't sog the quesadilla. Keep the lettuce (and carrot if using) cold and raw — don't cook them; toss lightly with a little mayo and a few drops Tabasco."
+    },
+    {
+      "title": "Assemble",
+      "body": "Pan on medium with a light butter/oil coating. Tortilla down, then 1 cheese slice for full coverage (glue + moisture barrier), then the hot filling and warm veg, a light scatter of gherkins, the cold lettuce last, then the second cheese slice. Fold in half."
+    },
+    {
+      "title": "Crisp it",
+      "body": "Cook ~2–3 minutes per side, pressing gently with a spatula, flipping once golden. Remove when the cheese is fully melted."
+    },
+    {
+      "title": "Rest & serve",
+      "body": "Let it rest 1 minute before cutting so the cheese sets. Serve with sour cream, salsa, guac or a Greek-yogurt-gherkin dip."
+    }
+  ],
+  "notes": [
+    "Meal prep: brown the chicken and veg fully, then cool them uncovered on a tray 15–20 minutes before sealing (trapped steam = sog). Store chicken and veg separately, use within 24–48 h, and reheat in a pan (not the microwave) before assembling.",
+    "Don't add schezwan sauce to raw chicken before cooking — its sugar and moisture make the chicken steam and burn instead of browning. Add 1–2 tsp at the end if you want the flavour.",
+    "Grate your own cheese if using a block — pre-shredded has anti-caking starch that melts worse. But cheese slices are ideal here for a fast, clean melt."
+  ],
+  "source": "Adapted from my own cooking notes.",
+  "diet": "non-veg"
+}

@@ -1,0 +1,109 @@
+{
+  "slug": "home-oven-pizza",
+  "title": "Home Oven Pizza",
+  "tagline": "Store-bought base, sautéed veg toppings, crisp in a home oven.",
+  "image": "image.webp",
+  "emoji": "🍕",
+  "chef": "Raja",
+  "cuisine": "Italian",
+  "course": "Main",
+  "tags": [
+    "vegetarian",
+    "oven-baked",
+    "paneer",
+    "comfort-food",
+    "cheat-day",
+    "italian"
+  ],
+  "flavor": [
+    "cheesy",
+    "savory",
+    "umami"
+  ],
+  "ratings": {
+    "overall": 4,
+    "difficulty": 1,
+    "availability": 4
+  },
+  "servings": 2,
+  "servingsNote": "1 medium store-bought base, shared or one each if small.",
+  "time": {
+    "prep": 15,
+    "cook": 12,
+    "total": 27
+  },
+  "macros": {
+    "perServing": {
+      "calories": 480,
+      "protein": 20,
+      "carbs": 55,
+      "fat": 20,
+      "fibre": 4
+    },
+    "whole": {
+      "calories": 960,
+      "protein": 40,
+      "carbs": 110,
+      "fat": 40,
+      "fibre": 8
+    }
+  },
+  "macroNotes": [
+    "Estimated for half a topped store-bought base each.",
+    "Paneer and cheese give it decent protein for a pizza. To bump it further, load more paneer (or add grilled chicken) and go lighter on the cheese.",
+    "To cut calories: use a thin base, go easy on the mozzarella, and pile on the sautéed veg for volume. Soya doesn't fit; extra paneer is the better protein lever here."
+  ],
+  "ingredients": [
+    {
+      "group": "Base & sauce",
+      "items": [
+        "1 store-bought pizza base (pre-made, partially baked)",
+        "3–4 tbsp pizza/pasta sauce",
+        "100–120 g mozzarella (or pizza cheese), grated"
+      ]
+    },
+    {
+      "group": "Toppings (sautéed)",
+      "items": [
+        "1 cup mushrooms, sliced",
+        "1 onion, thinly sliced",
+        "100 g paneer, cubed",
+        "1 tbsp olive oil or butter",
+        "Salt, pepper and Italian seasoning, to taste"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Preheat with the tray in",
+      "body": "Set the oven to 220°C (430°F) and put your tray (or pizza stone) in to preheat too — a hot surface cooks the base evenly and crisps it. Preheat 10–15 minutes. For a store-bought base a wire rack also works fine since it won't sag; sit a tray on the rack below to catch any cheese drips."
+    },
+    {
+      "title": "Sauté the mushrooms and onion",
+      "body": "Heat 1 tbsp oil or butter in a pan. Add the sliced mushrooms and sauté 3–4 minutes until they release their water and start to brown — this stops them making the base soggy. Add the sliced onion and cook 2–3 minutes until soft and slightly sweet. Season with a pinch of salt, pepper and Italian seasoning, then drain off any excess liquid."
+    },
+    {
+      "title": "Sauté the paneer (optional)",
+      "body": "In the same pan, lightly sauté 100 g paneer cubes 2–3 minutes until just golden with a pinch of salt and pepper. This keeps it from drying out in the oven and adds flavour — or add it raw if you prefer it soft."
+    },
+    {
+      "title": "Top the base",
+      "body": "Spread 3–4 tbsp sauce over the base, scatter over the 100–120 g grated mozzarella, then spread the sautéed mushrooms, onion and paneer evenly. Add the toppings right before baking."
+    },
+    {
+      "title": "Bake",
+      "body": "Carefully pull out the hot tray (oven mitts!), slide the pizza on, and return it to the middle of the oven. Bake 8–12 minutes until the cheese is melted and bubbly and the crust is golden. Store-bought bases cook fast — start checking at the 8-minute mark so it doesn't burn."
+    },
+    {
+      "title": "Rest and slice",
+      "body": "Let it sit a minute so the cheese sets slightly, then slice and eat hot."
+    }
+  ],
+  "notes": [
+    "Always sauté mushrooms and onions first — raw mushrooms release water and make the base soggy, and sautéed onions turn sweet.",
+    "For a store-bought base, a wire rack is fine (it won't sag) and lets air crisp the bottom; a preheated tray or stone gives the crispest base for beginners.",
+    "Paneer can go on raw if you like it soft, but a quick sauté with seasoning tastes better alongside the other cooked toppings."
+  ],
+  "source": "Adapted from my own cooking notes.",
+  "diet": "veg"
+}

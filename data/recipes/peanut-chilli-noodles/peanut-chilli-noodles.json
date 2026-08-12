@@ -1,0 +1,135 @@
+{
+  "slug": "peanut-chilli-noodles",
+  "title": "Peanut Chilli Noodles",
+  "tagline": "The viral spicy-creamy peanut noodles, loaded with chicken and crunchy cabbage.",
+  "image": "image.webp",
+  "emoji": "🍜",
+  "chef": "Raja",
+  "cuisine": "Fusion",
+  "course": "Main",
+  "tags": [
+    "noodles",
+    "chicken",
+    "high-protein",
+    "gym-meal",
+    "stir-fry",
+    "fusion"
+  ],
+  "flavor": [
+    "nutty",
+    "spicy",
+    "savory",
+    "umami"
+  ],
+  "ratings": {
+    "overall": 4.5,
+    "difficulty": 2,
+    "availability": 4
+  },
+  "servings": 2,
+  "servingsNote": "Makes 2 hearty portions.",
+  "time": {
+    "prep": 20,
+    "cook": 20,
+    "total": 40
+  },
+  "macros": {
+    "perServing": {
+      "calories": 650,
+      "protein": 52,
+      "carbs": 45,
+      "fat": 27,
+      "fibre": 6
+    },
+    "whole": {
+      "calories": 1300,
+      "protein": 104,
+      "carbs": 90,
+      "fat": 54,
+      "fibre": 12
+    }
+  },
+  "macroNotes": [
+    "Estimated for 450 g chicken thigh + 100 g spaghetti split into 2 servings — ~52 g protein per serving, which is excellent.",
+    "The sneaky calorie bombs are peanut butter and chilli oil, not the chicken. Cut to 1 tbsp peanut butter and 1 tsp chilli oil to save ~120 kcal across the pot; add more lime and pasta water instead to keep it saucy.",
+    "Chicken breast instead of thigh drops fat by ~15 g per serving for the same protein.",
+    "Want it meatless and still high-protein? Swap the chicken for 100 g dry soya chunks (soaked, squeezed, pan-crisped with soy) or a block of golden pan-fried paneer."
+  ],
+  "ingredients": [
+    {
+      "group": "Chicken",
+      "items": [
+        "450 g boneless skinless chicken thigh (juicier) or breast, cut into bite-sized 2–3 cm pieces",
+        "1 tsp soy sauce (from the total below)",
+        "1 tsp cornflour",
+        "2 garlic cloves, minced",
+        "Black pepper"
+      ]
+    },
+    {
+      "group": "Noodles + veg",
+      "items": [
+        "100 g dry spaghetti (or 1 pack instant noodles, seasoning discarded)",
+        "5 packed cups shredded cabbage (it wilts down a lot — don't panic)",
+        "1 large carrot, julienned",
+        "3 spring onions (whites to cook, greens to garnish)",
+        "6 garlic cloves total (2 for the chicken, 4 minced for the veg)",
+        "1 tsp neutral oil"
+      ]
+    },
+    {
+      "group": "Peanut chilli sauce",
+      "items": [
+        "2 tbsp peanut butter (smooth)",
+        "1.5 tbsp soy sauce (1 tsp goes to the chicken)",
+        "2 tsp chilli oil (less for milder)",
+        "1 tsp vinegar or juice of 1/2 lime",
+        "1–2 tsp chilli flakes or gochugaru",
+        "4 tbsp hot pasta water (plus more to loosen)",
+        "Optional: 1 tsp sesame oil, a little grated ginger, 1 tsp honey",
+        "Sesame seeds, to finish"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Marinate the chicken",
+      "body": "Toss 450 g chicken pieces with 1 tsp soy sauce, 1 tsp cornflour, 2 minced garlic cloves and a generous grind of black pepper. Leave it while you prep everything else (10–20 min is plenty). The cornflour is what gives it that takeaway-style browning."
+    },
+    {
+      "title": "Prep the veg",
+      "body": "Shred 5 packed cups cabbage thinly, julienne 1 large carrot, and slice 3 spring onions (keep whites and greens separate). Mince the remaining 4 garlic cloves."
+    },
+    {
+      "title": "Cook the spaghetti",
+      "body": "Boil 100 g spaghetti in lightly salted water to al dente (1 min under the packet time). Save 1 full cup of pasta water before draining — the starch is what emulsifies the peanut butter. Don't rinse."
+    },
+    {
+      "title": "Mix the sauce",
+      "body": "Whisk 2 tbsp peanut butter, the remaining ~1 tbsp + 2 tsp soy sauce, 2 tsp chilli oil, 1 tsp vinegar or 1/2 lime's juice, 1–2 tsp chilli flakes and 4 tbsp hot pasta water until smooth and pourable. Add more pasta water if it's paste-thick — you want it to pour, not clump."
+    },
+    {
+      "title": "Sear the chicken",
+      "body": "Heat 1 tsp oil in a wok/large pan on medium-high. Spread the chicken in one layer and leave it undisturbed 2–3 min to colour, then stir-fry until cooked through and lightly browned, about 8–10 min total. Remove to a plate."
+    },
+    {
+      "title": "Stir-fry the veg",
+      "body": "Same pan: add the minced garlic and spring onion whites, cook 30 sec. Add all the cabbage and carrot. It'll look like way too much — it isn't. Stir-fry 3–5 min until softened but still crunchy."
+    },
+    {
+      "title": "Combine",
+      "body": "Lower the heat. Return the chicken, add the drained spaghetti, and pour over all the sauce. Add 4–8 tbsp pasta water gradually while tossing aggressively until everything is glossy and coated. Too dry? More pasta water. Too wet? Toss over heat another minute."
+    },
+    {
+      "title": "Finish",
+      "body": "Taste and adjust — more soy for salt, more chilli for heat, more lime for brightness. Top with spring onion greens and sesame seeds."
+    }
+  ],
+  "notes": [
+    "Spaghetti works great here — peanut sauce clings to long pasta (think Thai/sesame noodles). Just cook it strictly al dente; overcooked spaghetti + peanut butter turns to sad paste.",
+    "Want more volume for almost no calories? Push the cabbage up to 5–6 cups. It balances all that chicken and sauce without moving the macros.",
+    "Instant noodles give the curlier, more 'viral comfort food' texture; spaghetti gives a cleaner, chewier bite. Both are legit."
+  ],
+  "source": "Adapted from my own cooking notes.",
+  "diet": "non-veg"
+}

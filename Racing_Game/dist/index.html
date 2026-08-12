@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>race_in_progress</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+        <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+        <style>
+            body {
+                color: #333;
+                margin: 0;
+                overflow: hidden;
+                font-family: Monospace;
+                background-color: #000;
+            }
+            html, body { height: 100%; }
+            canvas { touch-action: none; display: block; }
+
+            #info {
+                position: absolute;
+                top: 50px;
+                right: 10px;
+                padding: 6px 10px;
+                box-sizing: border-box;
+                text-align: right;
+                color: #fff;
+                background: rgba(0,0,0,0.45);
+                border-radius: 4px;
+                font-size: 12px;
+                z-index: 1;
+                pointer-events: none;
+                max-width: calc(100vw - 20px);
+            }
+            #info p { margin: 2px 0; }
+
+            #info .volume-row {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                gap: 6px;
+                margin: 2px 0 4px;
+                pointer-events: auto;
+            }
+            #info .volume-row input[type=range] {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 90px;
+                height: 4px;
+                background: rgba(255,255,255,0.25);
+                border-radius: 2px;
+                outline: none;
+                cursor: pointer;
+            }
+            #info .volume-row input[type=range]::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 11px;
+                height: 11px;
+                border-radius: 50%;
+                background: #FFCB47;
+                cursor: pointer;
+            }
+            #info .volume-row input[type=range]::-moz-range-thumb {
+                width: 11px;
+                height: 11px;
+                border: none;
+                border-radius: 50%;
+                background: #FFCB47;
+                cursor: pointer;
+            }
+            #info .volume-row span { min-width: 26px; text-align: right; opacity: 0.85; }
+
+            /* ── Custom scrollbars on the overlay panels ──────────────────
+               The stats-for-nerds panel scrolls; default OS scrollbars look
+               jarring on the dark glass theme. Target elements with
+               overflow-y:auto inside our overlays.                          */
+            *::-webkit-scrollbar {
+                width: 6px;
+                height: 6px;
+            }
+            *::-webkit-scrollbar-track {
+                background: rgba(255,255,255,0.04);
+                border-radius: 3px;
+            }
+            *::-webkit-scrollbar-thumb {
+                background: rgba(255,203,71,0.35);
+                border-radius: 3px;
+                transition: background 120ms;
+            }
+            *::-webkit-scrollbar-thumb:hover {
+                background: rgba(255,203,71,0.65);
+            }
+            *::-webkit-scrollbar-corner { background: transparent; }
+            /* Firefox */
+            * { scrollbar-width: thin; scrollbar-color: rgba(255,203,71,0.35) rgba(255,255,255,0.04); }
+
+            /* ── Responsive overlays ─────────────────────────────────────────
+               JS creates the speedometer / stats panels with inline styles,
+               so the media queries below have to use !important to override
+               them on smaller viewports. Numbers here are tuned to keep all
+               overlays readable and non-overlapping down to 320px wide.    */
+
+            @media (max-width: 900px) {
+                #info { font-size: 11px; padding: 5px 8px; }
+                #info p { margin: 1px 0; }
+            }
+
+            @media (max-width: 600px) {
+                #info { font-size: 10px; padding: 4px 7px; max-width: 60vw; }
+            }
+
+            @media (max-height: 500px) {
+                /* short / landscape laptops — keyboard layouts only */
+                body:not(.is-mobile) #info { top: 6px; right: 6px; padding: 3px 6px; font-size: 10px; }
+                body:not(.is-mobile) #info p { margin: 0; line-height: 1.4; }
+            }
+
+            /* ── Mobile (touchOnly) layout ───────────────────────────────────
+               When JS detects a phone-class device it adds .is-mobile to
+               <body> plus .is-portrait or .is-landscape. We hide the desktop
+               keybind cheatsheet entirely and re-flow every floating overlay.
+               JS still owns positioning of HUD elements — these rules only
+               provide safe-area padding, hide-classes, and the drawer skin. */
+            :root {
+                --sa-top:    env(safe-area-inset-top, 0px);
+                --sa-bottom: env(safe-area-inset-bottom, 0px);
+                --sa-left:   env(safe-area-inset-left, 0px);
+                --sa-right:  env(safe-area-inset-right, 0px);
+            }
+
+            body.is-mobile #info,
+            body.is-mobile #controlsList { display: none !important; }
+            body.is-mobile .desktop-only { display: none !important; }
+            /* hide three.js Stats fps chart on mobile */
+            body.is-mobile #stats,
+            body.is-mobile #stats-graph,
+            body.is-mobile .stats { display: none !important; }
+            /* hide carBadge (top-right HATCHBACK) — folded into drawer */
+            body.is-mobile .car-badge-desktop { display: none !important; }
+            /* hide desktop pos label (debug) */
+            body.is-mobile .pos-label-desktop { display: none !important; }
+            /* hide stats-for-nerds toggle + panel by default on mobile */
+            body.is-mobile .stats-nerds-toggle,
+            body.is-mobile .stats-nerds-panel { display: none !important; }
+            /* hide desktop fps pill */
+            body.is-mobile .fps-pill-desktop { display: none !important; }
+            /* hide desktop multiplayer panel (replaced by chip in drawer) */
+            body.is-mobile .mp-root-desktop { display: none !important; }
+
+            /* tiny in-corner fps for mobile players who want it */
+            body:not(.is-mobile) .mobile-only { display: none !important; }
+
+            /* Hamburger button + drawer (mobile only) */
+            .m-hamburger {
+                position: fixed;
+                top: calc(8px + var(--sa-top));
+                right: calc(8px + var(--sa-right));
+                width: 44px; height: 44px;
+                background: rgba(0,0,0,0.55);
+                color: #FFCB47;
+                border: 1px solid rgba(255,203,71,0.35);
+                border-radius: 10px;
+                font: 22px/1 Monospace;
+                display: flex; align-items: center; justify-content: center;
+                z-index: 40;
+                touch-action: manipulation;
+                user-select: none; -webkit-user-select: none;
+                cursor: pointer;
+                box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+            }
+            .m-hamburger:active { background: rgba(255,203,71,0.25); }
+
+            .m-drawer-backdrop {
+                position: fixed; inset: 0;
+                background: rgba(0,0,0,0.55);
+                z-index: 50;
+                opacity: 0;
+                pointer-events: none;
+                transition: opacity 180ms ease;
+            }
+            .m-drawer-backdrop.open {
+                opacity: 1;
+                pointer-events: auto;
+            }
+
+            .m-drawer {
+                position: fixed;
+                top: 0; right: 0; bottom: 0;
+                width: min(360px, 78vw);
+                background: rgba(12,12,14,0.96);
+                border-left: 1px solid rgba(255,255,255,0.12);
+                z-index: 51;
+                transform: translateX(102%);
+                transition: transform 220ms cubic-bezier(.4,.0,.2,1);
+                display: flex; flex-direction: column;
+                padding: calc(14px + var(--sa-top)) calc(16px + var(--sa-right)) calc(14px + var(--sa-bottom)) 16px;
+                box-sizing: border-box;
+                color: #fff;
+                font: 13px Monospace;
+                overflow-y: auto;
+                box-shadow: -10px 0 32px rgba(0,0,0,0.5);
+            }
+            .m-drawer.open { transform: translateX(0); }
+            .m-drawer h4 {
+                margin: 14px 0 6px;
+                font-size: 10px; letter-spacing: 2px;
+                color: #FFCB47;
+                opacity: 0.85;
+                border-bottom: 1px solid rgba(255,203,71,0.25);
+                padding-bottom: 4px;
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+            .m-drawer h4:first-of-type { margin-top: 4px; }
+            .m-drawer .m-close {
+                position: absolute; top: calc(10px + var(--sa-top)); right: calc(10px + var(--sa-right));
+                width: 36px; height: 36px;
+                display: flex; align-items: center; justify-content: center;
+                border-radius: 8px;
+                background: rgba(255,255,255,0.06);
+                color: #fff;
+                font-size: 20px;
+                cursor: pointer;
+                border: 1px solid rgba(255,255,255,0.1);
+            }
+            .m-drawer .m-row {
+                display: flex; align-items: center; justify-content: space-between;
+                gap: 10px;
+                padding: 10px 0;
+            }
+            .m-drawer .m-row > span:first-child { opacity: 0.7; font-size: 12px; }
+            .m-drawer .m-btn-row {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 8px;
+            }
+            .m-drawer .m-btn {
+                background: rgba(255,255,255,0.05);
+                color: #fff;
+                border: 1px solid rgba(255,255,255,0.12);
+                padding: 12px;
+                border-radius: 10px;
+                font: 12px Monospace;
+                letter-spacing: 1px;
+                text-align: center;
+                cursor: pointer;
+                min-height: 44px;
+                box-sizing: border-box;
+                touch-action: manipulation;
+            }
+            .m-drawer .m-btn:active { background: rgba(255,203,71,0.25); }
+            .m-drawer .m-btn.primary {
+                color: #FFCB47;
+                border-color: rgba(255,203,71,0.45);
+            }
+            .m-drawer .m-btn.danger {
+                color: #ff8a8a;
+                border-color: rgba(255,138,138,0.35);
+            }
+            .m-drawer .m-slider {
+                -webkit-appearance: none; appearance: none;
+                width: 140px; height: 4px;
+                background: rgba(255,255,255,0.18);
+                border-radius: 2px; outline: none;
+                cursor: pointer;
+            }
+            .m-drawer .m-slider::-webkit-slider-thumb {
+                -webkit-appearance: none; appearance: none;
+                width: 18px; height: 18px; border-radius: 50%;
+                background: #FFCB47; cursor: pointer;
+            }
+            .m-drawer .m-slider::-moz-range-thumb {
+                width: 18px; height: 18px; border: none; border-radius: 50%;
+                background: #FFCB47; cursor: pointer;
+            }
+            .m-drawer .m-chip {
+                display: inline-flex; align-items: center; gap: 6px;
+                padding: 6px 10px;
+                background: rgba(255,255,255,0.07);
+                border: 1px solid rgba(255,255,255,0.12);
+                border-radius: 999px;
+                font-size: 11px;
+            }
+            .m-drawer .m-chip.active {
+                background: rgba(255,203,71,0.15);
+                border-color: rgba(255,203,71,0.5);
+                color: #FFCB47;
+            }
+
+            /* Tiny mobile fps chip */
+            .m-fps {
+                position: fixed;
+                top: calc(8px + var(--sa-top));
+                left: calc(8px + var(--sa-left));
+                padding: 4px 8px;
+                background: rgba(0,0,0,0.55);
+                border: 1px solid rgba(255,255,255,0.1);
+                border-radius: 6px;
+                color: #fff;
+                font: 10px Monospace;
+                z-index: 30;
+                pointer-events: none;
+                opacity: 0.7;
+            }
+
+            /* Mobile MP modal (full-width sheet from bottom) */
+            .m-mp-modal {
+                position: fixed; inset: 0;
+                background: rgba(0,0,0,0.55);
+                z-index: 60;
+                opacity: 0;
+                pointer-events: none;
+                transition: opacity 180ms ease;
+                display: flex; align-items: flex-end; justify-content: center;
+            }
+            .m-mp-modal.open { opacity: 1; pointer-events: auto; }
+            .m-mp-modal .m-mp-sheet {
+                width: 100%;
+                max-width: 520px;
+                background: rgba(14,14,16,0.98);
+                border-top: 1px solid rgba(255,203,71,0.25);
+                border-radius: 16px 16px 0 0;
+                padding: 18px 18px calc(18px + var(--sa-bottom));
+                color: #fff;
+                font: 13px Monospace;
+                transform: translateY(100%);
+                transition: transform 220ms cubic-bezier(.4,.0,.2,1);
+                max-height: 80vh;
+                overflow-y: auto;
+                box-sizing: border-box;
+            }
+            .m-mp-modal.open .m-mp-sheet { transform: translateY(0); }
+
+            /* Touch-control overlay roots — JS sets exact positions; CSS just
+               provides per-orientation classes the JS keys off via dataset. */
+            #touch-overlay.is-portrait { /* default placement */ }
+            #touch-overlay.is-landscape { /* default placement */ }
+        </style>
+      <script type="module" crossorigin src="./assets/index-ByfXn8Ss.js"></script>
+    </head>
+    <body>
+        <div id="info">
+            <div id="controlsList"></div>
+        </div>
+
+        <script>
+          // Restore real path after the 404.html SPA redirect on GH Pages.
+          // If we got here via /?/AB12X (404.html rewrote it), put the
+          // pathname back to /AB12X so the auto-join code finds it.
+          (function(l) {
+            if (l.search[1] === '/') {
+              var decoded = l.search.slice(1).split('&').map(function(s) {
+                return s.replace(/~and~/g, '&');
+              }).join('?');
+              window.history.replaceState(
+                null, null,
+                l.pathname.slice(0, -1) + decoded + l.hash
+              );
+            }
+          })(window.location);
+        </script>
+    </body>
+</html>

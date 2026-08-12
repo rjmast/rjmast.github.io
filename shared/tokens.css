@@ -1,0 +1,59 @@
+/* ===========================================================================
+   Design tokens — RajaOS
+   Modern-macOS chrome reskinned to a blueprint (blue / orange / white) palette.
+   Restrained: mostly-solid surfaces, subtle frost, soft layered shadows.
+   =========================================================================== */
+
+:root {
+  /* --- Surfaces --------------------------------------------------------- */
+  --paper:      #ffffff;   /* primary window surface            */
+  --paper-2:    #f4f6fa;   /* recessed / sidebar surface        */
+  --paper-3:    #e9eef4;   /* deeper recess, tracks             */
+  --titlebar-a: #fbfcfe;   /* title-bar gradient top            */
+  --titlebar-b: #eef2f7;   /* title-bar gradient bottom         */
+
+  /* --- Ink -------------------------------------------------------------- */
+  --ink:        #16202e;   /* primary text                      */
+  --ink-2:      #5a6675;   /* secondary text                    */
+  --ink-3:      #93a0b0;   /* tertiary / disabled               */
+
+  /* --- Lines ------------------------------------------------------------ */
+  --line:       #d8dfe8;   /* hairline strokes                  */
+  --line-2:     #e7ecf2;   /* faint dividers                    */
+
+  /* --- Accents (blueprint) --------------------------------------------- */
+  --blue:       #0b5fd6;   /* primary accent                    */
+  --blue-600:   #0a52ba;   /* pressed / hover                   */
+  --blue-deep:  #08306b;   /* blueprint dark ground             */
+  --blue-050:   #eaf2ff;   /* tint wash                         */
+  --orange:     #f26b1d;   /* secondary accent                  */
+  --orange-050: #fff2e8;   /* tint wash                         */
+
+  /* --- Traffic lights (kept universal) --------------------------------- */
+  --tl-red:     #ff5f57;
+  --tl-amber:   #febc2e;
+  --tl-green:   #28c840;
+  --tl-off:     #d6dbe2;   /* dimmed when window unfocused      */
+
+  /* --- Metrics ---------------------------------------------------------- */
+  --menubar-h:  28px;
+  --dock-pad:   9px;
+  --radius-win: 12px;
+  --radius-tile: 14px;
+
+  /* --- Type ------------------------------------------------------------- */
+  --font-ui:   -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui,
+               "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo,
+               "Cascadia Code", monospace;
+
+  /* --- Shadows (offset + soft blur, layered) --------------------------- */
+  --shadow-win:  0 10px 34px -8px rgba(8,24,54,.30), 0 2px 7px rgba(8,24,54,.12);
+  --shadow-win-focus: 0 26px 70px -14px rgba(8,24,54,.44), 0 5px 14px rgba(8,24,54,.18);
+  --shadow-dock: 0 16px 44px -8px rgba(6,20,48,.46), inset 0 1px 0 rgba(255,255,255,.7);
+  --shadow-tile: 0 2px 5px rgba(8,24,54,.22), inset 0 1px 0 rgba(255,255,255,.35);
+
+  /* --- Motion ----------------------------------------------------------- */
+  --ease-out: cubic-bezier(.16, 1, .3, 1);
+  --ease-in-out: cubic-bezier(.65, 0, .35, 1);
+}

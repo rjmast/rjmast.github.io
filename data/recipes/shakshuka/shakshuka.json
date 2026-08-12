@@ -1,0 +1,118 @@
+{
+  "slug": "shakshuka",
+  "title": "Shakshuka",
+  "tagline": "Eggs poached in a spiced tomato-and-pepper sauce, desi-tuned with degi mirch and eaten with roti.",
+  "image": "image.webp",
+  "emoji": "🍳",
+  "chef": "Raja",
+  "cuisine": "Middle Eastern",
+  "course": "Main",
+  "tags": [
+    "egg",
+    "one-pot",
+    "middle-eastern",
+    "high-protein",
+    "comfort-food"
+  ],
+  "flavor": [
+    "spicy",
+    "savory",
+    "tangy"
+  ],
+  "ratings": {
+    "overall": 3,
+    "difficulty": 2,
+    "availability": 5
+  },
+  "servings": 2,
+  "servingsNote": "Eaten with roti",
+  "time": {
+    "prep": 10,
+    "cook": 25,
+    "total": 35
+  },
+  "macros": {
+    "perServing": {
+      "calories": 290,
+      "protein": 15,
+      "carbs": 15,
+      "fat": 18,
+      "fibre": 4
+    },
+    "whole": {
+      "calories": 580,
+      "protein": 30,
+      "carbs": 30,
+      "fat": 36,
+      "fibre": 8
+    }
+  },
+  "macroNotes": [
+    "Estimated for the shakshuka itself (roti not included — each roti adds ~110 kcal and ~3 g protein).",
+    "For a leaner, higher-protein plate, use 4 eggs but pull one or two yolks, or stir 100 g crumbled paneer into the sauce before adding the eggs (adds ~18 g protein across both servings). A handful of soaked, squeezed soya granules simmered into the sauce also works and keeps it authentic-ish.",
+    "The oil is the main fat lever — 1 tbsp instead of 1.5 saves ~60 kcal per serving."
+  ],
+  "ingredients": [
+    {
+      "group": "Sauce",
+      "items": [
+        "1.5 tbsp olive oil",
+        "1 small onion, chopped",
+        "1/2 red bell pepper (or 1 small), chopped",
+        "2 garlic cloves, minced",
+        "1/2 to 1 tsp degi mirch (stands in for paprika + cayenne — colour plus mild heat)",
+        "1 tsp ground cumin",
+        "2-3 medium tomatoes (~300-400 g), finely chopped",
+        "Salt to taste + a pinch of sugar if the tomatoes are very tangy"
+      ]
+    },
+    {
+      "group": "Eggs & finish",
+      "items": [
+        "3-4 eggs (1-2 per person)",
+        "Fresh coriander or parsley, chopped",
+        "Optional desi tweaks: 1/2 tsp kasuri methi (crushed) or a pinch of jeera at the start",
+        "Optional: crumbled feta, chilli flakes"
+      ]
+    },
+    {
+      "group": "To serve",
+      "items": [
+        "Roti (2-3 pieces), or pita / crusty bread"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Soften the veg",
+      "body": "Heat 1.5 tbsp olive oil in a skillet over medium heat. Add the chopped onion and 1/2 red bell pepper and cook 5-7 minutes until softened. (If using kasuri methi or jeera for a desi touch, add the jeera now.)"
+    },
+    {
+      "title": "Garlic and spices",
+      "body": "Stir in the 2 minced garlic cloves, 1 tsp cumin and 1/2 to 1 tsp degi mirch. Cook about 1 minute until fragrant — don't let the spices catch."
+    },
+    {
+      "title": "Cook down the tomatoes",
+      "body": "Add the 2-3 chopped fresh tomatoes and season with salt (and a pinch of sugar if they taste sharp). Simmer 10-15 minutes, stirring and mashing lightly with the spoon, until it breaks down into a thick-ish saucy base."
+    },
+    {
+      "title": "Make wells and add eggs",
+      "body": "Use the back of a spoon to make 3-4 little wells in the sauce and crack one egg into each. Cover the pan with a lid."
+    },
+    {
+      "title": "Poach",
+      "body": "Cook covered 5-7 minutes until the whites are just set but the yolks are still runny (or cook longer if you like them firm). Don't overcook — the residual heat keeps setting them."
+    },
+    {
+      "title": "Garnish and serve",
+      "body": "Scatter over chopped coriander or parsley (and feta / chilli flakes if using). Serve straight from the pan with hot roti to scoop it up."
+    }
+  ],
+  "notes": [
+    "Degi mirch is a great one-jar swap for paprika + cayenne — go up to 1.5 tsp if you like it hotter, or add a pinch of regular chilli powder for extra heat.",
+    "Fresh tomatoes are actually more authentic than canned here; no need to peel them for shakshuka, just chop fine and cook them down until saucy.",
+    "It eats like a spicy tomato-egg curry with roti — add a little kasuri methi or jeera to lean it further towards desi."
+  ],
+  "source": "Adapted from my own cooking notes.",
+  "diet": "non-veg"
+}

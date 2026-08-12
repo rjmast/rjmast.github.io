@@ -1,0 +1,140 @@
+{
+  "slug": "smash-chicken-burger",
+  "title": "Smash Chicken Burger",
+  "tagline": "Juicy coarse-mince chicken patty with a Greek-yogurt burger sauce.",
+  "image": "image.webp",
+  "emoji": "🍔",
+  "chef": "Raja",
+  "cuisine": "American",
+  "course": "Main",
+  "tags": [
+    "high-protein",
+    "gym-meal",
+    "chicken",
+    "pan-fried",
+    "sandwich",
+    "cheat-day",
+    "grilled"
+  ],
+  "flavor": [
+    "savory",
+    "smoky",
+    "creamy",
+    "tangy"
+  ],
+  "ratings": {
+    "overall": 4.5,
+    "difficulty": 2,
+    "availability": 4
+  },
+  "servings": 2,
+  "servingsNote": "2 burgers, one thick patty each (or two thin smashed patties per burger).",
+  "time": {
+    "prep": 15,
+    "cook": 15,
+    "total": 30
+  },
+  "macros": {
+    "perServing": {
+      "calories": 710,
+      "protein": 46,
+      "carbs": 38,
+      "fat": 40,
+      "fibre": 3
+    },
+    "whole": {
+      "calories": 1420,
+      "protein": 92,
+      "carbs": 76,
+      "fat": 80,
+      "fibre": 6
+    }
+  },
+  "macroNotes": [
+    "Estimated for one burger: 200 g chicken thigh + brioche bun + 1 slice cheese + sauce + veg.",
+    "Thigh gives ~46 g protein and stays juicy; lean, well-trimmed thighs are closer to 650–680 kcal. Breast instead of thigh drops it to ~550 kcal / ~48 g protein with much less fat.",
+    "To cut calories: skip the cheese (−80 kcal), serve as a burger bowl over salad with no bun (−200 kcal, much leaner), or use the Greek-yogurt sauce instead of mayo (already built in).",
+    "The yogurt burger sauce is the high-protein swap — way better macros than a mayo-heavy sauce and it still tastes indulgent."
+  ],
+  "ingredients": [
+    {
+      "group": "Patty (2 burgers)",
+      "items": [
+        "400 g boneless skinless chicken thigh (juicier) — or breast for leaner",
+        "1 tsp salt",
+        "1 tsp black pepper",
+        "1 tsp paprika",
+        "1 tsp garlic powder",
+        "1 tsp onion powder",
+        "1/2 tsp MSG (optional but great)",
+        "1 tsp Dijon mustard",
+        "1 tsp soy sauce (or Worcestershire)",
+        "1 tbsp finely grated onion (optional)",
+        "1–2 tsp neutral oil, for cooking"
+      ]
+    },
+    {
+      "group": "Greek-yogurt burger sauce",
+      "items": [
+        "100 g Greek yogurt (or 30 g light mayo for a richer version)",
+        "1 tsp Dijon mustard",
+        "1 tsp ketchup",
+        "1 tsp pickle juice (or a splash of vinegar)",
+        "1 pinch garlic powder",
+        "Black pepper"
+      ]
+    },
+    {
+      "group": "To build",
+      "items": [
+        "2 brioche buns (or burger buns), toasted",
+        "2 slices American or cheddar cheese",
+        "Lettuce",
+        "2–4 tomato slices",
+        "Thin onion slices",
+        "Pickle slices"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Coarse-mince the chicken",
+      "body": "Dice 400 g chicken thigh into chunks, then pulse in a food processor 5–8 times, or chop finely with a knife. Keep it a coarse mince — do NOT blend to a smooth paste; the texture is what gives a good bite."
+    },
+    {
+      "title": "Season",
+      "body": "Mix in 1 tsp salt, 1 tsp pepper, 1 tsp paprika, 1 tsp garlic powder, 1 tsp onion powder, 1/2 tsp MSG, 1 tsp Dijon, 1 tsp soy sauce and 1 tbsp grated onion. Mix just until combined — don't overwork it or the patty turns rubbery. Thigh holds together without egg or breadcrumbs; if using lean breast, add 1 egg white as a binder."
+    },
+    {
+      "title": "Shape and chill",
+      "body": "Divide into two balls. For classic patties, form two rounds about 10–11 cm wide and 1.5–2 cm thick. Chill 20–30 minutes if you can — it helps them hold together."
+    },
+    {
+      "title": "Make the sauce",
+      "body": "Stir together 100 g Greek yogurt, 1 tsp Dijon, 1 tsp ketchup, 1 tsp pickle juice, a pinch of garlic powder and black pepper. Set aside."
+    },
+    {
+      "title": "Cook (classic patty)",
+      "body": "Heat a pan over medium-high and add 1 tsp oil. Cook the patty 5–6 minutes on the first side without moving it, flip, and cook another 4–5 minutes to 74°C (165°F) in the center. Don't press down — you'll squeeze the juices out. Lay a slice of cheese on in the last minute and cover briefly to melt."
+    },
+    {
+      "title": "Or smash it",
+      "body": "For crispy edges: divide into 80–100 g balls, drop onto a ripping-hot skillet and smash very thin with a spatula. Cook 2–3 minutes, flip once, add cheese, cook another 2 minutes. Use two smashed patties per burger — the browned Maillard edges add a lot of flavour."
+    },
+    {
+      "title": "Toast the bun",
+      "body": "Toast the cut sides of 2 brioche buns in the same pan for 30–60 seconds to pick up the browned bits."
+    },
+    {
+      "title": "Rest and assemble",
+      "body": "Let the patty rest 2–3 minutes. Build: bottom bun → sauce → lettuce → chicken patty → melted cheese → tomato → onion → pickles → a thin layer of sauce on the top bun. For a leaner burger-bowl, skip the bun and pile everything over a big salad of lettuce, cucumber, tomato, onion and cabbage."
+    }
+  ],
+  "notes": [
+    "Thigh vs breast: thigh has intramuscular fat that keeps it juicy and forgiving, so it's the better burger cut even when well-trimmed. Breast is leaner but dries out fast — if using it, mix in a little soy/Worcestershire and don't overcook.",
+    "Optional crunch (+50–80 kcal): coat the patty lightly in seasoned panko or breadcrumbs, spray with oil and pan-fry or air-fry at 200°C for 10–12 min, flipping halfway.",
+    "Coarse mince, gentle mixing, no pressing while cooking, and a rest before assembly are the four things that keep it juicy."
+  ],
+  "source": "Adapted from my own cooking notes.",
+  "diet": "non-veg"
+}

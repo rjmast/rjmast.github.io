@@ -1,0 +1,133 @@
+{
+  "slug": "air-fryer-fried-chicken",
+  "title": "Air Fryer Fried Chicken",
+  "tagline": "Buttermilk-marinated crispy fried chicken with none of the deep-fry guilt.",
+  "image": "image.webp",
+  "emoji": "🍗",
+  "chef": "Raja",
+  "cuisine": "Indian",
+  "course": "Main",
+  "tags": [
+    "chicken",
+    "air-fryer",
+    "high-protein",
+    "gym-meal",
+    "marinade",
+    "comfort-food"
+  ],
+  "flavor": [
+    "savory",
+    "spicy",
+    "smoky"
+  ],
+  "ratings": {
+    "overall": 5,
+    "difficulty": 3,
+    "availability": 4
+  },
+  "servings": 2,
+  "servingsNote": "500 g chicken makes 2 solid portions.",
+  "time": {
+    "prep": 20,
+    "cook": 25,
+    "total": 45
+  },
+  "macros": {
+    "perServing": {
+      "calories": 575,
+      "protein": 52,
+      "carbs": 21,
+      "fat": 27,
+      "fibre": 1
+    },
+    "whole": {
+      "calories": 1150,
+      "protein": 104,
+      "carbs": 42,
+      "fat": 54,
+      "fibre": 2
+    }
+  },
+  "macroNotes": [
+    "Estimated for 500 g thigh + coating. Air-frying instead of deep-frying already saves you a few hundred calories versus classic fried chicken.",
+    "Boneless skinless breast instead of thigh drops fat by ~10–15 g per serving for the same protein — but it's less forgiving, so cut it into even 2–2.5 cm pieces and watch the timing.",
+    "Protein is already excellent here, so no soya needed. To lean it out further, use breast and go light on the oil spray (just enough to lose the raw-flour look).",
+    "Serve with a protein parotta and a salad rather than two regular parottas to keep it a genuine cutting meal."
+  ],
+  "ingredients": [
+    {
+      "group": "Buttermilk marinade (500 g boneless chicken thigh — best — or breast)",
+      "items": [
+        "3/4 cup buttermilk / chaach (or 1/2 cup thick curd + 2–3 tbsp water; or 3/4 cup milk + 1 tbsp lemon/vinegar rested 5 min)",
+        "2 tbsp thick curd (key for body so the coating grips)",
+        "1 tsp salt (skip if using salted/masala chaach)",
+        "1 tsp red chilli powder",
+        "1/2 tsp black pepper",
+        "1/2 tsp garam masala",
+        "1/2 tsp ginger-garlic paste"
+      ]
+    },
+    {
+      "group": "Crispy coating",
+      "items": [
+        "1/2 cup all-purpose flour (maida)",
+        "2 tbsp cornflour (essential for crunch)",
+        "1/2 tsp salt (halve it if the marinade was salty)",
+        "1/2 tsp black pepper",
+        "1/2 tsp paprika or chilli powder",
+        "Optional: 1/2 tsp garlic powder, 2 tbsp crushed cornflakes/breadcrumbs",
+        "Oil spray (mandatory — air fryers bake, they don't fry)"
+      ]
+    },
+    {
+      "group": "Kerala-style option (instead of the coating spices above)",
+      "items": [
+        "A handful of curry leaves",
+        "1 tsp coarsely cracked black pepper",
+        "1/2 tsp turmeric",
+        "1 small onion, thinly sliced, and lime wedges to finish"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Marinate",
+      "body": "Mix 3/4 cup buttermilk/chaach with 2 tbsp thick curd, 1 tsp salt, 1 tsp chilli powder, 1/2 tsp pepper, 1/2 tsp garam masala and 1/2 tsp ginger-garlic paste. Coat 500 g chicken, cover, and refrigerate — minimum 2 hours, ideal 4–6, max 10–12. This mild-acid soak is what replaces the moisture a deep-fry would give, so don't skip it. Using masala chaach? Add NO extra salt and taste a drop of the marinade before coating."
+    },
+    {
+      "title": "Mix the coating",
+      "body": "Whisk 1/2 cup maida, 2 tbsp cornflour, 1/2 tsp salt, 1/2 tsp pepper and 1/2 tsp paprika (plus garlic powder / crushed cornflakes if using). Keep the coating salt low if the marinade was salty. For the Kerala version, skip the paprika and instead plan to fry curry leaves + 1 tsp cracked pepper into the finish."
+    },
+    {
+      "title": "Bread the chicken",
+      "body": "Take the chicken straight from the fridge and press each piece firmly into the dry mix — press it on, don't shake it off. Rest the breaded pieces 5 minutes so the crust sets."
+    },
+    {
+      "title": "Oil the surface — critical",
+      "body": "Spray or brush oil over every piece until the coating looks slightly glossy, not matte. Dry flour will never crisp — this is the single most common failure point."
+    },
+    {
+      "title": "Stage 1 — cook the meat",
+      "body": "Preheat the air fryer to 180°C for 5 min. Arrange the chicken in a single layer, not touching. Cook at 180°C: 7 min, then flip and spray oil, then 6 min more. The inside turns opaque here."
+    },
+    {
+      "title": "Stage 2 — set and crisp the crust",
+      "body": "Turn it up to 200°C, give another light oil spray, and cook 3 min, flip, 2 min more. Air-fryer fried chicken is TWO temperatures / two phases — 'white inside + golden outside' is not done; you're waiting for the crust. Stop when no white flour patches remain and the surface is dry, rough and golden — don't push it dark or the meat dries."
+    },
+    {
+      "title": "Rest",
+      "body": "Rest 3 minutes so the juices settle."
+    },
+    {
+      "title": "Finish / Kerala-style option",
+      "body": "Classic: dust with chaat masala and a squeeze of lemon, serve with garlic mayo or peri-peri. Kerala-style: fry a handful of curry leaves and 1 tsp cracked pepper in a little oil, toss the fried chicken through it with thin onion slices, and finish with lime."
+    }
+  ],
+  "notes": [
+    "Chicken frozen solid and no time to thaw? Cold-water thaw in a leak-proof bag (change water every 20 min), or microwave on DEFROST only 30–60 sec just to separate the pieces — never until soft. Then cut thin, marinate, and refrigerate. Never marinate a rock-solid block; the marinade can't penetrate.",
+    "If your first batch comes out pale with raw flour patches, it's a crust problem, not a safety one: spray oil over the floury spots and blast at 200°C for 5–6 min (3 min a side), stopping the moment the flour disappears.",
+    "Cook in batches rather than stacking — overcrowding steams the coating and it won't crisp."
+  ],
+  "source": "Adapted from my own cooking notes.",
+  "diet": "non-veg"
+}
